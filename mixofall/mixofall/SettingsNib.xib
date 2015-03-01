@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="SettingsView" customModule="mixofall" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Settings" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0O4-iX-X7D">
+                    <rect key="frame" x="139" y="38" width="63" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zfB-vT-9yR">
+                    <rect key="frame" x="8" y="74" width="304" height="30"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rxn-J5-iui">
+                    <rect key="frame" x="160" y="561" width="20" height="7"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="20" id="3sU-gQ-But"/>
+                        <constraint firstAttribute="height" constant="7" id="EAr-bL-TOx"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstAttribute="centerX" secondItem="0O4-iX-X7D" secondAttribute="centerX" constant="-10.5" id="Og5-yO-zK5"/>
+                <constraint firstAttribute="trailing" secondItem="zfB-vT-9yR" secondAttribute="trailing" constant="8" id="S5X-Fh-v12"/>
+                <constraint firstAttribute="centerX" secondItem="Rxn-J5-iui" secondAttribute="centerX" constant="-10" id="VRQ-6P-g4f"/>
+                <constraint firstAttribute="centerY" secondItem="0O4-iX-X7D" secondAttribute="centerY" constant="235.5" id="daV-lQ-RHP"/>
+                <constraint firstItem="0O4-iX-X7D" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="38" id="duO-Gr-nCb"/>
+                <constraint firstItem="zfB-vT-9yR" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="rMK-0C-wJv"/>
+                <constraint firstItem="zfB-vT-9yR" firstAttribute="top" secondItem="0O4-iX-X7D" secondAttribute="bottom" constant="15" id="rhd-pn-xAx"/>
+                <constraint firstAttribute="bottom" secondItem="Rxn-J5-iui" secondAttribute="bottom" id="set-Hp-s4p"/>
+            </constraints>
+            <point key="canvasLocation" x="413" y="321"/>
+        </view>
+    </objects>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
