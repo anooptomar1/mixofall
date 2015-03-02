@@ -14,6 +14,10 @@
 		893824081AA3A181000710FD /* TouchyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893824071AA3A181000710FD /* TouchyView.swift */; };
 		8938240B1AA3B409000710FD /* TouchyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8938240A1AA3B409000710FD /* TouchyViewController.swift */; };
 		8938240D1AA3D1D7000710FD /* RandomLineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8938240C1AA3D1D7000710FD /* RandomLineView.swift */; };
+		893824121AA431AA000710FD /* NotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893824111AA431AA000710FD /* NotesViewController.swift */; };
+		893824141AA43FB0000710FD /* MyList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893824131AA43FB0000710FD /* MyList.swift */; };
+		893824161AA44212000710FD /* NoteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893824151AA44212000710FD /* NoteTableViewCell.swift */; };
+		893824181AA44657000710FD /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893824171AA44657000710FD /* DetailsViewController.swift */; };
 		89A065CB1AA3919800C321E2 /* EightBallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A065C91AA3919800C321E2 /* EightBallViewController.swift */; };
 		89A2166B1AA0430800223CFC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A2166A1AA0430800223CFC /* AppDelegate.swift */; };
 		89A2166D1AA0430800223CFC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A2166C1AA0430800223CFC /* ViewController.swift */; };
@@ -43,6 +47,10 @@
 		893824071AA3A181000710FD /* TouchyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TouchyView.swift; sourceTree = "<group>"; };
 		8938240A1AA3B409000710FD /* TouchyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TouchyViewController.swift; sourceTree = "<group>"; };
 		8938240C1AA3D1D7000710FD /* RandomLineView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomLineView.swift; sourceTree = "<group>"; };
+		893824111AA431AA000710FD /* NotesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotesViewController.swift; sourceTree = "<group>"; };
+		893824131AA43FB0000710FD /* MyList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyList.swift; sourceTree = "<group>"; };
+		893824151AA44212000710FD /* NoteTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteTableViewCell.swift; sourceTree = "<group>"; };
+		893824171AA44657000710FD /* DetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		89A065C91AA3919800C321E2 /* EightBallViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EightBallViewController.swift; sourceTree = "<group>"; };
 		89A216651AA0430800223CFC /* mixofall.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mixofall.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		89A216691AA0430800223CFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -104,6 +112,17 @@
 			name = Touchy;
 			sourceTree = "<group>";
 		};
+		893824101AA4317E000710FD /* TblDemo */ = {
+			isa = PBXGroup;
+			children = (
+				893824111AA431AA000710FD /* NotesViewController.swift */,
+				893824131AA43FB0000710FD /* MyList.swift */,
+				893824151AA44212000710FD /* NoteTableViewCell.swift */,
+				893824171AA44657000710FD /* DetailsViewController.swift */,
+			);
+			name = TblDemo;
+			sourceTree = "<group>";
+		};
 		89A065C81AA3915D00C321E2 /* eightBall */ = {
 			isa = PBXGroup;
 			children = (
@@ -133,6 +152,7 @@
 		89A216671AA0430800223CFC /* mixofall */ = {
 			isa = PBXGroup;
 			children = (
+				893824101AA4317E000710FD /* TblDemo */,
 				893824091AA3A18B000710FD /* Touchy */,
 				89A065C81AA3915D00C321E2 /* eightBall */,
 				890703D31AA2F36300FA2242 /* Drawer */,
@@ -273,15 +293,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				893824141AA43FB0000710FD /* MyList.swift in Sources */,
 				8938240B1AA3B409000710FD /* TouchyViewController.swift in Sources */,
 				89A2166D1AA0430800223CFC /* ViewController.swift in Sources */,
 				8938240D1AA3D1D7000710FD /* RandomLineView.swift in Sources */,
 				890703CE1AA2DF3B00FA2242 /* SettingsView.swift in Sources */,
 				890703D21AA2F35900FA2242 /* DrawerViewController.swift in Sources */,
 				893824081AA3A181000710FD /* TouchyView.swift in Sources */,
+				893824121AA431AA000710FD /* NotesViewController.swift in Sources */,
 				89A2166B1AA0430800223CFC /* AppDelegate.swift in Sources */,
 				890703CB1AA2DD3E00FA2242 /* FXBlurView.m in Sources */,
 				89A065CB1AA3919800C321E2 /* EightBallViewController.swift in Sources */,
+				893824181AA44657000710FD /* DetailsViewController.swift in Sources */,
+				893824161AA44212000710FD /* NoteTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
