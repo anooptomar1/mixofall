@@ -11,6 +11,10 @@
 		890703CE1AA2DF3B00FA2242 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890703CD1AA2DF3B00FA2242 /* SettingsView.swift */; };
 		890703D01AA2DF7D00FA2242 /* SettingsNib.xib in Resources */ = {isa = PBXBuildFile; fileRef = 890703CF1AA2DF7D00FA2242 /* SettingsNib.xib */; };
 		890703D21AA2F35900FA2242 /* DrawerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890703D11AA2F35900FA2242 /* DrawerViewController.swift */; };
+		893824081AA3A181000710FD /* TouchyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893824071AA3A181000710FD /* TouchyView.swift */; };
+		8938240B1AA3B409000710FD /* TouchyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8938240A1AA3B409000710FD /* TouchyViewController.swift */; };
+		8938240D1AA3D1D7000710FD /* RandomLineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8938240C1AA3D1D7000710FD /* RandomLineView.swift */; };
+		89A065CB1AA3919800C321E2 /* EightBallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A065C91AA3919800C321E2 /* EightBallViewController.swift */; };
 		89A2166B1AA0430800223CFC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A2166A1AA0430800223CFC /* AppDelegate.swift */; };
 		89A2166D1AA0430800223CFC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A2166C1AA0430800223CFC /* ViewController.swift */; };
 		89A216701AA0430800223CFC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89A2166E1AA0430800223CFC /* Main.storyboard */; };
@@ -36,6 +40,10 @@
 		890703CD1AA2DF3B00FA2242 /* SettingsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		890703CF1AA2DF7D00FA2242 /* SettingsNib.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsNib.xib; sourceTree = "<group>"; };
 		890703D11AA2F35900FA2242 /* DrawerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawerViewController.swift; sourceTree = "<group>"; };
+		893824071AA3A181000710FD /* TouchyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TouchyView.swift; sourceTree = "<group>"; };
+		8938240A1AA3B409000710FD /* TouchyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TouchyViewController.swift; sourceTree = "<group>"; };
+		8938240C1AA3D1D7000710FD /* RandomLineView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomLineView.swift; sourceTree = "<group>"; };
+		89A065C91AA3919800C321E2 /* EightBallViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EightBallViewController.swift; sourceTree = "<group>"; };
 		89A216651AA0430800223CFC /* mixofall.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mixofall.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		89A216691AA0430800223CFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		89A2166A1AA0430800223CFC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -86,6 +94,24 @@
 			name = Drawer;
 			sourceTree = "<group>";
 		};
+		893824091AA3A18B000710FD /* Touchy */ = {
+			isa = PBXGroup;
+			children = (
+				893824071AA3A181000710FD /* TouchyView.swift */,
+				8938240A1AA3B409000710FD /* TouchyViewController.swift */,
+				8938240C1AA3D1D7000710FD /* RandomLineView.swift */,
+			);
+			name = Touchy;
+			sourceTree = "<group>";
+		};
+		89A065C81AA3915D00C321E2 /* eightBall */ = {
+			isa = PBXGroup;
+			children = (
+				89A065C91AA3919800C321E2 /* EightBallViewController.swift */,
+			);
+			name = eightBall;
+			sourceTree = "<group>";
+		};
 		89A2165C1AA0430800223CFC = {
 			isa = PBXGroup;
 			children = (
@@ -107,6 +133,8 @@
 		89A216671AA0430800223CFC /* mixofall */ = {
 			isa = PBXGroup;
 			children = (
+				893824091AA3A18B000710FD /* Touchy */,
+				89A065C81AA3915D00C321E2 /* eightBall */,
 				890703D31AA2F36300FA2242 /* Drawer */,
 				89A2166A1AA0430800223CFC /* AppDelegate.swift */,
 				89A2166C1AA0430800223CFC /* ViewController.swift */,
@@ -245,11 +273,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8938240B1AA3B409000710FD /* TouchyViewController.swift in Sources */,
 				89A2166D1AA0430800223CFC /* ViewController.swift in Sources */,
+				8938240D1AA3D1D7000710FD /* RandomLineView.swift in Sources */,
 				890703CE1AA2DF3B00FA2242 /* SettingsView.swift in Sources */,
 				890703D21AA2F35900FA2242 /* DrawerViewController.swift in Sources */,
+				893824081AA3A181000710FD /* TouchyView.swift in Sources */,
 				89A2166B1AA0430800223CFC /* AppDelegate.swift in Sources */,
 				890703CB1AA2DD3E00FA2242 /* FXBlurView.m in Sources */,
+				89A065CB1AA3919800C321E2 /* EightBallViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

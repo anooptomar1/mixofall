@@ -1,9 +1,74 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="6F1-AS-luV">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="bP0-P5-tJl">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
     <scenes>
+        <!--Touchy View Controller-->
+        <scene sceneID="wxv-fx-JBA">
+            <objects>
+                <viewController storyboardIdentifier="touchyVC" id="bP0-P5-tJl" customClass="TouchyViewController" customModule="mixofall" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="SP1-Mq-q8u"/>
+                        <viewControllerLayoutGuide type="bottom" id="qvK-CA-tu8"/>
+                    </layoutGuides>
+                    <view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="eCI-Qq-zAR">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="s5G-IO-mFj" customClass="TouchyView" customModule="mixofall" customModuleProvider="target">
+                                <rect key="frame" x="14" y="20" width="290" height="248"/>
+                                <color key="backgroundColor" red="0.89644491790000003" green="0.89644491790000003" blue="0.89644491790000003" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jDr-1z-7cn" customClass="RandomLineView" customModule="mixofall" customModuleProvider="target">
+                                <rect key="frame" x="16" y="276" width="288" height="284"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pxW-BA-ujr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-981" y="366"/>
+        </scene>
+        <!--Eight Ball View Controller-->
+        <scene sceneID="der-KR-Kb2">
+            <objects>
+                <viewController storyboardIdentifier="eightVC" id="sTZ-7v-Y4X" customClass="EightBallViewController" customModule="mixofall" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3qe-qF-HX4"/>
+                        <viewControllerLayoutGuide type="bottom" id="ewq-UB-2cd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7PQ-sc-zLb">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Shake for answers" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="D4R-Mq-FL6">
+                                <rect key="frame" x="73" y="213" width="175" height="258"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="175" id="LQv-vD-Zex"/>
+                                    <constraint firstAttribute="height" constant="258" id="Uaj-iW-AUe"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="D4R-Mq-FL6" secondAttribute="centerX" id="7bY-iw-LhS"/>
+                            <constraint firstAttribute="centerY" secondItem="D4R-Mq-FL6" secondAttribute="centerY" constant="-58" id="fVQ-oN-XHZ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="answerText" destination="D4R-Mq-FL6" id="wdW-xM-4rV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j1L-bE-6Wc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-646" y="366.5"/>
+        </scene>
         <!--Drawer View Controller-->
         <scene sceneID="wLe-sI-vcJ">
             <objects>

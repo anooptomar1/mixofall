@@ -15,9 +15,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        var currentRootView = window?.rootViewController
+        //var currentRootView = window?.rootViewController
+        var currentRootView = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("touchyVC") as TouchyViewController
         
-        var navController = UINavigationController(rootViewController: currentRootView!)
+        var navController = UINavigationController(rootViewController: currentRootView)
         
         window?.rootViewController = navController
         
