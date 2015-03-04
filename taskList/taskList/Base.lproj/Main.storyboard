@@ -92,10 +92,10 @@
                                     <action selector="changeDetails:" destination="Ah7-4n-0Wa" eventType="editingDidEnd" id="9bC-St-dJD"/>
                                 </connections>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bE0-Kv-Vxa">
-                                <rect key="frame" x="16" y="139" width="67" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bE0-Kv-Vxa">
+                                <rect key="frame" x="16" y="139" width="72" height="21"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="67" id="6X1-KK-YbZ"/>
+                                    <constraint firstAttribute="width" constant="72" id="6X1-KK-YbZ"/>
                                     <constraint firstAttribute="height" constant="21" id="y1J-3I-qX4"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -110,28 +110,68 @@
                                     <action selector="changeDetails:" destination="Ah7-4n-0Wa" eventType="editingDidEnd" id="cAu-a2-97Y"/>
                                 </connections>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Picture:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aah-95-RaM">
+                                <rect key="frame" x="16" y="206" width="59" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="KH1-Ch-QaA"/>
+                                    <constraint firstAttribute="width" constant="59" id="d5W-hF-zhF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fe4-Ve-GlQ">
+                                <rect key="frame" x="232" y="236" width="136" height="128"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="tOs-HC-v3m"/>
+                                    <constraint firstAttribute="width" constant="136" id="ywV-Wu-mc9"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="FDS-NT-6oZ" appends="YES" id="ek5-p2-fJ6"/>
+                                </connections>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="9em-mB-hq6" secondAttribute="trailing" constant="16" id="2Oo-q8-SYt"/>
                             <constraint firstAttribute="trailing" secondItem="vow-M9-Osy" secondAttribute="trailing" constant="16" id="5tC-yb-iJD"/>
                             <constraint firstItem="vow-M9-Osy" firstAttribute="leading" secondItem="MMQ-IT-qOo" secondAttribute="leading" constant="16" id="8Wt-Pl-Sc7"/>
                             <constraint firstItem="vow-M9-Osy" firstAttribute="top" secondItem="MFE-fQ-w0J" secondAttribute="bottom" constant="8" id="KJZ-S9-5ET"/>
                             <constraint firstItem="bE0-Kv-Vxa" firstAttribute="top" secondItem="vow-M9-Osy" secondAttribute="bottom" constant="8" id="LZ7-zu-lIg"/>
+                            <constraint firstItem="aah-95-RaM" firstAttribute="leading" secondItem="MMQ-IT-qOo" secondAttribute="leading" constant="16" id="MHF-Cw-SKl"/>
                             <constraint firstItem="MFE-fQ-w0J" firstAttribute="leading" secondItem="MMQ-IT-qOo" secondAttribute="leading" constant="16" id="Nnz-Hs-dtV"/>
                             <constraint firstItem="9em-mB-hq6" firstAttribute="leading" secondItem="MMQ-IT-qOo" secondAttribute="leading" constant="16" id="Q8r-2f-bOC"/>
+                            <constraint firstItem="fe4-Ve-GlQ" firstAttribute="top" secondItem="9em-mB-hq6" secondAttribute="bottom" constant="38" id="Zfo-fP-GTm"/>
+                            <constraint firstItem="aah-95-RaM" firstAttribute="top" secondItem="9em-mB-hq6" secondAttribute="bottom" constant="8" id="ZmJ-C6-f5u"/>
+                            <constraint firstAttribute="centerX" secondItem="fe4-Ve-GlQ" secondAttribute="centerX" id="h2f-j8-fHg"/>
                             <constraint firstItem="9em-mB-hq6" firstAttribute="top" secondItem="bE0-Kv-Vxa" secondAttribute="bottom" constant="8" id="jaP-MC-D02"/>
                             <constraint firstItem="MFE-fQ-w0J" firstAttribute="top" secondItem="cIm-e0-J51" secondAttribute="bottom" constant="8" id="tN9-rX-39F"/>
                             <constraint firstItem="bE0-Kv-Vxa" firstAttribute="leading" secondItem="MMQ-IT-qOo" secondAttribute="leading" constant="16" id="zUY-yU-ECJ"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="DBe-5z-y4T" appends="YES" id="1oY-DK-vcz"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" title="Detail" id="cra-N8-TIN"/>
                     <connections>
                         <outlet property="locationText" destination="9em-mB-hq6" id="qWH-Nd-yWG"/>
                         <outlet property="nameText" destination="vow-M9-Osy" id="E1J-wS-oSa"/>
+                        <outlet property="taskImage" destination="fe4-Ve-GlQ" id="Aa5-RE-Ypq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lrm-kH-fPn" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="FDS-NT-6oZ">
+                    <connections>
+                        <action selector="changePicture:" destination="Ah7-4n-0Wa" id="LzI-VE-2UG"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="DBe-5z-y4T">
+                    <connections>
+                        <action selector="dismissKeyboard:" destination="Ah7-4n-0Wa" id="NeN-gl-9SZ"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1343" y="64"/>
         </scene>

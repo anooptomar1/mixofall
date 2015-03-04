@@ -22,9 +22,16 @@ class TaskList{
         }
     }
     
+    var _taskImage: UIImage{
+        didSet{
+            postNotification()
+        }
+    }
+    
     init(name: String, location: String){
         self._name = name
         self._location = location
+        self._taskImage = UIImage(named: "two185")!
     }
     
     func postNotification(){

@@ -68,6 +68,7 @@ class MasterViewController: UITableViewController {
 
         let task = tasks[indexPath.row] as TaskList
         cell.textLabel!.text = task._name
+        cell.imageView?.image = task._taskImage
         return cell
     }
 
