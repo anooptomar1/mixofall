@@ -1,9 +1,32 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="gb4-qX-k1G">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="wJE-LY-e18">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
     <scenes>
+        <!--Blue Demo View Controller-->
+        <scene sceneID="8nS-CP-DL6">
+            <objects>
+                <viewController storyboardIdentifier="blurVC" id="wJE-LY-e18" customClass="BlueDemoViewController" customModule="mixofall" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vKn-ib-feO"/>
+                        <viewControllerLayoutGuide type="bottom" id="6i8-uH-e9k"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cE6-oV-p5l">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="txP-yj-ufT">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZnD-jo-hzR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1341" y="368"/>
+        </scene>
         <!--Touchy View Controller-->
         <scene sceneID="wxv-fx-JBA">
             <objects>
@@ -31,6 +54,72 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pxW-BA-ujr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-981" y="366"/>
+        </scene>
+        <!--Stopwatch-->
+        <scene sceneID="TUZ-Fl-3mP">
+            <objects>
+                <viewController storyboardIdentifier="stopVC" id="5Yd-My-mXJ" customClass="StopWatchViewController" customModule="mixofall" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3jn-hZ-0od"/>
+                        <viewControllerLayoutGuide type="bottom" id="dTK-5n-3oS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fhu-0l-Q1Q">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q3T-9z-oiv">
+                                <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="IbE-Fc-MbA"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="P4v-05-TPe"/>
+                                    <barButtonItem systemItem="pause" id="LGM-1C-H7A">
+                                        <connections>
+                                            <action selector="onPauseButton:" destination="5Yd-My-mXJ" id="Cis-VZ-5O7"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nbF-0Y-Am1">
+                                <rect key="frame" x="148" y="114" width="24.5" height="54"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="54" id="2ll-Ma-Hea"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="45"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="dTK-5n-3oS" firstAttribute="top" secondItem="Q3T-9z-oiv" secondAttribute="bottom" id="1v3-xH-o8p"/>
+                            <constraint firstAttribute="trailing" secondItem="Q3T-9z-oiv" secondAttribute="trailing" id="DJM-68-fdj"/>
+                            <constraint firstAttribute="centerX" secondItem="nbF-0Y-Am1" secondAttribute="centerX" id="Y6K-g2-NnD"/>
+                            <constraint firstItem="nbF-0Y-Am1" firstAttribute="top" secondItem="3jn-hZ-0od" secondAttribute="bottom" constant="50" id="j2x-Xb-Wm2"/>
+                            <constraint firstItem="Q3T-9z-oiv" firstAttribute="leading" secondItem="fhu-0l-Q1Q" secondAttribute="leading" id="xLo-3P-t4W"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Stopwatch" id="jrC-D1-hcW">
+                        <barButtonItem key="leftBarButtonItem" systemItem="play" id="Gdn-zC-1dw">
+                            <connections>
+                                <action selector="onPlayButton:" destination="5Yd-My-mXJ" id="IuM-bi-2E4"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="stop" id="l6p-Tr-n71">
+                            <connections>
+                                <action selector="onStopButton:" destination="5Yd-My-mXJ" id="gDj-fq-5kd"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="timerDisplayLabel" destination="nbF-0Y-Am1" id="ce6-d0-tB2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0gr-tJ-5Af" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1341" y="988"/>
         </scene>
         <!--Notes View Controller-->
         <scene sceneID="DYH-R7-H7h">

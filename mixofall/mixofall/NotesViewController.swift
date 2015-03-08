@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import CoreBluetooth
 
-class NotesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class NotesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, CBCentralManagerDelegate{
 
     @IBOutlet weak var tableView: UITableView!
     
@@ -26,12 +27,9 @@ class NotesViewController: UIViewController, UITableViewDelegate, UITableViewDat
         tableView.backgroundView = UIImageView(image: UIImage(named: "bg")!)
     }
     
-//    override func setEditing(editing: Bool, animated: Bool) {
-//        super.setEditing(editing, animated: animated)
-//        
-//        tableView.setEditing(true, animated: true)
-//        
-//    }
+    func centralManagerDidUpdateState(central: CBCentralManager!) {
+        println(central.description)
+    }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("noteCell") as NoteTableViewCell
