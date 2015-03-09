@@ -15,12 +15,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        //var currentRootView = window?.rootViewController
-        var currentRootView = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("stopVC") as StopWatchViewController
         
-        var navController = UINavigationController(rootViewController: currentRootView)
+        var toDoStoryBoard = UIStoryboard(name: "ToDoSB", bundle: nil)
         
-        window?.rootViewController = navController
+        var mainViewController = UINavigationController(rootViewController: toDoStoryBoard.instantiateViewControllerWithIdentifier("MainVC") as MainViewController)
+        var addNewViewController = UINavigationController(rootViewController: toDoStoryBoard.instantiateViewControllerWithIdentifier("NewItemVC") as NewItemViewController)
+        
+        var listTabItem = UITabBarItem(title: "List", image: UIImage(named: "clipboard109"), tag: 0)
+        
+        
+        mainViewController.tabBarItem = listTabItem
+        
+        addNewViewController.tabBarItem = UITabBarItem(title: "Add", image: UIImage(named: "add10"), tag: 1)
+        
+        let tabBarController = UITabBarController()
+        tabBarController.viewControllers = [mainViewController, addNewViewController]
+        
+        self.window?.rootViewController = tabBarController
         
         return true
     }

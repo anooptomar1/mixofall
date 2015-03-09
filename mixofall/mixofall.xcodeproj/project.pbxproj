@@ -28,6 +28,10 @@
 		89A216811AA0430800223CFC /* mixofallTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A216801AA0430800223CFC /* mixofallTests.swift */; };
 		89A50CE21AAA9BA4002F3F48 /* BlueDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A50CE11AAA9BA4002F3F48 /* BlueDemoViewController.swift */; };
 		89A50CE51AAC0847002F3F48 /* StopWatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A50CE41AAC0847002F3F48 /* StopWatchViewController.swift */; };
+		89A50CE81AAD0204002F3F48 /* ToDoSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89A50CE71AAD0204002F3F48 /* ToDoSB.storyboard */; };
+		89A50CEA1AAD0232002F3F48 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A50CE91AAD0232002F3F48 /* MainViewController.swift */; };
+		89A50CEC1AAD0781002F3F48 /* NewItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A50CEB1AAD0781002F3F48 /* NewItemViewController.swift */; };
+		89A50CEE1AAD267E002F3F48 /* TodoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A50CED1AAD267E002F3F48 /* TodoTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +72,10 @@
 		89A216801AA0430800223CFC /* mixofallTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mixofallTests.swift; sourceTree = "<group>"; };
 		89A50CE11AAA9BA4002F3F48 /* BlueDemoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlueDemoViewController.swift; sourceTree = "<group>"; };
 		89A50CE41AAC0847002F3F48 /* StopWatchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StopWatchViewController.swift; sourceTree = "<group>"; };
+		89A50CE71AAD0204002F3F48 /* ToDoSB.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ToDoSB.storyboard; sourceTree = "<group>"; };
+		89A50CE91AAD0232002F3F48 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		89A50CEB1AAD0781002F3F48 /* NewItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewItemViewController.swift; sourceTree = "<group>"; };
+		89A50CED1AAD267E002F3F48 /* TodoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +168,7 @@
 		89A216671AA0430800223CFC /* mixofall */ = {
 			isa = PBXGroup;
 			children = (
+				89A50CE61AAD01E8002F3F48 /* TodoList */,
 				89A50CE31AAC0771002F3F48 /* stopWatch */,
 				89A50CDC1AAA9A74002F3F48 /* blurEffect */,
 				893824101AA4317E000710FD /* TblDemo */,
@@ -216,6 +225,17 @@
 				89A50CE41AAC0847002F3F48 /* StopWatchViewController.swift */,
 			);
 			name = stopWatch;
+			sourceTree = "<group>";
+		};
+		89A50CE61AAD01E8002F3F48 /* TodoList */ = {
+			isa = PBXGroup;
+			children = (
+				89A50CE71AAD0204002F3F48 /* ToDoSB.storyboard */,
+				89A50CE91AAD0232002F3F48 /* MainViewController.swift */,
+				89A50CEB1AAD0781002F3F48 /* NewItemViewController.swift */,
+				89A50CED1AAD267E002F3F48 /* TodoTableViewCell.swift */,
+			);
+			name = TodoList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -300,6 +320,7 @@
 			files = (
 				89A216701AA0430800223CFC /* Main.storyboard in Resources */,
 				89A216751AA0430800223CFC /* LaunchScreen.xib in Resources */,
+				89A50CE81AAD0204002F3F48 /* ToDoSB.storyboard in Resources */,
 				890703D01AA2DF7D00FA2242 /* SettingsNib.xib in Resources */,
 				89A216721AA0430800223CFC /* Images.xcassets in Resources */,
 			);
@@ -322,15 +343,18 @@
 				893824141AA43FB0000710FD /* MyList.swift in Sources */,
 				8938240B1AA3B409000710FD /* TouchyViewController.swift in Sources */,
 				89A2166D1AA0430800223CFC /* ViewController.swift in Sources */,
+				89A50CEE1AAD267E002F3F48 /* TodoTableViewCell.swift in Sources */,
 				8938240D1AA3D1D7000710FD /* RandomLineView.swift in Sources */,
 				89A50CE51AAC0847002F3F48 /* StopWatchViewController.swift in Sources */,
 				890703CE1AA2DF3B00FA2242 /* SettingsView.swift in Sources */,
 				890703D21AA2F35900FA2242 /* DrawerViewController.swift in Sources */,
+				89A50CEA1AAD0232002F3F48 /* MainViewController.swift in Sources */,
 				893824081AA3A181000710FD /* TouchyView.swift in Sources */,
 				893824121AA431AA000710FD /* NotesViewController.swift in Sources */,
 				89A2166B1AA0430800223CFC /* AppDelegate.swift in Sources */,
 				890703CB1AA2DD3E00FA2242 /* FXBlurView.m in Sources */,
 				89A065CB1AA3919800C321E2 /* EightBallViewController.swift in Sources */,
+				89A50CEC1AAD0781002F3F48 /* NewItemViewController.swift in Sources */,
 				893824181AA44657000710FD /* DetailsViewController.swift in Sources */,
 				893824161AA44212000710FD /* NoteTableViewCell.swift in Sources */,
 				89A50CE21AAA9BA4002F3F48 /* BlueDemoViewController.swift in Sources */,
