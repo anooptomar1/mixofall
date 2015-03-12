@@ -11,6 +11,10 @@
 		890703CE1AA2DF3B00FA2242 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890703CD1AA2DF3B00FA2242 /* SettingsView.swift */; };
 		890703D01AA2DF7D00FA2242 /* SettingsNib.xib in Resources */ = {isa = PBXBuildFile; fileRef = 890703CF1AA2DF7D00FA2242 /* SettingsNib.xib */; };
 		890703D21AA2F35900FA2242 /* DrawerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890703D11AA2F35900FA2242 /* DrawerViewController.swift */; };
+		891B31811AB1742C009FF581 /* mapsSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 891B31801AB1742C009FF581 /* mapsSB.storyboard */; };
+		891B31831AB17444009FF581 /* MapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891B31821AB17444009FF581 /* MapsViewController.swift */; };
+		891B31851AB174E4009FF581 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 891B31841AB174E4009FF581 /* MapKit.framework */; };
+		891B31871AB175A2009FF581 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891B31861AB175A2009FF581 /* LocationViewController.swift */; };
 		893824081AA3A181000710FD /* TouchyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893824071AA3A181000710FD /* TouchyView.swift */; };
 		8938240B1AA3B409000710FD /* TouchyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8938240A1AA3B409000710FD /* TouchyViewController.swift */; };
 		8938240D1AA3D1D7000710FD /* RandomLineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8938240C1AA3D1D7000710FD /* RandomLineView.swift */; };
@@ -53,6 +57,10 @@
 		890703CD1AA2DF3B00FA2242 /* SettingsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		890703CF1AA2DF7D00FA2242 /* SettingsNib.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsNib.xib; sourceTree = "<group>"; };
 		890703D11AA2F35900FA2242 /* DrawerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawerViewController.swift; sourceTree = "<group>"; };
+		891B31801AB1742C009FF581 /* mapsSB.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = mapsSB.storyboard; sourceTree = "<group>"; };
+		891B31821AB17444009FF581 /* MapsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapsViewController.swift; sourceTree = "<group>"; };
+		891B31841AB174E4009FF581 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		891B31861AB175A2009FF581 /* LocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
 		893824071AA3A181000710FD /* TouchyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TouchyView.swift; sourceTree = "<group>"; };
 		8938240A1AA3B409000710FD /* TouchyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TouchyViewController.swift; sourceTree = "<group>"; };
 		8938240C1AA3D1D7000710FD /* RandomLineView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomLineView.swift; sourceTree = "<group>"; };
@@ -87,6 +95,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				891B31851AB174E4009FF581 /* MapKit.framework in Frameworks */,
 				8938244D1AA6B7C5000710FD /* CoreBluetooth.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -121,6 +130,17 @@
 			name = Drawer;
 			sourceTree = "<group>";
 		};
+		891B317F1AB173AE009FF581 /* mapDemo */ = {
+			isa = PBXGroup;
+			children = (
+				891B31801AB1742C009FF581 /* mapsSB.storyboard */,
+				891B31821AB17444009FF581 /* MapsViewController.swift */,
+				891B31861AB175A2009FF581 /* LocationViewController.swift */,
+			);
+			name = mapDemo;
+			path = ..;
+			sourceTree = "<group>";
+		};
 		893824091AA3A18B000710FD /* Touchy */ = {
 			isa = PBXGroup;
 			children = (
@@ -153,6 +173,7 @@
 		89A2165C1AA0430800223CFC = {
 			isa = PBXGroup;
 			children = (
+				891B31841AB174E4009FF581 /* MapKit.framework */,
 				8938244C1AA6B7C5000710FD /* CoreBluetooth.framework */,
 				89A216671AA0430800223CFC /* mixofall */,
 				89A2167D1AA0430800223CFC /* mixofallTests */,
@@ -172,6 +193,7 @@
 		89A216671AA0430800223CFC /* mixofall */ = {
 			isa = PBXGroup;
 			children = (
+				891B317F1AB173AE009FF581 /* mapDemo */,
 				89A50CEF1AAD75D0002F3F48 /* GravityDemo */,
 				89A50CE61AAD01E8002F3F48 /* TodoList */,
 				89A50CE31AAC0771002F3F48 /* stopWatch */,
@@ -335,6 +357,7 @@
 				89A50CF11AAD75FF002F3F48 /* DyAnim.storyboard in Resources */,
 				89A216701AA0430800223CFC /* Main.storyboard in Resources */,
 				89A216751AA0430800223CFC /* LaunchScreen.xib in Resources */,
+				891B31811AB1742C009FF581 /* mapsSB.storyboard in Resources */,
 				89A50CE81AAD0204002F3F48 /* ToDoSB.storyboard in Resources */,
 				890703D01AA2DF7D00FA2242 /* SettingsNib.xib in Resources */,
 				89A216721AA0430800223CFC /* Images.xcassets in Resources */,
@@ -355,6 +378,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				891B31871AB175A2009FF581 /* LocationViewController.swift in Sources */,
 				893824141AA43FB0000710FD /* MyList.swift in Sources */,
 				8938240B1AA3B409000710FD /* TouchyViewController.swift in Sources */,
 				89A50CF31AAD7621002F3F48 /* MainAnimationViewController.swift in Sources */,
@@ -370,6 +394,7 @@
 				89A2166B1AA0430800223CFC /* AppDelegate.swift in Sources */,
 				890703CB1AA2DD3E00FA2242 /* FXBlurView.m in Sources */,
 				89A065CB1AA3919800C321E2 /* EightBallViewController.swift in Sources */,
+				891B31831AB17444009FF581 /* MapsViewController.swift in Sources */,
 				89A50CEC1AAD0781002F3F48 /* NewItemViewController.swift in Sources */,
 				893824181AA44657000710FD /* DetailsViewController.swift in Sources */,
 				893824161AA44212000710FD /* NoteTableViewCell.swift in Sources */,

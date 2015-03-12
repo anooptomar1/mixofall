@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+    </dependencies>
+    <scenes>
+        <!--Maps View Controller-->
+        <scene sceneID="e1S-8J-kBJ">
+            <objects>
+                <viewController storyboardIdentifier="mapsVC" id="j1h-t8-Eys" customClass="MapsViewController" customModule="mixofall" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="sK2-wZ-qoQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wDK-L2-xHB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ms0-Eu-C3J">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="uqR-dI-dcO">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KzO-ek-buD">
+                                <rect key="frame" x="133.5" y="518" width="53" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="53" id="AK1-mx-07I"/>
+                                    <constraint firstAttribute="height" constant="30" id="IKT-9Y-OEe"/>
+                                </constraints>
+                                <state key="normal" title="Choose">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onChoose:" destination="j1h-t8-Eys" eventType="touchUpInside" id="wb0-Et-eew"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="uqR-dI-dcO" firstAttribute="leading" secondItem="ms0-Eu-C3J" secondAttribute="leading" id="LdY-ey-aXB"/>
+                            <constraint firstAttribute="centerX" secondItem="KzO-ek-buD" secondAttribute="centerX" id="PJp-LI-HPt"/>
+                            <constraint firstAttribute="trailing" secondItem="uqR-dI-dcO" secondAttribute="trailing" id="PKO-bb-oH7"/>
+                            <constraint firstItem="uqR-dI-dcO" firstAttribute="top" secondItem="ms0-Eu-C3J" secondAttribute="top" id="PKy-ff-Lio"/>
+                            <constraint firstItem="wDK-L2-xHB" firstAttribute="top" secondItem="uqR-dI-dcO" secondAttribute="bottom" id="iUx-DT-NdI"/>
+                            <constraint firstItem="wDK-L2-xHB" firstAttribute="top" secondItem="KzO-ek-buD" secondAttribute="bottom" constant="20" id="zB6-iF-9qF"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="9LM-bo-53g"/>
+                    <connections>
+                        <outlet property="mapView" destination="uqR-dI-dcO" id="atQ-OC-dIk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eAZ-s8-Rej" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="145.06666666666666" y="243.29333333333332"/>
+        </scene>
+        <!--Location View Controller-->
+        <scene sceneID="bJ5-95-9u6">
+            <objects>
+                <viewController storyboardIdentifier="locationVC" id="UED-3g-R15" customClass="LocationViewController" customModule="mixofall" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="o2G-y5-4Ce"/>
+                        <viewControllerLayoutGuide type="bottom" id="KB1-qi-8ka"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0X1-C2-ucZ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wej-YW-MHo">
+                                <rect key="frame" x="16" y="64" width="46" height="30"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onButtonClick:" destination="UED-3g-R15" eventType="touchUpInside" id="nNg-u9-zHH"/>
+                                    <segue destination="j1h-t8-Eys" kind="modal" id="gbX-NI-gdf"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="vXs-Qp-5fa"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EqL-Hg-EH7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="638" y="627"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="pOE-fb-jfw">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Wdm-hV-FRY" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="7Pv-GS-qCZ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="UED-3g-R15" kind="relationship" relationship="rootViewController" id="nei-xB-HL9"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5gN-2d-CMT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="666" y="-73"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

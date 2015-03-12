@@ -40,6 +40,7 @@ class PhotoMapViewController: UIViewController, UIImagePickerControllerDelegate,
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
+        println(zoomLocation?)
         if zoomLocation != nil{
             var viewRegion: MKCoordinateRegion = MKCoordinateRegionMakeWithDistance(zoomLocation!, 0.5 * 1609.344, 0.5 * 1609.344);
             self.mapView.setRegion(viewRegion, animated: true)
@@ -58,11 +59,34 @@ class PhotoMapViewController: UIViewController, UIImagePickerControllerDelegate,
         var lng = zoomLocation!.longitude as NSNumber
         var latString = "\(lat)"
         var lngString = "\(lng)"
-        
+        println(zoomLocation?)
         println("inside didselectlocation")
         println(latString + " " + lngString)
+        loadMap(location.coordinate)
+    }
+    
+    func loadMap(location: CLLocationCoordinate2D){
+        var viewRegion: MKCoordinateRegion = MKCoordinateRegionMakeWithDistance(location, 0.5 * 1609.344, 0.5 * 1609.344);
+        self.mapView.setRegion(viewRegion, animated: true)
     }
 
+    func mapView(mapView: MKMapView!, viewForAnnotation annotation: MKAnnotation!) -> MKAnnotationView! {
+        
+        let reuseID = "myAnnotationView"
+        
+        var annotationView = mapView.dequeueReusableAnnotationViewWithIdentifier(reuseID)
+        if (annotationView == nil) {
+            annotationView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: reuseID)
+            annotationView.canShowCallout = true
+            annotationView.leftCalloutAccessoryView = UIImageView(frame: CGRect(x:0, y:0, width: 50, height:50))
+        }
+        
+        let imageView = annotationView.leftCalloutAccessoryView as UIImageView
+        imageView.image = UIImage(named: "juggle")
+        
+        return annotationView
+    }
+    
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [NSObject : AnyObject]) {
         originalImage = info[UIImagePickerControllerOriginalImage]  as? UIImage
         editedImage = info[UIImagePickerControllerEditedImage] as? UIImage

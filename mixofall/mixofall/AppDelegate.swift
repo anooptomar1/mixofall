@@ -15,7 +15,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        self.window?.rootViewController = UIStoryboard(name: "DyAnim", bundle: nil).instantiateViewControllerWithIdentifier("mainAnimVC") as MainAnimationViewController
+        
+        var nav = UINavigationController(rootViewController: UIStoryboard(name: "mapsSB", bundle: nil).instantiateViewControllerWithIdentifier("mapsVC") as MapsViewController)
+        
+        self.window?.rootViewController = nav
         
         return true
     }
