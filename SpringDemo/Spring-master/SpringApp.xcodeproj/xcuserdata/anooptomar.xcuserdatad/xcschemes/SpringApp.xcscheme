@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "8949D5A41AB2BAE400DC2F66"
-               BuildableName = "SpringDemo.app"
-               BlueprintName = "SpringDemo"
-               ReferencedContainer = "container:SpringDemo.xcodeproj">
+               BlueprintIdentifier = "9641173A1A5BE90A000E3A5A"
+               BuildableName = "SpringApp.app"
+               BlueprintName = "SpringApp"
+               ReferencedContainer = "container:SpringApp.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -28,10 +28,24 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "8949D5B91AB2BAE400DC2F66"
-               BuildableName = "SpringDemoTests.xctest"
-               BlueprintName = "SpringDemoTests"
-               ReferencedContainer = "container:SpringDemo.xcodeproj">
+               BlueprintIdentifier = "9641174F1A5BE90A000E3A5A"
+               BuildableName = "SpringAppTests.xctest"
+               BlueprintName = "SpringAppTests"
+               ReferencedContainer = "container:SpringApp.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "1A4FDA3C1A6E44780099D309"
+               BuildableName = "SpringTests.xctest"
+               BlueprintName = "SpringTests"
+               ReferencedContainer = "container:SpringApp.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -46,20 +60,30 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "8949D5B91AB2BAE400DC2F66"
-               BuildableName = "SpringDemoTests.xctest"
-               BlueprintName = "SpringDemoTests"
-               ReferencedContainer = "container:SpringDemo.xcodeproj">
+               BlueprintIdentifier = "9641174F1A5BE90A000E3A5A"
+               BuildableName = "SpringAppTests.xctest"
+               BlueprintName = "SpringAppTests"
+               ReferencedContainer = "container:SpringApp.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "1A4FDA3C1A6E44780099D309"
+               BuildableName = "SpringTests.xctest"
+               BlueprintName = "SpringTests"
+               ReferencedContainer = "container:SpringApp.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "8949D5A41AB2BAE400DC2F66"
-            BuildableName = "SpringDemo.app"
-            BlueprintName = "SpringDemo"
-            ReferencedContainer = "container:SpringDemo.xcodeproj">
+            BlueprintIdentifier = "9641173A1A5BE90A000E3A5A"
+            BuildableName = "SpringApp.app"
+            BlueprintName = "SpringApp"
+            ReferencedContainer = "container:SpringApp.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -76,10 +100,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "8949D5A41AB2BAE400DC2F66"
-            BuildableName = "SpringDemo.app"
-            BlueprintName = "SpringDemo"
-            ReferencedContainer = "container:SpringDemo.xcodeproj">
+            BlueprintIdentifier = "9641173A1A5BE90A000E3A5A"
+            BuildableName = "SpringApp.app"
+            BlueprintName = "SpringApp"
+            ReferencedContainer = "container:SpringApp.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -95,10 +119,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "8949D5A41AB2BAE400DC2F66"
-            BuildableName = "SpringDemo.app"
-            BlueprintName = "SpringDemo"
-            ReferencedContainer = "container:SpringDemo.xcodeproj">
+            BlueprintIdentifier = "9641173A1A5BE90A000E3A5A"
+            BuildableName = "SpringApp.app"
+            BlueprintName = "SpringApp"
+            ReferencedContainer = "container:SpringApp.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

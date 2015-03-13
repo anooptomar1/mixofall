@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
     </dependencies>
@@ -12,40 +12,112 @@
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS" customClass="SpringView" customModule="SpringDemo" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yD3-nq-T8e" customClass="SpringView" customModule="SpringDemo" customModuleProvider="target">
-                                <rect key="frame" x="110" y="234" width="100" height="100"/>
-                                <color key="backgroundColor" red="0.0" green="0.67378123619999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="atP-Ku-jxN"/>
-                                    <constraint firstAttribute="width" constant="100" id="dyo-iu-iXW"/>
-                                </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="animation" value="shake"/>
-                                </userDefinedRuntimeAttributes>
-                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KBX-F8-XY4">
+                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                                <color key="backgroundColor" red="1" green="0.69331204690000003" blue="0.00083137051919999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Open another view">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="4YW-JS-sTE" kind="presentation" modalPresentationStyle="overCurrentContext" id="3rf-pO-DIm"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="centerY" secondItem="yD3-nq-T8e" secondAttribute="centerY" id="s34-ht-8og"/>
-                            <constraint firstAttribute="centerX" secondItem="yD3-nq-T8e" secondAttribute="centerX" id="vbv-Do-Xh4"/>
+                            <constraint firstAttribute="trailing" secondItem="KBX-F8-XY4" secondAttribute="trailing" id="27A-vd-YJw"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="KBX-F8-XY4" secondAttribute="bottom" id="KPG-7n-jbr"/>
+                            <constraint firstItem="KBX-F8-XY4" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="pdz-6H-qdG"/>
+                            <constraint firstItem="KBX-F8-XY4" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="tfY-LV-KQJ"/>
                         </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="YES"/>
+                        </userDefinedRuntimeAttributes>
                     </view>
-                    <connections>
-                        <outlet property="testView" destination="yD3-nq-T8e" id="1j4-9K-Xuk"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="162" y="366"/>
+        </scene>
+        <!--List View Controller-->
+        <scene sceneID="VFl-kz-84W">
+            <objects>
+                <viewController id="4YW-JS-sTE" customClass="ListViewController" customModule="SpringDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6j7-8Y-rry"/>
+                        <viewControllerLayoutGuide type="bottom" id="aYv-jT-Fxi"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hFG-UF-5sJ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AYW-ST-cHr" customClass="SpringView" customModule="SpringDemo" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="336" width="600" height="264"/>
+                                <subviews>
+                                    <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xBJ-lw-08J" customClass="SpringView" customModule="SpringDemo" customModuleProvider="target">
+                                        <rect key="frame" x="8" y="227" width="33" height="29"/>
+                                        <color key="backgroundColor" red="0.0" green="0.67378123619999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="L58-QK-iVX" customClass="SpringView" customModule="SpringDemo" customModuleProvider="target">
+                                        <rect key="frame" x="60" y="227" width="33" height="29"/>
+                                        <color key="backgroundColor" red="1" green="0.69331204690000003" blue="0.00083137051919999995" alpha="1" colorSpace="calibratedRGB"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="quC-jB-pOq" customClass="SpringView" customModule="SpringDemo" customModuleProvider="target">
+                                        <rect key="frame" x="111" y="227" width="33" height="29"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="264" id="1aF-Zy-TF5"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="us3-VE-Emj">
+                                <rect key="frame" x="16" y="20" width="568" height="308"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="closeView:" destination="4YW-JS-sTE" eventType="touchUpInside" id="bIE-4d-ppQ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="aYv-jT-Fxi" firstAttribute="top" secondItem="AYW-ST-cHr" secondAttribute="bottom" id="8jw-K7-LV2"/>
+                            <constraint firstItem="us3-VE-Emj" firstAttribute="leading" secondItem="hFG-UF-5sJ" secondAttribute="leading" constant="16" id="BCE-PL-G0S"/>
+                            <constraint firstAttribute="trailing" secondItem="us3-VE-Emj" secondAttribute="trailing" constant="16" id="VOk-gi-SuH"/>
+                            <constraint firstAttribute="trailing" secondItem="AYW-ST-cHr" secondAttribute="trailing" id="e6A-sH-Fhd"/>
+                            <constraint firstItem="us3-VE-Emj" firstAttribute="top" secondItem="6j7-8Y-rry" secondAttribute="bottom" id="fSH-I4-GBQ"/>
+                            <constraint firstItem="AYW-ST-cHr" firstAttribute="top" secondItem="us3-VE-Emj" secondAttribute="bottom" constant="8" id="hn0-Uv-g1x"/>
+                            <constraint firstItem="AYW-ST-cHr" firstAttribute="leading" secondItem="hFG-UF-5sJ" secondAttribute="leading" id="q1x-a1-dSI"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="blueButton" destination="xBJ-lw-08J" id="TSd-i7-5ec"/>
+                        <outlet property="menuView" destination="AYW-ST-cHr" id="pPl-xx-TbD"/>
+                        <outlet property="orangeBtn" destination="L58-QK-iVX" id="hU7-kt-5yj"/>
+                        <outlet property="whiteButton" destination="quC-jB-pOq" id="DRi-6d-AsB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JRx-Gd-Gq2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1036" y="387"/>
         </scene>
     </scenes>
-    <simulatedMetricsContainer key="defaultSimulatedMetrics">
-        <simulatedStatusBarMetrics key="statusBar"/>
-        <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4"/>
-    </simulatedMetricsContainer>
 </document>

@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  SpringDemo
 //
-//  Created by Anoop tomar on 3/11/15.
+//  Created by Anoop tomar on 3/12/15.
 //  Copyright (c) 2015 Anoop tomar. All rights reserved.
 //
 
@@ -15,7 +15,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+        UIApplication.sharedApplication().statusBarStyle = .Default
+        UIApplication.sharedApplication().statusBarHidden = false
         return true
     }
 
