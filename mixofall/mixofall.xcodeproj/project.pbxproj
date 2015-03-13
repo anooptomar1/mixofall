@@ -12,9 +12,10 @@
 		890703D01AA2DF7D00FA2242 /* SettingsNib.xib in Resources */ = {isa = PBXBuildFile; fileRef = 890703CF1AA2DF7D00FA2242 /* SettingsNib.xib */; };
 		890703D21AA2F35900FA2242 /* DrawerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890703D11AA2F35900FA2242 /* DrawerViewController.swift */; };
 		891B31811AB1742C009FF581 /* mapsSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 891B31801AB1742C009FF581 /* mapsSB.storyboard */; };
-		891B31831AB17444009FF581 /* MapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891B31821AB17444009FF581 /* MapsViewController.swift */; };
 		891B31851AB174E4009FF581 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 891B31841AB174E4009FF581 /* MapKit.framework */; };
-		891B31871AB175A2009FF581 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891B31861AB175A2009FF581 /* LocationViewController.swift */; };
+		893638D31AB26FFB00F7DF0B /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893638D21AB26FFB00F7DF0B /* PhotoViewController.swift */; };
+		893638D51AB2738800F7DF0B /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893638D41AB2738800F7DF0B /* LocationViewController.swift */; };
+		893638D71AB277D100F7DF0B /* PhotoMapAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893638D61AB277D100F7DF0B /* PhotoMapAnnotation.swift */; };
 		893824081AA3A181000710FD /* TouchyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893824071AA3A181000710FD /* TouchyView.swift */; };
 		8938240B1AA3B409000710FD /* TouchyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8938240A1AA3B409000710FD /* TouchyViewController.swift */; };
 		8938240D1AA3D1D7000710FD /* RandomLineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8938240C1AA3D1D7000710FD /* RandomLineView.swift */; };
@@ -58,9 +59,10 @@
 		890703CF1AA2DF7D00FA2242 /* SettingsNib.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsNib.xib; sourceTree = "<group>"; };
 		890703D11AA2F35900FA2242 /* DrawerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawerViewController.swift; sourceTree = "<group>"; };
 		891B31801AB1742C009FF581 /* mapsSB.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = mapsSB.storyboard; sourceTree = "<group>"; };
-		891B31821AB17444009FF581 /* MapsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapsViewController.swift; sourceTree = "<group>"; };
 		891B31841AB174E4009FF581 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
-		891B31861AB175A2009FF581 /* LocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
+		893638D21AB26FFB00F7DF0B /* PhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
+		893638D41AB2738800F7DF0B /* LocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
+		893638D61AB277D100F7DF0B /* PhotoMapAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoMapAnnotation.swift; sourceTree = "<group>"; };
 		893824071AA3A181000710FD /* TouchyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TouchyView.swift; sourceTree = "<group>"; };
 		8938240A1AA3B409000710FD /* TouchyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TouchyViewController.swift; sourceTree = "<group>"; };
 		8938240C1AA3D1D7000710FD /* RandomLineView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomLineView.swift; sourceTree = "<group>"; };
@@ -134,8 +136,9 @@
 			isa = PBXGroup;
 			children = (
 				891B31801AB1742C009FF581 /* mapsSB.storyboard */,
-				891B31821AB17444009FF581 /* MapsViewController.swift */,
-				891B31861AB175A2009FF581 /* LocationViewController.swift */,
+				893638D21AB26FFB00F7DF0B /* PhotoViewController.swift */,
+				893638D41AB2738800F7DF0B /* LocationViewController.swift */,
+				893638D61AB277D100F7DF0B /* PhotoMapAnnotation.swift */,
 			);
 			name = mapDemo;
 			path = ..;
@@ -378,7 +381,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				891B31871AB175A2009FF581 /* LocationViewController.swift in Sources */,
+				893638D51AB2738800F7DF0B /* LocationViewController.swift in Sources */,
 				893824141AA43FB0000710FD /* MyList.swift in Sources */,
 				8938240B1AA3B409000710FD /* TouchyViewController.swift in Sources */,
 				89A50CF31AAD7621002F3F48 /* MainAnimationViewController.swift in Sources */,
@@ -388,13 +391,14 @@
 				89A50CE51AAC0847002F3F48 /* StopWatchViewController.swift in Sources */,
 				890703CE1AA2DF3B00FA2242 /* SettingsView.swift in Sources */,
 				890703D21AA2F35900FA2242 /* DrawerViewController.swift in Sources */,
+				893638D31AB26FFB00F7DF0B /* PhotoViewController.swift in Sources */,
 				89A50CEA1AAD0232002F3F48 /* MainViewController.swift in Sources */,
 				893824081AA3A181000710FD /* TouchyView.swift in Sources */,
 				893824121AA431AA000710FD /* NotesViewController.swift in Sources */,
+				893638D71AB277D100F7DF0B /* PhotoMapAnnotation.swift in Sources */,
 				89A2166B1AA0430800223CFC /* AppDelegate.swift in Sources */,
 				890703CB1AA2DD3E00FA2242 /* FXBlurView.m in Sources */,
 				89A065CB1AA3919800C321E2 /* EightBallViewController.swift in Sources */,
-				891B31831AB17444009FF581 /* MapsViewController.swift in Sources */,
 				89A50CEC1AAD0781002F3F48 /* NewItemViewController.swift in Sources */,
 				893824181AA44657000710FD /* DetailsViewController.swift in Sources */,
 				893824161AA44212000710FD /* NoteTableViewCell.swift in Sources */,

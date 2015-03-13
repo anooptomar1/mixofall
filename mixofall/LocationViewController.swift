@@ -7,10 +7,9 @@
 //
 
 import UIKit
-import MapKit
 
 protocol LocationViewControllerDelegate: class{
-    func didSetLocation(location:CLLocationCoordinate2D)
+    func didSetLocation(locationViewController: LocationViewController, location: PhotoMapAnnotation)
 }
 
 class LocationViewController: UIViewController {
@@ -28,15 +27,10 @@ class LocationViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func onButtonPress(sender: UIButton) {
+        self.delegate?.didSetLocation(self, location: PhotoMapAnnotation(lat: 37.359974624688, lng: -122.026310127546))
+    }
 
-    @IBAction func onButtonClick(sender: AnyObject) {
-        self.delegate?.didSetLocation(CLLocationCoordinate2D(latitude: 37.5413311, longitude: -122.303767))
-        
-    }
-    
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        
-    }
     /*
     // MARK: - Navigation
 

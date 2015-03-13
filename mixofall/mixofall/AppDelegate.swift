@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
-        var nav = UINavigationController(rootViewController: UIStoryboard(name: "mapsSB", bundle: nil).instantiateViewControllerWithIdentifier("mapsVC") as MapsViewController)
+        var nav = UINavigationController(rootViewController: UIStoryboard(name: "mapsSB", bundle: nil).instantiateViewControllerWithIdentifier("photoVC") as PhotoViewController)
         
         self.window?.rootViewController = nav
         

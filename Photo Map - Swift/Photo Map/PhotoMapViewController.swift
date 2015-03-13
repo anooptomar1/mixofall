@@ -47,7 +47,10 @@ class PhotoMapViewController: UIViewController, UIImagePickerControllerDelegate,
         }
     }
 
-    func didSelectLocation(location: CLLocation) {
+    func didSelectLocation(locationViewController: LocationsViewController, location: CLLocation) {
+        
+        navigationController?.popViewControllerAnimated(true)
+        
         let annotation = MKPointAnnotation()
         annotation.coordinate = location.coordinate
         annotation.title = "picture"

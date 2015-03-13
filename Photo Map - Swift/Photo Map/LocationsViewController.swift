@@ -10,7 +10,7 @@ import UIKit
 import MapKit
 
 protocol LocationsViewControllerDelegate: class{
-    func didSelectLocation(location: CLLocation)
+    func didSelectLocation(locationViewController:LocationsViewController, location: CLLocation)
 }
 
 class LocationsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
@@ -80,9 +80,8 @@ class LocationsViewController: UIViewController, UITableViewDelegate, UITableVie
         
         println(latString + " " + lngString)
         
-        self.delegate?.didSelectLocation(CLLocation(latitude: lat.doubleValue, longitude: lng.doubleValue))
-        var phtoVC = self.storyboard?.instantiateViewControllerWithIdentifier("photoVC") as PhotoMapViewController
-        self.presentViewController(phtoVC, animated: true, completion: nil)
+        self.delegate?.didSelectLocation(self, location: CLLocation(latitude: lat.doubleValue, longitude: lng.doubleValue))
+        
     }
 
 }
