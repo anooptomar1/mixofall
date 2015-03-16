@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+    </dependencies>
+    <scenes>
+        <!--Weather View Controller-->
+        <scene sceneID="kMs-FK-kMd">
+            <objects>
+                <viewController storyboardIdentifier="weatherVC" id="lW7-OT-IzM" customClass="WeatherViewController" customModule="mixofall" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Fki-Xt-3R0"/>
+                        <viewControllerLayoutGuide type="bottom" id="w9x-ve-DU7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4W7-Ci-BET">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="weather" translatesAutoresizingMaskIntoConstraints="NO" id="BI8-iJ-gTh">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="BI8-iJ-gTh" secondAttribute="trailing" id="ABe-gA-9Ek"/>
+                            <constraint firstItem="BI8-iJ-gTh" firstAttribute="leading" secondItem="4W7-Ci-BET" secondAttribute="leading" id="Yay-WF-fVX"/>
+                            <constraint firstItem="w9x-ve-DU7" firstAttribute="top" secondItem="BI8-iJ-gTh" secondAttribute="bottom" id="ojw-5u-wuy"/>
+                            <constraint firstItem="BI8-iJ-gTh" firstAttribute="top" secondItem="4W7-Ci-BET" secondAttribute="top" id="rya-CK-iTw"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eN1-Cg-G3K" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="311" y="384"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="weather" width="1024" height="613"/>
+    </resources>
+</document>

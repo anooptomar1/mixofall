@@ -24,6 +24,10 @@
 		893824161AA44212000710FD /* NoteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893824151AA44212000710FD /* NoteTableViewCell.swift */; };
 		893824181AA44657000710FD /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893824171AA44657000710FD /* DetailsViewController.swift */; };
 		8938244D1AA6B7C5000710FD /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8938244C1AA6B7C5000710FD /* CoreBluetooth.framework */; };
+		8949D67F1AB4B0AD00DC2F66 /* weatherSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8949D67E1AB4B0AD00DC2F66 /* weatherSB.storyboard */; };
+		8949D6811AB4B10200DC2F66 /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8949D6801AB4B10200DC2F66 /* WeatherViewController.swift */; };
+		898F45921AB6945800CAFC2F /* WeatherSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898F45911AB6945800CAFC2F /* WeatherSettings.swift */; };
+		898F45941AB6947F00CAFC2F /* WeatherSettings.xib in Resources */ = {isa = PBXBuildFile; fileRef = 898F45931AB6947F00CAFC2F /* WeatherSettings.xib */; };
 		89A065CB1AA3919800C321E2 /* EightBallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A065C91AA3919800C321E2 /* EightBallViewController.swift */; };
 		89A2166B1AA0430800223CFC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A2166A1AA0430800223CFC /* AppDelegate.swift */; };
 		89A2166D1AA0430800223CFC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A2166C1AA0430800223CFC /* ViewController.swift */; };
@@ -71,6 +75,10 @@
 		893824151AA44212000710FD /* NoteTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteTableViewCell.swift; sourceTree = "<group>"; };
 		893824171AA44657000710FD /* DetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		8938244C1AA6B7C5000710FD /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		8949D67E1AB4B0AD00DC2F66 /* weatherSB.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = weatherSB.storyboard; sourceTree = "<group>"; };
+		8949D6801AB4B10200DC2F66 /* WeatherViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
+		898F45911AB6945800CAFC2F /* WeatherSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherSettings.swift; sourceTree = "<group>"; };
+		898F45931AB6947F00CAFC2F /* WeatherSettings.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WeatherSettings.xib; sourceTree = "<group>"; };
 		89A065C91AA3919800C321E2 /* EightBallViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EightBallViewController.swift; sourceTree = "<group>"; };
 		89A216651AA0430800223CFC /* mixofall.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mixofall.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		89A216691AA0430800223CFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -165,6 +173,17 @@
 			name = TblDemo;
 			sourceTree = "<group>";
 		};
+		8949D67D1AB4B06300DC2F66 /* weatherDemo */ = {
+			isa = PBXGroup;
+			children = (
+				8949D67E1AB4B0AD00DC2F66 /* weatherSB.storyboard */,
+				8949D6801AB4B10200DC2F66 /* WeatherViewController.swift */,
+				898F45911AB6945800CAFC2F /* WeatherSettings.swift */,
+				898F45931AB6947F00CAFC2F /* WeatherSettings.xib */,
+			);
+			name = weatherDemo;
+			sourceTree = "<group>";
+		};
 		89A065C81AA3915D00C321E2 /* eightBall */ = {
 			isa = PBXGroup;
 			children = (
@@ -196,6 +215,7 @@
 		89A216671AA0430800223CFC /* mixofall */ = {
 			isa = PBXGroup;
 			children = (
+				8949D67D1AB4B06300DC2F66 /* weatherDemo */,
 				891B317F1AB173AE009FF581 /* mapDemo */,
 				89A50CEF1AAD75D0002F3F48 /* GravityDemo */,
 				89A50CE61AAD01E8002F3F48 /* TodoList */,
@@ -357,11 +377,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8949D67F1AB4B0AD00DC2F66 /* weatherSB.storyboard in Resources */,
 				89A50CF11AAD75FF002F3F48 /* DyAnim.storyboard in Resources */,
 				89A216701AA0430800223CFC /* Main.storyboard in Resources */,
 				89A216751AA0430800223CFC /* LaunchScreen.xib in Resources */,
 				891B31811AB1742C009FF581 /* mapsSB.storyboard in Resources */,
 				89A50CE81AAD0204002F3F48 /* ToDoSB.storyboard in Resources */,
+				898F45941AB6947F00CAFC2F /* WeatherSettings.xib in Resources */,
 				890703D01AA2DF7D00FA2242 /* SettingsNib.xib in Resources */,
 				89A216721AA0430800223CFC /* Images.xcassets in Resources */,
 			);
@@ -396,7 +418,9 @@
 				893824081AA3A181000710FD /* TouchyView.swift in Sources */,
 				893824121AA431AA000710FD /* NotesViewController.swift in Sources */,
 				893638D71AB277D100F7DF0B /* PhotoMapAnnotation.swift in Sources */,
+				8949D6811AB4B10200DC2F66 /* WeatherViewController.swift in Sources */,
 				89A2166B1AA0430800223CFC /* AppDelegate.swift in Sources */,
+				898F45921AB6945800CAFC2F /* WeatherSettings.swift in Sources */,
 				890703CB1AA2DD3E00FA2242 /* FXBlurView.m in Sources */,
 				89A065CB1AA3919800C321E2 /* EightBallViewController.swift in Sources */,
 				89A50CEC1AAD0781002F3F48 /* NewItemViewController.swift in Sources */,

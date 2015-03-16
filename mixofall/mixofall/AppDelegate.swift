@@ -15,12 +15,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        
+        weatherDemoStartup()
+        return true
+    }
+    
+    func weatherDemoStartup(){
+        //var nav = UINavigationController(rootViewController: UIStoryboard(name: "weatherSB", bundle: nil).instantiateViewControllerWithIdentifier("weatherVC") as WeatherViewController)
+        self.window?.rootViewController = UIStoryboard(name: "weatherSB", bundle: nil).instantiateViewControllerWithIdentifier("weatherVC") as WeatherViewController
+        UIApplication.sharedApplication().statusBarStyle = UIStatusBarStyle.Default
+        UIApplication.sharedApplication().statusBarHidden = false
+    }
+    
+    func mapDemoStartup(){
         var nav = UINavigationController(rootViewController: UIStoryboard(name: "mapsSB", bundle: nil).instantiateViewControllerWithIdentifier("photoVC") as PhotoViewController)
         
         self.window?.rootViewController = nav
-        
-        return true
     }
 
     func TabBarStartUP(){
