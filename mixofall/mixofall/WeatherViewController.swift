@@ -21,6 +21,15 @@ class WeatherViewController: UIViewController {
         super.viewDidAppear(animated)
     }
     
+    override func didRotateFromInterfaceOrientation(fromInterfaceOrientation: UIInterfaceOrientation) {
+        super.didRotateFromInterfaceOrientation(fromInterfaceOrientation)
+        if(weatherSettings != nil){
+            weatherSettings.removeFromSuperview()
+            weatherSettings = nil
+            addWeatherSettings()
+        }
+    }
+    
     func addWeatherSettings(){
         weatherSettings = NSBundle.mainBundle().loadNibNamed("WeatherSettings", owner: self, options: nil).last as WeatherSettings
         weatherSettings.frame = CGRectMake(0, self.view.frame.height - 100, self.view.frame.width, self.view.frame.height)
