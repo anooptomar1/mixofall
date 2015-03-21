@@ -11,10 +11,11 @@ import UIKit
 class CellTableViewCell: UITableViewCell {
    
     @IBOutlet weak var cellBack: UIView!
+    @IBOutlet weak var cellLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
+        self.cellLabel.preferredMaxLayoutWidth  = self.frame.width
     }
 
     override func setSelected(selected: Bool, animated: Bool) {

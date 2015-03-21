@@ -23,6 +23,8 @@ class ViewController: UIViewController {
         
         var headerFrame = CGRectMake(0, 0, self.tableView.frame.width, self.tableView.frame.height - 100)
         self.tableView.tableHeaderView = UIView(frame: headerFrame)
+        
+        tableView.rowHeight = UITableViewAutomaticDimension
     }
 
     override func didReceiveMemoryWarning() {
@@ -40,12 +42,15 @@ extension ViewController: UITableViewDelegate{
 extension ViewController: UITableViewDataSource{
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = self.tableView.dequeueReusableCellWithIdentifier("Cell") as CellTableViewCell
-        
+        cell.cellLabel.text = "dakfa kfj lsfflas f fj flsd sadf ds sd sadfslk sld fsa fsaf  sdfls ls fkd fsf slf f  flfjldfld ff dslf flk sk flks fsklf dlsk sdalkf saklfj slf sfk s;fk apofefdflk fdsa flsaf sfjlakf asklfj lfja djafl jlfka dkfjadfjdklf klsdfj sdaf ldakfl lkdajfkdlafjaklfjak dk fdasklf dfk af f sadf afdklsfjdkfd dfs faksj fldfkdsjf sfkhdhfjdvjkvjhvnvjahak ks flkasdf jdisfj sf sdjflkanflakjfaklajfs fakjfla jffjaslk"
         return cell
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 40
+    }
+    func tableView(tableView: UITableView, estimatedHeightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return UITableViewAutomaticDimension
     }
     
 }
