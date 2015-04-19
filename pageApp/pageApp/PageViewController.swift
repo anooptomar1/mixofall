@@ -8,8 +8,8 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class PageViewController: UIViewController {
+    
     var pageController: UIPageViewController?
     var pageContent = NSArray()
     
@@ -17,12 +17,14 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         createPageContent()
-        pageController = UIPageViewController(transitionStyle: UIPageViewControllerTransitionStyle.PageCurl, navigationOrientation: UIPageViewControllerNavigationOrientation.Horizontal, options: nil)
+        pageController = UIPageViewController(transitionStyle: UIPageViewControllerTransitionStyle.Scroll, navigationOrientation: UIPageViewControllerNavigationOrientation.Horizontal, options: nil)
         
         pageController?.dataSource = self
         pageController?.delegate = self
         
         let firstVC:ContentViewController = viewControllerAtIndex(0)!
+        let secondVC: ContentViewController = viewControllerAtIndex(1)!
+        
         pageController?.setViewControllers([firstVC], direction: UIPageViewControllerNavigationDirection.Forward, animated: true, completion: nil)
         self.addChildViewController(pageController!)
         self.view.addSubview(self.pageController!.view)
@@ -42,12 +44,12 @@ class ViewController: UIViewController {
         
         pageContent = pageStrings
     }
-
+    
     func viewControllerAtIndex(index: Int) -> ContentViewController?{
         if(pageContent.count == 0 || index >= pageContent.count){
             return nil
         }
-        let contentVC = self.storyboard?.instantiateViewControllerWithIdentifier("contentView") as ContentViewController
+        let contentVC = self.storyboard?.instantiateViewControllerWithIdentifier("contentView") as! ContentViewController
         contentVC.dataObject = pageContent[index]
         return contentVC
     }
@@ -59,12 +61,12 @@ class ViewController: UIViewController {
             return NSNotFound
         }
     }
-
+    
 }
 
-extension ViewController: UIPageViewControllerDataSource{
+extension PageViewController: UIPageViewControllerDataSource{
     func pageViewController(pageViewController: UIPageViewController, viewControllerBeforeViewController viewController: UIViewController) -> UIViewController? {
-        var index = indexOfViewController(viewController as ContentViewController)
+        var index = indexOfViewController(viewController as! ContentViewController)
         if index == 0 || index == NSNotFound{
             return nil
         }
@@ -75,7 +77,7 @@ extension ViewController: UIPageViewControllerDataSource{
     }
     
     func pageViewController(pageViewController: UIPageViewController, viewControllerAfterViewController viewController: UIViewController) -> UIViewController? {
-        var index = indexOfViewController(viewController as ContentViewController)
+        var index = indexOfViewController(viewController as! ContentViewController)
         if index == NSNotFound{
             return nil
         }
@@ -90,4 +92,4 @@ extension ViewController: UIPageViewControllerDataSource{
     }
 }
 
-extension ViewController: UIPageViewControllerDelegate{}
+extension PageViewController: UIPageViewControllerDelegate{}

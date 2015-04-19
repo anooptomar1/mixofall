@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--File Mgr View Controller-->
+        <scene sceneID="Bie-fw-3Bd">
+            <objects>
+                <viewController storyboardIdentifier="fileVC" id="2CQ-dc-Mfu" customClass="FileMgrViewController" customModule="pageApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="DBD-dc-rw8"/>
+                        <viewControllerLayoutGuide type="bottom" id="w1h-7F-j8D"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="itS-PN-TtA">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zFH-cN-V3G">
+                                <rect key="frame" x="16" y="28" width="568" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TdQ-xl-AxJ">
+                                <rect key="frame" x="283" y="66" width="34" height="30"/>
+                                <state key="normal" title="Save">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onSave:" destination="2CQ-dc-Mfu" eventType="touchUpInside" id="sDG-Fp-IBX"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="zFH-cN-V3G" firstAttribute="top" secondItem="DBD-dc-rw8" secondAttribute="bottom" constant="8" id="Fs0-dS-MxB"/>
+                            <constraint firstItem="TdQ-xl-AxJ" firstAttribute="top" secondItem="zFH-cN-V3G" secondAttribute="bottom" constant="8" id="VGq-wM-wHk"/>
+                            <constraint firstItem="zFH-cN-V3G" firstAttribute="leading" secondItem="itS-PN-TtA" secondAttribute="leadingMargin" id="hC6-r8-wYj"/>
+                            <constraint firstItem="zFH-cN-V3G" firstAttribute="trailing" secondItem="itS-PN-TtA" secondAttribute="trailingMargin" id="hic-11-0nh"/>
+                            <constraint firstAttribute="centerX" secondItem="TdQ-xl-AxJ" secondAttribute="centerX" id="ipr-0e-tyC"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="textBox" destination="zFH-cN-V3G" id="jC6-Pp-xba"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5qb-wL-gIq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="293" y="403"/>
+        </scene>
+    </scenes>
+</document>

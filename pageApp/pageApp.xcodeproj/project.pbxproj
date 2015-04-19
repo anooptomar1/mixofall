@@ -7,13 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8982D7381AD90ADE0050408E /* fileSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8982D7371AD90ADE0050408E /* fileSB.storyboard */; };
+		8982D73A1AD90AFB0050408E /* FileMgrViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8982D7391AD90AFB0050408E /* FileMgrViewController.swift */; };
+		8982D73C1AD9D63D0050408E /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8982D73B1AD9D63D0050408E /* CoreBluetooth.framework */; };
+		8982D73F1AD9D6700050408E /* BluetoothSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8982D73E1AD9D6700050408E /* BluetoothSB.storyboard */; };
+		8982D7411AD9D6890050408E /* BlueToothAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8982D7401AD9D6890050408E /* BlueToothAViewController.swift */; };
+		8982D7431AD9D7180050408E /* CommonCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8982D7421AD9D7180050408E /* CommonCode.swift */; };
 		899A09481AD4EE0F00C7458A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899A09471AD4EE0F00C7458A /* AppDelegate.swift */; };
-		899A094A1AD4EE0F00C7458A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899A09491AD4EE0F00C7458A /* ViewController.swift */; };
+		899A094A1AD4EE0F00C7458A /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899A09491AD4EE0F00C7458A /* PageViewController.swift */; };
 		899A094D1AD4EE0F00C7458A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 899A094B1AD4EE0F00C7458A /* Main.storyboard */; };
 		899A094F1AD4EE0F00C7458A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 899A094E1AD4EE0F00C7458A /* Images.xcassets */; };
 		899A09521AD4EE0F00C7458A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 899A09501AD4EE0F00C7458A /* LaunchScreen.xib */; };
 		899A095E1AD4EE0F00C7458A /* pageAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899A095D1AD4EE0F00C7458A /* pageAppTests.swift */; };
 		899A09681AD4EE7800C7458A /* ContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899A09671AD4EE7800C7458A /* ContentViewController.swift */; };
+		89B7C2261ADE2C840024F8F8 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89B7C2251ADE2C840024F8F8 /* CoreLocation.framework */; };
+		89B7C2281ADE2C8A0024F8F8 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89B7C2271ADE2C8A0024F8F8 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,10 +35,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8982D7371AD90ADE0050408E /* fileSB.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = fileSB.storyboard; sourceTree = "<group>"; };
+		8982D7391AD90AFB0050408E /* FileMgrViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileMgrViewController.swift; sourceTree = "<group>"; };
+		8982D73B1AD9D63D0050408E /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		8982D73E1AD9D6700050408E /* BluetoothSB.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = BluetoothSB.storyboard; sourceTree = "<group>"; };
+		8982D7401AD9D6890050408E /* BlueToothAViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlueToothAViewController.swift; sourceTree = "<group>"; };
+		8982D7421AD9D7180050408E /* CommonCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonCode.swift; sourceTree = "<group>"; };
 		899A09421AD4EE0F00C7458A /* pageApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pageApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		899A09461AD4EE0F00C7458A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		899A09471AD4EE0F00C7458A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		899A09491AD4EE0F00C7458A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		899A09471AD4EE0F00C7458A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = pageApp/AppDelegate.swift; sourceTree = "<group>"; };
+		899A09491AD4EE0F00C7458A /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		899A094C1AD4EE0F00C7458A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		899A094E1AD4EE0F00C7458A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		899A09511AD4EE0F00C7458A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -38,6 +52,8 @@
 		899A095C1AD4EE0F00C7458A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		899A095D1AD4EE0F00C7458A /* pageAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pageAppTests.swift; sourceTree = "<group>"; };
 		899A09671AD4EE7800C7458A /* ContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentViewController.swift; sourceTree = "<group>"; };
+		89B7C2251ADE2C840024F8F8 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		89B7C2271ADE2C8A0024F8F8 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +61,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89B7C2281ADE2C8A0024F8F8 /* MapKit.framework in Frameworks */,
+				89B7C2261ADE2C840024F8F8 /* CoreLocation.framework in Frameworks */,
+				8982D73C1AD9D63D0050408E /* CoreBluetooth.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,12 +77,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8982D7361AD90AAE0050408E /* fileApp */ = {
+			isa = PBXGroup;
+			children = (
+				8982D7371AD90ADE0050408E /* fileSB.storyboard */,
+				8982D7391AD90AFB0050408E /* FileMgrViewController.swift */,
+			);
+			name = fileApp;
+			sourceTree = "<group>";
+		};
+		8982D73D1AD9D64B0050408E /* CoreBluetoothAppTest */ = {
+			isa = PBXGroup;
+			children = (
+				8982D73E1AD9D6700050408E /* BluetoothSB.storyboard */,
+				8982D7401AD9D6890050408E /* BlueToothAViewController.swift */,
+			);
+			name = CoreBluetoothAppTest;
+			sourceTree = "<group>";
+		};
 		899A09391AD4EE0F00C7458A = {
 			isa = PBXGroup;
 			children = (
+				89B7C2271ADE2C8A0024F8F8 /* MapKit.framework */,
+				89B7C2251ADE2C840024F8F8 /* CoreLocation.framework */,
+				8982D7421AD9D7180050408E /* CommonCode.swift */,
+				8982D73D1AD9D64B0050408E /* CoreBluetoothAppTest */,
+				8982D7361AD90AAE0050408E /* fileApp */,
 				899A09441AD4EE0F00C7458A /* pageApp */,
 				899A095A1AD4EE0F00C7458A /* pageAppTests */,
 				899A09431AD4EE0F00C7458A /* Products */,
+				899A09471AD4EE0F00C7458A /* AppDelegate.swift */,
+				8982D73B1AD9D63D0050408E /* CoreBluetooth.framework */,
 			);
 			sourceTree = "<group>";
 		};
@@ -80,8 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				899A09671AD4EE7800C7458A /* ContentViewController.swift */,
-				899A09471AD4EE0F00C7458A /* AppDelegate.swift */,
-				899A09491AD4EE0F00C7458A /* ViewController.swift */,
+				899A09491AD4EE0F00C7458A /* PageViewController.swift */,
 				899A094B1AD4EE0F00C7458A /* Main.storyboard */,
 				899A094E1AD4EE0F00C7458A /* Images.xcassets */,
 				899A09501AD4EE0F00C7458A /* LaunchScreen.xib */,
@@ -164,6 +207,7 @@
 				TargetAttributes = {
 					899A09411AD4EE0F00C7458A = {
 						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = 63Y3987Z9A;
 					};
 					899A09561AD4EE0F00C7458A = {
 						CreatedOnToolsVersion = 6.2;
@@ -196,6 +240,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				899A094D1AD4EE0F00C7458A /* Main.storyboard in Resources */,
+				8982D73F1AD9D6700050408E /* BluetoothSB.storyboard in Resources */,
+				8982D7381AD90ADE0050408E /* fileSB.storyboard in Resources */,
 				899A09521AD4EE0F00C7458A /* LaunchScreen.xib in Resources */,
 				899A094F1AD4EE0F00C7458A /* Images.xcassets in Resources */,
 			);
@@ -215,9 +261,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				899A094A1AD4EE0F00C7458A /* ViewController.swift in Sources */,
+				899A094A1AD4EE0F00C7458A /* PageViewController.swift in Sources */,
 				899A09681AD4EE7800C7458A /* ContentViewController.swift in Sources */,
 				899A09481AD4EE0F00C7458A /* AppDelegate.swift in Sources */,
+				8982D7411AD9D6890050408E /* BlueToothAViewController.swift in Sources */,
+				8982D73A1AD90AFB0050408E /* FileMgrViewController.swift in Sources */,
+				8982D7431AD9D7180050408E /* CommonCode.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,9 +389,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = pageApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -350,9 +402,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = pageApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -409,6 +464,7 @@
 				899A09631AD4EE0F00C7458A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		899A09641AD4EE0F00C7458A /* Build configuration list for PBXNativeTarget "pageAppTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +473,7 @@
 				899A09661AD4EE0F00C7458A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

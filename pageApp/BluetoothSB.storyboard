@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+    </dependencies>
+    <scenes>
+        <!--Blue ToothA View Controller-->
+        <scene sceneID="tt9-OT-ffL">
+            <objects>
+                <viewController storyboardIdentifier="bleVC" id="MYd-a7-c6T" customClass="BlueToothAViewController" customModule="pageApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hQ2-JL-5by"/>
+                        <viewControllerLayoutGuide type="bottom" id="rpR-ac-BRN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="eoN-pM-bx2">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uUb-QK-8PQ">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="558"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="beX-rX-hS9">
+                                <rect key="frame" x="282" y="562" width="37" height="30"/>
+                                <state key="normal" title="Clear">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onClear:" destination="MYd-a7-c6T" eventType="touchUpInside" id="YCm-MM-cr4"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="beX-rX-hS9" secondAttribute="centerY" constant="-277" id="6yC-sl-Vm9"/>
+                            <constraint firstAttribute="trailing" secondItem="uUb-QK-8PQ" secondAttribute="trailing" id="FkL-M9-Wnx"/>
+                            <constraint firstAttribute="centerX" secondItem="beX-rX-hS9" secondAttribute="centerX" constant="-0.5" id="PUc-Fj-y2l"/>
+                            <constraint firstItem="uUb-QK-8PQ" firstAttribute="leading" secondItem="eoN-pM-bx2" secondAttribute="leading" id="dUg-CM-BM5"/>
+                            <constraint firstItem="beX-rX-hS9" firstAttribute="top" secondItem="uUb-QK-8PQ" secondAttribute="bottom" constant="4" id="mBS-BZ-56e"/>
+                            <constraint firstItem="uUb-QK-8PQ" firstAttribute="top" secondItem="eoN-pM-bx2" secondAttribute="top" id="wbn-TP-tAI"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="outputText" destination="uUb-QK-8PQ" id="9nY-9P-gNu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uIf-2z-FZm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="443" y="385"/>
+        </scene>
+    </scenes>
+</document>

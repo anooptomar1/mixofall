@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  pageApp
+//  MapkitApp
 //
-//  Created by Anoop tomar on 4/7/15.
+//  Created by Anoop tomar on 4/16/15.
 //  Copyright (c) 2015 Anoop tomar. All rights reserved.
 //
 
@@ -15,18 +15,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        //fileManagerAppStartup()
-        bluetoothStartup()
+        // Override point for customization after application launch.
         return true
-    }
-    
-    func bluetoothStartup(){
-        var bleVC = Utils.getStoryBoardFromName("BluetoothSB").instantiateViewControllerWithIdentifier("bleVC") as? BlueToothAViewController
-        window?.rootViewController = bleVC
-    }
-    
-    func fileManagerAppStartup(){
-        window?.rootViewController = Utils.getStoryBoardFromName("fileSB").instantiateViewControllerWithIdentifier("fileVC") as! FileMgrViewController
     }
 
     func applicationWillResignActive(application: UIApplication) {
