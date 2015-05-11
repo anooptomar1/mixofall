@@ -5,9 +5,9 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>775370ED-6263-4056-840A-E2890347CEB2</string>
+	<string>B56E2A23-8233-4BF8-9A16-0BAB3F8D1D96</string>
 	<key>IDESourceControlProjectName</key>
-	<string>MapkitApp</string>
+	<string>project</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>7AE26446FC131A977B67126CA1262106E2484337</key>
@@ -16,13 +16,13 @@
 		<string>https://bitbucket.org/anooptomar/bt-car.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>MapkitApp/MapkitApp.xcodeproj</string>
+	<string>CodeSamples/CodeSamples.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>7AE26446FC131A977B67126CA1262106E2484337</key>
 		<string>../../..</string>
 		<key>F8D5CCC0B848103AC2897358123470ADD4BF6303</key>
-		<string>../../../..</string>
+		<string>../../../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/anooptomar1/mixofall.git</string>
@@ -38,7 +38,7 @@
 			<key>IDESourceControlWCCIdentifierKey</key>
 			<string>F8D5CCC0B848103AC2897358123470ADD4BF6303</string>
 			<key>IDESourceControlWCCName</key>
-			<string></string>
+			<string>..</string>
 		</dict>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>

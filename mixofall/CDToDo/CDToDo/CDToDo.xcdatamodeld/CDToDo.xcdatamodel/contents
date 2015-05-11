@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="7549" systemVersion="14D136" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="SuperHero" syncable="YES">
+        <attribute name="birthDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="name" attributeType="String" defaultValueString="Untitled Hero" indexed="YES" syncable="YES"/>
+        <attribute name="secretIdentity" attributeType="String" defaultValueString="Unknown" indexed="YES" syncable="YES"/>
+        <attribute name="sex" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Todo" representedClassName="Todo" syncable="YES">
+        <attribute name="desc" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="due_date" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="finished" optional="YES" attributeType="Integer 16" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="SuperHero" positionX="-36" positionY="36" width="128" height="105"/>
+        <element name="Todo" positionX="-36" positionY="9" width="128" height="105"/>
+    </elements>
+</model>

@@ -28,12 +28,12 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         mapview.delegate = self
-        UIApplication.sharedApplication().idleTimerDisabled = false
+        UIApplication.sharedApplication().idleTimerDisabled = true
     }
     
     override func viewDidDisappear(animated: Bool) {
         super.viewDidDisappear(animated)
-        UIApplication.sharedApplication().idleTimerDisabled = true
+        UIApplication.sharedApplication().idleTimerDisabled = false
     }
     
     func eachSecond(){
