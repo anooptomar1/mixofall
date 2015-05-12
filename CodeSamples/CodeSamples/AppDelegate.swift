@@ -16,9 +16,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        tableApplication()
+        pageApplication()
+        //tableApplication()
         //tabBarApplication()
         return true
+    }
+    
+    func pageApplication(){
+        var storyboard = UIStoryboard(name: "PageDemo", bundle: nil)
+        var pageVC = storyboard.instantiateViewControllerWithIdentifier("pageDemoVC") as! PageDemoViewController
+        var navVC = UINavigationController(rootViewController: pageVC)
+        window?.rootViewController = navVC
     }
     
     func tableApplication(){
