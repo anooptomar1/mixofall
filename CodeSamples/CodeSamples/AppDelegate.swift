@@ -16,10 +16,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        pageApplication()
+        dirApplication()
+        //pageApplication()
         //tableApplication()
         //tabBarApplication()
         return true
+    }
+    
+    func dirApplication(){
+        var storyboard = UIStoryboard(name: "Dir", bundle: nil)
+        var dirVC = storyboard.instantiateViewControllerWithIdentifier("dirVC") as! DirDemoViewController
+        var navVC = UINavigationController(rootViewController: dirVC)
+        window?.rootViewController = navVC
     }
     
     func pageApplication(){
