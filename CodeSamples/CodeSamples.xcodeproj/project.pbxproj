@@ -28,6 +28,14 @@
 		89242A681B007327000C8556 /* PageDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89242A671B007327000C8556 /* PageDemoViewController.swift */; };
 		898723C01B01BD33002E4C87 /* Dir.Storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 898723BF1B01BD33002E4C87 /* Dir.Storyboard */; };
 		898723C21B01BD57002E4C87 /* DirDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898723C11B01BD57002E4C87 /* DirDemoViewController.swift */; };
+		898723C41B0580FA002E4C87 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 898723C31B0580FA002E4C87 /* libsqlite3.dylib */; };
+		898723D11B05898C002E4C87 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 898723C81B05898C002E4C87 /* FMDatabase.m */; };
+		898723D21B05898C002E4C87 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 898723CA1B05898C002E4C87 /* FMResultSet.m */; };
+		898723D31B05898C002E4C87 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 898723CC1B05898C002E4C87 /* FMDatabaseQueue.m */; };
+		898723D41B05898C002E4C87 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 898723CE1B05898C002E4C87 /* FMDatabaseAdditions.m */; };
+		898723D51B05898C002E4C87 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 898723D01B05898C002E4C87 /* FMDatabasePool.m */; };
+		898723D91B058A15002E4C87 /* DB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 898723D81B058A15002E4C87 /* DB.storyboard */; };
+		898723DB1B058A2F002E4C87 /* DBViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898723DA1B058A2F002E4C87 /* DBViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +74,21 @@
 		89242A671B007327000C8556 /* PageDemoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageDemoViewController.swift; sourceTree = "<group>"; };
 		898723BF1B01BD33002E4C87 /* Dir.Storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Dir.Storyboard; sourceTree = "<group>"; };
 		898723C11B01BD57002E4C87 /* DirDemoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirDemoViewController.swift; sourceTree = "<group>"; };
+		898723C31B0580FA002E4C87 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		898723C51B05898B002E4C87 /* CodeSamples-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CodeSamples-Bridging-Header.h"; sourceTree = "<group>"; };
+		898723C61B05898C002E4C87 /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDB.h; sourceTree = "<group>"; };
+		898723C71B05898C002E4C87 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
+		898723C81B05898C002E4C87 /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
+		898723C91B05898C002E4C87 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
+		898723CA1B05898C002E4C87 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
+		898723CB1B05898C002E4C87 /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
+		898723CC1B05898C002E4C87 /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
+		898723CD1B05898C002E4C87 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		898723CE1B05898C002E4C87 /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		898723CF1B05898C002E4C87 /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
+		898723D01B05898C002E4C87 /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
+		898723D81B058A15002E4C87 /* DB.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DB.storyboard; sourceTree = "<group>"; };
+		898723DA1B058A2F002E4C87 /* DBViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				898723C41B0580FA002E4C87 /* libsqlite3.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,6 +113,7 @@
 		89242A151AFEEED5000C8556 = {
 			isa = PBXGroup;
 			children = (
+				898723C31B0580FA002E4C87 /* libsqlite3.dylib */,
 				89242A201AFEEED5000C8556 /* CodeSamples */,
 				89242A391AFEEED5000C8556 /* CodeSamplesTests */,
 				89242A1F1AFEEED5000C8556 /* Products */,
@@ -107,9 +132,10 @@
 		89242A201AFEEED5000C8556 /* CodeSamples */ = {
 			isa = PBXGroup;
 			children = (
+				898723D71B0589FA002E4C87 /* DBDemo */,
+				898723D61B058999002E4C87 /* FMDB */,
 				898723BE1B01BD1D002E4C87 /* DirectoryDemo */,
 				89242A621B003D0F000C8556 /* PageControllerDemo */,
-				89242A231AFEEED5000C8556 /* AppDelegate.swift */,
 				89242A521AFEFECB000C8556 /* TableViewDemo */,
 				89242A471AFEEF2C000C8556 /* TabBarDemo */,
 				89242A211AFEEED5000C8556 /* Supporting Files */,
@@ -120,6 +146,8 @@
 		89242A211AFEEED5000C8556 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				89242A231AFEEED5000C8556 /* AppDelegate.swift */,
+				898723C51B05898B002E4C87 /* CodeSamples-Bridging-Header.h */,
 				89242A2D1AFEEED5000C8556 /* Images.xcassets */,
 				89242A2F1AFEEED5000C8556 /* LaunchScreen.xib */,
 				89242A251AFEEED5000C8556 /* CodeSamples.xcdatamodeld */,
@@ -195,6 +223,33 @@
 				898723C11B01BD57002E4C87 /* DirDemoViewController.swift */,
 			);
 			name = DirectoryDemo;
+			sourceTree = "<group>";
+		};
+		898723D61B058999002E4C87 /* FMDB */ = {
+			isa = PBXGroup;
+			children = (
+				898723CB1B05898C002E4C87 /* FMDatabaseQueue.h */,
+				898723CC1B05898C002E4C87 /* FMDatabaseQueue.m */,
+				898723CD1B05898C002E4C87 /* FMDatabaseAdditions.h */,
+				898723CE1B05898C002E4C87 /* FMDatabaseAdditions.m */,
+				898723CF1B05898C002E4C87 /* FMDatabasePool.h */,
+				898723D01B05898C002E4C87 /* FMDatabasePool.m */,
+				898723C61B05898C002E4C87 /* FMDB.h */,
+				898723C71B05898C002E4C87 /* FMDatabase.h */,
+				898723C81B05898C002E4C87 /* FMDatabase.m */,
+				898723C91B05898C002E4C87 /* FMResultSet.h */,
+				898723CA1B05898C002E4C87 /* FMResultSet.m */,
+			);
+			name = FMDB;
+			sourceTree = "<group>";
+		};
+		898723D71B0589FA002E4C87 /* DBDemo */ = {
+			isa = PBXGroup;
+			children = (
+				898723D81B058A15002E4C87 /* DB.storyboard */,
+				898723DA1B058A2F002E4C87 /* DBViewController.swift */,
+			);
+			name = DBDemo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -281,6 +336,7 @@
 				89242A641B0067CD000C8556 /* PageDemo.storyboard in Resources */,
 				898723C01B01BD33002E4C87 /* Dir.Storyboard in Resources */,
 				89242A311AFEEED5000C8556 /* LaunchScreen.xib in Resources */,
+				898723D91B058A15002E4C87 /* DB.storyboard in Resources */,
 				89242A541AFF14E4000C8556 /* TableView.storyboard in Resources */,
 				89242A2E1AFEEED5000C8556 /* Images.xcassets in Resources */,
 			);
@@ -302,9 +358,13 @@
 			files = (
 				89242A271AFEEED5000C8556 /* CodeSamples.xcdatamodeld in Sources */,
 				89242A4F1AFEFD47000C8556 /* TabThreeViewController.swift in Sources */,
+				898723D51B05898C002E4C87 /* FMDatabasePool.m in Sources */,
 				89242A4D1AFEF7E0000C8556 /* TabTwoViewController.swift in Sources */,
+				898723D11B05898C002E4C87 /* FMDatabase.m in Sources */,
 				89242A5A1AFFE63E000C8556 /* TableDemo3ViewController.swift in Sources */,
+				898723D41B05898C002E4C87 /* FMDatabaseAdditions.m in Sources */,
 				89242A661B00681E000C8556 /* ContentViewController.swift in Sources */,
+				898723D21B05898C002E4C87 /* FMResultSet.m in Sources */,
 				898723C21B01BD57002E4C87 /* DirDemoViewController.swift in Sources */,
 				89242A681B007327000C8556 /* PageDemoViewController.swift in Sources */,
 				89242A611B003428000C8556 /* TableDetailsViewController.swift in Sources */,
@@ -312,7 +372,9 @@
 				89242A511AFEFD53000C8556 /* TabFourViewController.swift in Sources */,
 				89242A561AFF1579000C8556 /* TableDemo2ViewController.swift in Sources */,
 				89242A5D1AFFE938000C8556 /* SampleTableViewCell.swift in Sources */,
+				898723D31B05898C002E4C87 /* FMDatabaseQueue.m in Sources */,
 				89242A581AFF3699000C8556 /* TableDemo1ViewController.swift in Sources */,
+				898723DB1B058A2F002E4C87 /* DBViewController.swift in Sources */,
 				89242A241AFEEED5000C8556 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -440,9 +502,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = CodeSamples/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CodeSamples/CodeSamples-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -450,9 +515,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = CodeSamples/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CodeSamples/CodeSamples-Bridging-Header.h";
 			};
 			name = Release;
 		};

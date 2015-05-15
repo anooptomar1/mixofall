@@ -16,11 +16,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        dirApplication()
+        dbApplication()
+        //dirApplication()
         //pageApplication()
         //tableApplication()
         //tabBarApplication()
         return true
+    }
+    
+    func dbApplication(){
+        var storyboard = UIStoryboard(name: "DB", bundle: nil)
+        var dbVC = storyboard.instantiateViewControllerWithIdentifier("dbVC") as! DBViewController
+        var navVC = UINavigationController(rootViewController: dbVC)
+        window?.rootViewController = navVC
     }
     
     func dirApplication(){
