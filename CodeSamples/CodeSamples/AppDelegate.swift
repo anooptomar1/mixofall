@@ -16,12 +16,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        dbApplication()
+        cdDBApplication()
+        //dbApplication()
         //dirApplication()
         //pageApplication()
         //tableApplication()
         //tabBarApplication()
         return true
+    }
+    
+    func cdDBApplication(){
+        var storyboard = UIStoryboard(name: "CD", bundle: nil)
+        var cdVC = storyboard.instantiateViewControllerWithIdentifier("cdVC") as! CDViewController
+        var navVC = UINavigationController(rootViewController: cdVC)
+        window?.rootViewController = navVC
     }
     
     func dbApplication(){
