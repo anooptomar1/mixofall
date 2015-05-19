@@ -39,6 +39,10 @@
 		898723DE1B063F8A002E4C87 /* CDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898723DD1B063F8A002E4C87 /* CDViewController.swift */; };
 		898723E01B063F98002E4C87 /* CD.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 898723DF1B063F98002E4C87 /* CD.storyboard */; };
 		898723E51B0640AB002E4C87 /* Contacts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898723E41B0640AB002E4C87 /* Contacts.swift */; };
+		898723E81B095DC9002E4C87 /* Touch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 898723E71B095DC9002E4C87 /* Touch.storyboard */; };
+		898723EA1B095DDC002E4C87 /* TouchDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898723E91B095DDC002E4C87 /* TouchDemoViewController.swift */; };
+		898723ED1B0988A2002E4C87 /* GestureDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898723EC1B0988A2002E4C87 /* GestureDViewController.swift */; };
+		898723EF1B0988EC002E4C87 /* GD.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 898723EE1B0988EC002E4C87 /* GD.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +99,10 @@
 		898723DD1B063F8A002E4C87 /* CDViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDViewController.swift; sourceTree = "<group>"; };
 		898723DF1B063F98002E4C87 /* CD.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CD.storyboard; sourceTree = "<group>"; };
 		898723E41B0640AB002E4C87 /* Contacts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Contacts.swift; path = ../Contacts.swift; sourceTree = "<group>"; };
+		898723E71B095DC9002E4C87 /* Touch.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Touch.storyboard; sourceTree = "<group>"; };
+		898723E91B095DDC002E4C87 /* TouchDemoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TouchDemoViewController.swift; sourceTree = "<group>"; };
+		898723EC1B0988A2002E4C87 /* GestureDViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GestureDViewController.swift; sourceTree = "<group>"; };
+		898723EE1B0988EC002E4C87 /* GD.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GD.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +145,8 @@
 		89242A201AFEEED5000C8556 /* CodeSamples */ = {
 			isa = PBXGroup;
 			children = (
+				898723EB1B098888002E4C87 /* GestureDemo */,
+				898723E61B095DB4002E4C87 /* TouchesDemo */,
 				898723DC1B063F74002E4C87 /* CoreDataDemo */,
 				898723D71B0589FA002E4C87 /* DBDemo */,
 				898723D61B058999002E4C87 /* FMDB */,
@@ -269,6 +279,24 @@
 			name = CoreDataDemo;
 			sourceTree = "<group>";
 		};
+		898723E61B095DB4002E4C87 /* TouchesDemo */ = {
+			isa = PBXGroup;
+			children = (
+				898723E71B095DC9002E4C87 /* Touch.storyboard */,
+				898723E91B095DDC002E4C87 /* TouchDemoViewController.swift */,
+			);
+			name = TouchesDemo;
+			sourceTree = "<group>";
+		};
+		898723EB1B098888002E4C87 /* GestureDemo */ = {
+			isa = PBXGroup;
+			children = (
+				898723EC1B0988A2002E4C87 /* GestureDViewController.swift */,
+				898723EE1B0988EC002E4C87 /* GD.storyboard */,
+			);
+			name = GestureDemo;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -353,6 +381,8 @@
 				89242A641B0067CD000C8556 /* PageDemo.storyboard in Resources */,
 				898723C01B01BD33002E4C87 /* Dir.Storyboard in Resources */,
 				898723E01B063F98002E4C87 /* CD.storyboard in Resources */,
+				898723E81B095DC9002E4C87 /* Touch.storyboard in Resources */,
+				898723EF1B0988EC002E4C87 /* GD.storyboard in Resources */,
 				89242A311AFEEED5000C8556 /* LaunchScreen.xib in Resources */,
 				898723D91B058A15002E4C87 /* DB.storyboard in Resources */,
 				89242A541AFF14E4000C8556 /* TableView.storyboard in Resources */,
@@ -375,6 +405,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				89242A271AFEEED5000C8556 /* CodeSamples.xcdatamodeld in Sources */,
+				898723ED1B0988A2002E4C87 /* GestureDViewController.swift in Sources */,
 				89242A4F1AFEFD47000C8556 /* TabThreeViewController.swift in Sources */,
 				898723D51B05898C002E4C87 /* FMDatabasePool.m in Sources */,
 				89242A4D1AFEF7E0000C8556 /* TabTwoViewController.swift in Sources */,
@@ -384,6 +415,7 @@
 				898723D41B05898C002E4C87 /* FMDatabaseAdditions.m in Sources */,
 				89242A661B00681E000C8556 /* ContentViewController.swift in Sources */,
 				898723DE1B063F8A002E4C87 /* CDViewController.swift in Sources */,
+				898723EA1B095DDC002E4C87 /* TouchDemoViewController.swift in Sources */,
 				898723D21B05898C002E4C87 /* FMResultSet.m in Sources */,
 				898723C21B01BD57002E4C87 /* DirDemoViewController.swift in Sources */,
 				89242A681B007327000C8556 /* PageDemoViewController.swift in Sources */,

@@ -16,13 +16,30 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        cdDBApplication()
+        gestureApplication()
+        //touchApplication()
+        //cdDBApplication()
         //dbApplication()
         //dirApplication()
         //pageApplication()
         //tableApplication()
         //tabBarApplication()
         return true
+    }
+    
+    
+    func gestureApplication(){
+        var storyboard = UIStoryboard(name: "GD", bundle: nil)
+        var gdVC = storyboard.instantiateViewControllerWithIdentifier("gdVC") as! GestureDViewController
+        var navVC = UINavigationController(rootViewController: gdVC)
+        window?.rootViewController = navVC
+    }
+    
+    func touchApplication(){
+        var storyboard = UIStoryboard(name: "Touch", bundle: nil)
+        var touchVC = storyboard.instantiateViewControllerWithIdentifier("touchVC") as! TouchDemoViewController
+        var navVC = UINavigationController(rootViewController: touchVC)
+        window?.rootViewController = navVC
     }
     
     func cdDBApplication(){
