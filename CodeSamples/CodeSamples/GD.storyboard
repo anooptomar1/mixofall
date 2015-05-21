@@ -21,7 +21,88 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jCV-be-6OX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="493" y="385"/>
+            <point key="canvasLocation" x="218.5" y="403.5"/>
+        </scene>
+        <!--Gesture Demo1 View Controller-->
+        <scene sceneID="5EU-tu-Cpj">
+            <objects>
+                <viewController storyboardIdentifier="gestureVC" id="lyd-ew-m4P" customClass="GestureDemo1ViewController" customModule="CodeSamples" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="oLf-wR-qEI"/>
+                        <viewControllerLayoutGuide type="bottom" id="lzZ-mU-U1I"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="G6z-R1-YqV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3pp-Vh-8CU">
+                                <rect key="frame" x="16" y="28" width="343" height="631"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="3pp-Vh-8CU" firstAttribute="leading" secondItem="G6z-R1-YqV" secondAttribute="leading" constant="16" id="3U2-oX-Hww"/>
+                            <constraint firstItem="3pp-Vh-8CU" firstAttribute="top" secondItem="oLf-wR-qEI" secondAttribute="bottom" constant="8" id="Dcy-Kr-mXB"/>
+                            <constraint firstItem="lzZ-mU-U1I" firstAttribute="top" relation="lessThanOrEqual" secondItem="3pp-Vh-8CU" secondAttribute="bottom" constant="8" id="pjC-8e-Sdi"/>
+                            <constraint firstAttribute="trailing" secondItem="3pp-Vh-8CU" secondAttribute="trailing" constant="16" id="rRW-4y-SNn"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="6xd-5u-ETm" appends="YES" id="8AV-pV-vIy"/>
+                            <outletCollection property="gestureRecognizers" destination="g7W-0f-pW5" appends="YES" id="gf0-Dr-CNi"/>
+                            <outletCollection property="gestureRecognizers" destination="XSC-eM-ZoW" appends="YES" id="HfR-lL-3pC"/>
+                            <outletCollection property="gestureRecognizers" destination="j5g-VD-bpe" appends="YES" id="gxU-4d-ecq"/>
+                            <outletCollection property="gestureRecognizers" destination="wBX-Hw-EfS" appends="YES" id="E3W-gN-IF6"/>
+                            <outletCollection property="gestureRecognizers" destination="ehw-u8-9Tn" appends="YES" id="m6R-VP-E0Y"/>
+                            <outletCollection property="gestureRecognizers" destination="DIe-DL-1be" appends="YES" id="EYa-Bd-Qic"/>
+                        </connections>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="statusLabel" destination="3pp-Vh-8CU" id="N0e-BQ-sGp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="N42-w4-UrU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="6xd-5u-ETm">
+                    <connections>
+                        <action selector="onTap:" destination="lyd-ew-m4P" id="0s5-Jg-7GY"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <pinchGestureRecognizer id="g7W-0f-pW5">
+                    <connections>
+                        <action selector="onPinch:" destination="lyd-ew-m4P" id="mgF-H3-qPU"/>
+                    </connections>
+                </pinchGestureRecognizer>
+                <rotationGestureRecognizer id="XSC-eM-ZoW">
+                    <connections>
+                        <action selector="onRotate:" destination="lyd-ew-m4P" id="l2K-aa-78x"/>
+                    </connections>
+                </rotationGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="j5g-VD-bpe">
+                    <connections>
+                        <action selector="onSwipe:" destination="lyd-ew-m4P" id="Kol-Os-ukm"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="wBX-Hw-EfS">
+                    <connections>
+                        <action selector="onPan:" destination="lyd-ew-m4P" id="IEc-ov-WZ4"/>
+                    </connections>
+                </panGestureRecognizer>
+                <screenEdgePanGestureRecognizer minimumNumberOfTouches="1" id="ehw-u8-9Tn">
+                    <connections>
+                        <action selector="onSceen:" destination="lyd-ew-m4P" id="sdi-kY-Mid"/>
+                    </connections>
+                </screenEdgePanGestureRecognizer>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="DIe-DL-1be">
+                    <connections>
+                        <action selector="onLongPress:" destination="lyd-ew-m4P" id="edT-UE-Pyk"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="659.5" y="403.5"/>
         </scene>
     </scenes>
 </document>

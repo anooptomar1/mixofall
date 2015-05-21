@@ -16,7 +16,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        gestureApplication()
+        touchIdDemoApplication()
+        //gestureDemo1Application()
+        //gestureApplication()
         //touchApplication()
         //cdDBApplication()
         //dbApplication()
@@ -27,6 +29,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
     
+    func touchIdDemoApplication(){
+        var storyboard = UIStoryboard(name: "TouchID", bundle: nil)
+        var touchIDVC = storyboard.instantiateViewControllerWithIdentifier("touchIDVC") as! TouchIdViewController
+        var navVC = UINavigationController(rootViewController: touchIDVC)
+        window?.rootViewController = navVC
+    }
+    
+    func gestureDemo1Application(){
+        var storyboard = UIStoryboard(name: "GD", bundle: nil)
+        var gestureVC = storyboard.instantiateViewControllerWithIdentifier("gestureVC") as! GestureDemo1ViewController
+        var navVC = UINavigationController(rootViewController: gestureVC)
+        window?.rootViewController = navVC
+    }
     
     func gestureApplication(){
         var storyboard = UIStoryboard(name: "GD", bundle: nil)

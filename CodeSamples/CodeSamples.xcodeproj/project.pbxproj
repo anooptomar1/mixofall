@@ -43,6 +43,9 @@
 		898723EA1B095DDC002E4C87 /* TouchDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898723E91B095DDC002E4C87 /* TouchDemoViewController.swift */; };
 		898723ED1B0988A2002E4C87 /* GestureDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898723EC1B0988A2002E4C87 /* GestureDViewController.swift */; };
 		898723EF1B0988EC002E4C87 /* GD.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 898723EE1B0988EC002E4C87 /* GD.storyboard */; };
+		898723F11B0C5BA4002E4C87 /* GestureDemo1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898723F01B0C5BA4002E4C87 /* GestureDemo1ViewController.swift */; };
+		898723F41B0D67B8002E4C87 /* TouchID.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 898723F31B0D67B8002E4C87 /* TouchID.storyboard */; };
+		898723F61B0D67D9002E4C87 /* TouchIdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898723F51B0D67D9002E4C87 /* TouchIdViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,6 +106,9 @@
 		898723E91B095DDC002E4C87 /* TouchDemoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TouchDemoViewController.swift; sourceTree = "<group>"; };
 		898723EC1B0988A2002E4C87 /* GestureDViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GestureDViewController.swift; sourceTree = "<group>"; };
 		898723EE1B0988EC002E4C87 /* GD.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GD.storyboard; sourceTree = "<group>"; };
+		898723F01B0C5BA4002E4C87 /* GestureDemo1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GestureDemo1ViewController.swift; sourceTree = "<group>"; };
+		898723F31B0D67B8002E4C87 /* TouchID.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TouchID.storyboard; sourceTree = "<group>"; };
+		898723F51B0D67D9002E4C87 /* TouchIdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TouchIdViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +151,7 @@
 		89242A201AFEEED5000C8556 /* CodeSamples */ = {
 			isa = PBXGroup;
 			children = (
+				898723F21B0D678A002E4C87 /* TouchIDDemo */,
 				898723EB1B098888002E4C87 /* GestureDemo */,
 				898723E61B095DB4002E4C87 /* TouchesDemo */,
 				898723DC1B063F74002E4C87 /* CoreDataDemo */,
@@ -293,8 +300,18 @@
 			children = (
 				898723EC1B0988A2002E4C87 /* GestureDViewController.swift */,
 				898723EE1B0988EC002E4C87 /* GD.storyboard */,
+				898723F01B0C5BA4002E4C87 /* GestureDemo1ViewController.swift */,
 			);
 			name = GestureDemo;
+			sourceTree = "<group>";
+		};
+		898723F21B0D678A002E4C87 /* TouchIDDemo */ = {
+			isa = PBXGroup;
+			children = (
+				898723F31B0D67B8002E4C87 /* TouchID.storyboard */,
+				898723F51B0D67D9002E4C87 /* TouchIdViewController.swift */,
+			);
+			name = TouchIDDemo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -378,6 +395,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				89242A2C1AFEEED5000C8556 /* Main.storyboard in Resources */,
+				898723F41B0D67B8002E4C87 /* TouchID.storyboard in Resources */,
 				89242A641B0067CD000C8556 /* PageDemo.storyboard in Resources */,
 				898723C01B01BD33002E4C87 /* Dir.Storyboard in Resources */,
 				898723E01B063F98002E4C87 /* CD.storyboard in Resources */,
@@ -421,6 +439,7 @@
 				89242A681B007327000C8556 /* PageDemoViewController.swift in Sources */,
 				89242A611B003428000C8556 /* TableDetailsViewController.swift in Sources */,
 				89242A4B1AFEF7BA000C8556 /* TabOneViewController.swift in Sources */,
+				898723F11B0C5BA4002E4C87 /* GestureDemo1ViewController.swift in Sources */,
 				89242A511AFEFD53000C8556 /* TabFourViewController.swift in Sources */,
 				89242A561AFF1579000C8556 /* TableDemo2ViewController.swift in Sources */,
 				89242A5D1AFFE938000C8556 /* SampleTableViewCell.swift in Sources */,
@@ -428,6 +447,7 @@
 				89242A581AFF3699000C8556 /* TableDemo1ViewController.swift in Sources */,
 				898723DB1B058A2F002E4C87 /* DBViewController.swift in Sources */,
 				89242A241AFEEED5000C8556 /* AppDelegate.swift in Sources */,
+				898723F61B0D67D9002E4C87 /* TouchIdViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -28,6 +28,14 @@ class GestureDViewController: UIViewController {
         let swipeGesture = UISwipeGestureRecognizer(target: self, action: "swipeDetected")
         swipeGesture.direction = UISwipeGestureRecognizerDirection.Down
         self.view.addGestureRecognizer(swipeGesture)
+        
+        let longPressGesture = UILongPressGestureRecognizer(target: self, action: "longPressDeteced")
+        longPressGesture.minimumPressDuration = 3
+        self.view.addGestureRecognizer(longPressGesture)
+    }
+    
+    func longPressDeteced(){
+        println("Long press detected")
     }
     
     func swipeDetected(){
