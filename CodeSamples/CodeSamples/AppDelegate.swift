@@ -16,7 +16,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        touchIdDemoApplication()
+        collectionViewDemoApplication()
+        //touchIdDemoApplication()
         //gestureDemo1Application()
         //gestureApplication()
         //touchApplication()
@@ -27,6 +28,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //tableApplication()
         //tabBarApplication()
         return true
+    }
+    
+    func collectionViewDemoApplication(){
+        var storyboard = UIStoryboard(name: "CollectionV", bundle: nil)
+        var collectionVC = storyboard.instantiateViewControllerWithIdentifier("collectionVC") as! CollectionVDemoViewController
+        var navVC = UINavigationController(rootViewController: collectionVC)
+        window?.rootViewController = navVC
     }
     
     func touchIdDemoApplication(){

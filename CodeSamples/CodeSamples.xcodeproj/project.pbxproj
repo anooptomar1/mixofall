@@ -26,6 +26,9 @@
 		89242A641B0067CD000C8556 /* PageDemo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89242A631B0067CD000C8556 /* PageDemo.storyboard */; };
 		89242A661B00681E000C8556 /* ContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89242A651B00681E000C8556 /* ContentViewController.swift */; };
 		89242A681B007327000C8556 /* PageDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89242A671B007327000C8556 /* PageDemoViewController.swift */; };
+		8943C5A31B0D8249001223A0 /* CollectionVDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8943C5A21B0D8249001223A0 /* CollectionVDemoViewController.swift */; };
+		8943C5A51B0D8269001223A0 /* CollectionV.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8943C5A41B0D8269001223A0 /* CollectionV.storyboard */; };
+		8943C5A71B0DC092001223A0 /* ColViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8943C5A61B0DC092001223A0 /* ColViewCell.swift */; };
 		898723C01B01BD33002E4C87 /* Dir.Storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 898723BF1B01BD33002E4C87 /* Dir.Storyboard */; };
 		898723C21B01BD57002E4C87 /* DirDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898723C11B01BD57002E4C87 /* DirDemoViewController.swift */; };
 		898723C41B0580FA002E4C87 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 898723C31B0580FA002E4C87 /* libsqlite3.dylib */; };
@@ -82,6 +85,9 @@
 		89242A631B0067CD000C8556 /* PageDemo.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PageDemo.storyboard; sourceTree = "<group>"; };
 		89242A651B00681E000C8556 /* ContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentViewController.swift; sourceTree = "<group>"; };
 		89242A671B007327000C8556 /* PageDemoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageDemoViewController.swift; sourceTree = "<group>"; };
+		8943C5A21B0D8249001223A0 /* CollectionVDemoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionVDemoViewController.swift; sourceTree = "<group>"; };
+		8943C5A41B0D8269001223A0 /* CollectionV.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CollectionV.storyboard; sourceTree = "<group>"; };
+		8943C5A61B0DC092001223A0 /* ColViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColViewCell.swift; sourceTree = "<group>"; };
 		898723BF1B01BD33002E4C87 /* Dir.Storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Dir.Storyboard; sourceTree = "<group>"; };
 		898723C11B01BD57002E4C87 /* DirDemoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirDemoViewController.swift; sourceTree = "<group>"; };
 		898723C31B0580FA002E4C87 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
@@ -151,6 +157,7 @@
 		89242A201AFEEED5000C8556 /* CodeSamples */ = {
 			isa = PBXGroup;
 			children = (
+				8943C5A11B0D8229001223A0 /* CollectionViewDemo */,
 				898723F21B0D678A002E4C87 /* TouchIDDemo */,
 				898723EB1B098888002E4C87 /* GestureDemo */,
 				898723E61B095DB4002E4C87 /* TouchesDemo */,
@@ -238,6 +245,16 @@
 				89242A671B007327000C8556 /* PageDemoViewController.swift */,
 			);
 			name = PageControllerDemo;
+			sourceTree = "<group>";
+		};
+		8943C5A11B0D8229001223A0 /* CollectionViewDemo */ = {
+			isa = PBXGroup;
+			children = (
+				8943C5A21B0D8249001223A0 /* CollectionVDemoViewController.swift */,
+				8943C5A41B0D8269001223A0 /* CollectionV.storyboard */,
+				8943C5A61B0DC092001223A0 /* ColViewCell.swift */,
+			);
+			name = CollectionViewDemo;
 			sourceTree = "<group>";
 		};
 		898723BE1B01BD1D002E4C87 /* DirectoryDemo */ = {
@@ -397,6 +414,7 @@
 				89242A2C1AFEEED5000C8556 /* Main.storyboard in Resources */,
 				898723F41B0D67B8002E4C87 /* TouchID.storyboard in Resources */,
 				89242A641B0067CD000C8556 /* PageDemo.storyboard in Resources */,
+				8943C5A51B0D8269001223A0 /* CollectionV.storyboard in Resources */,
 				898723C01B01BD33002E4C87 /* Dir.Storyboard in Resources */,
 				898723E01B063F98002E4C87 /* CD.storyboard in Resources */,
 				898723E81B095DC9002E4C87 /* Touch.storyboard in Resources */,
@@ -443,11 +461,13 @@
 				89242A511AFEFD53000C8556 /* TabFourViewController.swift in Sources */,
 				89242A561AFF1579000C8556 /* TableDemo2ViewController.swift in Sources */,
 				89242A5D1AFFE938000C8556 /* SampleTableViewCell.swift in Sources */,
+				8943C5A71B0DC092001223A0 /* ColViewCell.swift in Sources */,
 				898723D31B05898C002E4C87 /* FMDatabaseQueue.m in Sources */,
 				89242A581AFF3699000C8556 /* TableDemo1ViewController.swift in Sources */,
 				898723DB1B058A2F002E4C87 /* DBViewController.swift in Sources */,
 				89242A241AFEEED5000C8556 /* AppDelegate.swift in Sources */,
 				898723F61B0D67D9002E4C87 /* TouchIdViewController.swift in Sources */,
+				8943C5A31B0D8249001223A0 /* CollectionVDemoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
