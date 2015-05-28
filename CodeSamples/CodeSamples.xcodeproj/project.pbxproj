@@ -29,6 +29,23 @@
 		8943C5A31B0D8249001223A0 /* CollectionVDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8943C5A21B0D8249001223A0 /* CollectionVDemoViewController.swift */; };
 		8943C5A51B0D8269001223A0 /* CollectionV.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8943C5A41B0D8269001223A0 /* CollectionV.storyboard */; };
 		8943C5A71B0DC092001223A0 /* ColViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8943C5A61B0DC092001223A0 /* ColViewCell.swift */; };
+		8943C5AA1B0ED7CF001223A0 /* CGDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8943C5A91B0ED7CF001223A0 /* CGDemoViewController.swift */; };
+		8943C5AC1B0ED7D8001223A0 /* CG.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8943C5AB1B0ED7D8001223A0 /* CG.storyboard */; };
+		8943C5B71B0EDF85001223A0 /* MyDrawKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 8943C5B61B0EDF85001223A0 /* MyDrawKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8943C5BD1B0EDF85001223A0 /* MyDrawKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8943C5B21B0EDF85001223A0 /* MyDrawKit.framework */; };
+		8943C5C61B0EDF85001223A0 /* MyDrawKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8943C5C51B0EDF85001223A0 /* MyDrawKitTests.swift */; };
+		8943C5C91B0EDF85001223A0 /* MyDrawKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8943C5B21B0EDF85001223A0 /* MyDrawKit.framework */; };
+		8943C5CA1B0EDF85001223A0 /* MyDrawKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8943C5B21B0EDF85001223A0 /* MyDrawKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8943C5D31B0EE057001223A0 /* MyDrawView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8943C5D21B0EE057001223A0 /* MyDrawView.swift */; };
+		8943C5D61B0F033E001223A0 /* CGDemo2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8943C5D51B0F033E001223A0 /* CGDemo2ViewController.swift */; };
+		8943C5D81B0F0356001223A0 /* CG2.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8943C5D71B0F0356001223A0 /* CG2.storyboard */; };
+		8943C5DA1B0F043B001223A0 /* Draw2D.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8943C5D91B0F043B001223A0 /* Draw2D.swift */; };
+		8943C5DC1B0F0F8D001223A0 /* DrawRect2D.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8943C5DB1B0F0F8D001223A0 /* DrawRect2D.swift */; };
+		8943C5DE1B0F14BB001223A0 /* Arc2D.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8943C5DD1B0F14BB001223A0 /* Arc2D.swift */; };
+		8943C5E01B0F1674001223A0 /* BezierCurve2D.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8943C5DF1B0F1674001223A0 /* BezierCurve2D.swift */; };
+		8943C5E21B0F177D001223A0 /* QuadBezierCurve.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8943C5E11B0F177D001223A0 /* QuadBezierCurve.swift */; };
+		8943C5E41B163BCB001223A0 /* DashedLine2D.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8943C5E31B163BCB001223A0 /* DashedLine2D.swift */; };
+		8943C5E61B163D67001223A0 /* ShadowDemo2D.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8943C5E51B163D67001223A0 /* ShadowDemo2D.swift */; };
 		898723C01B01BD33002E4C87 /* Dir.Storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 898723BF1B01BD33002E4C87 /* Dir.Storyboard */; };
 		898723C21B01BD57002E4C87 /* DirDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898723C11B01BD57002E4C87 /* DirDemoViewController.swift */; };
 		898723C41B0580FA002E4C87 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 898723C31B0580FA002E4C87 /* libsqlite3.dylib */; };
@@ -59,7 +76,42 @@
 			remoteGlobalIDString = 89242A1D1AFEEED5000C8556;
 			remoteInfo = CodeSamples;
 		};
+		8943C5BE1B0EDF85001223A0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 89242A161AFEEED5000C8556 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8943C5B11B0EDF85001223A0;
+			remoteInfo = MyDrawKit;
+		};
+		8943C5C01B0EDF85001223A0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 89242A161AFEEED5000C8556 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 89242A1D1AFEEED5000C8556;
+			remoteInfo = CodeSamples;
+		};
+		8943C5C71B0EDF85001223A0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 89242A161AFEEED5000C8556 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8943C5B11B0EDF85001223A0;
+			remoteInfo = MyDrawKit;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		8943C5CE1B0EDF85001223A0 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				8943C5CA1B0EDF85001223A0 /* MyDrawKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		89242A1E1AFEEED5000C8556 /* CodeSamples.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CodeSamples.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -88,6 +140,24 @@
 		8943C5A21B0D8249001223A0 /* CollectionVDemoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionVDemoViewController.swift; sourceTree = "<group>"; };
 		8943C5A41B0D8269001223A0 /* CollectionV.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CollectionV.storyboard; sourceTree = "<group>"; };
 		8943C5A61B0DC092001223A0 /* ColViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColViewCell.swift; sourceTree = "<group>"; };
+		8943C5A91B0ED7CF001223A0 /* CGDemoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGDemoViewController.swift; sourceTree = "<group>"; };
+		8943C5AB1B0ED7D8001223A0 /* CG.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CG.storyboard; sourceTree = "<group>"; };
+		8943C5B21B0EDF85001223A0 /* MyDrawKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MyDrawKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8943C5B51B0EDF85001223A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8943C5B61B0EDF85001223A0 /* MyDrawKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyDrawKit.h; sourceTree = "<group>"; };
+		8943C5BC1B0EDF85001223A0 /* MyDrawKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyDrawKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8943C5C41B0EDF85001223A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8943C5C51B0EDF85001223A0 /* MyDrawKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDrawKitTests.swift; sourceTree = "<group>"; };
+		8943C5D21B0EE057001223A0 /* MyDrawView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyDrawView.swift; sourceTree = "<group>"; };
+		8943C5D51B0F033E001223A0 /* CGDemo2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGDemo2ViewController.swift; sourceTree = "<group>"; };
+		8943C5D71B0F0356001223A0 /* CG2.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CG2.storyboard; sourceTree = "<group>"; };
+		8943C5D91B0F043B001223A0 /* Draw2D.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Draw2D.swift; sourceTree = "<group>"; };
+		8943C5DB1B0F0F8D001223A0 /* DrawRect2D.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawRect2D.swift; sourceTree = "<group>"; };
+		8943C5DD1B0F14BB001223A0 /* Arc2D.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Arc2D.swift; sourceTree = "<group>"; };
+		8943C5DF1B0F1674001223A0 /* BezierCurve2D.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BezierCurve2D.swift; sourceTree = "<group>"; };
+		8943C5E11B0F177D001223A0 /* QuadBezierCurve.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuadBezierCurve.swift; sourceTree = "<group>"; };
+		8943C5E31B163BCB001223A0 /* DashedLine2D.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashedLine2D.swift; sourceTree = "<group>"; };
+		8943C5E51B163D67001223A0 /* ShadowDemo2D.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShadowDemo2D.swift; sourceTree = "<group>"; };
 		898723BF1B01BD33002E4C87 /* Dir.Storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Dir.Storyboard; sourceTree = "<group>"; };
 		898723C11B01BD57002E4C87 /* DirDemoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirDemoViewController.swift; sourceTree = "<group>"; };
 		898723C31B0580FA002E4C87 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
@@ -123,6 +193,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				898723C41B0580FA002E4C87 /* libsqlite3.dylib in Frameworks */,
+				8943C5C91B0EDF85001223A0 /* MyDrawKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -130,6 +201,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8943C5AE1B0EDF85001223A0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8943C5B91B0EDF85001223A0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8943C5BD1B0EDF85001223A0 /* MyDrawKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,6 +227,8 @@
 			children = (
 				89242A201AFEEED5000C8556 /* CodeSamples */,
 				89242A391AFEEED5000C8556 /* CodeSamplesTests */,
+				8943C5B31B0EDF85001223A0 /* MyDrawKit */,
+				8943C5C21B0EDF85001223A0 /* MyDrawKitTests */,
 				89242A1F1AFEEED5000C8556 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -150,6 +238,8 @@
 			children = (
 				89242A1E1AFEEED5000C8556 /* CodeSamples.app */,
 				89242A361AFEEED5000C8556 /* CodeSamplesTests.xctest */,
+				8943C5B21B0EDF85001223A0 /* MyDrawKit.framework */,
+				8943C5BC1B0EDF85001223A0 /* MyDrawKitTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -157,6 +247,8 @@
 		89242A201AFEEED5000C8556 /* CodeSamples */ = {
 			isa = PBXGroup;
 			children = (
+				8943C5D41B0F0322001223A0 /* CGDemo */,
+				8943C5A81B0ED7A9001223A0 /* QuartzCGDemo */,
 				8943C5A11B0D8229001223A0 /* CollectionViewDemo */,
 				898723F21B0D678A002E4C87 /* TouchIDDemo */,
 				898723EB1B098888002E4C87 /* GestureDemo */,
@@ -257,6 +349,66 @@
 			name = CollectionViewDemo;
 			sourceTree = "<group>";
 		};
+		8943C5A81B0ED7A9001223A0 /* QuartzCGDemo */ = {
+			isa = PBXGroup;
+			children = (
+				8943C5A91B0ED7CF001223A0 /* CGDemoViewController.swift */,
+				8943C5AB1B0ED7D8001223A0 /* CG.storyboard */,
+			);
+			name = QuartzCGDemo;
+			sourceTree = "<group>";
+		};
+		8943C5B31B0EDF85001223A0 /* MyDrawKit */ = {
+			isa = PBXGroup;
+			children = (
+				8943C5B61B0EDF85001223A0 /* MyDrawKit.h */,
+				8943C5B41B0EDF85001223A0 /* Supporting Files */,
+				8943C5D21B0EE057001223A0 /* MyDrawView.swift */,
+			);
+			path = MyDrawKit;
+			sourceTree = "<group>";
+		};
+		8943C5B41B0EDF85001223A0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8943C5B51B0EDF85001223A0 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8943C5C21B0EDF85001223A0 /* MyDrawKitTests */ = {
+			isa = PBXGroup;
+			children = (
+				8943C5C51B0EDF85001223A0 /* MyDrawKitTests.swift */,
+				8943C5C31B0EDF85001223A0 /* Supporting Files */,
+			);
+			path = MyDrawKitTests;
+			sourceTree = "<group>";
+		};
+		8943C5C31B0EDF85001223A0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8943C5C41B0EDF85001223A0 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8943C5D41B0F0322001223A0 /* CGDemo */ = {
+			isa = PBXGroup;
+			children = (
+				8943C5D51B0F033E001223A0 /* CGDemo2ViewController.swift */,
+				8943C5D71B0F0356001223A0 /* CG2.storyboard */,
+				8943C5D91B0F043B001223A0 /* Draw2D.swift */,
+				8943C5DB1B0F0F8D001223A0 /* DrawRect2D.swift */,
+				8943C5DD1B0F14BB001223A0 /* Arc2D.swift */,
+				8943C5DF1B0F1674001223A0 /* BezierCurve2D.swift */,
+				8943C5E11B0F177D001223A0 /* QuadBezierCurve.swift */,
+				8943C5E31B163BCB001223A0 /* DashedLine2D.swift */,
+				8943C5E51B163D67001223A0 /* ShadowDemo2D.swift */,
+			);
+			name = CGDemo;
+			sourceTree = "<group>";
+		};
 		898723BE1B01BD1D002E4C87 /* DirectoryDemo */ = {
 			isa = PBXGroup;
 			children = (
@@ -333,6 +485,17 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		8943C5AF1B0EDF85001223A0 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8943C5B71B0EDF85001223A0 /* MyDrawKit.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
 		89242A1D1AFEEED5000C8556 /* CodeSamples */ = {
 			isa = PBXNativeTarget;
@@ -341,10 +504,12 @@
 				89242A1A1AFEEED5000C8556 /* Sources */,
 				89242A1B1AFEEED5000C8556 /* Frameworks */,
 				89242A1C1AFEEED5000C8556 /* Resources */,
+				8943C5CE1B0EDF85001223A0 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				8943C5C81B0EDF85001223A0 /* PBXTargetDependency */,
 			);
 			name = CodeSamples;
 			productName = CodeSamples;
@@ -369,6 +534,43 @@
 			productReference = 89242A361AFEEED5000C8556 /* CodeSamplesTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		8943C5B11B0EDF85001223A0 /* MyDrawKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8943C5CB1B0EDF85001223A0 /* Build configuration list for PBXNativeTarget "MyDrawKit" */;
+			buildPhases = (
+				8943C5AD1B0EDF85001223A0 /* Sources */,
+				8943C5AE1B0EDF85001223A0 /* Frameworks */,
+				8943C5AF1B0EDF85001223A0 /* Headers */,
+				8943C5B01B0EDF85001223A0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MyDrawKit;
+			productName = MyDrawKit;
+			productReference = 8943C5B21B0EDF85001223A0 /* MyDrawKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		8943C5BB1B0EDF85001223A0 /* MyDrawKitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8943C5CF1B0EDF85001223A0 /* Build configuration list for PBXNativeTarget "MyDrawKitTests" */;
+			buildPhases = (
+				8943C5B81B0EDF85001223A0 /* Sources */,
+				8943C5B91B0EDF85001223A0 /* Frameworks */,
+				8943C5BA1B0EDF85001223A0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8943C5BF1B0EDF85001223A0 /* PBXTargetDependency */,
+				8943C5C11B0EDF85001223A0 /* PBXTargetDependency */,
+			);
+			name = MyDrawKitTests;
+			productName = MyDrawKitTests;
+			productReference = 8943C5BC1B0EDF85001223A0 /* MyDrawKitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -382,6 +584,13 @@
 						CreatedOnToolsVersion = 6.3.1;
 					};
 					89242A351AFEEED5000C8556 = {
+						CreatedOnToolsVersion = 6.3.1;
+						TestTargetID = 89242A1D1AFEEED5000C8556;
+					};
+					8943C5B11B0EDF85001223A0 = {
+						CreatedOnToolsVersion = 6.3.1;
+					};
+					8943C5BB1B0EDF85001223A0 = {
 						CreatedOnToolsVersion = 6.3.1;
 						TestTargetID = 89242A1D1AFEEED5000C8556;
 					};
@@ -402,6 +611,8 @@
 			targets = (
 				89242A1D1AFEEED5000C8556 /* CodeSamples */,
 				89242A351AFEEED5000C8556 /* CodeSamplesTests */,
+				8943C5B11B0EDF85001223A0 /* MyDrawKit */,
+				8943C5BB1B0EDF85001223A0 /* MyDrawKitTests */,
 			);
 		};
 /* End PBXProject section */
@@ -418,15 +629,31 @@
 				898723C01B01BD33002E4C87 /* Dir.Storyboard in Resources */,
 				898723E01B063F98002E4C87 /* CD.storyboard in Resources */,
 				898723E81B095DC9002E4C87 /* Touch.storyboard in Resources */,
+				8943C5D81B0F0356001223A0 /* CG2.storyboard in Resources */,
 				898723EF1B0988EC002E4C87 /* GD.storyboard in Resources */,
 				89242A311AFEEED5000C8556 /* LaunchScreen.xib in Resources */,
 				898723D91B058A15002E4C87 /* DB.storyboard in Resources */,
+				8943C5AC1B0ED7D8001223A0 /* CG.storyboard in Resources */,
 				89242A541AFF14E4000C8556 /* TableView.storyboard in Resources */,
 				89242A2E1AFEEED5000C8556 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		89242A341AFEEED5000C8556 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8943C5B01B0EDF85001223A0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8943C5BA1B0EDF85001223A0 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -442,16 +669,22 @@
 			files = (
 				89242A271AFEEED5000C8556 /* CodeSamples.xcdatamodeld in Sources */,
 				898723ED1B0988A2002E4C87 /* GestureDViewController.swift in Sources */,
+				8943C5E21B0F177D001223A0 /* QuadBezierCurve.swift in Sources */,
+				8943C5E01B0F1674001223A0 /* BezierCurve2D.swift in Sources */,
 				89242A4F1AFEFD47000C8556 /* TabThreeViewController.swift in Sources */,
 				898723D51B05898C002E4C87 /* FMDatabasePool.m in Sources */,
 				89242A4D1AFEF7E0000C8556 /* TabTwoViewController.swift in Sources */,
 				898723D11B05898C002E4C87 /* FMDatabase.m in Sources */,
+				8943C5AA1B0ED7CF001223A0 /* CGDemoViewController.swift in Sources */,
 				89242A5A1AFFE63E000C8556 /* TableDemo3ViewController.swift in Sources */,
 				898723E51B0640AB002E4C87 /* Contacts.swift in Sources */,
 				898723D41B05898C002E4C87 /* FMDatabaseAdditions.m in Sources */,
+				8943C5E41B163BCB001223A0 /* DashedLine2D.swift in Sources */,
+				8943C5E61B163D67001223A0 /* ShadowDemo2D.swift in Sources */,
 				89242A661B00681E000C8556 /* ContentViewController.swift in Sources */,
 				898723DE1B063F8A002E4C87 /* CDViewController.swift in Sources */,
 				898723EA1B095DDC002E4C87 /* TouchDemoViewController.swift in Sources */,
+				8943C5DE1B0F14BB001223A0 /* Arc2D.swift in Sources */,
 				898723D21B05898C002E4C87 /* FMResultSet.m in Sources */,
 				898723C21B01BD57002E4C87 /* DirDemoViewController.swift in Sources */,
 				89242A681B007327000C8556 /* PageDemoViewController.swift in Sources */,
@@ -459,13 +692,16 @@
 				89242A4B1AFEF7BA000C8556 /* TabOneViewController.swift in Sources */,
 				898723F11B0C5BA4002E4C87 /* GestureDemo1ViewController.swift in Sources */,
 				89242A511AFEFD53000C8556 /* TabFourViewController.swift in Sources */,
+				8943C5DA1B0F043B001223A0 /* Draw2D.swift in Sources */,
 				89242A561AFF1579000C8556 /* TableDemo2ViewController.swift in Sources */,
 				89242A5D1AFFE938000C8556 /* SampleTableViewCell.swift in Sources */,
 				8943C5A71B0DC092001223A0 /* ColViewCell.swift in Sources */,
 				898723D31B05898C002E4C87 /* FMDatabaseQueue.m in Sources */,
 				89242A581AFF3699000C8556 /* TableDemo1ViewController.swift in Sources */,
 				898723DB1B058A2F002E4C87 /* DBViewController.swift in Sources */,
+				8943C5D61B0F033E001223A0 /* CGDemo2ViewController.swift in Sources */,
 				89242A241AFEEED5000C8556 /* AppDelegate.swift in Sources */,
+				8943C5DC1B0F0F8D001223A0 /* DrawRect2D.swift in Sources */,
 				898723F61B0D67D9002E4C87 /* TouchIdViewController.swift in Sources */,
 				8943C5A31B0D8249001223A0 /* CollectionVDemoViewController.swift in Sources */,
 			);
@@ -479,6 +715,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8943C5AD1B0EDF85001223A0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8943C5D31B0EE057001223A0 /* MyDrawView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8943C5B81B0EDF85001223A0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8943C5C61B0EDF85001223A0 /* MyDrawKitTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -486,6 +738,21 @@
 			isa = PBXTargetDependency;
 			target = 89242A1D1AFEEED5000C8556 /* CodeSamples */;
 			targetProxy = 89242A371AFEEED5000C8556 /* PBXContainerItemProxy */;
+		};
+		8943C5BF1B0EDF85001223A0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8943C5B11B0EDF85001223A0 /* MyDrawKit */;
+			targetProxy = 8943C5BE1B0EDF85001223A0 /* PBXContainerItemProxy */;
+		};
+		8943C5C11B0EDF85001223A0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 89242A1D1AFEEED5000C8556 /* CodeSamples */;
+			targetProxy = 8943C5C01B0EDF85001223A0 /* PBXContainerItemProxy */;
+		};
+		8943C5C81B0EDF85001223A0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8943C5B11B0EDF85001223A0 /* MyDrawKit */;
+			targetProxy = 8943C5C71B0EDF85001223A0 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -649,6 +916,83 @@
 			};
 			name = Release;
 		};
+		8943C5CC1B0EDF85001223A0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = MyDrawKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		8943C5CD1B0EDF85001223A0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = MyDrawKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		8943C5D01B0EDF85001223A0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = MyDrawKitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CodeSamples.app/CodeSamples";
+			};
+			name = Debug;
+		};
+		8943C5D11B0EDF85001223A0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = MyDrawKitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CodeSamples.app/CodeSamples";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -678,6 +1022,22 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		8943C5CB1B0EDF85001223A0 /* Build configuration list for PBXNativeTarget "MyDrawKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8943C5CC1B0EDF85001223A0 /* Debug */,
+				8943C5CD1B0EDF85001223A0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		8943C5CF1B0EDF85001223A0 /* Build configuration list for PBXNativeTarget "MyDrawKitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8943C5D01B0EDF85001223A0 /* Debug */,
+				8943C5D11B0EDF85001223A0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 

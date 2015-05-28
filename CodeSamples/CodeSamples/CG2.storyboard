@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+    </dependencies>
+    <scenes>
+        <!--Demo2 View Controller-->
+        <scene sceneID="6sl-MG-GFO">
+            <objects>
+                <viewController storyboardIdentifier="cgVC2" id="Cfp-sb-cFT" customClass="CGDemo2ViewController" customModule="CodeSamples" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vRW-Tc-Vv4"/>
+                        <viewControllerLayoutGuide type="bottom" id="Of5-X8-Jx1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="oDk-Jl-qes">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yqF-gm-DBr" customClass="ShadowDemo2D" customModule="CodeSamples" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="yqF-gm-DBr" firstAttribute="top" secondItem="oDk-Jl-qes" secondAttribute="top" id="d4a-99-PjV"/>
+                            <constraint firstItem="Of5-X8-Jx1" firstAttribute="top" secondItem="yqF-gm-DBr" secondAttribute="bottom" id="q0q-uI-UHd"/>
+                            <constraint firstAttribute="trailing" secondItem="yqF-gm-DBr" secondAttribute="trailing" id="w71-4x-8KW"/>
+                            <constraint firstItem="yqF-gm-DBr" firstAttribute="leading" secondItem="oDk-Jl-qes" secondAttribute="leading" id="xF1-cC-B7D"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="69q-Co-DMs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="363" y="360"/>
+        </scene>
+    </scenes>
+</document>

@@ -16,7 +16,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        collectionViewDemoApplication()
+        cgDemo2Application()
+        //coreGraphicsDemoApplication()
+        //collectionViewDemoApplication()
         //touchIdDemoApplication()
         //gestureDemo1Application()
         //gestureApplication()
@@ -28,6 +30,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //tableApplication()
         //tabBarApplication()
         return true
+    }
+    
+    func cgDemo2Application(){
+        var storyboard = UIStoryboard(name: "CG2", bundle: nil)
+        var cgVC2 = storyboard.instantiateViewControllerWithIdentifier("cgVC2") as! CGDemo2ViewController
+        //var navVC = UINavigationController(rootViewController: cgVC2)
+        window?.rootViewController = cgVC2
+    }
+    
+    func coreGraphicsDemoApplication(){
+        var storyboard = UIStoryboard(name: "CG", bundle: nil)
+        var cgVC = storyboard.instantiateViewControllerWithIdentifier("cgVC") as! CGDemoViewController
+        var navVC = UINavigationController(rootViewController: cgVC)
+        window?.rootViewController = navVC
     }
     
     func collectionViewDemoApplication(){
