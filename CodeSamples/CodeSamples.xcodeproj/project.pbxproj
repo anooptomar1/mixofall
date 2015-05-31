@@ -66,6 +66,9 @@
 		898723F11B0C5BA4002E4C87 /* GestureDemo1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898723F01B0C5BA4002E4C87 /* GestureDemo1ViewController.swift */; };
 		898723F41B0D67B8002E4C87 /* TouchID.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 898723F31B0D67B8002E4C87 /* TouchID.storyboard */; };
 		898723F61B0D67D9002E4C87 /* TouchIdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898723F51B0D67D9002E4C87 /* TouchIdViewController.swift */; };
+		89DC27D61B1A734700E01FE7 /* Gradient2D.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DC27D51B1A734700E01FE7 /* Gradient2D.swift */; };
+		89DC27D81B1A7F5C00E01FE7 /* RadialGradient2D.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DC27D71B1A7F5C00E01FE7 /* RadialGradient2D.swift */; };
+		89DC27DA1B1A85B500E01FE7 /* SphereGradient2D.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DC27D91B1A85B500E01FE7 /* SphereGradient2D.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -185,6 +188,9 @@
 		898723F01B0C5BA4002E4C87 /* GestureDemo1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GestureDemo1ViewController.swift; sourceTree = "<group>"; };
 		898723F31B0D67B8002E4C87 /* TouchID.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TouchID.storyboard; sourceTree = "<group>"; };
 		898723F51B0D67D9002E4C87 /* TouchIdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TouchIdViewController.swift; sourceTree = "<group>"; };
+		89DC27D51B1A734700E01FE7 /* Gradient2D.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Gradient2D.swift; sourceTree = "<group>"; };
+		89DC27D71B1A7F5C00E01FE7 /* RadialGradient2D.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadialGradient2D.swift; sourceTree = "<group>"; };
+		89DC27D91B1A85B500E01FE7 /* SphereGradient2D.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SphereGradient2D.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -405,6 +411,9 @@
 				8943C5E11B0F177D001223A0 /* QuadBezierCurve.swift */,
 				8943C5E31B163BCB001223A0 /* DashedLine2D.swift */,
 				8943C5E51B163D67001223A0 /* ShadowDemo2D.swift */,
+				89DC27D51B1A734700E01FE7 /* Gradient2D.swift */,
+				89DC27D71B1A7F5C00E01FE7 /* RadialGradient2D.swift */,
+				89DC27D91B1A85B500E01FE7 /* SphereGradient2D.swift */,
 			);
 			name = CGDemo;
 			sourceTree = "<group>";
@@ -671,6 +680,7 @@
 				898723ED1B0988A2002E4C87 /* GestureDViewController.swift in Sources */,
 				8943C5E21B0F177D001223A0 /* QuadBezierCurve.swift in Sources */,
 				8943C5E01B0F1674001223A0 /* BezierCurve2D.swift in Sources */,
+				89DC27DA1B1A85B500E01FE7 /* SphereGradient2D.swift in Sources */,
 				89242A4F1AFEFD47000C8556 /* TabThreeViewController.swift in Sources */,
 				898723D51B05898C002E4C87 /* FMDatabasePool.m in Sources */,
 				89242A4D1AFEF7E0000C8556 /* TabTwoViewController.swift in Sources */,
@@ -678,6 +688,7 @@
 				8943C5AA1B0ED7CF001223A0 /* CGDemoViewController.swift in Sources */,
 				89242A5A1AFFE63E000C8556 /* TableDemo3ViewController.swift in Sources */,
 				898723E51B0640AB002E4C87 /* Contacts.swift in Sources */,
+				89DC27D81B1A7F5C00E01FE7 /* RadialGradient2D.swift in Sources */,
 				898723D41B05898C002E4C87 /* FMDatabaseAdditions.m in Sources */,
 				8943C5E41B163BCB001223A0 /* DashedLine2D.swift in Sources */,
 				8943C5E61B163D67001223A0 /* ShadowDemo2D.swift in Sources */,
@@ -690,6 +701,7 @@
 				89242A681B007327000C8556 /* PageDemoViewController.swift in Sources */,
 				89242A611B003428000C8556 /* TableDetailsViewController.swift in Sources */,
 				89242A4B1AFEF7BA000C8556 /* TabOneViewController.swift in Sources */,
+				89DC27D61B1A734700E01FE7 /* Gradient2D.swift in Sources */,
 				898723F11B0C5BA4002E4C87 /* GestureDemo1ViewController.swift in Sources */,
 				89242A511AFEFD53000C8556 /* TabFourViewController.swift in Sources */,
 				8943C5DA1B0F043B001223A0 /* Draw2D.swift in Sources */,
@@ -1030,6 +1042,7 @@
 				8943C5CD1B0EDF85001223A0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8943C5CF1B0EDF85001223A0 /* Build configuration list for PBXNativeTarget "MyDrawKitTests" */ = {
 			isa = XCConfigurationList;
@@ -1038,6 +1051,7 @@
 				8943C5D11B0EDF85001223A0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
