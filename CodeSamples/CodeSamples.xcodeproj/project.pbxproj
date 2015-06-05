@@ -46,6 +46,13 @@
 		8943C5E21B0F177D001223A0 /* QuadBezierCurve.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8943C5E11B0F177D001223A0 /* QuadBezierCurve.swift */; };
 		8943C5E41B163BCB001223A0 /* DashedLine2D.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8943C5E31B163BCB001223A0 /* DashedLine2D.swift */; };
 		8943C5E61B163D67001223A0 /* ShadowDemo2D.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8943C5E51B163D67001223A0 /* ShadowDemo2D.swift */; };
+		896B8EA11B1BEA9C009CF23D /* DA.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 896B8EA01B1BEA9C009CF23D /* DA.storyboard */; };
+		896B8EA31B1BEAA9009CF23D /* DAMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896B8EA21B1BEAA9009CF23D /* DAMainViewController.swift */; };
+		896B8EDC1B1E8DAD009CF23D /* UIKitSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 896B8EDB1B1E8DAD009CF23D /* UIKitSB.storyboard */; };
+		896B8EDE1B1E8DD2009CF23D /* UIKitMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896B8EDD1B1E8DD2009CF23D /* UIKitMainViewController.swift */; };
+		896B8F341B21204B009CF23D /* LocalNSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 896B8F331B21204B009CF23D /* LocalNSB.storyboard */; };
+		896B8F361B2120B3009CF23D /* LocalMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896B8F351B2120B3009CF23D /* LocalMainViewController.swift */; };
+		896B8F381B2124A1009CF23D /* laser.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 896B8F371B2124A1009CF23D /* laser.mp3 */; };
 		898723C01B01BD33002E4C87 /* Dir.Storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 898723BF1B01BD33002E4C87 /* Dir.Storyboard */; };
 		898723C21B01BD57002E4C87 /* DirDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898723C11B01BD57002E4C87 /* DirDemoViewController.swift */; };
 		898723C41B0580FA002E4C87 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 898723C31B0580FA002E4C87 /* libsqlite3.dylib */; };
@@ -69,6 +76,10 @@
 		89DC27D61B1A734700E01FE7 /* Gradient2D.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DC27D51B1A734700E01FE7 /* Gradient2D.swift */; };
 		89DC27D81B1A7F5C00E01FE7 /* RadialGradient2D.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DC27D71B1A7F5C00E01FE7 /* RadialGradient2D.swift */; };
 		89DC27DA1B1A85B500E01FE7 /* SphereGradient2D.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DC27D91B1A85B500E01FE7 /* SphereGradient2D.swift */; };
+		89DC27DC1B1A8F8B00E01FE7 /* CGImage2D.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DC27DB1B1A8F8B00E01FE7 /* CGImage2D.swift */; };
+		89DC27DE1B1A99B700E01FE7 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89DC27DD1B1A99B700E01FE7 /* CoreImage.framework */; };
+		89DC27E11B1AAD8300E01FE7 /* CA.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89DC27E01B1AAD8300E01FE7 /* CA.storyboard */; };
+		89DC27E31B1AADA600E01FE7 /* CAMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DC27E21B1AADA600E01FE7 /* CAMainViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -161,6 +172,13 @@
 		8943C5E11B0F177D001223A0 /* QuadBezierCurve.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuadBezierCurve.swift; sourceTree = "<group>"; };
 		8943C5E31B163BCB001223A0 /* DashedLine2D.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashedLine2D.swift; sourceTree = "<group>"; };
 		8943C5E51B163D67001223A0 /* ShadowDemo2D.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShadowDemo2D.swift; sourceTree = "<group>"; };
+		896B8EA01B1BEA9C009CF23D /* DA.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DA.storyboard; sourceTree = "<group>"; };
+		896B8EA21B1BEAA9009CF23D /* DAMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DAMainViewController.swift; sourceTree = "<group>"; };
+		896B8EDB1B1E8DAD009CF23D /* UIKitSB.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = UIKitSB.storyboard; sourceTree = "<group>"; };
+		896B8EDD1B1E8DD2009CF23D /* UIKitMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIKitMainViewController.swift; sourceTree = "<group>"; };
+		896B8F331B21204B009CF23D /* LocalNSB.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LocalNSB.storyboard; sourceTree = "<group>"; };
+		896B8F351B2120B3009CF23D /* LocalMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalMainViewController.swift; sourceTree = "<group>"; };
+		896B8F371B2124A1009CF23D /* laser.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = laser.mp3; sourceTree = "<group>"; };
 		898723BF1B01BD33002E4C87 /* Dir.Storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Dir.Storyboard; sourceTree = "<group>"; };
 		898723C11B01BD57002E4C87 /* DirDemoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirDemoViewController.swift; sourceTree = "<group>"; };
 		898723C31B0580FA002E4C87 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
@@ -191,6 +209,10 @@
 		89DC27D51B1A734700E01FE7 /* Gradient2D.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Gradient2D.swift; sourceTree = "<group>"; };
 		89DC27D71B1A7F5C00E01FE7 /* RadialGradient2D.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadialGradient2D.swift; sourceTree = "<group>"; };
 		89DC27D91B1A85B500E01FE7 /* SphereGradient2D.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SphereGradient2D.swift; sourceTree = "<group>"; };
+		89DC27DB1B1A8F8B00E01FE7 /* CGImage2D.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGImage2D.swift; sourceTree = "<group>"; };
+		89DC27DD1B1A99B700E01FE7 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
+		89DC27E01B1AAD8300E01FE7 /* CA.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CA.storyboard; sourceTree = "<group>"; };
+		89DC27E21B1AADA600E01FE7 /* CAMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CAMainViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -198,6 +220,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89DC27DE1B1A99B700E01FE7 /* CoreImage.framework in Frameworks */,
 				898723C41B0580FA002E4C87 /* libsqlite3.dylib in Frameworks */,
 				8943C5C91B0EDF85001223A0 /* MyDrawKit.framework in Frameworks */,
 			);
@@ -231,6 +254,7 @@
 		89242A151AFEEED5000C8556 = {
 			isa = PBXGroup;
 			children = (
+				89DC27DD1B1A99B700E01FE7 /* CoreImage.framework */,
 				89242A201AFEEED5000C8556 /* CodeSamples */,
 				89242A391AFEEED5000C8556 /* CodeSamplesTests */,
 				8943C5B31B0EDF85001223A0 /* MyDrawKit */,
@@ -253,6 +277,10 @@
 		89242A201AFEEED5000C8556 /* CodeSamples */ = {
 			isa = PBXGroup;
 			children = (
+				896B8F321B212034009CF23D /* LocalNotificationDemo */,
+				896B8EDA1B1E8D95009CF23D /* UIKitDemo */,
+				896B8E9F1B1BEA78009CF23D /* DynamicAnimDemo */,
+				89DC27DF1B1AAD7000E01FE7 /* CoreAnimationDemo */,
 				8943C5D41B0F0322001223A0 /* CGDemo */,
 				8943C5A81B0ED7A9001223A0 /* QuartzCGDemo */,
 				8943C5A11B0D8229001223A0 /* CollectionViewDemo */,
@@ -274,6 +302,7 @@
 		89242A211AFEEED5000C8556 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				896B8F371B2124A1009CF23D /* laser.mp3 */,
 				898723C31B0580FA002E4C87 /* libsqlite3.dylib */,
 				89242A231AFEEED5000C8556 /* AppDelegate.swift */,
 				898723C51B05898B002E4C87 /* CodeSamples-Bridging-Header.h */,
@@ -414,8 +443,36 @@
 				89DC27D51B1A734700E01FE7 /* Gradient2D.swift */,
 				89DC27D71B1A7F5C00E01FE7 /* RadialGradient2D.swift */,
 				89DC27D91B1A85B500E01FE7 /* SphereGradient2D.swift */,
+				89DC27DB1B1A8F8B00E01FE7 /* CGImage2D.swift */,
 			);
 			name = CGDemo;
+			sourceTree = "<group>";
+		};
+		896B8E9F1B1BEA78009CF23D /* DynamicAnimDemo */ = {
+			isa = PBXGroup;
+			children = (
+				896B8EA01B1BEA9C009CF23D /* DA.storyboard */,
+				896B8EA21B1BEAA9009CF23D /* DAMainViewController.swift */,
+			);
+			name = DynamicAnimDemo;
+			sourceTree = "<group>";
+		};
+		896B8EDA1B1E8D95009CF23D /* UIKitDemo */ = {
+			isa = PBXGroup;
+			children = (
+				896B8EDB1B1E8DAD009CF23D /* UIKitSB.storyboard */,
+				896B8EDD1B1E8DD2009CF23D /* UIKitMainViewController.swift */,
+			);
+			name = UIKitDemo;
+			sourceTree = "<group>";
+		};
+		896B8F321B212034009CF23D /* LocalNotificationDemo */ = {
+			isa = PBXGroup;
+			children = (
+				896B8F331B21204B009CF23D /* LocalNSB.storyboard */,
+				896B8F351B2120B3009CF23D /* LocalMainViewController.swift */,
+			);
+			name = LocalNotificationDemo;
 			sourceTree = "<group>";
 		};
 		898723BE1B01BD1D002E4C87 /* DirectoryDemo */ = {
@@ -490,6 +547,15 @@
 				898723F51B0D67D9002E4C87 /* TouchIdViewController.swift */,
 			);
 			name = TouchIDDemo;
+			sourceTree = "<group>";
+		};
+		89DC27DF1B1AAD7000E01FE7 /* CoreAnimationDemo */ = {
+			isa = PBXGroup;
+			children = (
+				89DC27E01B1AAD8300E01FE7 /* CA.storyboard */,
+				89DC27E21B1AADA600E01FE7 /* CAMainViewController.swift */,
+			);
+			name = CoreAnimationDemo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -633,16 +699,21 @@
 			files = (
 				89242A2C1AFEEED5000C8556 /* Main.storyboard in Resources */,
 				898723F41B0D67B8002E4C87 /* TouchID.storyboard in Resources */,
+				896B8F341B21204B009CF23D /* LocalNSB.storyboard in Resources */,
 				89242A641B0067CD000C8556 /* PageDemo.storyboard in Resources */,
+				896B8F381B2124A1009CF23D /* laser.mp3 in Resources */,
 				8943C5A51B0D8269001223A0 /* CollectionV.storyboard in Resources */,
 				898723C01B01BD33002E4C87 /* Dir.Storyboard in Resources */,
 				898723E01B063F98002E4C87 /* CD.storyboard in Resources */,
 				898723E81B095DC9002E4C87 /* Touch.storyboard in Resources */,
 				8943C5D81B0F0356001223A0 /* CG2.storyboard in Resources */,
 				898723EF1B0988EC002E4C87 /* GD.storyboard in Resources */,
+				896B8EA11B1BEA9C009CF23D /* DA.storyboard in Resources */,
+				89DC27E11B1AAD8300E01FE7 /* CA.storyboard in Resources */,
 				89242A311AFEEED5000C8556 /* LaunchScreen.xib in Resources */,
 				898723D91B058A15002E4C87 /* DB.storyboard in Resources */,
 				8943C5AC1B0ED7D8001223A0 /* CG.storyboard in Resources */,
+				896B8EDC1B1E8DAD009CF23D /* UIKitSB.storyboard in Resources */,
 				89242A541AFF14E4000C8556 /* TableView.storyboard in Resources */,
 				89242A2E1AFEEED5000C8556 /* Images.xcassets in Resources */,
 			);
@@ -690,6 +761,7 @@
 				898723E51B0640AB002E4C87 /* Contacts.swift in Sources */,
 				89DC27D81B1A7F5C00E01FE7 /* RadialGradient2D.swift in Sources */,
 				898723D41B05898C002E4C87 /* FMDatabaseAdditions.m in Sources */,
+				896B8EA31B1BEAA9009CF23D /* DAMainViewController.swift in Sources */,
 				8943C5E41B163BCB001223A0 /* DashedLine2D.swift in Sources */,
 				8943C5E61B163D67001223A0 /* ShadowDemo2D.swift in Sources */,
 				89242A661B00681E000C8556 /* ContentViewController.swift in Sources */,
@@ -698,6 +770,8 @@
 				8943C5DE1B0F14BB001223A0 /* Arc2D.swift in Sources */,
 				898723D21B05898C002E4C87 /* FMResultSet.m in Sources */,
 				898723C21B01BD57002E4C87 /* DirDemoViewController.swift in Sources */,
+				89DC27DC1B1A8F8B00E01FE7 /* CGImage2D.swift in Sources */,
+				89DC27E31B1AADA600E01FE7 /* CAMainViewController.swift in Sources */,
 				89242A681B007327000C8556 /* PageDemoViewController.swift in Sources */,
 				89242A611B003428000C8556 /* TableDetailsViewController.swift in Sources */,
 				89242A4B1AFEF7BA000C8556 /* TabOneViewController.swift in Sources */,
@@ -707,11 +781,13 @@
 				8943C5DA1B0F043B001223A0 /* Draw2D.swift in Sources */,
 				89242A561AFF1579000C8556 /* TableDemo2ViewController.swift in Sources */,
 				89242A5D1AFFE938000C8556 /* SampleTableViewCell.swift in Sources */,
+				896B8EDE1B1E8DD2009CF23D /* UIKitMainViewController.swift in Sources */,
 				8943C5A71B0DC092001223A0 /* ColViewCell.swift in Sources */,
 				898723D31B05898C002E4C87 /* FMDatabaseQueue.m in Sources */,
 				89242A581AFF3699000C8556 /* TableDemo1ViewController.swift in Sources */,
 				898723DB1B058A2F002E4C87 /* DBViewController.swift in Sources */,
 				8943C5D61B0F033E001223A0 /* CGDemo2ViewController.swift in Sources */,
+				896B8F361B2120B3009CF23D /* LocalMainViewController.swift in Sources */,
 				89242A241AFEEED5000C8556 /* AppDelegate.swift in Sources */,
 				8943C5DC1B0F0F8D001223A0 /* DrawRect2D.swift in Sources */,
 				898723F61B0D67D9002E4C87 /* TouchIdViewController.swift in Sources */,

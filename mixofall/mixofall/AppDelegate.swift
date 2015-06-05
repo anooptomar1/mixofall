@@ -15,19 +15,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        weatherDemoStartup()
+        //weatherDemoStartup()
         return true
     }
     
     func weatherDemoStartup(){
         //var nav = UINavigationController(rootViewController: UIStoryboard(name: "weatherSB", bundle: nil).instantiateViewControllerWithIdentifier("weatherVC") as WeatherViewController)
-        self.window?.rootViewController = UIStoryboard(name: "weatherSB", bundle: nil).instantiateViewControllerWithIdentifier("weatherVC") as WeatherViewController
+        self.window?.rootViewController = UIStoryboard(name: "weatherSB", bundle: nil).instantiateViewControllerWithIdentifier("weatherVC") as! WeatherViewController
         UIApplication.sharedApplication().statusBarStyle = UIStatusBarStyle.Default
         UIApplication.sharedApplication().statusBarHidden = false
     }
     
     func mapDemoStartup(){
-        var nav = UINavigationController(rootViewController: UIStoryboard(name: "mapsSB", bundle: nil).instantiateViewControllerWithIdentifier("photoVC") as PhotoViewController)
+        var nav = UINavigationController(rootViewController: UIStoryboard(name: "mapsSB", bundle: nil).instantiateViewControllerWithIdentifier("photoVC") as! PhotoViewController)
         
         self.window?.rootViewController = nav
     }
@@ -35,8 +35,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func TabBarStartUP(){
         var toDoStoryBoard = UIStoryboard(name: "ToDoSB", bundle: nil)
         
-        var mainViewController = UINavigationController(rootViewController: toDoStoryBoard.instantiateViewControllerWithIdentifier("MainVC") as MainViewController)
-        var addNewViewController = UINavigationController(rootViewController: toDoStoryBoard.instantiateViewControllerWithIdentifier("NewItemVC") as NewItemViewController)
+        var mainViewController = UINavigationController(rootViewController: toDoStoryBoard.instantiateViewControllerWithIdentifier("MainVC") as! MainViewController)
+        var addNewViewController = UINavigationController(rootViewController: toDoStoryBoard.instantiateViewControllerWithIdentifier("NewItemVC") as! NewItemViewController)
         
         var listTabItem = UITabBarItem(title: "List", image: UIImage(named: "clipboard109"), tag: 0)
         

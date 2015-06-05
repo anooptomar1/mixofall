@@ -59,7 +59,7 @@ extension PhotoViewController: UIImagePickerControllerDelegate{
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "locationTag"{
-            let locationVC = segue.destinationViewController as LocationViewController
+            let locationVC = segue.destinationViewController as! LocationViewController
             locationVC.delegate = self
         }
     }

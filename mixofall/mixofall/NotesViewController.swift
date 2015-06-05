@@ -32,7 +32,7 @@ class NotesViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("noteCell") as NoteTableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("noteCell") as! NoteTableViewCell
         cell.setup(taskList[indexPath.row])
         return cell
     }
@@ -55,8 +55,8 @@ class NotesViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "detailSegue"{
-            var detailsVC = segue.destinationViewController as DetailsViewController
-            var indexPath = tableView.indexPathForCell(sender as UITableViewCell)
+            var detailsVC = segue.destinationViewController as! DetailsViewController
+            var indexPath = tableView.indexPathForCell(sender as! UITableViewCell)
             detailsVC.myTask = taskList[indexPath!.row]
         }
     }

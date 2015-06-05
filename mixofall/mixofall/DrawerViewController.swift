@@ -13,7 +13,7 @@ class DrawerViewController: UIViewController {
     var settings: SettingsView!
     
     override func viewDidLoad() {
-        settings = NSBundle.mainBundle().loadNibNamed("SettingsNib", owner: self, options: nil).last as SettingsView
+        settings = NSBundle.mainBundle().loadNibNamed("SettingsNib", owner: self, options: nil).last as! SettingsView
         settings.frame = CGRectMake(0, -self.view.frame.size.height + 80, self.view.frame.size.width, self.view.frame.size.height)
         
         self.view.addSubview(settings)

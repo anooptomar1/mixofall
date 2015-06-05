@@ -31,7 +31,7 @@ class WeatherViewController: UIViewController {
     }
     
     func addWeatherSettings(){
-        weatherSettings = NSBundle.mainBundle().loadNibNamed("WeatherSettings", owner: self, options: nil).last as WeatherSettings
+        weatherSettings = NSBundle.mainBundle().loadNibNamed("WeatherSettings", owner: self, options: nil).last as! WeatherSettings
         weatherSettings.frame = CGRectMake(0, self.view.frame.height - 100, self.view.frame.width, self.view.frame.height)
         
         self.view.addSubview(weatherSettings)

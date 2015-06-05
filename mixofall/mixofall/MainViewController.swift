@@ -21,7 +21,7 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         self.tableView.delegate = self
         
         if NSUserDefaults.standardUserDefaults().objectForKey(kTodoList) != nil{
-            toDoList = NSUserDefaults.standardUserDefaults().objectForKey(kTodoList) as [String]
+            toDoList = NSUserDefaults.standardUserDefaults().objectForKey(kTodoList) as! [String]
         }
         
         // set this to remove empty lines from tableview
@@ -33,7 +33,7 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("cell") as TodoTableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("cell") as! TodoTableViewCell
         cell.setCell(toDoList[indexPath.row])
         return cell
     }

@@ -16,7 +16,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        cgDemo2Application()
+        
+        localNotificationApplication()
+        //daDemoApplication()
+        //caDemoApplication()
+        //cgDemo2Application()
         //coreGraphicsDemoApplication()
         //collectionViewDemoApplication()
         //touchIdDemoApplication()
@@ -30,6 +34,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //tableApplication()
         //tabBarApplication()
         return true
+    }
+    
+    func localNotificationApplication(){
+        var storyboard = UIStoryboard(name: "LocalNSB", bundle: nil)
+        var localVC = storyboard.instantiateViewControllerWithIdentifier("localVC") as! LocalMainViewController
+        var navVC = UINavigationController(rootViewController: localVC)
+        window?.rootViewController = navVC
+    }
+    
+    func daDemoApplication(){
+        var storyboard = UIStoryboard(name: "DA", bundle: nil)
+        var daVC = storyboard.instantiateViewControllerWithIdentifier("daVC") as! DAMainViewController
+        var navVC = UINavigationController(rootViewController: daVC)
+        window?.rootViewController = navVC
+    }
+    
+    func caDemoApplication(){
+        var storyborard = UIStoryboard(name: "CA", bundle: nil)
+        var caVC = storyborard.instantiateViewControllerWithIdentifier("caVC") as! CAMainViewController
+        var navVC = UINavigationController(rootViewController: caVC)
+        window?.rootViewController = navVC
     }
     
     func cgDemo2Application(){
@@ -141,6 +166,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationDidEnterBackground(application: UIApplication) {
         // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
         // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+        let app = UIApplication.sharedApplication()
+        let notificationSettings = UIUserNotificationSettings(forTypes: UIUserNotificationType.Alert | UIUserNotificationType.Sound, categories: nil)
+        app.registerUserNotificationSettings(notificationSettings)
+        let alertTime = NSDate().dateByAddingTimeInterval(20)
+        let notifyAlarm = UILocalNotification()
+        notifyAlarm.fireDate = alertTime
+        notifyAlarm.timeZone = NSTimeZone.defaultTimeZone()
+        notifyAlarm.soundName = "laser.mp3"
+        notifyAlarm.alertBody = "Local notification got triggered"
+        app.scheduleLocalNotification(notifyAlarm)
     }
 
     func applicationWillEnterForeground(application: UIApplication) {

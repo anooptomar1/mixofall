@@ -44,7 +44,7 @@ class ViewController: UIViewController, UIWebViewDelegate, NSURLConnectionDataDe
     }
     
     func webViewDidFinishLoad(webView: UIWebView) {
-        urlText.text = webView.request?.URL.absoluteURL?.absoluteString
+        urlText.text = webView.request?.URL!.absoluteURL?.absoluteString
         shortButton.enabled = true
     }
 
@@ -53,7 +53,7 @@ class ViewController: UIViewController, UIWebViewDelegate, NSURLConnectionDataDe
     }
 ////
     @IBAction func onShortButton(sender: UIBarButtonItem) {
-        var encodedUrl = webSection.request?.URL.absoluteString?.stringByReplacingPercentEscapesUsingEncoding(NSUTF8StringEncoding)
+        var encodedUrl = webSection.request?.URL!.absoluteString?.stringByReplacingPercentEscapesUsingEncoding(NSUTF8StringEncoding)
         var tinyUrlString = "http://tinyurl.com/api-create.php?url=\(encodedUrl!)"
         
         let request = NSURLRequest(URL: NSURL(string: tinyUrlString)!)
@@ -70,7 +70,7 @@ class ViewController: UIViewController, UIWebViewDelegate, NSURLConnectionDataDe
     func connectionDidFinishLoading(connection: NSURLConnection) {
         if let data = shortData{
             let shortString = NSString(data: data, encoding: NSUTF8StringEncoding)
-            shortButton.title = shortString
+            shortButton.title = shortString as? String
             copyButton.enabled = true
         }
     }
