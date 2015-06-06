@@ -53,6 +53,10 @@
 		896B8F341B21204B009CF23D /* LocalNSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 896B8F331B21204B009CF23D /* LocalNSB.storyboard */; };
 		896B8F361B2120B3009CF23D /* LocalMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896B8F351B2120B3009CF23D /* LocalMainViewController.swift */; };
 		896B8F381B2124A1009CF23D /* laser.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 896B8F371B2124A1009CF23D /* laser.mp3 */; };
+		896B8F3B1B213080009CF23D /* MapItemMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896B8F3A1B213080009CF23D /* MapItemMainViewController.swift */; };
+		896B8F3D1B213096009CF23D /* MapItem.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 896B8F3C1B213096009CF23D /* MapItem.storyboard */; };
+		896B8F401B21624C009CF23D /* CLSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 896B8F3F1B21624C009CF23D /* CLSB.storyboard */; };
+		896B8F421B21626C009CF23D /* CLDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896B8F411B21626C009CF23D /* CLDemoViewController.swift */; };
 		898723C01B01BD33002E4C87 /* Dir.Storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 898723BF1B01BD33002E4C87 /* Dir.Storyboard */; };
 		898723C21B01BD57002E4C87 /* DirDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898723C11B01BD57002E4C87 /* DirDemoViewController.swift */; };
 		898723C41B0580FA002E4C87 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 898723C31B0580FA002E4C87 /* libsqlite3.dylib */; };
@@ -179,6 +183,10 @@
 		896B8F331B21204B009CF23D /* LocalNSB.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LocalNSB.storyboard; sourceTree = "<group>"; };
 		896B8F351B2120B3009CF23D /* LocalMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalMainViewController.swift; sourceTree = "<group>"; };
 		896B8F371B2124A1009CF23D /* laser.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = laser.mp3; sourceTree = "<group>"; };
+		896B8F3A1B213080009CF23D /* MapItemMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapItemMainViewController.swift; sourceTree = "<group>"; };
+		896B8F3C1B213096009CF23D /* MapItem.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MapItem.storyboard; sourceTree = "<group>"; };
+		896B8F3F1B21624C009CF23D /* CLSB.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CLSB.storyboard; sourceTree = "<group>"; };
+		896B8F411B21626C009CF23D /* CLDemoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CLDemoViewController.swift; sourceTree = "<group>"; };
 		898723BF1B01BD33002E4C87 /* Dir.Storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Dir.Storyboard; sourceTree = "<group>"; };
 		898723C11B01BD57002E4C87 /* DirDemoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirDemoViewController.swift; sourceTree = "<group>"; };
 		898723C31B0580FA002E4C87 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
@@ -277,6 +285,8 @@
 		89242A201AFEEED5000C8556 /* CodeSamples */ = {
 			isa = PBXGroup;
 			children = (
+				896B8F3E1B2161E3009CF23D /* CLDemo */,
+				896B8F391B21306C009CF23D /* MapItemDemo */,
 				896B8F321B212034009CF23D /* LocalNotificationDemo */,
 				896B8EDA1B1E8D95009CF23D /* UIKitDemo */,
 				896B8E9F1B1BEA78009CF23D /* DynamicAnimDemo */,
@@ -473,6 +483,24 @@
 				896B8F351B2120B3009CF23D /* LocalMainViewController.swift */,
 			);
 			name = LocalNotificationDemo;
+			sourceTree = "<group>";
+		};
+		896B8F391B21306C009CF23D /* MapItemDemo */ = {
+			isa = PBXGroup;
+			children = (
+				896B8F3A1B213080009CF23D /* MapItemMainViewController.swift */,
+				896B8F3C1B213096009CF23D /* MapItem.storyboard */,
+			);
+			name = MapItemDemo;
+			sourceTree = "<group>";
+		};
+		896B8F3E1B2161E3009CF23D /* CLDemo */ = {
+			isa = PBXGroup;
+			children = (
+				896B8F3F1B21624C009CF23D /* CLSB.storyboard */,
+				896B8F411B21626C009CF23D /* CLDemoViewController.swift */,
+			);
+			name = CLDemo;
 			sourceTree = "<group>";
 		};
 		898723BE1B01BD1D002E4C87 /* DirectoryDemo */ = {
@@ -714,7 +742,9 @@
 				898723D91B058A15002E4C87 /* DB.storyboard in Resources */,
 				8943C5AC1B0ED7D8001223A0 /* CG.storyboard in Resources */,
 				896B8EDC1B1E8DAD009CF23D /* UIKitSB.storyboard in Resources */,
+				896B8F401B21624C009CF23D /* CLSB.storyboard in Resources */,
 				89242A541AFF14E4000C8556 /* TableView.storyboard in Resources */,
+				896B8F3D1B213096009CF23D /* MapItem.storyboard in Resources */,
 				89242A2E1AFEEED5000C8556 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -749,7 +779,9 @@
 			files = (
 				89242A271AFEEED5000C8556 /* CodeSamples.xcdatamodeld in Sources */,
 				898723ED1B0988A2002E4C87 /* GestureDViewController.swift in Sources */,
+				896B8F421B21626C009CF23D /* CLDemoViewController.swift in Sources */,
 				8943C5E21B0F177D001223A0 /* QuadBezierCurve.swift in Sources */,
+				896B8F3B1B213080009CF23D /* MapItemMainViewController.swift in Sources */,
 				8943C5E01B0F1674001223A0 /* BezierCurve2D.swift in Sources */,
 				89DC27DA1B1A85B500E01FE7 /* SphereGradient2D.swift in Sources */,
 				89242A4F1AFEFD47000C8556 /* TabThreeViewController.swift in Sources */,
