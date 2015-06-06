@@ -16,7 +16,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        coreLocationApplication()
+        mkDemoApplication()
+        //coreLocationApplication()
         //mapItemApplication()
         //localNotificationApplication()
         //daDemoApplication()
@@ -35,6 +36,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //tableApplication()
         //tabBarApplication()
         return true
+    }
+    
+    func mkDemoApplication(){
+        var storyboard = UIStoryboard(name: "MKSb", bundle: nil)
+        var mkVC = storyboard.instantiateViewControllerWithIdentifier("mkVC") as! MKMainDemoViewController
+        var navVC = UINavigationController(rootViewController: mkVC)
+        window?.rootViewController = navVC
     }
     
     func coreLocationApplication(){

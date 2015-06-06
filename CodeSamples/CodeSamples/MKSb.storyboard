@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+    </dependencies>
+    <scenes>
+        <!--Main Demo View Controller-->
+        <scene sceneID="aRf-Dw-xiI">
+            <objects>
+                <viewController storyboardIdentifier="mkVC" id="ybY-FJ-Xpx" customClass="MKMainDemoViewController" customModule="CodeSamples" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="DXY-8m-yQI"/>
+                        <viewControllerLayoutGuide type="bottom" id="wvx-YC-KFt"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="25K-fm-Lee">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="FQ6-W3-ASa">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="524"/>
+                            </mapView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HzV-ob-Aai">
+                                <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                                <items>
+                                    <barButtonItem title="Zoom" id="3h5-ys-3qd">
+                                        <connections>
+                                            <action selector="onZoom:" destination="ybY-FJ-Xpx" id="mmu-Ln-8q9"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="rkE-2k-ptz"/>
+                                    <barButtonItem title="Close Keyboard" id="cxI-AB-89S">
+                                        <connections>
+                                            <action selector="onCloseKeyboard:" destination="ybY-FJ-Xpx" id="ZJd-VH-ZfC"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="AGe-D3-DDH"/>
+                                    <barButtonItem title="Map Type" id="kdl-a6-4hs">
+                                        <connections>
+                                            <action selector="onMapType:" destination="ybY-FJ-Xpx" id="JPA-hy-96K"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wvx-YC-KFt" firstAttribute="top" secondItem="HzV-ob-Aai" secondAttribute="bottom" id="8wo-Yg-vDm"/>
+                            <constraint firstAttribute="trailing" secondItem="FQ6-W3-ASa" secondAttribute="trailing" id="E8B-XU-a27"/>
+                            <constraint firstItem="HzV-ob-Aai" firstAttribute="top" secondItem="FQ6-W3-ASa" secondAttribute="bottom" id="OMZ-Xw-D9I"/>
+                            <constraint firstItem="HzV-ob-Aai" firstAttribute="top" secondItem="FQ6-W3-ASa" secondAttribute="bottom" id="U3a-vB-Y6C"/>
+                            <constraint firstAttribute="trailing" secondItem="HzV-ob-Aai" secondAttribute="trailing" id="dDS-ID-zkS"/>
+                            <constraint firstItem="HzV-ob-Aai" firstAttribute="leading" secondItem="25K-fm-Lee" secondAttribute="leading" id="sfh-4l-rTT"/>
+                            <constraint firstItem="FQ6-W3-ASa" firstAttribute="top" secondItem="25K-fm-Lee" secondAttribute="top" id="tqb-Jp-4Ta"/>
+                            <constraint firstItem="FQ6-W3-ASa" firstAttribute="leading" secondItem="25K-fm-Lee" secondAttribute="leading" id="xrC-lA-jcz"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="mapView" destination="FQ6-W3-ASa" id="zMH-tf-fsN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s53-Vt-Tcb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="398" y="390"/>
+        </scene>
+    </scenes>
+</document>
