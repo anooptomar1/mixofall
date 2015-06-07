@@ -48,6 +48,7 @@
 		8943C5E61B163D67001223A0 /* ShadowDemo2D.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8943C5E51B163D67001223A0 /* ShadowDemo2D.swift */; };
 		8964058A1B23613500D6A105 /* MKMainDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896405891B23613500D6A105 /* MKMainDemoViewController.swift */; };
 		8964058C1B23613E00D6A105 /* MKSb.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8964058B1B23613E00D6A105 /* MKSb.storyboard */; };
+		8964058E1B23D2F500D6A105 /* ATPinAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8964058D1B23D2F500D6A105 /* ATPinAnnotation.swift */; };
 		896B8EA11B1BEA9C009CF23D /* DA.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 896B8EA01B1BEA9C009CF23D /* DA.storyboard */; };
 		896B8EA31B1BEAA9009CF23D /* DAMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896B8EA21B1BEAA9009CF23D /* DAMainViewController.swift */; };
 		896B8EDC1B1E8DAD009CF23D /* UIKitSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 896B8EDB1B1E8DAD009CF23D /* UIKitSB.storyboard */; };
@@ -180,6 +181,7 @@
 		8943C5E51B163D67001223A0 /* ShadowDemo2D.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShadowDemo2D.swift; sourceTree = "<group>"; };
 		896405891B23613500D6A105 /* MKMainDemoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MKMainDemoViewController.swift; sourceTree = "<group>"; };
 		8964058B1B23613E00D6A105 /* MKSb.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MKSb.storyboard; sourceTree = "<group>"; };
+		8964058D1B23D2F500D6A105 /* ATPinAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ATPinAnnotation.swift; sourceTree = "<group>"; };
 		896B8EA01B1BEA9C009CF23D /* DA.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DA.storyboard; sourceTree = "<group>"; };
 		896B8EA21B1BEAA9009CF23D /* DAMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DAMainViewController.swift; sourceTree = "<group>"; };
 		896B8EDB1B1E8DAD009CF23D /* UIKitSB.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = UIKitSB.storyboard; sourceTree = "<group>"; };
@@ -468,6 +470,7 @@
 			children = (
 				896405891B23613500D6A105 /* MKMainDemoViewController.swift */,
 				8964058B1B23613E00D6A105 /* MKSb.storyboard */,
+				8964058D1B23D2F500D6A105 /* ATPinAnnotation.swift */,
 			);
 			name = MKDemo;
 			sourceTree = "<group>";
@@ -800,6 +803,7 @@
 				8943C5E01B0F1674001223A0 /* BezierCurve2D.swift in Sources */,
 				89DC27DA1B1A85B500E01FE7 /* SphereGradient2D.swift in Sources */,
 				89242A4F1AFEFD47000C8556 /* TabThreeViewController.swift in Sources */,
+				8964058E1B23D2F500D6A105 /* ATPinAnnotation.swift in Sources */,
 				898723D51B05898C002E4C87 /* FMDatabasePool.m in Sources */,
 				89242A4D1AFEF7E0000C8556 /* TabTwoViewController.swift in Sources */,
 				898723D11B05898C002E4C87 /* FMDatabase.m in Sources */,
