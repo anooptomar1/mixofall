@@ -8,15 +8,17 @@
 
 import UIKit
 import CoreData
+import EventKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    var eventStore: EKEventStore?
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        mkDemoApplication()
+        ekDemoApplication()
+        //mkDemoApplication()
         //coreLocationApplication()
         //mapItemApplication()
         //localNotificationApplication()
@@ -36,6 +38,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //tableApplication()
         //tabBarApplication()
         return true
+    }
+    
+    func ekDemoApplication(){
+        var storyboard = UIStoryboard(name: "EKSB", bundle: nil)
+        var ekVC = storyboard.instantiateViewControllerWithIdentifier("ekVC") as! AlarmDemoViewController
+        var navVC = UINavigationController(rootViewController: ekVC)
+        window?.rootViewController = navVC
     }
     
     func mkDemoApplication(){

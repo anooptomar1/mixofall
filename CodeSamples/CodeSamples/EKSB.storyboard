@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+    </dependencies>
+    <scenes>
+        <!--Alarm Demo View Controller-->
+        <scene sceneID="ObM-Be-7Ua">
+            <objects>
+                <viewController storyboardIdentifier="ekVC" id="zgh-lp-OCw" customClass="AlarmDemoViewController" customModule="CodeSamples" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="uDB-Wf-lSn"/>
+                        <viewControllerLayoutGuide type="bottom" id="1JW-nW-lzd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="jIe-EO-PTv">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kwi-Ah-wOx">
+                                <rect key="frame" x="16" y="28" width="343" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="0pR-1e-fZq">
+                                <rect key="frame" x="0.0" y="104" width="375" height="162"/>
+                                <date key="date" timeIntervalSinceReferenceDate="455423030.73703402">
+                                    <!--2015-06-08 02:23:50 +0000-->
+                                </date>
+                            </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OfW-CZ-qhA">
+                                <rect key="frame" x="141" y="66" width="94" height="30"/>
+                                <state key="normal" title="Set Reminder">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onReminder:" destination="zgh-lp-OCw" eventType="touchUpInside" id="LZ5-eu-us4"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="kwi-Ah-wOx" secondAttribute="trailing" constant="16" id="6at-b2-EC6"/>
+                            <constraint firstItem="0pR-1e-fZq" firstAttribute="leading" secondItem="jIe-EO-PTv" secondAttribute="leading" id="B5V-kX-7cL"/>
+                            <constraint firstItem="OfW-CZ-qhA" firstAttribute="top" secondItem="kwi-Ah-wOx" secondAttribute="bottom" constant="8" id="Hxx-gf-aeL"/>
+                            <constraint firstAttribute="trailing" secondItem="0pR-1e-fZq" secondAttribute="trailing" id="Uro-yJ-vAU"/>
+                            <constraint firstItem="0pR-1e-fZq" firstAttribute="top" secondItem="OfW-CZ-qhA" secondAttribute="bottom" constant="8" id="iAC-Gp-i3X"/>
+                            <constraint firstAttribute="centerX" secondItem="OfW-CZ-qhA" secondAttribute="centerX" id="pGL-UN-P0b"/>
+                            <constraint firstItem="kwi-Ah-wOx" firstAttribute="top" secondItem="uDB-Wf-lSn" secondAttribute="bottom" constant="8" id="qCB-c0-Gqg"/>
+                            <constraint firstItem="kwi-Ah-wOx" firstAttribute="leading" secondItem="jIe-EO-PTv" secondAttribute="leading" constant="16" id="tJF-6m-y6v"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="datePicker" destination="0pR-1e-fZq" id="ZUn-I3-YZ7"/>
+                        <outlet property="reminderText" destination="kwi-Ah-wOx" id="EBD-bB-d74"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gSd-hI-Qfp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="434.5" y="351.5"/>
+        </scene>
+    </scenes>
+</document>
