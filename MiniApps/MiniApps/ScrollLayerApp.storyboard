@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+    </dependencies>
+    <scenes>
+        <!--CAScrollLayer Demo-->
+        <scene sceneID="Abc-Yi-FVx">
+            <objects>
+                <viewController storyboardIdentifier="subMainVC" id="wpZ-r0-eUL" customClass="CAScrollViewController" customModule="MiniApps" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3Ze-m6-y6z"/>
+                        <viewControllerLayoutGuide type="bottom" id="hlg-PV-tkm"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Vim-E7-lLL">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ru4-vq-XAa" customClass="ScrollView" customModule="MiniApps" customModuleProvider="target">
+                                <rect key="frame" x="146" y="72" width="309" height="238"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="caScrollImage" translatesAutoresizingMaskIntoConstraints="NO" id="lAY-l5-CAs">
+                                        <rect key="frame" x="0.0" y="0.0" width="309" height="238"/>
+                                        <gestureRecognizers/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="309" id="MEK-Sy-gCo"/>
+                                    <constraint firstAttribute="height" constant="238" id="crS-Hp-58y"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="aOL-dz-WRa" appends="YES" id="VLk-ia-rci"/>
+                                </connections>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4jo-sW-dya">
+                                <rect key="frame" x="146" y="318" width="309" height="105"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Horizontal Scroll:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1lx-w4-bvA">
+                                        <rect key="frame" x="8" y="18" width="131" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vertical Scroll:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5a9-8g-2B5">
+                                        <rect key="frame" x="8" y="60" width="109" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vFn-h0-Njp">
+                                        <rect key="frame" x="252" y="55" width="51" height="31"/>
+                                        <connections>
+                                            <action selector="OnSliderChange:" destination="wpZ-r0-eUL" eventType="valueChanged" id="v7H-tu-B2I"/>
+                                        </connections>
+                                    </switch>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DID-V4-mGo">
+                                        <rect key="frame" x="252" y="8" width="51" height="31"/>
+                                        <connections>
+                                            <action selector="OnSliderChange:" destination="wpZ-r0-eUL" eventType="valueChanged" id="MjG-qL-qZR"/>
+                                        </connections>
+                                    </switch>
+                                </subviews>
+                                <color key="backgroundColor" red="0.96154908459595956" green="0.96154908459595956" blue="0.96154908459595956" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="vFn-h0-Njp" firstAttribute="top" secondItem="DID-V4-mGo" secondAttribute="bottom" constant="16" id="093-qJ-v7N"/>
+                                    <constraint firstItem="1lx-w4-bvA" firstAttribute="top" secondItem="4jo-sW-dya" secondAttribute="top" constant="18" id="Jt7-sg-pJm"/>
+                                    <constraint firstAttribute="trailing" secondItem="DID-V4-mGo" secondAttribute="trailing" constant="8" id="R7w-ac-Cla"/>
+                                    <constraint firstAttribute="height" constant="105" id="S67-iw-8uu"/>
+                                    <constraint firstItem="5a9-8g-2B5" firstAttribute="leading" secondItem="4jo-sW-dya" secondAttribute="leading" constant="8" id="WNZ-S5-wGA"/>
+                                    <constraint firstItem="1lx-w4-bvA" firstAttribute="leading" secondItem="4jo-sW-dya" secondAttribute="leading" constant="8" id="dkh-q0-0Kb"/>
+                                    <constraint firstItem="DID-V4-mGo" firstAttribute="top" secondItem="4jo-sW-dya" secondAttribute="top" constant="8" id="meA-Nn-yX1"/>
+                                    <constraint firstItem="5a9-8g-2B5" firstAttribute="top" secondItem="1lx-w4-bvA" secondAttribute="bottom" constant="21" id="oUN-h5-XNN"/>
+                                    <constraint firstAttribute="trailing" secondItem="vFn-h0-Njp" secondAttribute="trailing" constant="8" id="thV-Jq-0UC"/>
+                                    <constraint firstAttribute="width" constant="309" id="weH-4J-xnE"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="4jo-sW-dya" secondAttribute="centerX" id="It3-lL-7cD"/>
+                            <constraint firstItem="Ru4-vq-XAa" firstAttribute="top" secondItem="3Ze-m6-y6z" secondAttribute="bottom" constant="8" id="hWK-kA-g5V"/>
+                            <constraint firstAttribute="centerX" secondItem="Ru4-vq-XAa" secondAttribute="centerX" id="iT3-M4-HOK"/>
+                            <constraint firstItem="4jo-sW-dya" firstAttribute="top" secondItem="Ru4-vq-XAa" secondAttribute="bottom" constant="8" id="tCB-aU-HR5"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="CAScrollLayer Demo" id="YqE-DC-58i">
+                        <barButtonItem key="rightBarButtonItem" systemItem="stop" id="Ugw-3b-9ZI">
+                            <connections>
+                                <action selector="onClose:" destination="wpZ-r0-eUL" id="bUP-8v-e5v"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="horizontalSwitch" destination="DID-V4-mGo" id="85o-Eq-KmV"/>
+                        <outlet property="image" destination="Ru4-vq-XAa" id="wQm-aU-hmS"/>
+                        <outlet property="verticalSwitch" destination="vFn-h0-Njp" id="tfu-bL-z64"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bwJ-bg-jPB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="aOL-dz-WRa">
+                    <connections>
+                        <action selector="onPanGesture:" destination="wpZ-r0-eUL" id="AQc-I6-HeR"/>
+                    </connections>
+                </panGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="529" y="405"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="caScrollImage" width="1280" height="1280"/>
+    </resources>
+</document>

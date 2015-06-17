@@ -17,7 +17,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var eventStore: EKEventStore?
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        ekDemoApplication()
+        cadDemoApplication()
+        //viewDemoApplication()
+        //ekDemoApplication()
         //mkDemoApplication()
         //coreLocationApplication()
         //mapItemApplication()
@@ -38,6 +40,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //tableApplication()
         //tabBarApplication()
         return true
+    }
+    
+    func cadDemoApplication(){
+        var storyboard = UIStoryboard(name: "CALDemo", bundle: nil)
+        var cadVC = storyboard.instantiateViewControllerWithIdentifier("cadVC") as! CADViewController
+        var navVC = UINavigationController(rootViewController: cadVC)
+        window?.rootViewController = navVC
+    }
+    
+    func viewDemoApplication(){
+        self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
+        self.window?.rootViewController = VDViewController()
+        self.window?.backgroundColor = UIColor.whiteColor()
+        self.window?.makeKeyAndVisible()
     }
     
     func ekDemoApplication(){

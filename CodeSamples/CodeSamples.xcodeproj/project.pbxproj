@@ -48,6 +48,9 @@
 		8943C5E61B163D67001223A0 /* ShadowDemo2D.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8943C5E51B163D67001223A0 /* ShadowDemo2D.swift */; };
 		894FEF0C1B25332400F9DB4C /* AlarmDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894FEF0B1B25332400F9DB4C /* AlarmDemoViewController.swift */; };
 		894FEF0E1B25334900F9DB4C /* EKSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 894FEF0D1B25334900F9DB4C /* EKSB.storyboard */; };
+		894FEF111B2B8FD600F9DB4C /* VDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894FEF101B2B8FD600F9DB4C /* VDViewController.swift */; };
+		894FEF141B2E003A00F9DB4C /* CALDemo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 894FEF131B2E003A00F9DB4C /* CALDemo.storyboard */; };
+		894FEF161B2E004700F9DB4C /* CADViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894FEF151B2E004700F9DB4C /* CADViewController.swift */; };
 		8964058A1B23613500D6A105 /* MKMainDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896405891B23613500D6A105 /* MKMainDemoViewController.swift */; };
 		8964058C1B23613E00D6A105 /* MKSb.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8964058B1B23613E00D6A105 /* MKSb.storyboard */; };
 		8964058E1B23D2F500D6A105 /* ATPinAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8964058D1B23D2F500D6A105 /* ATPinAnnotation.swift */; };
@@ -205,6 +208,9 @@
 		8943C5E51B163D67001223A0 /* ShadowDemo2D.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShadowDemo2D.swift; sourceTree = "<group>"; };
 		894FEF0B1B25332400F9DB4C /* AlarmDemoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlarmDemoViewController.swift; sourceTree = "<group>"; };
 		894FEF0D1B25334900F9DB4C /* EKSB.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = EKSB.storyboard; sourceTree = "<group>"; };
+		894FEF101B2B8FD600F9DB4C /* VDViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VDViewController.swift; sourceTree = "<group>"; };
+		894FEF131B2E003A00F9DB4C /* CALDemo.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CALDemo.storyboard; sourceTree = "<group>"; };
+		894FEF151B2E004700F9DB4C /* CADViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CADViewController.swift; sourceTree = "<group>"; };
 		896405891B23613500D6A105 /* MKMainDemoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MKMainDemoViewController.swift; sourceTree = "<group>"; };
 		8964058B1B23613E00D6A105 /* MKSb.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MKSb.storyboard; sourceTree = "<group>"; };
 		8964058D1B23D2F500D6A105 /* ATPinAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ATPinAnnotation.swift; sourceTree = "<group>"; };
@@ -333,6 +339,8 @@
 		89242A201AFEEED5000C8556 /* CodeSamples */ = {
 			isa = PBXGroup;
 			children = (
+				894FEF121B2DFB7600F9DB4C /* CALayerDemo */,
+				894FEF0F1B2B8F5E00F9DB4C /* ViewDemo */,
 				896405A51B241C7A00D6A105 /* ReminderDemo */,
 				896405881B23612200D6A105 /* MKDemo */,
 				896B8F3E1B2161E3009CF23D /* CLDemo */,
@@ -506,6 +514,23 @@
 				89DC27DB1B1A8F8B00E01FE7 /* CGImage2D.swift */,
 			);
 			name = CGDemo;
+			sourceTree = "<group>";
+		};
+		894FEF0F1B2B8F5E00F9DB4C /* ViewDemo */ = {
+			isa = PBXGroup;
+			children = (
+				894FEF101B2B8FD600F9DB4C /* VDViewController.swift */,
+			);
+			name = ViewDemo;
+			sourceTree = "<group>";
+		};
+		894FEF121B2DFB7600F9DB4C /* CALayerDemo */ = {
+			isa = PBXGroup;
+			children = (
+				894FEF131B2E003A00F9DB4C /* CALDemo.storyboard */,
+				894FEF151B2E004700F9DB4C /* CADViewController.swift */,
+			);
+			name = CALayerDemo;
 			sourceTree = "<group>";
 		};
 		896405881B23612200D6A105 /* MKDemo */ = {
@@ -857,6 +882,7 @@
 				896B8EA11B1BEA9C009CF23D /* DA.storyboard in Resources */,
 				89DC27E11B1AAD8300E01FE7 /* CA.storyboard in Resources */,
 				89242A311AFEEED5000C8556 /* LaunchScreen.xib in Resources */,
+				894FEF141B2E003A00F9DB4C /* CALDemo.storyboard in Resources */,
 				898723D91B058A15002E4C87 /* DB.storyboard in Resources */,
 				8943C5AC1B0ED7D8001223A0 /* CG.storyboard in Resources */,
 				896B8EDC1B1E8DAD009CF23D /* UIKitSB.storyboard in Resources */,
@@ -922,6 +948,7 @@
 				898723E51B0640AB002E4C87 /* Contacts.swift in Sources */,
 				89DC27D81B1A7F5C00E01FE7 /* RadialGradient2D.swift in Sources */,
 				898723D41B05898C002E4C87 /* FMDatabaseAdditions.m in Sources */,
+				894FEF111B2B8FD600F9DB4C /* VDViewController.swift in Sources */,
 				894FEF0C1B25332400F9DB4C /* AlarmDemoViewController.swift in Sources */,
 				896B8EA31B1BEAA9009CF23D /* DAMainViewController.swift in Sources */,
 				8943C5E41B163BCB001223A0 /* DashedLine2D.swift in Sources */,
@@ -937,6 +964,7 @@
 				89242A681B007327000C8556 /* PageDemoViewController.swift in Sources */,
 				89242A611B003428000C8556 /* TableDetailsViewController.swift in Sources */,
 				89242A4B1AFEF7BA000C8556 /* TabOneViewController.swift in Sources */,
+				894FEF161B2E004700F9DB4C /* CADViewController.swift in Sources */,
 				89DC27D61B1A734700E01FE7 /* Gradient2D.swift in Sources */,
 				898723F11B0C5BA4002E4C87 /* GestureDemo1ViewController.swift in Sources */,
 				89242A511AFEFD53000C8556 /* TabFourViewController.swift in Sources */,
