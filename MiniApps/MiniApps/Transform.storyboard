@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+    </dependencies>
+    <scenes>
+        <!--CGAffineTransform-->
+        <scene sceneID="orA-wO-uM6">
+            <objects>
+                <viewController storyboardIdentifier="subMainVC" id="t7y-dc-M4g" customClass="TransformViewController" customModule="MiniApps" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="NZT-Ht-03d"/>
+                        <viewControllerLayoutGuide type="bottom" id="n0R-Yp-J7x"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wlu-FT-SId">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HFo-dq-lP4">
+                                <rect key="frame" x="0.0" y="64" width="375" height="301"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vSx-V1-TEJ">
+                                <rect key="frame" x="0.0" y="367" width="375" height="300"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rotation" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bg1-Rp-TQp">
+                                        <rect key="frame" x="8" y="17" width="65" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="180" translatesAutoresizingMaskIntoConstraints="NO" id="vcC-6i-cNn">
+                                        <rect key="frame" x="79" y="13" width="290" height="31"/>
+                                        <connections>
+                                            <action selector="onSlider:" destination="t7y-dc-M4g" eventType="valueChanged" id="FUd-kx-KbI"/>
+                                        </connections>
+                                    </slider>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scale" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2HK-0y-3th">
+                                        <rect key="frame" x="8" y="55" width="43" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="1" maxValue="2" translatesAutoresizingMaskIntoConstraints="NO" id="SVN-7l-TVA">
+                                        <rect key="frame" x="79" y="51" width="290" height="31"/>
+                                        <connections>
+                                            <action selector="onSlider:" destination="t7y-dc-M4g" eventType="valueChanged" id="MR9-Xv-9k4"/>
+                                        </connections>
+                                    </slider>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="vcC-6i-cNn" secondAttribute="trailing" constant="8" id="G3Z-oh-dXG"/>
+                                    <constraint firstItem="2HK-0y-3th" firstAttribute="leading" secondItem="vSx-V1-TEJ" secondAttribute="leading" constant="8" id="Q7G-iI-LHR"/>
+                                    <constraint firstItem="2HK-0y-3th" firstAttribute="top" secondItem="bg1-Rp-TQp" secondAttribute="bottom" constant="17" id="V0Y-Iz-tZi"/>
+                                    <constraint firstItem="bg1-Rp-TQp" firstAttribute="top" secondItem="vSx-V1-TEJ" secondAttribute="top" constant="17" id="VQe-l0-egH"/>
+                                    <constraint firstItem="vcC-6i-cNn" firstAttribute="top" secondItem="vSx-V1-TEJ" secondAttribute="top" constant="13" id="ZSi-3o-1AD"/>
+                                    <constraint firstItem="SVN-7l-TVA" firstAttribute="top" secondItem="vcC-6i-cNn" secondAttribute="bottom" constant="8" id="aIe-d2-A54"/>
+                                    <constraint firstItem="SVN-7l-TVA" firstAttribute="leading" secondItem="vcC-6i-cNn" secondAttribute="leading" id="acH-t3-lNy"/>
+                                    <constraint firstAttribute="trailing" secondItem="SVN-7l-TVA" secondAttribute="trailing" constant="8" id="dlX-Hg-LB4"/>
+                                    <constraint firstItem="bg1-Rp-TQp" firstAttribute="leading" secondItem="vSx-V1-TEJ" secondAttribute="leading" constant="8" id="kph-Kl-ijd"/>
+                                    <constraint firstItem="vcC-6i-cNn" firstAttribute="leading" secondItem="bg1-Rp-TQp" secondAttribute="trailing" constant="8" id="oBO-nr-kTV"/>
+                                    <constraint firstItem="SVN-7l-TVA" firstAttribute="trailing" secondItem="vcC-6i-cNn" secondAttribute="trailing" id="ro4-Y0-B8F"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="HFo-dq-lP4" firstAttribute="leading" secondItem="wlu-FT-SId" secondAttribute="leading" id="6zL-ZK-Oob"/>
+                            <constraint firstItem="vSx-V1-TEJ" firstAttribute="height" secondItem="HFo-dq-lP4" secondAttribute="height" id="9dk-yg-8Wq"/>
+                            <constraint firstItem="vSx-V1-TEJ" firstAttribute="top" secondItem="HFo-dq-lP4" secondAttribute="bottom" constant="2" id="DAj-hg-anv"/>
+                            <constraint firstItem="vSx-V1-TEJ" firstAttribute="width" secondItem="HFo-dq-lP4" secondAttribute="width" id="FFP-dl-yTp"/>
+                            <constraint firstItem="vSx-V1-TEJ" firstAttribute="leading" secondItem="wlu-FT-SId" secondAttribute="leading" id="Kwz-UF-nSB"/>
+                            <constraint firstAttribute="trailing" secondItem="vSx-V1-TEJ" secondAttribute="trailing" id="LQi-dY-XN1"/>
+                            <constraint firstItem="HFo-dq-lP4" firstAttribute="top" secondItem="NZT-Ht-03d" secondAttribute="bottom" id="bQQ-i1-ksd"/>
+                            <constraint firstItem="n0R-Yp-J7x" firstAttribute="top" secondItem="vSx-V1-TEJ" secondAttribute="bottom" id="dNK-vH-yK8"/>
+                            <constraint firstAttribute="trailing" secondItem="HFo-dq-lP4" secondAttribute="trailing" id="e5i-5h-6eg"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="CGAffineTransform" id="D52-bt-lHz">
+                        <barButtonItem key="rightBarButtonItem" systemItem="stop" id="Xn5-3Y-RfG">
+                            <connections>
+                                <action selector="onClose:" destination="t7y-dc-M4g" id="Y7r-8X-uSm"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="topView" destination="HFo-dq-lP4" id="bPJ-7F-4VM"/>
+                        <outletCollection property="sliders" destination="vcC-6i-cNn" collectionClass="NSMutableArray" id="PjA-O4-GV3"/>
+                        <outletCollection property="sliders" destination="SVN-7l-TVA" collectionClass="NSMutableArray" id="LUc-Lq-IFD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="24v-iu-EHb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="386.5" y="385.5"/>
+        </scene>
+    </scenes>
+</document>
