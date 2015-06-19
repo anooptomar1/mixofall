@@ -18,6 +18,8 @@ class TransformViewController: UIViewController {
     var currentRotation: CGFloat?
     var currentScale: CGFloat?
     
+    var img: UIImage?
+    
     enum Sliders: Int{
         case rotation, scale, skew
     }
@@ -76,6 +78,27 @@ class TransformViewController: UIViewController {
     func skewView(value: Float){
         v1!.transform = CGAffineTransformMake(CGFloat(value), 1.0, 1.0, 0, 0, 0)
     }
+    
+    @IBAction func onSnapshot(sender: UIButton) {
+        img = screenShot()
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "imagSegue"{
+            var destController = segue.destinationViewController as! SnapViewController
+            destController.image = img
+        }
+    }
+    
+    func screenShot() -> UIImage{
+        UIGraphicsBeginImageContextWithOptions(view.bounds.size, false, UIScreen.mainScreen().scale)
+        self.view.drawViewHierarchyInRect(self.view.bounds, afterScreenUpdates: true)
+        
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return image
+    }
+    
     
     @IBAction func onClose(sender: UIBarButtonItem) {
         dismissViewControllerAnimated(true, completion: nil)

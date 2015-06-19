@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--CGAffineTransform-->
@@ -59,14 +60,26 @@
                                             <action selector="onSlider:" destination="t7y-dc-M4g" eventType="valueChanged" id="ZFf-EX-p1i"/>
                                         </connections>
                                     </slider>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RRD-6b-PwL">
+                                        <rect key="frame" x="137" y="262" width="102" height="30"/>
+                                        <state key="normal" title="Take Snapshot">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onSnapshot:" destination="t7y-dc-M4g" eventType="touchUpInside" id="ekV-e0-6Ha"/>
+                                            <segue destination="fvw-hd-rqr" kind="showDetail" identifier="imagSegue" id="uIH-LZ-aNB"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="SVN-7l-TVA" firstAttribute="leading" secondItem="ZJS-39-ydE" secondAttribute="leading" id="36K-oP-fUR"/>
                                     <constraint firstAttribute="trailing" secondItem="vcC-6i-cNn" secondAttribute="trailing" constant="8" id="G3Z-oh-dXG"/>
                                     <constraint firstItem="WIu-rK-RFY" firstAttribute="leading" secondItem="vSx-V1-TEJ" secondAttribute="leading" constant="8" id="Lec-Dz-fnn"/>
+                                    <constraint firstAttribute="bottom" secondItem="RRD-6b-PwL" secondAttribute="bottom" constant="8" id="Lxy-Oj-sEc"/>
                                     <constraint firstItem="2HK-0y-3th" firstAttribute="leading" secondItem="vSx-V1-TEJ" secondAttribute="leading" constant="8" id="Q7G-iI-LHR"/>
                                     <constraint firstItem="SVN-7l-TVA" firstAttribute="trailing" secondItem="ZJS-39-ydE" secondAttribute="trailing" id="SQI-5Q-Dyn"/>
+                                    <constraint firstAttribute="centerX" secondItem="RRD-6b-PwL" secondAttribute="centerX" id="UMa-Cd-LXe"/>
                                     <constraint firstItem="2HK-0y-3th" firstAttribute="top" secondItem="bg1-Rp-TQp" secondAttribute="bottom" constant="17" id="V0Y-Iz-tZi"/>
                                     <constraint firstItem="bg1-Rp-TQp" firstAttribute="top" secondItem="vSx-V1-TEJ" secondAttribute="top" constant="17" id="VQe-l0-egH"/>
                                     <constraint firstItem="WIu-rK-RFY" firstAttribute="top" secondItem="2HK-0y-3th" secondAttribute="bottom" constant="17" id="X9B-rT-xiw"/>
@@ -113,6 +126,47 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="24v-iu-EHb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="386.5" y="385.5"/>
+        </scene>
+        <!--Snap View Controller-->
+        <scene sceneID="2iE-5M-bx9">
+            <objects>
+                <viewController id="fvw-hd-rqr" customClass="SnapViewController" customModule="MiniApps" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wD2-eO-HFN"/>
+                        <viewControllerLayoutGuide type="bottom" id="DNK-cT-TdD"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="P6y-0P-cI7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="je0-01-rDx">
+                                <rect key="frame" x="31" y="48" width="313" height="571"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="je0-01-rDx" secondAttribute="trailing" constant="15" id="Lg7-bp-hhD"/>
+                            <constraint firstItem="je0-01-rDx" firstAttribute="leading" secondItem="P6y-0P-cI7" secondAttribute="leadingMargin" constant="15" id="U8l-5R-Ald"/>
+                            <constraint firstAttribute="centerY" secondItem="je0-01-rDx" secondAttribute="centerY" id="WDO-gg-iN3"/>
+                            <constraint firstItem="DNK-cT-TdD" firstAttribute="top" secondItem="je0-01-rDx" secondAttribute="bottom" constant="48" id="Y0o-xy-FXt"/>
+                            <constraint firstAttribute="centerX" secondItem="je0-01-rDx" secondAttribute="centerX" id="h2j-Nn-kEc"/>
+                            <constraint firstItem="je0-01-rDx" firstAttribute="top" secondItem="wD2-eO-HFN" secondAttribute="bottom" constant="28" id="pGO-bF-S5z"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="WDO-gg-iN3"/>
+                                <exclude reference="h2j-Nn-kEc"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="imgView" destination="je0-01-rDx" id="ge1-sr-Tgp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sc3-wD-FDo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="854.5" y="385.5"/>
         </scene>
     </scenes>
 </document>

@@ -28,6 +28,7 @@
 		8972B1DE1B3392D7005D32AA /* img.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8972B1DD1B3392D7005D32AA /* img.storyboard */; };
 		8972B1E01B3392E3005D32AA /* ImgViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8972B1DF1B3392E3005D32AA /* ImgViewController.swift */; };
 		8972B1E21B33976E005D32AA /* sampleview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8972B1E11B33976E005D32AA /* sampleview.swift */; };
+		8972B1E41B33E2F1005D32AA /* SnapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8972B1E31B33E2F1005D32AA /* SnapViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,7 @@
 		8972B1DD1B3392D7005D32AA /* img.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = img.storyboard; sourceTree = "<group>"; };
 		8972B1DF1B3392E3005D32AA /* ImgViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImgViewController.swift; sourceTree = "<group>"; };
 		8972B1E11B33976E005D32AA /* sampleview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = sampleview.swift; sourceTree = "<group>"; };
+		8972B1E31B33E2F1005D32AA /* SnapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,6 +192,7 @@
 				894FEF591B312BB000F9DB4C /* TransformViewController.swift */,
 				894FEF5B1B312BBA00F9DB4C /* Transform.storyboard */,
 				894FEF5D1B330CA900F9DB4C /* calculatorBrain.swift */,
+				8972B1E31B33E2F1005D32AA /* SnapViewController.swift */,
 			);
 			name = TransformApp;
 			sourceTree = "<group>";
@@ -324,6 +327,7 @@
 				894FEF4C1B2F36A800F9DB4C /* CALViewController.swift in Sources */,
 				894FEF611B336E7700F9DB4C /* TraitViewController.swift in Sources */,
 				894FEF5A1B312BB000F9DB4C /* TransformViewController.swift in Sources */,
+				8972B1E41B33E2F1005D32AA /* SnapViewController.swift in Sources */,
 				894FEF291B2F2FDE00F9DB4C /* MiniApps.xcdatamodeld in Sources */,
 				8972B1E01B3392E3005D32AA /* ImgViewController.swift in Sources */,
 				894FEF501B2FADD200F9DB4C /* ControlsTableViewController.swift in Sources */,
