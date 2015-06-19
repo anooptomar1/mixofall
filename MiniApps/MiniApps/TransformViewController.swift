@@ -15,21 +15,34 @@ class TransformViewController: UIViewController {
     
     var v1: UIView?, v2: UIView?
     
+    var currentRotation: CGFloat?
+    var currentScale: CGFloat?
+    
     enum Sliders: Int{
-        case rotation, scale
+        case rotation, scale, skew
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         let point = CGPointMake(topView.frame.size.width/2, topView.frame.size.height/2)
         v1 = UIView(frame: CGRectMake(point.x-50, point.y-50, 100, 100))
-        v1!.backgroundColor = UIColor.brownColor()
+        v1!.backgroundColor = UIColor.grayColor()
         
         v2 = UIView(frame: CGRectMake(5, 5, 90, 90))
-        v2!.backgroundColor = UIColor.blueColor()
+        v2!.layer.contents = UIImage(named: "windingRoadThumbnail")?.CGImage
         
         v1!.addSubview(v2!)
         topView.addSubview(v1!)
+        
+        // calculator test
+        
+//        var calc = CalculatorBrain()
+//        calc.pushOperand(20.0)
+//        calc.pushOperand(30.0)
+//        calc.performOperation("+")
+//        calc.evaluate()
+        // end calculator test
+        
         // Do any additional setup after loading the view.
     }
 
@@ -39,13 +52,31 @@ class TransformViewController: UIViewController {
     }
     
     func rotateView(value: Float){
-        v1!.transform = CGAffineTransformMakeRotation(CGFloat(value) * CGFloat(M_PI)/180.0)
+        if currentScale != nil{
+            let scaleTransform = CGAffineTransformMakeScale(currentScale!, currentScale!)
+            let rotationTransform = CGAffineTransformMakeRotation(CGFloat(value) * CGFloat(M_PI)/180.0)
+            v1?.transform = CGAffineTransformConcat(scaleTransform, rotationTransform)
+        }else{
+            v1?.transform = CGAffineTransformMakeRotation(CGFloat(value) * CGFloat(M_PI)/180.0)
+        }
+        currentRotation = CGFloat(value)
     }
     
     func scaleView(value: Float){
-        v1!.transform = CGAffineTransformMakeScale(CGFloat(value), CGFloat(value))
+        if currentRotation != nil{
+            let rotationTransform = CGAffineTransformMakeRotation(currentRotation!)
+            let scaleTransform = CGAffineTransformMakeScale(CGFloat(value), CGFloat(value))
+            v1?.transform = CGAffineTransformConcat(rotationTransform, scaleTransform)
+        }else{
+            v1!.transform = CGAffineTransformMakeScale(CGFloat(value), CGFloat(value))
+        }
+        currentScale = CGFloat(value)
     }
 
+    func skewView(value: Float){
+        v1!.transform = CGAffineTransformMake(CGFloat(value), 1.0, 1.0, 0, 0, 0)
+    }
+    
     @IBAction func onClose(sender: UIBarButtonItem) {
         dismissViewControllerAnimated(true, completion: nil)
     }
@@ -58,6 +89,8 @@ class TransformViewController: UIViewController {
             rotateView(sender.value)
         case Sliders.scale:
             scaleView(sender.value)
+        case Sliders.skew:
+            skewView(sender.value)
         default:
              break
         }

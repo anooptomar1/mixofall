@@ -22,6 +22,12 @@
 		894FEF571B30F2C100F9DB4C /* ScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894FEF561B30F2C100F9DB4C /* ScrollView.swift */; };
 		894FEF5A1B312BB000F9DB4C /* TransformViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894FEF591B312BB000F9DB4C /* TransformViewController.swift */; };
 		894FEF5C1B312BBA00F9DB4C /* Transform.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 894FEF5B1B312BBA00F9DB4C /* Transform.storyboard */; };
+		894FEF5E1B330CA900F9DB4C /* calculatorBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894FEF5D1B330CA900F9DB4C /* calculatorBrain.swift */; };
+		894FEF611B336E7700F9DB4C /* TraitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894FEF601B336E7700F9DB4C /* TraitViewController.swift */; };
+		894FEF631B336E8500F9DB4C /* Trait.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 894FEF621B336E8500F9DB4C /* Trait.storyboard */; };
+		8972B1DE1B3392D7005D32AA /* img.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8972B1DD1B3392D7005D32AA /* img.storyboard */; };
+		8972B1E01B3392E3005D32AA /* ImgViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8972B1DF1B3392E3005D32AA /* ImgViewController.swift */; };
+		8972B1E21B33976E005D32AA /* sampleview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8972B1E11B33976E005D32AA /* sampleview.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +60,12 @@
 		894FEF561B30F2C100F9DB4C /* ScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollView.swift; sourceTree = "<group>"; };
 		894FEF591B312BB000F9DB4C /* TransformViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransformViewController.swift; sourceTree = "<group>"; };
 		894FEF5B1B312BBA00F9DB4C /* Transform.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Transform.storyboard; sourceTree = "<group>"; };
+		894FEF5D1B330CA900F9DB4C /* calculatorBrain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = calculatorBrain.swift; sourceTree = "<group>"; };
+		894FEF601B336E7700F9DB4C /* TraitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TraitViewController.swift; sourceTree = "<group>"; };
+		894FEF621B336E8500F9DB4C /* Trait.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Trait.storyboard; sourceTree = "<group>"; };
+		8972B1DD1B3392D7005D32AA /* img.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = img.storyboard; sourceTree = "<group>"; };
+		8972B1DF1B3392E3005D32AA /* ImgViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImgViewController.swift; sourceTree = "<group>"; };
+		8972B1E11B33976E005D32AA /* sampleview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = sampleview.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +107,8 @@
 		894FEF221B2F2FDE00F9DB4C /* MiniApps */ = {
 			isa = PBXGroup;
 			children = (
+				8972B1DC1B3392C6005D32AA /* ImageApp */,
+				894FEF5F1B336E5600F9DB4C /* TraitsApp */,
 				894FEF581B312B8600F9DB4C /* TransformApp */,
 				894FEF511B30E81D00F9DB4C /* CAScrollLayerApp */,
 				894FEF4A1B2F368D00F9DB4C /* CALayerApp */,
@@ -175,8 +189,28 @@
 			children = (
 				894FEF591B312BB000F9DB4C /* TransformViewController.swift */,
 				894FEF5B1B312BBA00F9DB4C /* Transform.storyboard */,
+				894FEF5D1B330CA900F9DB4C /* calculatorBrain.swift */,
 			);
 			name = TransformApp;
+			sourceTree = "<group>";
+		};
+		894FEF5F1B336E5600F9DB4C /* TraitsApp */ = {
+			isa = PBXGroup;
+			children = (
+				894FEF601B336E7700F9DB4C /* TraitViewController.swift */,
+				894FEF621B336E8500F9DB4C /* Trait.storyboard */,
+			);
+			name = TraitsApp;
+			sourceTree = "<group>";
+		};
+		8972B1DC1B3392C6005D32AA /* ImageApp */ = {
+			isa = PBXGroup;
+			children = (
+				8972B1DD1B3392D7005D32AA /* img.storyboard */,
+				8972B1DF1B3392E3005D32AA /* ImgViewController.swift */,
+				8972B1E11B33976E005D32AA /* sampleview.swift */,
+			);
+			name = ImageApp;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,9 +295,11 @@
 			files = (
 				894FEF2E1B2F2FDE00F9DB4C /* Main.storyboard in Resources */,
 				894FEF551B30E86100F9DB4C /* ScrollLayerApp.storyboard in Resources */,
+				8972B1DE1B3392D7005D32AA /* img.storyboard in Resources */,
 				894FEF331B2F2FDE00F9DB4C /* LaunchScreen.xib in Resources */,
 				894FEF5C1B312BBA00F9DB4C /* Transform.storyboard in Resources */,
 				894FEF4E1B2F36B700F9DB4C /* CALDemo.storyboard in Resources */,
+				894FEF631B336E8500F9DB4C /* Trait.storyboard in Resources */,
 				894FEF301B2F2FDE00F9DB4C /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -282,12 +318,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8972B1E21B33976E005D32AA /* sampleview.swift in Sources */,
 				894FEF2B1B2F2FDE00F9DB4C /* ViewController.swift in Sources */,
 				894FEF571B30F2C100F9DB4C /* ScrollView.swift in Sources */,
 				894FEF4C1B2F36A800F9DB4C /* CALViewController.swift in Sources */,
+				894FEF611B336E7700F9DB4C /* TraitViewController.swift in Sources */,
 				894FEF5A1B312BB000F9DB4C /* TransformViewController.swift in Sources */,
 				894FEF291B2F2FDE00F9DB4C /* MiniApps.xcdatamodeld in Sources */,
+				8972B1E01B3392E3005D32AA /* ImgViewController.swift in Sources */,
 				894FEF501B2FADD200F9DB4C /* ControlsTableViewController.swift in Sources */,
+				894FEF5E1B330CA900F9DB4C /* calculatorBrain.swift in Sources */,
 				894FEF261B2F2FDE00F9DB4C /* AppDelegate.swift in Sources */,
 				894FEF531B30E84400F9DB4C /* CAScrollViewController.swift in Sources */,
 			);
@@ -485,6 +525,7 @@
 				894FEF441B2F2FDE00F9DB4C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		894FEF451B2F2FDE00F9DB4C /* Build configuration list for PBXNativeTarget "MiniAppsTests" */ = {
 			isa = XCConfigurationList;
@@ -493,6 +534,7 @@
 				894FEF471B2F2FDE00F9DB4C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

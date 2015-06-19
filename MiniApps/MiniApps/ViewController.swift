@@ -11,7 +11,7 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
-    let menuItems: [String: String] = ["CALDemo": "CALayer Demo", "ScrollLayerApp":"CAScrollLayer Demo", "Transform":"CAAffineTransform Demo"]
+    let menuItems: [String: String] = ["CALDemo": "CALayer Demo", "ScrollLayerApp":"CAScrollLayer Demo", "Transform":"CAAffineTransform Demo", "Trait": "TraitCollection Demo", "img": "UIImageView"]
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -47,16 +47,33 @@
                                             <action selector="onSlider:" destination="t7y-dc-M4g" eventType="valueChanged" id="MR9-Xv-9k4"/>
                                         </connections>
                                     </slider>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Skew" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WIu-rK-RFY">
+                                        <rect key="frame" x="8" y="93" width="43" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="ZJS-39-ydE">
+                                        <rect key="frame" x="79" y="89" width="290" height="31"/>
+                                        <connections>
+                                            <action selector="onSlider:" destination="t7y-dc-M4g" eventType="valueChanged" id="ZFf-EX-p1i"/>
+                                        </connections>
+                                    </slider>
                                 </subviews>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstItem="SVN-7l-TVA" firstAttribute="leading" secondItem="ZJS-39-ydE" secondAttribute="leading" id="36K-oP-fUR"/>
                                     <constraint firstAttribute="trailing" secondItem="vcC-6i-cNn" secondAttribute="trailing" constant="8" id="G3Z-oh-dXG"/>
+                                    <constraint firstItem="WIu-rK-RFY" firstAttribute="leading" secondItem="vSx-V1-TEJ" secondAttribute="leading" constant="8" id="Lec-Dz-fnn"/>
                                     <constraint firstItem="2HK-0y-3th" firstAttribute="leading" secondItem="vSx-V1-TEJ" secondAttribute="leading" constant="8" id="Q7G-iI-LHR"/>
+                                    <constraint firstItem="SVN-7l-TVA" firstAttribute="trailing" secondItem="ZJS-39-ydE" secondAttribute="trailing" id="SQI-5Q-Dyn"/>
                                     <constraint firstItem="2HK-0y-3th" firstAttribute="top" secondItem="bg1-Rp-TQp" secondAttribute="bottom" constant="17" id="V0Y-Iz-tZi"/>
                                     <constraint firstItem="bg1-Rp-TQp" firstAttribute="top" secondItem="vSx-V1-TEJ" secondAttribute="top" constant="17" id="VQe-l0-egH"/>
+                                    <constraint firstItem="WIu-rK-RFY" firstAttribute="top" secondItem="2HK-0y-3th" secondAttribute="bottom" constant="17" id="X9B-rT-xiw"/>
                                     <constraint firstItem="vcC-6i-cNn" firstAttribute="top" secondItem="vSx-V1-TEJ" secondAttribute="top" constant="13" id="ZSi-3o-1AD"/>
                                     <constraint firstItem="SVN-7l-TVA" firstAttribute="top" secondItem="vcC-6i-cNn" secondAttribute="bottom" constant="8" id="aIe-d2-A54"/>
                                     <constraint firstItem="SVN-7l-TVA" firstAttribute="leading" secondItem="vcC-6i-cNn" secondAttribute="leading" id="acH-t3-lNy"/>
+                                    <constraint firstItem="ZJS-39-ydE" firstAttribute="top" secondItem="SVN-7l-TVA" secondAttribute="bottom" constant="8" id="bzJ-Ue-R1d"/>
                                     <constraint firstAttribute="trailing" secondItem="SVN-7l-TVA" secondAttribute="trailing" constant="8" id="dlX-Hg-LB4"/>
                                     <constraint firstItem="bg1-Rp-TQp" firstAttribute="leading" secondItem="vSx-V1-TEJ" secondAttribute="leading" constant="8" id="kph-Kl-ijd"/>
                                     <constraint firstItem="vcC-6i-cNn" firstAttribute="leading" secondItem="bg1-Rp-TQp" secondAttribute="trailing" constant="8" id="oBO-nr-kTV"/>
@@ -90,6 +107,7 @@
                         <outlet property="topView" destination="HFo-dq-lP4" id="bPJ-7F-4VM"/>
                         <outletCollection property="sliders" destination="vcC-6i-cNn" collectionClass="NSMutableArray" id="PjA-O4-GV3"/>
                         <outletCollection property="sliders" destination="SVN-7l-TVA" collectionClass="NSMutableArray" id="LUc-Lq-IFD"/>
+                        <outletCollection property="sliders" destination="ZJS-39-ydE" collectionClass="NSMutableArray" id="ZLQ-Qr-KLW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="24v-iu-EHb" userLabel="First Responder" sceneMemberID="firstResponder"/>

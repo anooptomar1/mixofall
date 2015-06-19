@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--TraitCollection Demo-->
+        <scene sceneID="xcG-KJ-86N">
+            <objects>
+                <viewController storyboardIdentifier="subMainVC" id="oVO-7P-tGM" customClass="TraitViewController" customModule="MiniApps" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1E2-if-IDI"/>
+                        <viewControllerLayoutGuide type="bottom" id="SQP-Yl-clg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="B28-K3-u2T">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="F9F-vV-XZa">
+                                <rect key="frame" x="16" y="72" width="568" height="239"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DSf-X2-iMR">
+                                <rect key="frame" x="16" y="319" width="568" height="239"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="F9F-vV-XZa" firstAttribute="trailing" secondItem="B28-K3-u2T" secondAttribute="trailingMargin" id="21q-aR-N54"/>
+                            <constraint firstItem="DSf-X2-iMR" firstAttribute="top" secondItem="F9F-vV-XZa" secondAttribute="bottom" constant="8" id="36h-dU-G7X"/>
+                            <constraint firstItem="SQP-Yl-clg" firstAttribute="top" secondItem="DSf-X2-iMR" secondAttribute="bottom" constant="42" id="52a-Zl-Wu7"/>
+                            <constraint firstItem="DSf-X2-iMR" firstAttribute="leading" secondItem="B28-K3-u2T" secondAttribute="leadingMargin" id="5HF-us-1hW"/>
+                            <constraint firstItem="F9F-vV-XZa" firstAttribute="top" secondItem="1E2-if-IDI" secondAttribute="bottom" constant="8" id="7wb-Nv-9UC"/>
+                            <constraint firstItem="DSf-X2-iMR" firstAttribute="height" secondItem="F9F-vV-XZa" secondAttribute="height" id="BXP-HN-GZL"/>
+                            <constraint firstItem="DSf-X2-iMR" firstAttribute="width" secondItem="F9F-vV-XZa" secondAttribute="width" id="Ed8-YB-KFg"/>
+                            <constraint firstItem="DSf-X2-iMR" firstAttribute="trailing" secondItem="B28-K3-u2T" secondAttribute="trailingMargin" id="GOY-qf-Sil"/>
+                            <constraint firstItem="F9F-vV-XZa" firstAttribute="leading" secondItem="B28-K3-u2T" secondAttribute="leadingMargin" id="NIA-UL-AmP"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="TraitCollection Demo" id="2jP-vB-XCJ">
+                        <barButtonItem key="rightBarButtonItem" systemItem="stop" id="47e-XJ-aA6">
+                            <connections>
+                                <action selector="onClose:" destination="oVO-7P-tGM" id="3Np-1r-fac"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="image" destination="F9F-vV-XZa" id="4ky-oT-Hr8"/>
+                        <outlet property="image2" destination="DSf-X2-iMR" id="cj7-sv-hNg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hz2-yf-hnQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="420" y="385"/>
+        </scene>
+    </scenes>
+</document>
