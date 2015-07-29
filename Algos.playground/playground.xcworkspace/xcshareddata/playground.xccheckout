@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>26391686-60E9-46FD-8E06-06258BDCF640</string>
+	<key>IDESourceControlProjectName</key>
+	<string>playground</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>7AE26446FC131A977B67126CA1262106E2484337</key>
+		<string>https://github.com/anooptomar1/mixofall.git</string>
+		<key>F8D5CCC0B848103AC2897358123470ADD4BF6303</key>
+		<string>https://bitbucket.org/anooptomar/bt-car.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Algos.playground/playground.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>7AE26446FC131A977B67126CA1262106E2484337</key>
+		<string>../..</string>
+		<key>F8D5CCC0B848103AC2897358123470ADD4BF6303</key>
+		<string>../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/anooptomar1/mixofall.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>7AE26446FC131A977B67126CA1262106E2484337</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>F8D5CCC0B848103AC2897358123470ADD4BF6303</string>
+			<key>IDESourceControlWCCName</key>
+			<string>..</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>7AE26446FC131A977B67126CA1262106E2484337</string>
+			<key>IDESourceControlWCCName</key>
+			<string>mixofall</string>
+		</dict>
+	</array>
+</dict>
+</plist>

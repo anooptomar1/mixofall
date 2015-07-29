@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <scenes>
+        <!--Swift tests-->
+        <scene sceneID="e3A-oR-zk8">
+            <objects>
+                <viewController storyboardIdentifier="subMainVC" id="ntR-Qd-FDX" customClass="CTViewController" customModule="MiniApps" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="49c-um-s53"/>
+                        <viewControllerLayoutGuide type="bottom" id="8Ig-St-iFP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="d5u-ai-FBb">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qQB-MT-K6u">
+                                <rect key="frame" x="16" y="562" width="524" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FHc-Ee-ecS">
+                                <rect key="frame" x="548" y="562" width="36" height="30"/>
+                                <state key="normal" title="Send">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="sendMessage:" destination="ntR-Qd-FDX" eventType="touchUpInside" id="FUT-AT-ntd"/>
+                                </connections>
+                            </button>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="X6H-UA-yik">
+                                <rect key="frame" x="0.0" y="64" width="600" height="2"/>
+                            </progressView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="8Ig-St-iFP" firstAttribute="top" secondItem="qQB-MT-K6u" secondAttribute="bottom" constant="8" id="38k-7d-i8r"/>
+                            <constraint firstItem="X6H-UA-yik" firstAttribute="leading" secondItem="d5u-ai-FBb" secondAttribute="leading" id="Sge-kU-ld4"/>
+                            <constraint firstItem="X6H-UA-yik" firstAttribute="top" secondItem="49c-um-s53" secondAttribute="bottom" id="jFD-Gf-16c"/>
+                            <constraint firstItem="FHc-Ee-ecS" firstAttribute="leading" secondItem="qQB-MT-K6u" secondAttribute="trailing" constant="8" id="kJ2-Qb-14m"/>
+                            <constraint firstAttribute="trailing" secondItem="X6H-UA-yik" secondAttribute="trailing" id="pO9-kl-ffI"/>
+                            <constraint firstItem="qQB-MT-K6u" firstAttribute="leading" secondItem="d5u-ai-FBb" secondAttribute="leading" constant="16" id="pOJ-1u-XBE"/>
+                            <constraint firstItem="8Ig-St-iFP" firstAttribute="top" secondItem="FHc-Ee-ecS" secondAttribute="bottom" constant="8" id="q0W-Wc-Boq"/>
+                            <constraint firstAttribute="trailing" secondItem="FHc-Ee-ecS" secondAttribute="trailing" constant="16" id="uR8-zC-lQc"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Swift tests" id="oqw-SW-rWy">
+                        <barButtonItem key="rightBarButtonItem" systemItem="stop" id="hNL-mU-CsB">
+                            <connections>
+                                <action selector="onClose:" destination="ntR-Qd-FDX" id="ZcD-Vj-CfL"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="myprogressView" destination="X6H-UA-yik" id="y5l-PT-bxh"/>
+                        <outlet property="textb" destination="qQB-MT-K6u" id="8ot-vh-n4g"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kgb-Ic-8Rr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="323" y="301"/>
+        </scene>
+    </scenes>
+</document>

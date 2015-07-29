@@ -11,13 +11,29 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
-    let menuItems: [String: String] = ["CALDemo": "CALayer Demo", "ScrollLayerApp":"CAScrollLayer Demo", "Transform":"CAAffineTransform Demo", "Trait": "TraitCollection Demo", "img": "UIImageView"]
+    var menus = [MenuModel]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavBar()
         self.tableView.delegate = self
         self.tableView.dataSource = self
+        initializeMenu()
+        menus = sorted(menus){$0.ordering < $1.ordering}
+    }
+    
+    func initializeMenu(){
+        menus.append(MenuModel(text: "CALayer Demo", sb: "CALDemo", order: 1))
+        menus.append(MenuModel(text: "CAScrollLayer Demo", sb: "ScrollLayerApp", order: 2))
+        menus.append(MenuModel(text: "CAAffineTransform Demo", sb: "Transform", order: 3))
+        menus.append(MenuModel(text: "TraitCollection Demo", sb: "Trait", order: 4))
+        menus.append(MenuModel(text: "UIImageView Demo", sb: "img", order: 5))
+        menus.append(MenuModel(text: "CIImage Demo", sb: "CID", order: 6))
+        menus.append(MenuModel(text: "UIView Demo", sb: "UID", order: 7))
+        menus.append(MenuModel(text: "Geofence App", sb: "GeoF", order: 8))
+        menus.append(MenuModel(text: "AddressBook App", sb: "ABAPP", order: 9))
+        menus.append(MenuModel(text: "Bart API", sb: "bart", order: 10))
+        menus.append(MenuModel(text: "Swift test", sb: "CT", order: 11))
     }
     
     func setupNavBar(){
@@ -49,7 +65,7 @@ extension ViewController: UITableViewDelegate{}
 
 extension ViewController: UITableViewDataSource{
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
-        return menuItems.count
+        return menus.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
@@ -57,12 +73,12 @@ extension ViewController: UITableViewDataSource{
         if cell == nil{
             cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: NSStringFromClass(ViewController.self))
         }
-        cell!.textLabel!.text = Array(menuItems.values)[indexPath.row]
+        cell!.textLabel!.text = menus[indexPath.row].titleText
         return cell!
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let sbName: String = Array(menuItems.keys)[indexPath.row]
+        let sbName: String = menus[indexPath.row].sbName
         let storyboard = UIStoryboard(name: sbName, bundle: nil)
         let submainVC = storyboard.instantiateViewControllerWithIdentifier("subMainVC") as! UIViewController
         let navVC = UINavigationController(rootViewController: submainVC)

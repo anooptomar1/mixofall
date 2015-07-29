@@ -8,19 +8,54 @@
 
 import UIKit
 import CoreData
+import CoreLocation
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate {
 
     var window: UIWindow?
-
+    var locationManager = CLLocationManager()
+    var completionHandler: (() -> Void)?
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let mainVC = storyboard.instantiateViewControllerWithIdentifier("mainVC") as! ViewController
         let navVC = UINavigationController(rootViewController: mainVC)
         window?.rootViewController = navVC
+        
+        application.registerUserNotificationSettings(UIUserNotificationSettings(forTypes: .Sound | .Alert | .Badge, categories: nil))
+        UIApplication.sharedApplication().cancelAllLocalNotifications()
+        locationManager.delegate = self
         return true
+    }
+    
+    // MARK: Handler for localnotifications
+    func handleRegionChange(region: CLRegion){
+        var note = getMessageFromGeofence(region.identifier)
+        if UIApplication.sharedApplication().applicationState == UIApplicationState.Active{
+        // true if user has app opened
+            if let message = note{
+                showLocalNotification("Note from geofence: \(message)")
+            }
+        }else{
+        // true in all other cases
+            if let message = note{
+                showLocalNotification(message)
+            }else{
+                showLocalNotification("")
+            }
+        }
+    }
+    
+    // MARK: CLLocationManagerDelegate
+    func locationManager(manager: CLLocationManager!, didEnterRegion region: CLRegion!) {
+        // do something when user enters in geofence
+        handleRegionChange(region)
+    }
+    
+    func locationManager(manager: CLLocationManager!, didExitRegion region: CLRegion!) {
+        // do something when user exists the geofence
+        handleRegionChange(region)
     }
 
     func applicationWillResignActive(application: UIApplication) {
@@ -29,8 +64,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationDidEnterBackground(application: UIApplication) {
-        // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
-        // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+        var taskToken: UIBackgroundTaskIdentifier = UIBackgroundTaskInvalid
+        
+        taskToken = application.beginBackgroundTaskWithExpirationHandler({ () -> Void in
+            application.endBackgroundTask(taskToken)
+            taskToken = UIBackgroundTaskInvalid
+        })
+        
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), { () -> Void in
+            println("Performing long running task like saving to database :P")
+            application.endBackgroundTask(taskToken)
+            taskToken = UIBackgroundTaskInvalid
+        })
     }
 
     func applicationWillEnterForeground(application: UIApplication) {
@@ -45,6 +90,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
         // Saves changes in the application's managed object context before the application terminates.
         self.saveContext()
+    }
+    
+    func application(application: UIApplication, handleEventsForBackgroundURLSession identifier: String, completionHandler: () -> Void) {
+        self.completionHandler = completionHandler
     }
 
     // MARK: - Core Data stack
