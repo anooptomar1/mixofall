@@ -14,4 +14,5 @@ class Trip {
     var origTimeMin: String?
     var destTimeMin: String?
     var legs = [Leg]()
+    
 }

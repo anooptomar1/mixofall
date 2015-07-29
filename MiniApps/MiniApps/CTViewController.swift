@@ -54,8 +54,26 @@ class CTViewController: UIViewController, NSURLSessionDownloadDelegate, CLLocati
                         }
                         bartTrips.append(newTrip)
                     }
-                    for t in bartTrips[0].legs{
-                        println("\(t.origin!) - \(t.destination!) : \(t.origDate!):\(t.origTimeMin!) :\(t.line!):")
+                    var formatter = NSDateFormatter()
+                    formatter.timeZone = NSTimeZone.localTimeZone()
+                    formatter.timeStyle = NSDateFormatterStyle.ShortStyle
+                    formatter.dateStyle = NSDateFormatterStyle.ShortStyle
+                    for t in bartTrips{
+                        for l in t.legs{
+                            t.legs.sort{
+                                (a, b) in
+                                var a: Int = NSString(string: a.order!).integerValue
+                                var b: Int = NSString(string: b.order!).integerValue
+                                return a < b
+                            }
+                            var legDateTime = formatter.dateFromString("\(l.origDate!) \(l.origTimeMin!)")
+                            if legDateTime?.timeIntervalSinceNow >= 0{
+                                println("-------------------------------------------------------")
+                                println("\(l.origin!)-\(l.destination!) at \(l.origDate!) \(l.origTimeMin!)")
+                                println("-------------------------------------------------------")
+                            }
+
+                        }
                     }
                 }
             }
