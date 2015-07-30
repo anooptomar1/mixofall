@@ -16,6 +16,11 @@
 		894BDC2B1B681E2A0072E9F0 /* JSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894BDC2A1B681E2A0072E9F0 /* JSONParser.swift */; };
 		894BDC2D1B681E350072E9F0 /* JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894BDC2C1B681E350072E9F0 /* JSON.swift */; };
 		894BDC301B6845420072E9F0 /* SMXMLDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 894BDC2F1B6845420072E9F0 /* SMXMLDocument.m */; };
+		894BDC331B69109E0072E9F0 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 894BDC321B69109E0072E9F0 /* Reachability.m */; };
+		894BDC351B69204B0072E9F0 /* RestClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894BDC341B69204B0072E9F0 /* RestClient.swift */; };
+		894BDC3B1B6952880072E9F0 /* Ingredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894BDC3A1B6952880072E9F0 /* Ingredient.swift */; };
+		894BDC3D1B6952880072E9F0 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894BDC3C1B6952880072E9F0 /* Recipe.swift */; };
+		894BDC3F1B6952D10072E9F0 /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894BDC3E1B6952D10072E9F0 /* CoreDataHelper.swift */; };
 		894E91FE1B53781000E45BC4 /* BartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894E91FD1B53781000E45BC4 /* BartTableViewCell.swift */; };
 		894FEF261B2F2FDE00F9DB4C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894FEF251B2F2FDE00F9DB4C /* AppDelegate.swift */; };
 		894FEF291B2F2FDE00F9DB4C /* MiniApps.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 894FEF271B2F2FDE00F9DB4C /* MiniApps.xcdatamodeld */; };
@@ -85,6 +90,12 @@
 		894BDC2C1B681E350072E9F0 /* JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSON.swift; sourceTree = "<group>"; };
 		894BDC2E1B6845420072E9F0 /* SMXMLDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SMXMLDocument.h; path = MiniApps/SMXMLDocument.h; sourceTree = "<group>"; };
 		894BDC2F1B6845420072E9F0 /* SMXMLDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SMXMLDocument.m; path = MiniApps/SMXMLDocument.m; sourceTree = "<group>"; };
+		894BDC311B69109E0072E9F0 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		894BDC321B69109E0072E9F0 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		894BDC341B69204B0072E9F0 /* RestClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestClient.swift; sourceTree = "<group>"; };
+		894BDC3A1B6952880072E9F0 /* Ingredient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ingredient.swift; sourceTree = "<group>"; };
+		894BDC3C1B6952880072E9F0 /* Recipe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
+		894BDC3E1B6952D10072E9F0 /* CoreDataHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
 		894E91FD1B53781000E45BC4 /* BartTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BartTableViewCell.swift; sourceTree = "<group>"; };
 		894FEF201B2F2FDE00F9DB4C /* MiniApps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MiniApps.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		894FEF241B2F2FDE00F9DB4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -359,12 +370,16 @@
 		897B3A971B5FD8AE004D4A69 /* SwiftComplexType */ = {
 			isa = PBXGroup;
 			children = (
+				894BDC3C1B6952880072E9F0 /* Recipe.swift */,
+				894BDC3A1B6952880072E9F0 /* Ingredient.swift */,
 				897B3A981B5FD8C4004D4A69 /* CT.storyboard */,
 				897B3A9A1B5FD8D2004D4A69 /* CTViewController.swift */,
 				897B3A9C1B5FEDDE004D4A69 /* Sharing.swift */,
 				897B3A9E1B62862B004D4A69 /* ATStac.swift */,
 				894BDC2A1B681E2A0072E9F0 /* JSONParser.swift */,
 				894BDC2C1B681E350072E9F0 /* JSON.swift */,
+				894BDC341B69204B0072E9F0 /* RestClient.swift */,
+				894BDC3E1B6952D10072E9F0 /* CoreDataHelper.swift */,
 			);
 			name = SwiftComplexType;
 			sourceTree = "<group>";
@@ -395,6 +410,8 @@
 		89D90BF21B3A20910066C792 /* Framework */ = {
 			isa = PBXGroup;
 			children = (
+				894BDC311B69109E0072E9F0 /* Reachability.h */,
+				894BDC321B69109E0072E9F0 /* Reachability.m */,
 				894BDC2E1B6845420072E9F0 /* SMXMLDocument.h */,
 				894BDC2F1B6845420072E9F0 /* SMXMLDocument.m */,
 				89D90BF01B3A208A0066C792 /* MapKit.framework */,
@@ -568,13 +585,16 @@
 				8972B1E21B33976E005D32AA /* sampleview.swift in Sources */,
 				897B3A9F1B62862B004D4A69 /* ATStac.swift in Sources */,
 				8972B1EE1B35186E005D32AA /* UIVIewDViewController.swift in Sources */,
+				894BDC331B69109E0072E9F0 /* Reachability.m in Sources */,
 				894FEF2B1B2F2FDE00F9DB4C /* ViewController.swift in Sources */,
 				894FEF571B30F2C100F9DB4C /* ScrollView.swift in Sources */,
 				897B3A9B1B5FD8D2004D4A69 /* CTViewController.swift in Sources */,
 				894FEF4C1B2F36A800F9DB4C /* CALViewController.swift in Sources */,
 				894FEF611B336E7700F9DB4C /* TraitViewController.swift in Sources */,
 				894BDC2B1B681E2A0072E9F0 /* JSONParser.swift in Sources */,
+				894BDC3F1B6952D10072E9F0 /* CoreDataHelper.swift in Sources */,
 				89CBE24F1B4C187B00139979 /* MenuModel.swift in Sources */,
+				894BDC3B1B6952880072E9F0 /* Ingredient.swift in Sources */,
 				89143E3A1B508CE5003F5D56 /* BartViewController.swift in Sources */,
 				894FEF5A1B312BB000F9DB4C /* TransformViewController.swift in Sources */,
 				8972B1E41B33E2F1005D32AA /* SnapViewController.swift in Sources */,
@@ -585,6 +605,7 @@
 				894FEF501B2FADD200F9DB4C /* ControlsTableViewController.swift in Sources */,
 				89D90BF41B3A64A40066C792 /* commonUtils.swift in Sources */,
 				894BDC301B6845420072E9F0 /* SMXMLDocument.m in Sources */,
+				894BDC351B69204B0072E9F0 /* RestClient.swift in Sources */,
 				894E91FE1B53781000E45BC4 /* BartTableViewCell.swift in Sources */,
 				897B3A9D1B5FEDDE004D4A69 /* Sharing.swift in Sources */,
 				89CBE2511B4CE1FA00139979 /* AddressBookPeople.swift in Sources */,
@@ -598,6 +619,7 @@
 				894FEF261B2F2FDE00F9DB4C /* AppDelegate.swift in Sources */,
 				89D90BED1B3A1F400066C792 /* NewGeoTableViewController.swift in Sources */,
 				894FEF531B30E84400F9DB4C /* CAScrollViewController.swift in Sources */,
+				894BDC3D1B6952880072E9F0 /* Recipe.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

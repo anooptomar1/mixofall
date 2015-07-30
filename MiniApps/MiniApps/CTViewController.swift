@@ -9,12 +9,14 @@
 import UIKit
 import Foundation
 import CoreLocation
+import CoreData
 
 class CTViewController: UIViewController, NSURLSessionDownloadDelegate, CLLocationManagerDelegate {
     
     @IBOutlet weak var myprogressView: UIProgressView!
     var serialQueue: NSOperationQueue?
     var mainQueue: NSOperationQueue?
+    var reach: Reachability!
     
     var locationManager: CLLocationManager!
     
@@ -23,8 +25,79 @@ class CTViewController: UIViewController, NSURLSessionDownloadDelegate, CLLocati
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        XMLParsingExample()
+        CoreDataExample()
     }
+    
+    func CoreDataExample(){
+        var helper = CoreDataHelper(modelName: "MiniApps", datastoreFileName: "MiniApps.sqlite")
+        let coordinator = helper.persistentStoreCoordinator
+        var recipe = helper.newEntry("Recipe") as? Recipe
+        if let r = recipe{
+            r.name = "Apple pie"
+            r.serves = 8
+            r.recipeDescription = "A summer tradition"
+            helper.saveContext()
+        }
+        
+        let fetchRequest = NSFetchRequest()
+        let entity = NSEntityDescription.entityForName("Recipe", inManagedObjectContext: helper.managedObjectContext!)
+        fetchRequest.entity = entity
+        
+        var error: NSError?
+        
+        var result = helper.managedObjectContext?.executeFetchRequest(fetchRequest, error: &error) as? [Recipe]
+        if let recepies = result{
+            for r in recepies{
+                println(r.name)
+            }
+        }
+    }
+    
+    func RestClientExample(){
+        RestClient.Get("https://openlibrary.org/books/OL8365328M.json", callback: { (json: JSON?, error: NSError?) -> () in
+            if let err = error{
+                println("Error: \(err.localizedDescription)")
+                return
+            }
+            
+            if let j = json{
+                var subtitle = j["subtitle"]?.stringValue
+                var title = j["title"]?.stringValue
+                var revision = j["revision"]?.intValue
+                println("Title: \(title!) - \(subtitle!)")
+                println("Revision: \(revision!)")
+            }
+        })
+        var data: [String: AnyObject] = [ "name" : "PeaSoup","Ingredients" : "Split Peas, Water, Chicken Broth, Milk, Salt, Onions" ]
+        RestClient.Post("http://echo.jsontest.com/status/OK", data: data) { (json: JSON?, error: NSError?) -> () in
+            if let err = error{
+                println(err.localizedDescription)
+            }
+            if let j = json{
+                println((j["status"]?.stringValue)!)
+            }
+        }
+    }
+    
+    func reachabilityTest(){
+        reach = Reachability.reachabilityForInternetConnection()
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "checkForReachability:", name: kReachabilityChangedNotification, object: nil)
+        reach.startNotifier()
+    }
+    
+    func checkForReachability(notification: NSNotification){
+        switch reach.currentReachabilityStatus().value{
+        case ReachableViaWiFi.value:
+            println("Reachable via wifi")
+        case ReachableViaWWAN.value:
+            println("Reachable via mobile network")
+        case NotReachable.value:
+            println("Not reachable")
+        default:
+            println("Not reachable")
+        }
+    }
+    
     
     func XMLParsingExample(){
         var doc: SMXMLDocument?
