@@ -21,6 +21,15 @@
 		894BDC3B1B6952880072E9F0 /* Ingredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894BDC3A1B6952880072E9F0 /* Ingredient.swift */; };
 		894BDC3D1B6952880072E9F0 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894BDC3C1B6952880072E9F0 /* Recipe.swift */; };
 		894BDC3F1B6952D10072E9F0 /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894BDC3E1B6952D10072E9F0 /* CoreDataHelper.swift */; };
+		894BDCB31B6FB74B0072E9F0 /* animationD.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 894BDCB21B6FB74B0072E9F0 /* animationD.storyboard */; };
+		894BDCB51B6FB7570072E9F0 /* AnimationDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894BDCB41B6FB7570072E9F0 /* AnimationDViewController.swift */; };
+		894BDCB81B7043BD0072E9F0 /* CP.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 894BDCB71B7043BD0072E9F0 /* CP.storyboard */; };
+		894BDCBA1B7043C70072E9F0 /* CPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894BDCB91B7043C70072E9F0 /* CPViewController.swift */; };
+		894BDCBC1B7073DE0072E9F0 /* progressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894BDCBB1B7073DE0072E9F0 /* progressView.swift */; };
+		894BDCBF1B7187A00072E9F0 /* Transition1.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 894BDCBE1B7187A00072E9F0 /* Transition1.storyboard */; };
+		894BDCC11B7187B40072E9F0 /* Transition1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894BDCC01B7187B40072E9F0 /* Transition1ViewController.swift */; };
+		894BDCC31B7189CB0072E9F0 /* TransitionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894BDCC21B7189CB0072E9F0 /* TransitionManager.swift */; };
+		894BDCC51B71AB9C0072E9F0 /* TransitionVC2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894BDCC41B71AB9C0072E9F0 /* TransitionVC2ViewController.swift */; };
 		894E91FE1B53781000E45BC4 /* BartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894E91FD1B53781000E45BC4 /* BartTableViewCell.swift */; };
 		894FEF261B2F2FDE00F9DB4C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894FEF251B2F2FDE00F9DB4C /* AppDelegate.swift */; };
 		894FEF291B2F2FDE00F9DB4C /* MiniApps.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 894FEF271B2F2FDE00F9DB4C /* MiniApps.xcdatamodeld */; };
@@ -96,6 +105,15 @@
 		894BDC3A1B6952880072E9F0 /* Ingredient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ingredient.swift; sourceTree = "<group>"; };
 		894BDC3C1B6952880072E9F0 /* Recipe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 		894BDC3E1B6952D10072E9F0 /* CoreDataHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
+		894BDCB21B6FB74B0072E9F0 /* animationD.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = animationD.storyboard; sourceTree = "<group>"; };
+		894BDCB41B6FB7570072E9F0 /* AnimationDViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationDViewController.swift; sourceTree = "<group>"; };
+		894BDCB71B7043BD0072E9F0 /* CP.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CP.storyboard; sourceTree = "<group>"; };
+		894BDCB91B7043C70072E9F0 /* CPViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CPViewController.swift; sourceTree = "<group>"; };
+		894BDCBB1B7073DE0072E9F0 /* progressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = progressView.swift; sourceTree = "<group>"; };
+		894BDCBE1B7187A00072E9F0 /* Transition1.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Transition1.storyboard; sourceTree = "<group>"; };
+		894BDCC01B7187B40072E9F0 /* Transition1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transition1ViewController.swift; sourceTree = "<group>"; };
+		894BDCC21B7189CB0072E9F0 /* TransitionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionManager.swift; sourceTree = "<group>"; };
+		894BDCC41B71AB9C0072E9F0 /* TransitionVC2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionVC2ViewController.swift; sourceTree = "<group>"; };
 		894E91FD1B53781000E45BC4 /* BartTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BartTableViewCell.swift; sourceTree = "<group>"; };
 		894FEF201B2F2FDE00F9DB4C /* MiniApps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MiniApps.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		894FEF241B2F2FDE00F9DB4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -200,6 +218,36 @@
 			name = Models;
 			sourceTree = "<group>";
 		};
+		894BDCB11B6F1A430072E9F0 /* AnimationTest */ = {
+			isa = PBXGroup;
+			children = (
+				894BDCB21B6FB74B0072E9F0 /* animationD.storyboard */,
+				894BDCB41B6FB7570072E9F0 /* AnimationDViewController.swift */,
+			);
+			name = AnimationTest;
+			sourceTree = "<group>";
+		};
+		894BDCB61B7043AA0072E9F0 /* CircularProgress */ = {
+			isa = PBXGroup;
+			children = (
+				894BDCB71B7043BD0072E9F0 /* CP.storyboard */,
+				894BDCB91B7043C70072E9F0 /* CPViewController.swift */,
+				894BDCBB1B7073DE0072E9F0 /* progressView.swift */,
+			);
+			name = CircularProgress;
+			sourceTree = "<group>";
+		};
+		894BDCBD1B7187810072E9F0 /* Transition1 */ = {
+			isa = PBXGroup;
+			children = (
+				894BDCBE1B7187A00072E9F0 /* Transition1.storyboard */,
+				894BDCC01B7187B40072E9F0 /* Transition1ViewController.swift */,
+				894BDCC21B7189CB0072E9F0 /* TransitionManager.swift */,
+				894BDCC41B71AB9C0072E9F0 /* TransitionVC2ViewController.swift */,
+			);
+			name = Transition1;
+			sourceTree = "<group>";
+		};
 		894D514C1B3CCD4200903023 /* ParseDemoApp */ = {
 			isa = PBXGroup;
 			children = (
@@ -231,6 +279,9 @@
 		894FEF221B2F2FDE00F9DB4C /* MiniApps */ = {
 			isa = PBXGroup;
 			children = (
+				894BDCBD1B7187810072E9F0 /* Transition1 */,
+				894BDCB61B7043AA0072E9F0 /* CircularProgress */,
+				894BDCB11B6F1A430072E9F0 /* AnimationTest */,
 				897B3A971B5FD8AE004D4A69 /* SwiftComplexType */,
 				89143E361B508CB3003F5D56 /* BartApp */,
 				89CBE2491B4C17EA00139979 /* AddressbookApp */,
@@ -516,14 +567,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				894FEF2E1B2F2FDE00F9DB4C /* Main.storyboard in Resources */,
+				894BDCB31B6FB74B0072E9F0 /* animationD.storyboard in Resources */,
 				894FEF551B30E86100F9DB4C /* ScrollLayerApp.storyboard in Resources */,
 				8972B1DE1B3392D7005D32AA /* img.storyboard in Resources */,
 				894FEF331B2F2FDE00F9DB4C /* LaunchScreen.xib in Resources */,
 				894FEF5C1B312BBA00F9DB4C /* Transform.storyboard in Resources */,
 				89D90BE71B3A10E10066C792 /* GeoF.storyboard in Resources */,
+				894BDCB81B7043BD0072E9F0 /* CP.storyboard in Resources */,
 				894FEF4E1B2F36B700F9DB4C /* CALDemo.storyboard in Resources */,
 				89143E381B508CC4003F5D56 /* bart.storyboard in Resources */,
 				89CBE24D1B4C182400139979 /* ABAPP.storyboard in Resources */,
+				894BDCBF1B7187A00072E9F0 /* Transition1.storyboard in Resources */,
 				897B3A991B5FD8C4004D4A69 /* CT.storyboard in Resources */,
 				894FEF631B336E8500F9DB4C /* Trait.storyboard in Resources */,
 				8972B1E91B346A5C005D32AA /* CID.storyboard in Resources */,
@@ -581,16 +635,19 @@
 			files = (
 				8972B1E71B346A51005D32AA /* CoreImageDViewController.swift in Sources */,
 				894BDC2D1B681E350072E9F0 /* JSON.swift in Sources */,
+				894BDCBA1B7043C70072E9F0 /* CPViewController.swift in Sources */,
 				89D90BE51B3A10D60066C792 /* GeoFViewController.swift in Sources */,
 				8972B1E21B33976E005D32AA /* sampleview.swift in Sources */,
 				897B3A9F1B62862B004D4A69 /* ATStac.swift in Sources */,
 				8972B1EE1B35186E005D32AA /* UIVIewDViewController.swift in Sources */,
+				894BDCC51B71AB9C0072E9F0 /* TransitionVC2ViewController.swift in Sources */,
 				894BDC331B69109E0072E9F0 /* Reachability.m in Sources */,
 				894FEF2B1B2F2FDE00F9DB4C /* ViewController.swift in Sources */,
 				894FEF571B30F2C100F9DB4C /* ScrollView.swift in Sources */,
 				897B3A9B1B5FD8D2004D4A69 /* CTViewController.swift in Sources */,
 				894FEF4C1B2F36A800F9DB4C /* CALViewController.swift in Sources */,
 				894FEF611B336E7700F9DB4C /* TraitViewController.swift in Sources */,
+				894BDCB51B6FB7570072E9F0 /* AnimationDViewController.swift in Sources */,
 				894BDC2B1B681E2A0072E9F0 /* JSONParser.swift in Sources */,
 				894BDC3F1B6952D10072E9F0 /* CoreDataHelper.swift in Sources */,
 				89CBE24F1B4C187B00139979 /* MenuModel.swift in Sources */,
@@ -601,6 +658,7 @@
 				89143E3F1B51D917003F5D56 /* Trip.swift in Sources */,
 				8972B1F21B3612C0005D32AA /* myDrawView.swift in Sources */,
 				894FEF291B2F2FDE00F9DB4C /* MiniApps.xcdatamodeld in Sources */,
+				894BDCC31B7189CB0072E9F0 /* TransitionManager.swift in Sources */,
 				8972B1E01B3392E3005D32AA /* ImgViewController.swift in Sources */,
 				894FEF501B2FADD200F9DB4C /* ControlsTableViewController.swift in Sources */,
 				89D90BF41B3A64A40066C792 /* commonUtils.swift in Sources */,
@@ -610,10 +668,12 @@
 				897B3A9D1B5FEDDE004D4A69 /* Sharing.swift in Sources */,
 				89CBE2511B4CE1FA00139979 /* AddressBookPeople.swift in Sources */,
 				89143E3D1B517094003F5D56 /* Route.swift in Sources */,
+				894BDCBC1B7073DE0072E9F0 /* progressView.swift in Sources */,
 				894FEF5E1B330CA900F9DB4C /* calculatorBrain.swift in Sources */,
 				8972B1EB1B346EB6005D32AA /* MyImageFilter.swift in Sources */,
 				89D90BF61B3A6DE10066C792 /* Geofence.swift in Sources */,
 				89CBE24B1B4C180700139979 /* ABAppViewController.swift in Sources */,
+				894BDCC11B7187B40072E9F0 /* Transition1ViewController.swift in Sources */,
 				89143E411B51DAF2003F5D56 /* Leg.swift in Sources */,
 				89D90BEB1B3A1F320066C792 /* GeoDetailsTableViewController.swift in Sources */,
 				894FEF261B2F2FDE00F9DB4C /* AppDelegate.swift in Sources */,

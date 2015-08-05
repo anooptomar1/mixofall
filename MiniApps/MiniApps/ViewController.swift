@@ -34,6 +34,9 @@ class ViewController: UIViewController {
         menus.append(MenuModel(text: "AddressBook App", sb: "ABAPP", order: 9))
         menus.append(MenuModel(text: "Bart API", sb: "bart", order: 10))
         menus.append(MenuModel(text: "Swift test", sb: "CT", order: 11))
+        menus.append(MenuModel(text: "Animation Test", sb: "animationD", order: 12))
+        menus.append(MenuModel(text: "Circular Progress", sb: "CP", order: 13))
+        menus.append(MenuModel(text: "Transition1 Demo", sb: "Transition1", order: 14))
     }
     
     func setupNavBar(){

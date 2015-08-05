@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Transition 1-->
+        <scene sceneID="LiT-JX-L88">
+            <objects>
+                <viewController storyboardIdentifier="subMainVC" id="mW5-ne-Ic4" customClass="Transition1ViewController" customModule="MiniApps" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Sbc-eH-v6Z"/>
+                        <viewControllerLayoutGuide type="bottom" id="1nc-75-Xhx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Pxy-YV-ITt">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jj7-qM-Kqb">
+                                <rect key="frame" x="280" y="550" width="39" height="30"/>
+                                <state key="normal" title="Show">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="6Ea-0F-qgp" kind="custom" id="JBl-cB-4sl"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="1nc-75-Xhx" firstAttribute="top" secondItem="Jj7-qM-Kqb" secondAttribute="bottom" constant="20" id="8ys-ab-QYB"/>
+                            <constraint firstAttribute="centerX" secondItem="Jj7-qM-Kqb" secondAttribute="centerX" id="zV2-cA-3bu"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Transition 1" id="Xak-CC-ujI">
+                        <barButtonItem key="rightBarButtonItem" systemItem="stop" id="oNJ-eo-nxn">
+                            <connections>
+                                <action selector="onClose:" destination="mW5-ne-Ic4" id="SQr-Qo-8eo"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6OZ-8k-8CL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="441" y="436"/>
+        </scene>
+        <!--TransitionVC2 View Controller-->
+        <scene sceneID="9OL-O3-wGq">
+            <objects>
+                <viewController id="6Ea-0F-qgp" customClass="TransitionVC2ViewController" customModule="MiniApps" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="11P-ac-uKy"/>
+                        <viewControllerLayoutGuide type="bottom" id="jfU-6c-1pl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="s1y-e1-6BP">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P6d-lE-MWh">
+                                <rect key="frame" x="284" y="550" width="32" height="30"/>
+                                <state key="normal" title="Hide">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="5Ff-iD-i2h" kind="unwind" unwindAction="unwindToViewController:" id="z9S-mW-Gr7"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="P6d-lE-MWh" secondAttribute="centerX" id="3U3-AD-SkN"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="P6d-lE-MWh" secondAttribute="trailing" constant="268" id="Jpn-hb-otq"/>
+                            <constraint firstItem="jfU-6c-1pl" firstAttribute="top" secondItem="P6d-lE-MWh" secondAttribute="bottom" constant="20" id="qb3-BP-4XJ"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Jpn-hb-otq"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="csy-Fw-l3z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="5Ff-iD-i2h" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1110" y="436"/>
+        </scene>
+    </scenes>
+</document>
