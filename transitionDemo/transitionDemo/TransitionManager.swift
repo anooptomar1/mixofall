@@ -17,12 +17,16 @@ class TransitionManager: NSObject, UIViewControllerAnimatedTransitioning, UIView
         let fromView = transitionContext.viewForKey(UITransitionContextFromViewKey)!
         let toView = transitionContext.viewForKey(UITransitionContextToViewKey)!
         
-//        let offScreenRight = CGAffineTransformMakeTranslation(container.frame.width, 0)
-//        let offScreenLeft = CGAffineTransformMakeTranslation(-container.frame.width, 0)
-        let offScreenRight = CGAffineTransformMakeRotation(CGFloat(M_PI/180 * 140))
-        let offScreenLeft = CGAffineTransformMakeRotation(CGFloat(M_PI/180 * 90))
+        let offScreenRight = CGAffineTransformMakeTranslation(container.frame.width, 0)
+        let offScreenLeft = CGAffineTransformMakeTranslation(-container.frame.width, 0)
+//        let offScreenRight = CGAffineTransformMakeRotation(CGFloat(M_PI/180 * 140))
+//        let offScreenLeft = CGAffineTransformMakeRotation(CGFloat(M_PI/180 * 90))
         
-        toView.transform = offScreenRight
+        if presenting{
+            toView.transform = offScreenRight
+        }else{
+            toView.transform = offScreenLeft
+        }
         
         container.addSubview(toView)
         container.addSubview(fromView)
@@ -31,7 +35,12 @@ class TransitionManager: NSObject, UIViewControllerAnimatedTransitioning, UIView
         
         UIView.animateWithDuration(duration, animations: { () -> Void in
             
-            fromView.transform = offScreenLeft
+            if self.presenting{
+                fromView.transform = offScreenLeft
+            }else{
+                fromView.transform = offScreenRight
+            }
+            
             toView.transform = CGAffineTransformIdentity
             
             }) { (finished: Bool) -> Void in
@@ -50,7 +59,7 @@ class TransitionManager: NSObject, UIViewControllerAnimatedTransitioning, UIView
     }
     
     func animationControllerForDismissedController(dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        self.presenting = true
+        self.presenting = false
         return self
     }
 }
