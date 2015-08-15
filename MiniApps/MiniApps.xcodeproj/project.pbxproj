@@ -49,6 +49,15 @@
 		894FEF5E1B330CA900F9DB4C /* calculatorBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894FEF5D1B330CA900F9DB4C /* calculatorBrain.swift */; };
 		894FEF611B336E7700F9DB4C /* TraitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894FEF601B336E7700F9DB4C /* TraitViewController.swift */; };
 		894FEF631B336E8500F9DB4C /* Trait.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 894FEF621B336E8500F9DB4C /* Trait.storyboard */; };
+		89605F1E1B7A418A004CF25D /* LE.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89605F1D1B7A418A004CF25D /* LE.storyboard */; };
+		89605F201B7A4195004CF25D /* LEViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89605F1F1B7A4195004CF25D /* LEViewController.swift */; };
+		89605F221B7B96EA004CF25D /* reflectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89605F211B7B96EA004CF25D /* reflectionView.swift */; };
+		89605F251B7BB40A004CF25D /* AEViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89605F241B7BB40A004CF25D /* AEViewController.swift */; };
+		89605F271B7BB416004CF25D /* AE.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89605F261B7BB416004CF25D /* AE.storyboard */; };
+		89605F2A1B7D59CB004CF25D /* TE.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89605F291B7D59CB004CF25D /* TE.storyboard */; };
+		89605F2C1B7D59D6004CF25D /* TEViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89605F2B1B7D59D6004CF25D /* TEViewController.swift */; };
+		89605F2F1B7E3CFB004CF25D /* ADViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89605F2E1B7E3CFB004CF25D /* ADViewController.swift */; };
+		89605F311B7E3D07004CF25D /* AD.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89605F301B7E3D07004CF25D /* AD.storyboard */; };
 		8972B1DE1B3392D7005D32AA /* img.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8972B1DD1B3392D7005D32AA /* img.storyboard */; };
 		8972B1E01B3392E3005D32AA /* ImgViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8972B1DF1B3392E3005D32AA /* ImgViewController.swift */; };
 		8972B1E21B33976E005D32AA /* sampleview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8972B1E11B33976E005D32AA /* sampleview.swift */; };
@@ -137,6 +146,15 @@
 		894FEF5D1B330CA900F9DB4C /* calculatorBrain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = calculatorBrain.swift; sourceTree = "<group>"; };
 		894FEF601B336E7700F9DB4C /* TraitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TraitViewController.swift; sourceTree = "<group>"; };
 		894FEF621B336E8500F9DB4C /* Trait.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Trait.storyboard; sourceTree = "<group>"; };
+		89605F1D1B7A418A004CF25D /* LE.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LE.storyboard; sourceTree = "<group>"; };
+		89605F1F1B7A4195004CF25D /* LEViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LEViewController.swift; sourceTree = "<group>"; };
+		89605F211B7B96EA004CF25D /* reflectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = reflectionView.swift; sourceTree = "<group>"; };
+		89605F241B7BB40A004CF25D /* AEViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AEViewController.swift; sourceTree = "<group>"; };
+		89605F261B7BB416004CF25D /* AE.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AE.storyboard; sourceTree = "<group>"; };
+		89605F291B7D59CB004CF25D /* TE.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TE.storyboard; sourceTree = "<group>"; };
+		89605F2B1B7D59D6004CF25D /* TEViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TEViewController.swift; sourceTree = "<group>"; };
+		89605F2E1B7E3CFB004CF25D /* ADViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADViewController.swift; sourceTree = "<group>"; };
+		89605F301B7E3D07004CF25D /* AD.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AD.storyboard; sourceTree = "<group>"; };
 		897100BD1B57FBCE00EA18C6 /* MiniApps-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MiniApps-Bridging-Header.h"; sourceTree = "<group>"; };
 		8972B1DD1B3392D7005D32AA /* img.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = img.storyboard; sourceTree = "<group>"; };
 		8972B1DF1B3392E3005D32AA /* ImgViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImgViewController.swift; sourceTree = "<group>"; };
@@ -279,6 +297,10 @@
 		894FEF221B2F2FDE00F9DB4C /* MiniApps */ = {
 			isa = PBXGroup;
 			children = (
+				89605F2D1B7E3CE1004CF25D /* AnimationDuration */,
+				89605F281B7D599C004CF25D /* TransitionExplored */,
+				89605F231B7BB3F1004CF25D /* AnimationExplored */,
+				89605F1C1B7A4166004CF25D /* LayersExplored */,
 				894BDCBD1B7187810072E9F0 /* Transition1 */,
 				894BDCB61B7043AA0072E9F0 /* CircularProgress */,
 				894BDCB11B6F1A430072E9F0 /* AnimationTest */,
@@ -386,6 +408,43 @@
 				894FEF621B336E8500F9DB4C /* Trait.storyboard */,
 			);
 			name = TraitsApp;
+			sourceTree = "<group>";
+		};
+		89605F1C1B7A4166004CF25D /* LayersExplored */ = {
+			isa = PBXGroup;
+			children = (
+				89605F1D1B7A418A004CF25D /* LE.storyboard */,
+				89605F1F1B7A4195004CF25D /* LEViewController.swift */,
+				89605F211B7B96EA004CF25D /* reflectionView.swift */,
+			);
+			name = LayersExplored;
+			sourceTree = "<group>";
+		};
+		89605F231B7BB3F1004CF25D /* AnimationExplored */ = {
+			isa = PBXGroup;
+			children = (
+				89605F241B7BB40A004CF25D /* AEViewController.swift */,
+				89605F261B7BB416004CF25D /* AE.storyboard */,
+			);
+			name = AnimationExplored;
+			sourceTree = "<group>";
+		};
+		89605F281B7D599C004CF25D /* TransitionExplored */ = {
+			isa = PBXGroup;
+			children = (
+				89605F291B7D59CB004CF25D /* TE.storyboard */,
+				89605F2B1B7D59D6004CF25D /* TEViewController.swift */,
+			);
+			name = TransitionExplored;
+			sourceTree = "<group>";
+		};
+		89605F2D1B7E3CE1004CF25D /* AnimationDuration */ = {
+			isa = PBXGroup;
+			children = (
+				89605F2E1B7E3CFB004CF25D /* ADViewController.swift */,
+				89605F301B7E3D07004CF25D /* AD.storyboard */,
+			);
+			name = AnimationDuration;
 			sourceTree = "<group>";
 		};
 		8972B1DC1B3392C6005D32AA /* ImageApp */ = {
@@ -575,12 +634,16 @@
 				89D90BE71B3A10E10066C792 /* GeoF.storyboard in Resources */,
 				894BDCB81B7043BD0072E9F0 /* CP.storyboard in Resources */,
 				894FEF4E1B2F36B700F9DB4C /* CALDemo.storyboard in Resources */,
+				89605F311B7E3D07004CF25D /* AD.storyboard in Resources */,
+				89605F2A1B7D59CB004CF25D /* TE.storyboard in Resources */,
 				89143E381B508CC4003F5D56 /* bart.storyboard in Resources */,
 				89CBE24D1B4C182400139979 /* ABAPP.storyboard in Resources */,
 				894BDCBF1B7187A00072E9F0 /* Transition1.storyboard in Resources */,
 				897B3A991B5FD8C4004D4A69 /* CT.storyboard in Resources */,
+				89605F1E1B7A418A004CF25D /* LE.storyboard in Resources */,
 				894FEF631B336E8500F9DB4C /* Trait.storyboard in Resources */,
 				8972B1E91B346A5C005D32AA /* CID.storyboard in Resources */,
+				89605F271B7BB416004CF25D /* AE.storyboard in Resources */,
 				894FEF301B2F2FDE00F9DB4C /* Images.xcassets in Resources */,
 				8972B1F01B351878005D32AA /* UID.storyboard in Resources */,
 			);
@@ -634,6 +697,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8972B1E71B346A51005D32AA /* CoreImageDViewController.swift in Sources */,
+				89605F201B7A4195004CF25D /* LEViewController.swift in Sources */,
 				894BDC2D1B681E350072E9F0 /* JSON.swift in Sources */,
 				894BDCBA1B7043C70072E9F0 /* CPViewController.swift in Sources */,
 				89D90BE51B3A10D60066C792 /* GeoFViewController.swift in Sources */,
@@ -643,13 +707,16 @@
 				894BDCC51B71AB9C0072E9F0 /* TransitionVC2ViewController.swift in Sources */,
 				894BDC331B69109E0072E9F0 /* Reachability.m in Sources */,
 				894FEF2B1B2F2FDE00F9DB4C /* ViewController.swift in Sources */,
+				89605F2C1B7D59D6004CF25D /* TEViewController.swift in Sources */,
 				894FEF571B30F2C100F9DB4C /* ScrollView.swift in Sources */,
 				897B3A9B1B5FD8D2004D4A69 /* CTViewController.swift in Sources */,
 				894FEF4C1B2F36A800F9DB4C /* CALViewController.swift in Sources */,
 				894FEF611B336E7700F9DB4C /* TraitViewController.swift in Sources */,
 				894BDCB51B6FB7570072E9F0 /* AnimationDViewController.swift in Sources */,
+				89605F2F1B7E3CFB004CF25D /* ADViewController.swift in Sources */,
 				894BDC2B1B681E2A0072E9F0 /* JSONParser.swift in Sources */,
 				894BDC3F1B6952D10072E9F0 /* CoreDataHelper.swift in Sources */,
+				89605F221B7B96EA004CF25D /* reflectionView.swift in Sources */,
 				89CBE24F1B4C187B00139979 /* MenuModel.swift in Sources */,
 				894BDC3B1B6952880072E9F0 /* Ingredient.swift in Sources */,
 				89143E3A1B508CE5003F5D56 /* BartViewController.swift in Sources */,
@@ -657,6 +724,7 @@
 				8972B1E41B33E2F1005D32AA /* SnapViewController.swift in Sources */,
 				89143E3F1B51D917003F5D56 /* Trip.swift in Sources */,
 				8972B1F21B3612C0005D32AA /* myDrawView.swift in Sources */,
+				89605F251B7BB40A004CF25D /* AEViewController.swift in Sources */,
 				894FEF291B2F2FDE00F9DB4C /* MiniApps.xcdatamodeld in Sources */,
 				894BDCC31B7189CB0072E9F0 /* TransitionManager.swift in Sources */,
 				8972B1E01B3392E3005D32AA /* ImgViewController.swift in Sources */,

@@ -34,7 +34,71 @@ class ViewController: UIViewController {
         clockTicking()
         positionColorRadius()
         shadowBottomLeft()
-        maskLayer()
+      //  maskLayer()
+       // applyTransform()
+        //makeClock3D()
+        flipTheView()
+    }
+    
+    func flipTheView(){
+        var transform = CATransform3DIdentity
+        transform.m34 = -1.0/(1000.0)
+        transform = CATransform3DRotate(transform, CGFloat(M_PI), CGFloat(0), CGFloat(1), CGFloat(0))
+        //self.leftTop.layer.doubleSided = false
+        
+        UIView.animateWithDuration(5, animations: { () -> Void in
+            self.leftTop.layer.transform = transform
+            }) { (finished:Bool) -> Void in
+                transform = CATransform3DRotate(transform, CGFloat(M_PI), CGFloat(0), CGFloat(1), CGFloat(0))
+                UIView.animateWithDuration(10, animations: { () -> Void in
+                    self.leftTop.layer.transform = transform
+                })
+        }
+        
+        
+    }
+    
+    func makeClock3D(){
+        var transform3d = CATransform3DIdentity
+        transform3d.m34 = -1/500.0
+        transform3d = CATransform3DRotate(transform3d, CGFloat(M_PI_4), CGFloat(0), CGFloat(1), CGFloat(0))
+        UIView.animateWithDuration(5, animations: { () -> Void in
+            self.clock_face.layer.transform = transform3d
+        })
+    }
+    
+    func CGAffineTransformShear(transform: CGAffineTransform, x: CGFloat, y: CGFloat) -> CGAffineTransform{
+        var newTransform = transform
+        newTransform.c = -x
+        newTransform.d = y
+        return newTransform
+    }
+    
+    func applyTransform(){
+        // single transform to 45 degrees
+        //var transform: CGAffineTransform = CGAffineTransformMakeRotation(CGFloat(M_PI_4))
+        //self.leftTop.layer.transform = CATransform3DMakeAffineTransform(transform)
+        // multiple transforms
+        var transform = CGAffineTransformIdentity
+        
+        // scale by 50%
+        transform = CGAffineTransformScale(transform, 0.5, 0.5)
+        
+        // rotate 45 degrees
+        transform = CGAffineTransformRotate(transform, CGFloat(M_PI_4))
+        
+        //translate 200 points
+        transform = CGAffineTransformTranslate(transform, 100, 100)
+        
+        // shear transform
+        transform = CGAffineTransformShear(transform, x: CGFloat(10), y: CGFloat(10))
+        
+        
+        UIView.animateWithDuration(10.0, animations: { () -> Void in
+            
+            self.leftTop.layer.transform = CATransform3DMakeAffineTransform(transform)
+            
+        })
     }
     
     func maskLayer(){
@@ -55,8 +119,10 @@ class ViewController: UIViewController {
     func positionColorRadius(){
         self.leftTop.layer.zPosition = 1
         self.rightTop.layer.zPosition = 1
-        self.leftTop.backgroundColor = UIColor.blueColor().colorWithAlphaComponent(0.75)
-        self.rightTop.backgroundColor = UIColor.blueColor().colorWithAlphaComponent(0.75)
+        self.leftTop.backgroundColor = UIColor.blueColor().colorWithAlphaComponent(0.3)
+        self.rightTop.backgroundColor = UIColor.blueColor().colorWithAlphaComponent(0.3)
+        //self.leftTop.layer.shouldRasterize = true
+        //self.leftTop.layer.rasterizationScale = UIScreen.mainScreen().scale
         self.bottomRight.layer.cornerRadius = 10
         self.bottomRight.clipsToBounds = true
         self.bottomRight.layer.borderWidth = 5.0
@@ -130,10 +196,10 @@ class ViewController: UIViewController {
         CGContextStrokeEllipseInRect(ctx, CGRectMake(layer.bounds.origin.x + 5, layer.bounds.origin.y + 5, layer.bounds.width - 10, layer.bounds.height - 10))
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        var vc = segue.destinationViewController as! UIViewController
-        vc.transitioningDelegate = self.transitionManager
-    }
+//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+//        var vc = segue.destinationViewController as! UIViewController
+//        vc.transitioningDelegate = self.transitionManager
+//    }
 
 }
 

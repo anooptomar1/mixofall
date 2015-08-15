@@ -15,6 +15,7 @@
 		894BDCEB1B71B9F70072E9F0 /* transitionDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894BDCEA1B71B9F70072E9F0 /* transitionDemoTests.swift */; };
 		894BDCF51B71BA880072E9F0 /* VC2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894BDCF41B71BA880072E9F0 /* VC2ViewController.swift */; };
 		894BDCF71B71BB890072E9F0 /* TransitionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894BDCF61B71BB890072E9F0 /* TransitionManager.swift */; };
+		89605F1B1B797F5B004CF25D /* CubeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89605F1A1B797F5B004CF25D /* CubeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		894BDCEA1B71B9F70072E9F0 /* transitionDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = transitionDemoTests.swift; sourceTree = "<group>"; };
 		894BDCF41B71BA880072E9F0 /* VC2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VC2ViewController.swift; sourceTree = "<group>"; };
 		894BDCF61B71BB890072E9F0 /* TransitionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionManager.swift; sourceTree = "<group>"; };
+		89605F1A1B797F5B004CF25D /* CubeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CubeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				894BDCF61B71BB890072E9F0 /* TransitionManager.swift */,
+				89605F1A1B797F5B004CF25D /* CubeViewController.swift */,
 				894BDCD41B71B9F60072E9F0 /* AppDelegate.swift */,
 				894BDCF41B71BA880072E9F0 /* VC2ViewController.swift */,
 				894BDCD61B71B9F60072E9F0 /* ViewController.swift */,
@@ -221,6 +224,7 @@
 				894BDCF71B71BB890072E9F0 /* TransitionManager.swift in Sources */,
 				894BDCF51B71BA880072E9F0 /* VC2ViewController.swift in Sources */,
 				894BDCD71B71B9F60072E9F0 /* ViewController.swift in Sources */,
+				89605F1B1B797F5B004CF25D /* CubeViewController.swift in Sources */,
 				894BDCD51B71B9F60072E9F0 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -417,6 +421,7 @@
 				894BDCF01B71B9F70072E9F0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		894BDCF11B71B9F70072E9F0 /* Build configuration list for PBXNativeTarget "transitionDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -425,6 +430,7 @@
 				894BDCF31B71B9F70072E9F0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

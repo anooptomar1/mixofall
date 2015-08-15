@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <scenes>
+        <!--Transition Example-->
+        <scene sceneID="Qrb-Xg-Vfr">
+            <objects>
+                <viewController storyboardIdentifier="subMainVC" id="dFj-Nc-cNQ" customClass="TEViewController" customModule="MiniApps" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="me3-Yc-TgN"/>
+                        <viewControllerLayoutGuide type="bottom" id="CI6-sN-vfp"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="rk4-kd-KxD">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dwe-zk-jeH">
+                                <rect key="frame" x="10" y="143" width="301" height="281"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="301" id="acC-r2-AZj"/>
+                                    <constraint firstAttribute="height" constant="281" id="nZ8-yR-hfV"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LcG-XY-NuD">
+                                <rect key="frame" x="144" y="530" width="32" height="30"/>
+                                <state key="normal" title="Next">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onNext:" destination="dFj-Nc-cNQ" eventType="touchUpInside" id="D3k-pi-mya"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="Dwe-zk-jeH" secondAttribute="centerY" id="Hi1-7V-75i"/>
+                            <constraint firstAttribute="centerX" secondItem="LcG-XY-NuD" secondAttribute="centerX" id="JYC-n2-r7r"/>
+                            <constraint firstItem="CI6-sN-vfp" firstAttribute="top" secondItem="LcG-XY-NuD" secondAttribute="bottom" constant="8" id="gK9-8u-GVR"/>
+                            <constraint firstAttribute="centerX" secondItem="Dwe-zk-jeH" secondAttribute="centerX" id="hYw-Ic-uwW"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Transition Example" id="EPO-ZV-zgp">
+                        <barButtonItem key="rightBarButtonItem" systemItem="stop" id="7VO-A7-DgC">
+                            <connections>
+                                <action selector="onClose:" destination="dFj-Nc-cNQ" id="5p4-IG-hRZ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="v" destination="Dwe-zk-jeH" id="qFC-a6-SCt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dxN-m2-lB3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="454" y="446"/>
+        </scene>
+    </scenes>
+</document>

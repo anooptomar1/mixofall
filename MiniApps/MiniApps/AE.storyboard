@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <scenes>
+        <!--Animations-->
+        <scene sceneID="Jad-7Y-Ope">
+            <objects>
+                <viewController storyboardIdentifier="subMainVC" id="66c-Bv-tPr" customClass="AEViewController" customModule="MiniApps" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="q0s-mn-wcY"/>
+                        <viewControllerLayoutGuide type="bottom" id="mQA-1X-TPI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xo4-zq-HK7">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Animations" id="S2G-Fk-H5g">
+                        <barButtonItem key="rightBarButtonItem" systemItem="stop" id="jL0-IJ-8nR">
+                            <connections>
+                                <action selector="onClose:" destination="66c-Bv-tPr" id="yVG-8Q-uuz"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="huq-sv-t9P" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="418" y="325"/>
+        </scene>
+    </scenes>
+</document>

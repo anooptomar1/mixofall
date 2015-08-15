@@ -37,6 +37,10 @@ class ViewController: UIViewController {
         menus.append(MenuModel(text: "Animation Test", sb: "animationD", order: 12))
         menus.append(MenuModel(text: "Circular Progress", sb: "CP", order: 13))
         menus.append(MenuModel(text: "Transition1 Demo", sb: "Transition1", order: 14))
+        menus.append(MenuModel(text: "Layers", sb: "LE", order: 0))
+        menus.append(MenuModel(text: "Animations Explored", sb: "AE", order: 0))
+        menus.append(MenuModel(text: "Transition Animation", sb: "TE", order: -1))
+        menus.append(MenuModel(text: "Animation Duration", sb: "AD", order: -2))
     }
     
     func setupNavBar(){
@@ -85,6 +89,11 @@ extension ViewController: UITableViewDataSource{
         let storyboard = UIStoryboard(name: sbName, bundle: nil)
         let submainVC = storyboard.instantiateViewControllerWithIdentifier("subMainVC") as! UIViewController
         let navVC = UINavigationController(rootViewController: submainVC)
+//        var transition = CATransition()
+//        transition.type = kCATransitionPush
+//        transition.duration = 10
+//        transition.subtype = kCATransitionFromBottom
+//        self.view.layer.addAnimation(transition, forKey: nil)
         presentViewController(navVC, animated: true, completion: nil)
     }
 
