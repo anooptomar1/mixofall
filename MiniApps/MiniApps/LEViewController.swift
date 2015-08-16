@@ -11,8 +11,15 @@ import CoreText
 
 class LEViewController: UIViewController {
     
+    var flag = true
+    var cl: CALayer!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        //easingOnView()
+        easingTest()
+        //cometDial()
+        //gradientDial()
         //self.reflectionLayer()
         //self.textLayer()
         //self.roundedButton()
@@ -22,6 +29,160 @@ class LEViewController: UIViewController {
     
     @IBAction func onClose(sender: UIBarButtonItem) {
         dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    func easingOnView(){
+        
+    }
+    
+    func easingTest(){
+        cl = CALayer()
+        cl.frame = CGRectMake(0, 0, 50, 50)
+        cl.cornerRadius = 10
+        cl.borderColor = UIColor.redColor().CGColor
+        cl.borderWidth = 2
+        self.view.layer.addSublayer(cl)
+    }
+    
+    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
+        var touch = (touches.first as! UITouch).locationInView(self.view)
+        moveLayer(touch)
+    }
+    
+    func moveLayer(touchPoint: CGPoint){
+        CATransaction.begin()
+        CATransaction.setAnimationDuration(5)
+        CATransaction.setAnimationTimingFunction(CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut))
+        cl.position = touchPoint
+        
+        if flag{
+            var transform = CGAffineTransformMakeRotation(CGFloat(M_PI))
+            cl.transform = CATransform3DMakeAffineTransform(transform)
+            flag = false
+        }else{
+            var transform = CGAffineTransformMakeRotation(CGFloat(M_PI * 2))
+            cl.transform = CATransform3DMakeAffineTransform(transform)
+            flag = true
+        }
+        
+        CATransaction.commit()
+    }
+    
+    func cometDial(){
+        // container view
+        var v = UIView(frame: CGRectMake(0, 100, 300, 300))
+        //v.backgroundColor = UIColor.blueColor()
+        self.view.addSubview(v)
+        
+       // v.layer.contents = UIImage(named: "earth")?.CGImage
+        
+        // add circle layer
+        var path = UIBezierPath(arcCenter: CGPointMake(v.bounds.width/2, v.bounds.height/2), radius: v.bounds.width/2 - 50, startAngle: 0, endAngle: CGFloat(M_PI * 2), clockwise: true)
+        var shapeLayer = CAShapeLayer()
+        shapeLayer.path = path.CGPath
+        
+        shapeLayer.fillColor = UIColor.blueColor().CGColor
+        shapeLayer.strokeColor = UIColor.clearColor().CGColor
+
+        
+        v.layer.addSublayer(shapeLayer)
+        
+        
+        
+        // add outerlayer
+//        var outerPath = UIBezierPath(arcCenter: CGPointMake(shapeLayer.bounds.width,shapeLayer.bounds.height), radius: 4, startAngle: CGFloat(M_PI_2), endAngle: CGFloat(M_PI), clockwise: true)
+//        var outerLayer = CAShapeLayer()
+//        outerLayer.path = outerPath.CGPath
+//        outerLayer.position = CGPointMake(100, 100)
+//        outerLayer.fillColor = UIColor.clearColor().CGColor
+//        outerLayer.strokeColor = UIColor.lightGrayColor().CGColor
+//        outerLayer.lineWidth = 10
+//        outerLayer.lineJoin = kCALineJoinMiter
+//        outerLayer.lineCap = kCALineCapRound
+        var outerLayer = CALayer()
+        var image = UIImage(named: "asteroid")!
+        outerLayer.contents = image.CGImage
+        outerLayer.frame = CGRectMake(0, 0, 25, 25)
+        var transform = CGAffineTransformIdentity
+        transform = CGAffineTransformRotate(transform, CGFloat(M_PI_4))
+        outerLayer.transform = CATransform3DMakeAffineTransform(transform)
+        v.layer.addSublayer(outerLayer)
+        
+        // path for ball
+        var ballPath = UIBezierPath(arcCenter: CGPointMake(v.bounds.width/2, v.bounds.height/2), radius: v.bounds.width/2 - 35, startAngle: 0, endAngle: CGFloat(M_PI * 2), clockwise: true)
+        
+        // animation
+        var pathAnimation = CAKeyframeAnimation()
+        pathAnimation.keyPath = "position"
+        // instead using duration of 4 sec from animation group
+        pathAnimation.duration = 10.0
+        pathAnimation.path = ballPath.CGPath
+        
+        pathAnimation.rotationMode = kCAAnimationRotateAutoReverse
+        pathAnimation.repeatCount = Float.infinity
+        outerLayer.addAnimation(pathAnimation, forKey: "outerLayerAnimation")
+        
+        // animation 
+//        var animation = CABasicAnimation()
+//        animation.keyPath = "transform.rotation"
+//        animation.duration = 1.0
+//        animation.repeatCount = Float.infinity
+//        animation.byValue = M_PI * 2
+//        
+//        outerLayer.anchorPoint = CGPointMake(1, 0.5)
+//        outerLayer.position =  CGPointMake(v.bounds.size.width/2 - 200, v.bounds.size.height/2)
+//        outerLayer.addAnimation(animation, forKey: "outerLayerAnimation")
+    }
+    
+    func gradientDial(){
+        var v = UIView(frame: CGRectMake(0, 100, 300, 300))
+        //v.backgroundColor = UIColor.redColor()
+        
+        // circle shape of radius half of rect width
+        var shapeLayer = CAShapeLayer()
+        var path = UIBezierPath()
+        path.addArcWithCenter(CGPointMake(v.frame.width/2.0, v.frame.height/2.0), radius: v.frame.width/2.0 - 10, startAngle: CGFloat(0), endAngle: CGFloat(M_PI*2), clockwise: false)
+    
+        shapeLayer.path = path.CGPath
+        shapeLayer.position = CGPointZero
+        shapeLayer.fillColor = UIColor.clearColor().CGColor
+        shapeLayer.strokeColor = UIColor.blueColor().CGColor
+        shapeLayer.lineWidth = 15
+        shapeLayer.lineCap = kCALineCapRound
+        shapeLayer.lineJoin = kCALineCapButt
+        
+        // stroke animation to draw line
+        var animation = CABasicAnimation(keyPath: "strokeEnd")
+        animation.duration = 5
+        animation.repeatCount = 1
+        animation.removedOnCompletion = false
+        animation.fromValue = 0.0
+        animation.toValue = 1.0
+        animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseIn)
+        
+        // addAnimation to the layer
+        shapeLayer.addAnimation(animation, forKey: "drawCircle")
+        
+        
+        // add gradientLayer to base layer and mask it with shapelayer created earlier
+        var gradientLayer = CAGradientLayer()
+        gradientLayer.frame = v.bounds
+        gradientLayer.colors = [UIColor.redColor().CGColor, UIColor.blueColor().CGColor, UIColor.greenColor().CGColor, UIColor.yellowColor().CGColor, UIColor.brownColor().CGColor]
+        gradientLayer.locations = [0.0, 0.25, 0.5, 0.75, 1.0]
+        
+        gradientLayer.mask = shapeLayer
+        v.layer.addSublayer(gradientLayer)
+        self.view.addSubview(v)
+        
+        // add uilabel
+        var label = UILabel(frame: CGRectMake(v.frame.width/2 - v.bounds.width/2, v.frame.height/2 - 40, v.bounds.width, 80))
+        
+        label.textColor = UIColor.blueColor()
+        label.text = "Hola Como Esta!"
+        //label.backgroundColor = UIColor.brownColor()
+        label.textAlignment = NSTextAlignment.Center
+        
+        v.addSubview(label)
     }
     
 //    func reflectionLayer(){
