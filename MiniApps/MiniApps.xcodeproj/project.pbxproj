@@ -84,6 +84,14 @@
 		89D90BF11B3A208A0066C792 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89D90BF01B3A208A0066C792 /* MapKit.framework */; };
 		89D90BF41B3A64A40066C792 /* commonUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D90BF31B3A64A40066C792 /* commonUtils.swift */; };
 		89D90BF61B3A6DE10066C792 /* Geofence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D90BF51B3A6DE10066C792 /* Geofence.swift */; };
+		89F734111B83E8A900E908F5 /* SnapMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89F734101B83E8A900E908F5 /* SnapMenu.storyboard */; };
+		89F734141B83E8E400E908F5 /* SnapMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F734131B83E8E400E908F5 /* SnapMenuViewController.swift */; };
+		89F734171B83E93300E908F5 /* View1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F734151B83E93300E908F5 /* View1.swift */; };
+		89F734181B83E93300E908F5 /* View1.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89F734161B83E93300E908F5 /* View1.xib */; };
+		89F7341B1B83ECA000E908F5 /* View2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F734191B83ECA000E908F5 /* View2.swift */; };
+		89F7341C1B83ECA000E908F5 /* View2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89F7341A1B83ECA000E908F5 /* View2.xib */; };
+		89F7341F1B83F10E00E908F5 /* View3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F7341D1B83F10E00E908F5 /* View3.swift */; };
+		89F734201B83F10E00E908F5 /* View3.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89F7341E1B83F10E00E908F5 /* View3.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -182,6 +190,14 @@
 		89D90BF01B3A208A0066C792 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		89D90BF31B3A64A40066C792 /* commonUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = commonUtils.swift; sourceTree = "<group>"; };
 		89D90BF51B3A6DE10066C792 /* Geofence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Geofence.swift; sourceTree = "<group>"; };
+		89F734101B83E8A900E908F5 /* SnapMenu.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SnapMenu.storyboard; sourceTree = "<group>"; };
+		89F734131B83E8E400E908F5 /* SnapMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapMenuViewController.swift; sourceTree = "<group>"; };
+		89F734151B83E93300E908F5 /* View1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View1.swift; sourceTree = "<group>"; };
+		89F734161B83E93300E908F5 /* View1.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = View1.xib; sourceTree = "<group>"; };
+		89F734191B83ECA000E908F5 /* View2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View2.swift; sourceTree = "<group>"; };
+		89F7341A1B83ECA000E908F5 /* View2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = View2.xib; sourceTree = "<group>"; };
+		89F7341D1B83F10E00E908F5 /* View3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View3.swift; sourceTree = "<group>"; };
+		89F7341E1B83F10E00E908F5 /* View3.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = View3.xib; sourceTree = "<group>"; };
 		FF0D2F4E75CB4D7FF024F60E /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -297,6 +313,7 @@
 		894FEF221B2F2FDE00F9DB4C /* MiniApps */ = {
 			isa = PBXGroup;
 			children = (
+				89F734121B83E8B500E908F5 /* SChatMenu */,
 				89605F2D1B7E3CE1004CF25D /* AnimationDuration */,
 				89605F281B7D599C004CF25D /* TransitionExplored */,
 				89605F231B7BB3F1004CF25D /* AnimationExplored */,
@@ -530,6 +547,21 @@
 			name = Framework;
 			sourceTree = "<group>";
 		};
+		89F734121B83E8B500E908F5 /* SChatMenu */ = {
+			isa = PBXGroup;
+			children = (
+				89F734101B83E8A900E908F5 /* SnapMenu.storyboard */,
+				89F734131B83E8E400E908F5 /* SnapMenuViewController.swift */,
+				89F734151B83E93300E908F5 /* View1.swift */,
+				89F734161B83E93300E908F5 /* View1.xib */,
+				89F734191B83ECA000E908F5 /* View2.swift */,
+				89F7341A1B83ECA000E908F5 /* View2.xib */,
+				89F7341D1B83F10E00E908F5 /* View3.swift */,
+				89F7341E1B83F10E00E908F5 /* View3.xib */,
+			);
+			name = SChatMenu;
+			sourceTree = "<group>";
+		};
 		8B2FDCA5E7B1DEE48486C36E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -635,10 +667,13 @@
 				894BDCB81B7043BD0072E9F0 /* CP.storyboard in Resources */,
 				894FEF4E1B2F36B700F9DB4C /* CALDemo.storyboard in Resources */,
 				89605F311B7E3D07004CF25D /* AD.storyboard in Resources */,
+				89F734181B83E93300E908F5 /* View1.xib in Resources */,
 				89605F2A1B7D59CB004CF25D /* TE.storyboard in Resources */,
 				89143E381B508CC4003F5D56 /* bart.storyboard in Resources */,
 				89CBE24D1B4C182400139979 /* ABAPP.storyboard in Resources */,
+				89F734111B83E8A900E908F5 /* SnapMenu.storyboard in Resources */,
 				894BDCBF1B7187A00072E9F0 /* Transition1.storyboard in Resources */,
+				89F734201B83F10E00E908F5 /* View3.xib in Resources */,
 				897B3A991B5FD8C4004D4A69 /* CT.storyboard in Resources */,
 				89605F1E1B7A418A004CF25D /* LE.storyboard in Resources */,
 				894FEF631B336E8500F9DB4C /* Trait.storyboard in Resources */,
@@ -646,6 +681,7 @@
 				89605F271B7BB416004CF25D /* AE.storyboard in Resources */,
 				894FEF301B2F2FDE00F9DB4C /* Images.xcassets in Resources */,
 				8972B1F01B351878005D32AA /* UID.storyboard in Resources */,
+				89F7341C1B83ECA000E908F5 /* View2.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -699,6 +735,7 @@
 				8972B1E71B346A51005D32AA /* CoreImageDViewController.swift in Sources */,
 				89605F201B7A4195004CF25D /* LEViewController.swift in Sources */,
 				894BDC2D1B681E350072E9F0 /* JSON.swift in Sources */,
+				89F734141B83E8E400E908F5 /* SnapMenuViewController.swift in Sources */,
 				894BDCBA1B7043C70072E9F0 /* CPViewController.swift in Sources */,
 				89D90BE51B3A10D60066C792 /* GeoFViewController.swift in Sources */,
 				8972B1E21B33976E005D32AA /* sampleview.swift in Sources */,
@@ -735,10 +772,13 @@
 				894E91FE1B53781000E45BC4 /* BartTableViewCell.swift in Sources */,
 				897B3A9D1B5FEDDE004D4A69 /* Sharing.swift in Sources */,
 				89CBE2511B4CE1FA00139979 /* AddressBookPeople.swift in Sources */,
+				89F734171B83E93300E908F5 /* View1.swift in Sources */,
 				89143E3D1B517094003F5D56 /* Route.swift in Sources */,
 				894BDCBC1B7073DE0072E9F0 /* progressView.swift in Sources */,
 				894FEF5E1B330CA900F9DB4C /* calculatorBrain.swift in Sources */,
+				89F7341F1B83F10E00E908F5 /* View3.swift in Sources */,
 				8972B1EB1B346EB6005D32AA /* MyImageFilter.swift in Sources */,
+				89F7341B1B83ECA000E908F5 /* View2.swift in Sources */,
 				89D90BF61B3A6DE10066C792 /* Geofence.swift in Sources */,
 				89CBE24B1B4C180700139979 /* ABAppViewController.swift in Sources */,
 				894BDCC11B7187B40072E9F0 /* Transition1ViewController.swift in Sources */,

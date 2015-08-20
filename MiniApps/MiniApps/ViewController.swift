@@ -41,6 +41,7 @@ class ViewController: UIViewController {
         menus.append(MenuModel(text: "Animations Explored", sb: "AE", order: 0))
         menus.append(MenuModel(text: "Transition Animation", sb: "TE", order: -1))
         menus.append(MenuModel(text: "Animation Duration", sb: "AD", order: -2))
+        menus.append(MenuModel(text: "SnapChat Menu", sb: "SnapMenu", order: -3))
     }
     
     func setupNavBar(){

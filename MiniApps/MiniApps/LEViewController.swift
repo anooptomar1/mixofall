@@ -13,11 +13,17 @@ class LEViewController: UIViewController {
     
     var flag = true
     var cl: CALayer!
+    var v: UIView!
+    var label: UILabel!
+    
+    var timer: NSTimer!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        rotateCircle()
+        //pulseAnimation()
         //easingOnView()
-        easingTest()
+        //easingTest()
         //cometDial()
         //gradientDial()
         //self.reflectionLayer()
@@ -31,13 +37,105 @@ class LEViewController: UIViewController {
         dismissViewControllerAnimated(true, completion: nil)
     }
     
-    func easingOnView(){
+    func rotateCircle(){
         
+        // init timer
+        timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: "tick", userInfo: nil, repeats: true)
+        
+        v = UIView(frame: CGRectMake(100, 100, 100, 100))
+        //v.backgroundColor = UIColor.lightGrayColor()
+        
+        
+        
+        var path = UIBezierPath(arcCenter: CGPoint(x: v.bounds.size.width/2, y: v.bounds.size.height/2), radius: v.bounds.size.width/2+10, startAngle: 0, endAngle: CGFloat(M_PI), clockwise: true)
+        
+        cl = CAShapeLayer()
+        (cl as! CAShapeLayer).path = path.CGPath
+        (cl as! CAShapeLayer).strokeColor = UIColor.lightGrayColor().CGColor
+        (cl as! CAShapeLayer).fillColor = UIColor.clearColor().CGColor
+        (cl as! CAShapeLayer).lineWidth = 4
+        (cl as! CAShapeLayer).frame = CGRectMake(0, 0, v.bounds.size.width, v.bounds.size.height)
+        v.layer.addSublayer(cl as! CAShapeLayer)
+  //      v.layer.insertSublayer(cl, atIndex: 0)
+        
+        v.layer.cornerRadius = v.bounds.size.width/2
+        v.layer.backgroundColor = UIColor.blueColor().CGColor
+        
+        
+        // rotation animation
+        
+        var animation = CABasicAnimation(keyPath: "transform.rotation")
+        animation.byValue = CGFloat(M_PI*2)
+        animation.duration = 1
+        animation.repeatCount = Float.infinity
+        animation.removedOnCompletion = false
+        (cl as! CAShapeLayer).addAnimation(animation, forKey: "circleRotate")
+        
+        self.view.addSubview(v)
+        
+        // add a label for time
+        label = UILabel(frame: v.bounds)
+        label.font = UIFont.systemFontOfSize(16)
+        //label.text = "12:12:12"
+        label.textAlignment = NSTextAlignment.Center
+        label.textColor = UIColor.whiteColor()
+        v.addSubview(label)
+    }
+    
+    func tick(){
+        var calendar = NSCalendar(identifier: NSCalendarIdentifierGregorian)
+        var units = NSCalendarUnit.CalendarUnitHour | NSCalendarUnit.CalendarUnitMinute | NSCalendarUnit.CalendarUnitSecond
+        
+        var components = calendar?.components(units, fromDate: NSDate())
+        var hour = (components!.hour<10) ? "0\(components!.hour)" : "\(components!.hour)"
+        var minute = components!.minute<10 ? "0\(components!.minute)" : "\(components!.minute)"
+        var second = components!.second<10 ? "0\(components!.second)" : "\(components!.second)"
+        label.text = "\(hour):\(minute):\(second)"
+        
+        var red = CGFloat(arc4random_uniform(255)) / CGFloat(255.0)
+        var green = CGFloat(arc4random_uniform(255)) / CGFloat(255.0)
+        var blue = CGFloat(arc4random_uniform(255)) / CGFloat(255.0)
+
+        
+        (cl as! CAShapeLayer).strokeColor = UIColor(red: red, green: green, blue: blue, alpha: 1.0).CGColor
+    }
+    
+    func pulseAnimation(){
+        cl = CALayer()
+        cl.frame = CGRectMake(100, 100, 200, 200)
+        cl.backgroundColor = UIColor.blueColor().CGColor
+        
+        self.view.layer.addSublayer(cl)
+    }
+    
+    func changeColor(){
+        var animation = CAKeyframeAnimation()
+        animation.keyPath = "backgroundColor"
+        animation.duration = 1.0
+        animation.values = [UIColor.lightGrayColor().CGColor,
+                            UIColor.blueColor().CGColor,
+                            UIColor.lightGrayColor().CGColor,
+                            UIColor.blueColor().CGColor,
+                            UIColor.lightGrayColor().CGColor]
+        
+        var timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseIn)
+        animation.timingFunctions = [timingFunction, timingFunction, timingFunction, timingFunction]
+        cl.addAnimation(animation, forKey: "backAnimation")
+    }
+    
+    func easingOnView(){
+        v = UIView(frame: CGRectMake(0,100,50,50))
+        v.backgroundColor = UIColor.blueColor()
+        v.layer.cornerRadius = v.bounds.size.width/2 - 5
+        v.layer.borderWidth = 5
+        v.layer.borderColor = UIColor.lightGrayColor().CGColor
+        v.clipsToBounds = true
+        self.view.addSubview(v)
     }
     
     func easingTest(){
         cl = CALayer()
-        cl.frame = CGRectMake(0, 0, 50, 50)
+        cl.frame = CGRectMake(0, 100, 50, 50)
         cl.cornerRadius = 10
         cl.borderColor = UIColor.redColor().CGColor
         cl.borderWidth = 2
@@ -46,7 +144,26 @@ class LEViewController: UIViewController {
     
     override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
         var touch = (touches.first as! UITouch).locationInView(self.view)
-        moveLayer(touch)
+       // moveLayer(touch)
+       // moveView(touch)
+       // changeColor()
+       // performRotation()
+    }
+    
+    func performRotation(){
+        var animation = CABasicAnimation(keyPath: "transform.rotation")
+        animation.byValue = CGFloat(M_PI*2)
+        animation.duration = 5
+        animation.repeatCount = 4
+        animation.removedOnCompletion = false
+        (cl as! CAShapeLayer).addAnimation(animation, forKey: "circleRotate")
+    }
+    
+    func moveView(touchPoint: CGPoint){
+        UIView.animateWithDuration(5, delay: 0, options: UIViewAnimationOptions.CurveEaseInOut, animations: { () -> Void in
+            self.v.center = touchPoint
+            self.v.transform = CGAffineTransformRotate(self.v.transform, CGFloat(M_PI / 2))
+        }, completion: nil)
     }
     
     func moveLayer(touchPoint: CGPoint){
