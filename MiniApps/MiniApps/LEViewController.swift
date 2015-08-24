@@ -66,7 +66,7 @@ class LEViewController: UIViewController {
         
         var animation = CABasicAnimation(keyPath: "transform.rotation")
         animation.byValue = CGFloat(M_PI*2)
-        animation.duration = 1
+        animation.duration = 5
         animation.repeatCount = Float.infinity
         animation.removedOnCompletion = false
         (cl as! CAShapeLayer).addAnimation(animation, forKey: "circleRotate")
