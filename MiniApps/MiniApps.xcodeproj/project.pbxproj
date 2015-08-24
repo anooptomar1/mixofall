@@ -10,6 +10,8 @@
 		1BE108CFDA7988630929127A /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 365C67A0F02A9B5131487040 /* libPods.a */; };
 		890352FB1B8A9B0E008B37E6 /* WT.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 890352FA1B8A9B0E008B37E6 /* WT.storyboard */; };
 		890352FD1B8A9B20008B37E6 /* WTViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890352FC1B8A9B20008B37E6 /* WTViewController.swift */; };
+		890352FF1B8A9DD0008B37E6 /* PushButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890352FE1B8A9DD0008B37E6 /* PushButtonView.swift */; };
+		890353011B8ABF6D008B37E6 /* CounterVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890353001B8ABF6D008B37E6 /* CounterVIew.swift */; };
 		89143E381B508CC4003F5D56 /* bart.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89143E371B508CC4003F5D56 /* bart.storyboard */; };
 		89143E3A1B508CE5003F5D56 /* BartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89143E391B508CE5003F5D56 /* BartViewController.swift */; };
 		89143E3D1B517094003F5D56 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89143E3C1B517094003F5D56 /* Route.swift */; };
@@ -114,6 +116,8 @@
 		365C67A0F02A9B5131487040 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		890352FA1B8A9B0E008B37E6 /* WT.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = WT.storyboard; sourceTree = "<group>"; };
 		890352FC1B8A9B20008B37E6 /* WTViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WTViewController.swift; sourceTree = "<group>"; };
+		890352FE1B8A9DD0008B37E6 /* PushButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushButtonView.swift; sourceTree = "<group>"; };
+		890353001B8ABF6D008B37E6 /* CounterVIew.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CounterVIew.swift; sourceTree = "<group>"; };
 		89143E371B508CC4003F5D56 /* bart.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = bart.storyboard; sourceTree = "<group>"; };
 		89143E391B508CE5003F5D56 /* BartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BartViewController.swift; sourceTree = "<group>"; };
 		89143E3C1B517094003F5D56 /* Route.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
@@ -246,6 +250,8 @@
 			children = (
 				890352FA1B8A9B0E008B37E6 /* WT.storyboard */,
 				890352FC1B8A9B20008B37E6 /* WTViewController.swift */,
+				890352FE1B8A9DD0008B37E6 /* PushButtonView.swift */,
+				890353001B8ABF6D008B37E6 /* CounterVIew.swift */,
 			);
 			name = WaterTracker;
 			sourceTree = "<group>";
@@ -775,6 +781,7 @@
 				8972B1E21B33976E005D32AA /* sampleview.swift in Sources */,
 				897B3A9F1B62862B004D4A69 /* ATStac.swift in Sources */,
 				8972B1EE1B35186E005D32AA /* UIVIewDViewController.swift in Sources */,
+				890352FF1B8A9DD0008B37E6 /* PushButtonView.swift in Sources */,
 				894BDCC51B71AB9C0072E9F0 /* TransitionVC2ViewController.swift in Sources */,
 				894BDC331B69109E0072E9F0 /* Reachability.m in Sources */,
 				894FEF2B1B2F2FDE00F9DB4C /* ViewController.swift in Sources */,
@@ -811,6 +818,7 @@
 				89143E3D1B517094003F5D56 /* Route.swift in Sources */,
 				894BDCBC1B7073DE0072E9F0 /* progressView.swift in Sources */,
 				894FEF5E1B330CA900F9DB4C /* calculatorBrain.swift in Sources */,
+				890353011B8ABF6D008B37E6 /* CounterVIew.swift in Sources */,
 				89F7341F1B83F10E00E908F5 /* View3.swift in Sources */,
 				8972B1EB1B346EB6005D32AA /* MyImageFilter.swift in Sources */,
 				89F7341B1B83ECA000E908F5 /* View2.swift in Sources */,

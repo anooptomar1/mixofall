@@ -1,7 +1,114 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
-    <scenes/>
+    <scenes>
+        <!--Water Tracker-->
+        <scene sceneID="bVf-K6-xnz">
+            <objects>
+                <viewController storyboardIdentifier="subMainVC" id="RzM-We-Nc9" customClass="WTViewController" customModule="MiniApps" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="98v-b9-Dc5"/>
+                        <viewControllerLayoutGuide type="bottom" id="eGn-qz-s1Q"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="rCx-Bn-NdJ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZzJ-aT-5En" customClass="PushButtonView" customModule="MiniApps" customModuleProvider="target">
+                                <rect key="frame" x="250" y="350" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="Awb-1L-Ug7"/>
+                                    <constraint firstAttribute="height" constant="100" id="Xyl-Vm-ihA"/>
+                                </constraints>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
+                                        <color key="value" red="0.28745590785875252" green="0.78162114778294112" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="onPlus:" destination="RzM-We-Nc9" eventType="touchUpInside" id="9lR-tv-hhn"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cbt-ZS-Z0w" customClass="PushButtonView" customModule="MiniApps" customModuleProvider="target">
+                                <rect key="frame" x="262" y="490" width="75" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="75" id="Ffe-FF-8XJ"/>
+                                    <constraint firstAttribute="height" constant="75" id="ehD-CP-GQM"/>
+                                </constraints>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isAddButton" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
+                                        <color key="value" red="1" green="0.57581318372827694" blue="0.0041654680032363611" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="onMinus:" destination="RzM-We-Nc9" eventType="touchUpInside" id="tju-3T-iUF"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="liR-DX-zaR" customClass="CounterVIew" customModule="MiniApps" customModuleProvider="target">
+                                <rect key="frame" x="185" y="70" width="230" height="230"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XDh-SJ-ZeZ">
+                                        <rect key="frame" x="103.5" y="90" width="23.5" height="51.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="43"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="230" id="EHG-U9-9nM"/>
+                                    <constraint firstAttribute="centerX" secondItem="XDh-SJ-ZeZ" secondAttribute="centerX" id="NdA-Rz-Y9Y"/>
+                                    <constraint firstAttribute="centerY" secondItem="XDh-SJ-ZeZ" secondAttribute="centerY" id="PaV-8v-m9Y"/>
+                                    <constraint firstAttribute="height" constant="230" id="WQi-oA-xQx"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="counter">
+                                        <integer key="value" value="0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="outlineColor">
+                                        <color key="value" red="0.12925408661517401" green="0.81716307629091434" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="counterColor">
+                                        <color key="value" red="0.0072997263268735901" green="0.60725809293406741" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="ZzJ-aT-5En" secondAttribute="centerY" constant="-100" id="D56-Ha-vlQ"/>
+                            <constraint firstAttribute="centerX" secondItem="liR-DX-zaR" secondAttribute="centerX" id="aRJ-K3-mfH"/>
+                            <constraint firstAttribute="centerX" secondItem="ZzJ-aT-5En" secondAttribute="centerX" id="dAC-n5-UOq"/>
+                            <constraint firstAttribute="centerX" secondItem="cbt-ZS-Z0w" secondAttribute="centerX" id="ier-M1-16J"/>
+                            <constraint firstItem="cbt-ZS-Z0w" firstAttribute="top" secondItem="ZzJ-aT-5En" secondAttribute="bottom" constant="40" id="oWg-Yp-KJI"/>
+                            <constraint firstItem="liR-DX-zaR" firstAttribute="top" secondItem="98v-b9-Dc5" secondAttribute="bottom" constant="6" id="tK2-0p-3av"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Water Tracker" id="e8f-ta-o5h">
+                        <barButtonItem key="rightBarButtonItem" systemItem="stop" id="S7o-ha-BqM">
+                            <connections>
+                                <action selector="OnClose:" destination="RzM-We-Nc9" id="fZQ-L9-ak0"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="counterL" destination="XDh-SJ-ZeZ" id="GHg-p5-lMu"/>
+                        <outlet property="counterV" destination="liR-DX-zaR" id="gO7-bT-5Ur"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="o3p-s8-BYJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="506" y="398"/>
+        </scene>
+    </scenes>
 </document>
