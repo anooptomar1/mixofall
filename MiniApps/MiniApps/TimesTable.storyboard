@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Times Table-->
+        <scene sceneID="fRy-Kh-eVu">
+            <objects>
+                <viewController storyboardIdentifier="subMainVC" id="jGY-Oi-AIL" customClass="TimesTableViewController" customModule="MiniApps" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="R27-a5-P4c"/>
+                        <viewControllerLayoutGuide type="bottom" id="ppT-aJ-gb2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1Jy-x5-Z5o">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.050000000000000003" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="qqG-vj-cBs">
+                                <rect key="frame" x="14" y="72" width="572" height="31"/>
+                                <connections>
+                                    <action selector="ValueChanged:" destination="jGY-Oi-AIL" eventType="valueChanged" id="OiK-ru-oFJ"/>
+                                </connections>
+                            </slider>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="VOP-90-SvK">
+                                <rect key="frame" x="16" y="110" width="568" height="482"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="apT-1b-pBD">
+                                        <rect key="frame" x="0.0" y="0.0" width="568" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="apT-1b-pBD" id="LfM-B2-Mtd">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="VOP-90-SvK" firstAttribute="leading" secondItem="1Jy-x5-Z5o" secondAttribute="leadingMargin" id="HgP-qN-ewv"/>
+                            <constraint firstItem="VOP-90-SvK" firstAttribute="top" secondItem="qqG-vj-cBs" secondAttribute="bottom" constant="8" id="N8M-Jo-yCk"/>
+                            <constraint firstItem="VOP-90-SvK" firstAttribute="trailing" secondItem="1Jy-x5-Z5o" secondAttribute="trailingMargin" id="gtE-lu-xi4"/>
+                            <constraint firstItem="ppT-aJ-gb2" firstAttribute="top" secondItem="VOP-90-SvK" secondAttribute="bottom" constant="8" id="imu-1y-kuW"/>
+                            <constraint firstItem="qqG-vj-cBs" firstAttribute="top" secondItem="R27-a5-P4c" secondAttribute="bottom" constant="8" id="krT-sF-Kzi"/>
+                            <constraint firstItem="qqG-vj-cBs" firstAttribute="trailing" secondItem="1Jy-x5-Z5o" secondAttribute="trailingMargin" id="nEg-zu-oN3"/>
+                            <constraint firstItem="qqG-vj-cBs" firstAttribute="leading" secondItem="1Jy-x5-Z5o" secondAttribute="leadingMargin" id="zmm-f3-K6n"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Times Table" id="UP1-Ft-Lac">
+                        <barButtonItem key="rightBarButtonItem" systemItem="stop" id="bif-D2-N7a">
+                            <connections>
+                                <action selector="onClose:" destination="jGY-Oi-AIL" id="Jfh-vD-ywD"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="slider" destination="qqG-vj-cBs" id="xHp-UF-F38"/>
+                        <outlet property="table" destination="VOP-90-SvK" id="N5R-FS-YYv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s6C-t5-1sM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="424" y="276"/>
+        </scene>
+    </scenes>
+</document>

@@ -12,6 +12,9 @@
 		890352FD1B8A9B20008B37E6 /* WTViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890352FC1B8A9B20008B37E6 /* WTViewController.swift */; };
 		890352FF1B8A9DD0008B37E6 /* PushButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890352FE1B8A9DD0008B37E6 /* PushButtonView.swift */; };
 		890353011B8ABF6D008B37E6 /* CounterVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890353001B8ABF6D008B37E6 /* CounterVIew.swift */; };
+		890353031B92373A008B37E6 /* GraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890353021B92373A008B37E6 /* GraphView.swift */; };
+		890353061B92D670008B37E6 /* CircleLoaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890353051B92D670008B37E6 /* CircleLoaderViewController.swift */; };
+		890353081B92D67B008B37E6 /* CircleLoader.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 890353071B92D67B008B37E6 /* CircleLoader.storyboard */; };
 		89143E381B508CC4003F5D56 /* bart.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89143E371B508CC4003F5D56 /* bart.storyboard */; };
 		89143E3A1B508CE5003F5D56 /* BartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89143E391B508CE5003F5D56 /* BartViewController.swift */; };
 		89143E3D1B517094003F5D56 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89143E3C1B517094003F5D56 /* Route.swift */; };
@@ -91,6 +94,15 @@
 		89D90BF11B3A208A0066C792 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89D90BF01B3A208A0066C792 /* MapKit.framework */; };
 		89D90BF41B3A64A40066C792 /* commonUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D90BF31B3A64A40066C792 /* commonUtils.swift */; };
 		89D90BF61B3A6DE10066C792 /* Geofence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D90BF51B3A6DE10066C792 /* Geofence.swift */; };
+		89DA5E171B93B4D200E86636 /* GAN.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89DA5E161B93B4D200E86636 /* GAN.storyboard */; };
+		89DA5E191B93B4DE00E86636 /* GANViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DA5E181B93B4DE00E86636 /* GANViewController.swift */; };
+		89DA5E1C1B948F6900E86636 /* StopWatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DA5E1B1B948F6900E86636 /* StopWatchViewController.swift */; };
+		89DA5E1E1B948F7500E86636 /* StopWatch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89DA5E1D1B948F7500E86636 /* StopWatch.storyboard */; };
+		89DA5E211B94B72D00E86636 /* TimesTable.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89DA5E201B94B72D00E86636 /* TimesTable.storyboard */; };
+		89DA5E231B94B73800E86636 /* TimesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DA5E221B94B73800E86636 /* TimesTableViewController.swift */; };
+		89DA5E261B9526EF00E86636 /* TodoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DA5E251B9526EF00E86636 /* TodoViewController.swift */; };
+		89DA5E281B95274600E86636 /* Todo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89DA5E271B95274600E86636 /* Todo.storyboard */; };
+		89DA5E2A1B95439C00E86636 /* saveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DA5E291B95439C00E86636 /* saveViewController.swift */; };
 		89F734111B83E8A900E908F5 /* SnapMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89F734101B83E8A900E908F5 /* SnapMenu.storyboard */; };
 		89F734141B83E8E400E908F5 /* SnapMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F734131B83E8E400E908F5 /* SnapMenuViewController.swift */; };
 		89F734171B83E93300E908F5 /* View1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F734151B83E93300E908F5 /* View1.swift */; };
@@ -118,6 +130,9 @@
 		890352FC1B8A9B20008B37E6 /* WTViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WTViewController.swift; sourceTree = "<group>"; };
 		890352FE1B8A9DD0008B37E6 /* PushButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushButtonView.swift; sourceTree = "<group>"; };
 		890353001B8ABF6D008B37E6 /* CounterVIew.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CounterVIew.swift; sourceTree = "<group>"; };
+		890353021B92373A008B37E6 /* GraphView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphView.swift; sourceTree = "<group>"; };
+		890353051B92D670008B37E6 /* CircleLoaderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleLoaderViewController.swift; sourceTree = "<group>"; };
+		890353071B92D67B008B37E6 /* CircleLoader.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CircleLoader.storyboard; sourceTree = "<group>"; };
 		89143E371B508CC4003F5D56 /* bart.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = bart.storyboard; sourceTree = "<group>"; };
 		89143E391B508CE5003F5D56 /* BartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BartViewController.swift; sourceTree = "<group>"; };
 		89143E3C1B517094003F5D56 /* Route.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
@@ -204,6 +219,15 @@
 		89D90BF01B3A208A0066C792 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		89D90BF31B3A64A40066C792 /* commonUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = commonUtils.swift; sourceTree = "<group>"; };
 		89D90BF51B3A6DE10066C792 /* Geofence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Geofence.swift; sourceTree = "<group>"; };
+		89DA5E161B93B4D200E86636 /* GAN.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GAN.storyboard; sourceTree = "<group>"; };
+		89DA5E181B93B4DE00E86636 /* GANViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GANViewController.swift; sourceTree = "<group>"; };
+		89DA5E1B1B948F6900E86636 /* StopWatchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StopWatchViewController.swift; sourceTree = "<group>"; };
+		89DA5E1D1B948F7500E86636 /* StopWatch.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = StopWatch.storyboard; sourceTree = "<group>"; };
+		89DA5E201B94B72D00E86636 /* TimesTable.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TimesTable.storyboard; sourceTree = "<group>"; };
+		89DA5E221B94B73800E86636 /* TimesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimesTableViewController.swift; sourceTree = "<group>"; };
+		89DA5E251B9526EF00E86636 /* TodoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoViewController.swift; sourceTree = "<group>"; };
+		89DA5E271B95274600E86636 /* Todo.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Todo.storyboard; sourceTree = "<group>"; };
+		89DA5E291B95439C00E86636 /* saveViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = saveViewController.swift; sourceTree = "<group>"; };
 		89F734101B83E8A900E908F5 /* SnapMenu.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SnapMenu.storyboard; sourceTree = "<group>"; };
 		89F734131B83E8E400E908F5 /* SnapMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapMenuViewController.swift; sourceTree = "<group>"; };
 		89F734151B83E93300E908F5 /* View1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View1.swift; sourceTree = "<group>"; };
@@ -252,8 +276,18 @@
 				890352FC1B8A9B20008B37E6 /* WTViewController.swift */,
 				890352FE1B8A9DD0008B37E6 /* PushButtonView.swift */,
 				890353001B8ABF6D008B37E6 /* CounterVIew.swift */,
+				890353021B92373A008B37E6 /* GraphView.swift */,
 			);
 			name = WaterTracker;
+			sourceTree = "<group>";
+		};
+		890353041B92D654008B37E6 /* CircleLoader */ = {
+			isa = PBXGroup;
+			children = (
+				890353051B92D670008B37E6 /* CircleLoaderViewController.swift */,
+				890353071B92D67B008B37E6 /* CircleLoader.storyboard */,
+			);
+			name = CircleLoader;
 			sourceTree = "<group>";
 		};
 		89143E361B508CB3003F5D56 /* BartApp */ = {
@@ -348,6 +382,11 @@
 		894FEF221B2F2FDE00F9DB4C /* MiniApps */ = {
 			isa = PBXGroup;
 			children = (
+				89DA5E241B9526CD00E86636 /* Todo */,
+				89DA5E1F1B94B72000E86636 /* TimesTable */,
+				89DA5E1A1B94048A00E86636 /* StopWatch */,
+				89DA5E151B93B4BF00E86636 /* GuessANumber */,
+				890353041B92D654008B37E6 /* CircleLoader */,
 				890352F91B8A9AFC008B37E6 /* WaterTracker */,
 				894E68C11B86B3CB00E155F9 /* CoreAnimationGuide */,
 				89F734121B83E8B500E908F5 /* SChatMenu */,
@@ -584,6 +623,43 @@
 			name = Framework;
 			sourceTree = "<group>";
 		};
+		89DA5E151B93B4BF00E86636 /* GuessANumber */ = {
+			isa = PBXGroup;
+			children = (
+				89DA5E161B93B4D200E86636 /* GAN.storyboard */,
+				89DA5E181B93B4DE00E86636 /* GANViewController.swift */,
+			);
+			name = GuessANumber;
+			sourceTree = "<group>";
+		};
+		89DA5E1A1B94048A00E86636 /* StopWatch */ = {
+			isa = PBXGroup;
+			children = (
+				89DA5E1B1B948F6900E86636 /* StopWatchViewController.swift */,
+				89DA5E1D1B948F7500E86636 /* StopWatch.storyboard */,
+			);
+			name = StopWatch;
+			sourceTree = "<group>";
+		};
+		89DA5E1F1B94B72000E86636 /* TimesTable */ = {
+			isa = PBXGroup;
+			children = (
+				89DA5E201B94B72D00E86636 /* TimesTable.storyboard */,
+				89DA5E221B94B73800E86636 /* TimesTableViewController.swift */,
+			);
+			name = TimesTable;
+			sourceTree = "<group>";
+		};
+		89DA5E241B9526CD00E86636 /* Todo */ = {
+			isa = PBXGroup;
+			children = (
+				89DA5E251B9526EF00E86636 /* TodoViewController.swift */,
+				89DA5E271B95274600E86636 /* Todo.storyboard */,
+				89DA5E291B95439C00E86636 /* saveViewController.swift */,
+			);
+			name = Todo;
+			sourceTree = "<group>";
+		};
 		89F734121B83E8B500E908F5 /* SChatMenu */ = {
 			isa = PBXGroup;
 			children = (
@@ -705,6 +781,7 @@
 				894BDCB81B7043BD0072E9F0 /* CP.storyboard in Resources */,
 				894E68C51B86B3E900E155F9 /* CAG.storyboard in Resources */,
 				894FEF4E1B2F36B700F9DB4C /* CALDemo.storyboard in Resources */,
+				890353081B92D67B008B37E6 /* CircleLoader.storyboard in Resources */,
 				89605F311B7E3D07004CF25D /* AD.storyboard in Resources */,
 				89F734181B83E93300E908F5 /* View1.xib in Resources */,
 				89605F2A1B7D59CB004CF25D /* TE.storyboard in Resources */,
@@ -719,7 +796,11 @@
 				8972B1E91B346A5C005D32AA /* CID.storyboard in Resources */,
 				89605F271B7BB416004CF25D /* AE.storyboard in Resources */,
 				894FEF301B2F2FDE00F9DB4C /* Images.xcassets in Resources */,
+				89DA5E1E1B948F7500E86636 /* StopWatch.storyboard in Resources */,
 				8972B1F01B351878005D32AA /* UID.storyboard in Resources */,
+				89DA5E281B95274600E86636 /* Todo.storyboard in Resources */,
+				89DA5E171B93B4D200E86636 /* GAN.storyboard in Resources */,
+				89DA5E211B94B72D00E86636 /* TimesTable.storyboard in Resources */,
 				89F7341C1B83ECA000E908F5 /* View2.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -772,12 +853,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				894E68C71B86B76B00E155F9 /* shapeLayerView.swift in Sources */,
+				89DA5E2A1B95439C00E86636 /* saveViewController.swift in Sources */,
 				8972B1E71B346A51005D32AA /* CoreImageDViewController.swift in Sources */,
 				89605F201B7A4195004CF25D /* LEViewController.swift in Sources */,
 				894BDC2D1B681E350072E9F0 /* JSON.swift in Sources */,
 				89F734141B83E8E400E908F5 /* SnapMenuViewController.swift in Sources */,
 				894BDCBA1B7043C70072E9F0 /* CPViewController.swift in Sources */,
 				89D90BE51B3A10D60066C792 /* GeoFViewController.swift in Sources */,
+				89DA5E191B93B4DE00E86636 /* GANViewController.swift in Sources */,
 				8972B1E21B33976E005D32AA /* sampleview.swift in Sources */,
 				897B3A9F1B62862B004D4A69 /* ATStac.swift in Sources */,
 				8972B1EE1B35186E005D32AA /* UIVIewDViewController.swift in Sources */,
@@ -794,20 +877,25 @@
 				894BDCB51B6FB7570072E9F0 /* AnimationDViewController.swift in Sources */,
 				89605F2F1B7E3CFB004CF25D /* ADViewController.swift in Sources */,
 				894BDC2B1B681E2A0072E9F0 /* JSONParser.swift in Sources */,
+				89DA5E1C1B948F6900E86636 /* StopWatchViewController.swift in Sources */,
 				894BDC3F1B6952D10072E9F0 /* CoreDataHelper.swift in Sources */,
 				89605F221B7B96EA004CF25D /* reflectionView.swift in Sources */,
 				89CBE24F1B4C187B00139979 /* MenuModel.swift in Sources */,
 				894BDC3B1B6952880072E9F0 /* Ingredient.swift in Sources */,
 				89143E3A1B508CE5003F5D56 /* BartViewController.swift in Sources */,
+				89DA5E231B94B73800E86636 /* TimesTableViewController.swift in Sources */,
 				894FEF5A1B312BB000F9DB4C /* TransformViewController.swift in Sources */,
 				8972B1E41B33E2F1005D32AA /* SnapViewController.swift in Sources */,
 				89143E3F1B51D917003F5D56 /* Trip.swift in Sources */,
 				8972B1F21B3612C0005D32AA /* myDrawView.swift in Sources */,
 				89605F251B7BB40A004CF25D /* AEViewController.swift in Sources */,
 				894FEF291B2F2FDE00F9DB4C /* MiniApps.xcdatamodeld in Sources */,
+				890353061B92D670008B37E6 /* CircleLoaderViewController.swift in Sources */,
 				894BDCC31B7189CB0072E9F0 /* TransitionManager.swift in Sources */,
 				8972B1E01B3392E3005D32AA /* ImgViewController.swift in Sources */,
 				894FEF501B2FADD200F9DB4C /* ControlsTableViewController.swift in Sources */,
+				890353031B92373A008B37E6 /* GraphView.swift in Sources */,
+				89DA5E261B9526EF00E86636 /* TodoViewController.swift in Sources */,
 				89D90BF41B3A64A40066C792 /* commonUtils.swift in Sources */,
 				894BDC301B6845420072E9F0 /* SMXMLDocument.m in Sources */,
 				894BDC351B69204B0072E9F0 /* RestClient.swift in Sources */,

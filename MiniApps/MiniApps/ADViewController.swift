@@ -21,7 +21,8 @@ class ADViewController: UIViewController {
     }
     
     @IBAction func onStart(sender: UIButton) {
-        doorAnimation()
+        //doorAnimation()
+        faceAnimation()
     }
     
     func doorPrep(){

@@ -17,14 +17,17 @@ class CAGViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        transitionViews()
-        //layerClassTest()
+        //transitionViews()
+        layerClassTest()
         //usingUIViewAnimation()
-       // opacityAnimationToTheLayer()
-       // moveLayerByFrame()
-       // groupAnimation()
+        opacityAnimationToTheLayer()
+        moveLayerByFrame()
+        groupAnimation()
     }
     
+    @IBAction func onClose(sender: UIBarButtonItem) {
+        dismissViewControllerAnimated(true, completion: nil)
+    }
     func transitionViews(){
         var view1 = UIView(frame: CGRectMake(100,100,200,200))
         view1.backgroundColor = UIColor.redColor()

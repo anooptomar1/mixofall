@@ -16,6 +16,70 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ode-Cq-QWb" userLabel="Container View">
+                                <rect key="frame" x="150" y="70" width="300" height="260"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bl6-7a-vkR" userLabel="Graph View" customClass="GraphView" customModule="MiniApps" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="15" width="300" height="230"/>
+                                        <color key="backgroundColor" red="1" green="0.57581318370000001" blue="0.0041654680029999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="tintColor" red="1" green="0.64464565129999996" blue="0.094605640059999996" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="230" id="M22-bN-yQT"/>
+                                            <constraint firstAttribute="width" constant="300" id="OpK-Ql-IIx"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                                                <color key="value" red="0.97647058823529409" green="0.70980392156862748" blue="0.5490196078431373" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                                                <color key="value" red="0.91764705882352937" green="0.17254901960784313" blue="0.094117647058823528" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="liR-DX-zaR" userLabel="Counter View" customClass="CounterVIew" customModule="MiniApps" customModuleProvider="target">
+                                        <rect key="frame" x="35" y="15" width="230" height="230"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XDh-SJ-ZeZ">
+                                                <rect key="frame" x="103" y="90" width="23.5" height="51.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="43"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="230" id="EHG-U9-9nM"/>
+                                            <constraint firstAttribute="centerX" secondItem="XDh-SJ-ZeZ" secondAttribute="centerX" id="NdA-Rz-Y9Y"/>
+                                            <constraint firstAttribute="centerY" secondItem="XDh-SJ-ZeZ" secondAttribute="centerY" id="PaV-8v-m9Y"/>
+                                            <constraint firstAttribute="height" constant="230" id="WQi-oA-xQx"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="counter">
+                                                <integer key="value" value="0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="outlineColor">
+                                                <color key="value" red="0.12925408661517401" green="0.81716307629091434" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="counterColor">
+                                                <color key="value" red="0.0072997263268735901" green="0.60725809293406741" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="centerX" secondItem="bl6-7a-vkR" secondAttribute="centerX" id="06K-f0-nSz"/>
+                                    <constraint firstAttribute="height" constant="260" id="QQO-u8-mFU"/>
+                                    <constraint firstAttribute="centerY" secondItem="bl6-7a-vkR" secondAttribute="centerY" id="S5k-PL-r7Y"/>
+                                    <constraint firstAttribute="width" constant="300" id="bLa-8H-OXu"/>
+                                    <constraint firstAttribute="centerX" secondItem="liR-DX-zaR" secondAttribute="centerX" id="m76-Qe-c2Z"/>
+                                    <constraint firstAttribute="centerY" secondItem="liR-DX-zaR" secondAttribute="centerY" id="n8b-35-Jv4"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="117-aV-BFI" appends="YES" id="deS-N5-F04"/>
+                                </connections>
+                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZzJ-aT-5En" customClass="PushButtonView" customModule="MiniApps" customModuleProvider="target">
                                 <rect key="frame" x="250" y="350" width="100" height="100"/>
                                 <constraints>
@@ -53,44 +117,15 @@
                                     <action selector="onMinus:" destination="RzM-We-Nc9" eventType="touchUpInside" id="tju-3T-iUF"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="liR-DX-zaR" customClass="CounterVIew" customModule="MiniApps" customModuleProvider="target">
-                                <rect key="frame" x="185" y="70" width="230" height="230"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XDh-SJ-ZeZ">
-                                        <rect key="frame" x="103.5" y="90" width="23.5" height="51.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="43"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="230" id="EHG-U9-9nM"/>
-                                    <constraint firstAttribute="centerX" secondItem="XDh-SJ-ZeZ" secondAttribute="centerX" id="NdA-Rz-Y9Y"/>
-                                    <constraint firstAttribute="centerY" secondItem="XDh-SJ-ZeZ" secondAttribute="centerY" id="PaV-8v-m9Y"/>
-                                    <constraint firstAttribute="height" constant="230" id="WQi-oA-xQx"/>
-                                </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="counter">
-                                        <integer key="value" value="0"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="outlineColor">
-                                        <color key="value" red="0.12925408661517401" green="0.81716307629091434" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="counterColor">
-                                        <color key="value" red="0.0072997263268735901" green="0.60725809293406741" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="centerY" secondItem="ode-Cq-QWb" secondAttribute="centerY" constant="100" id="5Z1-NO-jqe"/>
                             <constraint firstAttribute="centerY" secondItem="ZzJ-aT-5En" secondAttribute="centerY" constant="-100" id="D56-Ha-vlQ"/>
-                            <constraint firstAttribute="centerX" secondItem="liR-DX-zaR" secondAttribute="centerX" id="aRJ-K3-mfH"/>
                             <constraint firstAttribute="centerX" secondItem="ZzJ-aT-5En" secondAttribute="centerX" id="dAC-n5-UOq"/>
                             <constraint firstAttribute="centerX" secondItem="cbt-ZS-Z0w" secondAttribute="centerX" id="ier-M1-16J"/>
                             <constraint firstItem="cbt-ZS-Z0w" firstAttribute="top" secondItem="ZzJ-aT-5En" secondAttribute="bottom" constant="40" id="oWg-Yp-KJI"/>
-                            <constraint firstItem="liR-DX-zaR" firstAttribute="top" secondItem="98v-b9-Dc5" secondAttribute="bottom" constant="6" id="tK2-0p-3av"/>
+                            <constraint firstAttribute="centerX" secondItem="ode-Cq-QWb" secondAttribute="centerX" id="sfD-6z-Alj"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Water Tracker" id="e8f-ta-o5h">
@@ -102,11 +137,18 @@
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
+                        <outlet property="containerV" destination="ode-Cq-QWb" id="hJB-Zh-8VO"/>
                         <outlet property="counterL" destination="XDh-SJ-ZeZ" id="GHg-p5-lMu"/>
                         <outlet property="counterV" destination="liR-DX-zaR" id="gO7-bT-5Ur"/>
+                        <outlet property="graphV" destination="bl6-7a-vkR" id="dhe-Mp-OMc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o3p-s8-BYJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="117-aV-BFI">
+                    <connections>
+                        <action selector="counterViewTap:" destination="RzM-We-Nc9" id="XSq-8g-lUL"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="506" y="398"/>
         </scene>

@@ -4,31 +4,31 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
-        <!--CA Tests-->
-        <scene sceneID="Hm0-tP-KvZ">
+        <!--Guess The Number Game-->
+        <scene sceneID="7RC-5r-0gA">
             <objects>
-                <viewController storyboardIdentifier="subMainVC" id="4Ir-Oa-ABw" customClass="CAGViewController" customModule="MiniApps" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="subMainVC" id="U9l-46-jix" customClass="GANViewController" customModule="MiniApps" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="fAD-8I-8aH"/>
-                        <viewControllerLayoutGuide type="bottom" id="mZy-EY-KaL"/>
+                        <viewControllerLayoutGuide type="top" id="ZNd-u6-LAk"/>
+                        <viewControllerLayoutGuide type="bottom" id="Onf-DE-iES"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="QY6-4B-ftA">
+                    <view key="view" contentMode="scaleToFill" id="6Gv-4M-iec">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="CA Tests" id="cFA-Cp-9PT">
-                        <barButtonItem key="rightBarButtonItem" systemItem="stop" id="6VA-MH-QjQ">
+                    <navigationItem key="navigationItem" title="Guess The Number Game" id="7ar-MS-iW3">
+                        <barButtonItem key="rightBarButtonItem" systemItem="stop" id="c7S-HI-CiL">
                             <connections>
-                                <action selector="onClose:" destination="4Ir-Oa-ABw" id="Bpe-1a-CkV"/>
+                                <action selector="onClose:" destination="U9l-46-jix" id="Pn9-yR-XNs"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="jl6-5y-meW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TyI-Wh-RN6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="414" y="383"/>
+            <point key="canvasLocation" x="426" y="377"/>
         </scene>
     </scenes>
 </document>
