@@ -48,6 +48,10 @@ class ViewController: UIViewController {
         menus.append(MenuModel(text: "Stop Watch", sb: "StopWatch", order: -7))
         menus.append(MenuModel(text: "Times Table", sb: "TimesTable", order: -8))
         menus.append(MenuModel(text: "Todo App", sb: "Todo", order: -9))
+        menus.append(MenuModel(text: "Web Browser", sb: "WebBrowser", order: -10))
+        menus.append(MenuModel(text: "Weather App", sb: "Weather", order: -11))
+        menus.append(MenuModel(text: "GIF Player", sb: "GIF", order: -12))
+        menus.append(MenuModel(text: "Tic Tac Toe", sb: "tictactoe", order: -13))
     }
     
     func setupNavBar(){

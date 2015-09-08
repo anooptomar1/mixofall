@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <scenes>
+        <!--Web Browser!-->
+        <scene sceneID="4SV-eC-YpN">
+            <objects>
+                <viewController storyboardIdentifier="subMainVC" id="0ij-aF-rXU" customClass="WebBrowserViewController" customModule="MiniApps" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dIL-cU-eUq"/>
+                        <viewControllerLayoutGuide type="bottom" id="q7h-gA-4CS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qr4-vl-B5V">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="jec-pv-BE3">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="MbB-2Q-3ao">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="MbB-2Q-3ao" id="VH8-rt-gOs">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="AcO-3i-s21" kind="show" identifier="browse" id="ZBj-UF-zrt"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="q7h-gA-4CS" firstAttribute="top" secondItem="jec-pv-BE3" secondAttribute="bottom" id="5qt-su-leg"/>
+                            <constraint firstAttribute="trailing" secondItem="jec-pv-BE3" secondAttribute="trailing" id="ERx-T5-rat"/>
+                            <constraint firstItem="jec-pv-BE3" firstAttribute="leading" secondItem="qr4-vl-B5V" secondAttribute="leading" id="bNJ-aQ-ldq"/>
+                            <constraint firstItem="jec-pv-BE3" firstAttribute="top" secondItem="qr4-vl-B5V" secondAttribute="top" id="jwD-TH-lF0"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Web Browser!" id="Ekn-Vd-GIW">
+                        <barButtonItem key="rightBarButtonItem" systemItem="stop" id="zM9-9y-a8u">
+                            <connections>
+                                <action selector="onClose:" destination="0ij-aF-rXU" id="y16-EJ-1cZ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="table" destination="jec-pv-BE3" id="oBT-tg-Aqq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XMh-X2-Jw0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="373" y="322"/>
+        </scene>
+        <!--Browse-->
+        <scene sceneID="cy0-Uu-enf">
+            <objects>
+                <viewController id="AcO-3i-s21" customClass="BrowseViewController" customModule="MiniApps" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5dw-0e-hUi"/>
+                        <viewControllerLayoutGuide type="bottom" id="m2i-jB-Nn2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="FcD-Au-8PE">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IQu-GM-dP7">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="m2i-jB-Nn2" firstAttribute="top" secondItem="IQu-GM-dP7" secondAttribute="bottom" id="aib-ha-iZd"/>
+                            <constraint firstItem="IQu-GM-dP7" firstAttribute="top" secondItem="FcD-Au-8PE" secondAttribute="top" id="ce0-6u-Rdg"/>
+                            <constraint firstAttribute="trailing" secondItem="IQu-GM-dP7" secondAttribute="trailing" id="dp4-SW-man"/>
+                            <constraint firstItem="IQu-GM-dP7" firstAttribute="leading" secondItem="FcD-Au-8PE" secondAttribute="leading" id="z71-aT-ccX"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Browse" id="fdc-S9-n5q"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="web" destination="IQu-GM-dP7" id="sR5-it-cef"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nPd-SL-c1p" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="779" y="322"/>
+        </scene>
+    </scenes>
+</document>

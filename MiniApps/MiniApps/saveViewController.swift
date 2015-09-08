@@ -8,13 +8,22 @@
 
 import UIKit
 
-protocol saveViewControllerDelegate{
-    
+protocol saveViewControllerDelegate: class{
+    func didSaved(sa: saveViewController, note: String)
 }
 
 class saveViewController: UIViewController {
 
+    @IBOutlet weak var noteText: UITextField!
+    weak var delegate: saveViewControllerDelegate?
+    
+    var sourceVC: TodoViewController?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    @IBAction func onSave(sender: UIBarButtonItem) {
+        self.delegate?.didSaved(self, note: noteText.text)
+        navigationController?.popToViewController(sourceVC!, animated: true)
     }
 }

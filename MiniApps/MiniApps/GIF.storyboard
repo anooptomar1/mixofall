@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <scenes>
+        <!--Player View Controller-->
+        <scene sceneID="DXh-Er-nOY">
+            <objects>
+                <viewController storyboardIdentifier="subMainVC" id="WrZ-gn-mkv" customClass="GIFPlayerViewController" customModule="MiniApps" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="eIE-qq-a9D"/>
+                        <viewControllerLayoutGuide type="bottom" id="bqR-yJ-XSf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ocx-ST-0D1">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1.png" translatesAutoresizingMaskIntoConstraints="NO" id="GCl-jT-2qx">
+                                <rect key="frame" x="224" y="223" width="153" height="153"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="153" id="EsJ-GA-5gF"/>
+                                    <constraint firstAttribute="height" constant="153" id="mqp-di-Wvr"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="12f-rh-H21" appends="YES" id="jea-aB-hUf"/>
+                                </connections>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="GCl-jT-2qx" secondAttribute="centerX" id="7ON-Ws-HWa"/>
+                            <constraint firstAttribute="centerY" secondItem="GCl-jT-2qx" secondAttribute="centerY" id="QAc-ZD-gW2"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageV" destination="GCl-jT-2qx" id="6D1-qx-aA3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1XQ-AC-2i1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="12f-rh-H21">
+                    <connections>
+                        <action selector="onPan:" destination="WrZ-gn-mkv" id="luw-zf-tuG"/>
+                    </connections>
+                </panGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="460" y="347"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="1.png" width="123" height="117"/>
+    </resources>
+</document>
