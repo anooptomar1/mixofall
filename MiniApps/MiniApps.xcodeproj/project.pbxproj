@@ -119,6 +119,10 @@
 		89DCD7441B9E815200C921F9 /* circle146.png in Resources */ = {isa = PBXBuildFile; fileRef = 89DCD7421B9E815200C921F9 /* circle146.png */; };
 		89DCD7451B9E815200C921F9 /* cross-mark1.png in Resources */ = {isa = PBXBuildFile; fileRef = 89DCD7431B9E815200C921F9 /* cross-mark1.png */; };
 		89DCD7471B9E815E00C921F9 /* board.png in Resources */ = {isa = PBXBuildFile; fileRef = 89DCD7461B9E815E00C921F9 /* board.png */; };
+		89DCD74D1B9FA6B900C921F9 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89DCD74C1B9FA6B900C921F9 /* AVFoundation.framework */; };
+		89DCD7511B9FAD2100C921F9 /* flute.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 89DCD7501B9FAD2100C921F9 /* flute.aiff */; };
+		89DCD7531B9FADA600C921F9 /* boing.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 89DCD7521B9FADA600C921F9 /* boing.aiff */; };
+		89DCD7551B9FAEE400C921F9 /* swoosh.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 89DCD7541B9FAEE400C921F9 /* swoosh.aiff */; };
 		89E3456E1B9BE5F900F36298 /* GIFPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E3456D1B9BE5F900F36298 /* GIFPlayerViewController.swift */; };
 		89E3457B1B9BE9F000F36298 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 89E345701B9BE9F000F36298 /* 1.png */; };
 		89E3457C1B9BE9F000F36298 /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 89E345711B9BE9F000F36298 /* 2.png */; };
@@ -273,6 +277,11 @@
 		89DCD7421B9E815200C921F9 /* circle146.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = circle146.png; sourceTree = "<group>"; };
 		89DCD7431B9E815200C921F9 /* cross-mark1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cross-mark1.png"; sourceTree = "<group>"; };
 		89DCD7461B9E815E00C921F9 /* board.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = board.png; sourceTree = "<group>"; };
+		89DCD7481B9F98A900C921F9 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		89DCD74C1B9FA6B900C921F9 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		89DCD7501B9FAD2100C921F9 /* flute.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = flute.aiff; sourceTree = "<group>"; };
+		89DCD7521B9FADA600C921F9 /* boing.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = boing.aiff; sourceTree = "<group>"; };
+		89DCD7541B9FAEE400C921F9 /* swoosh.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = swoosh.aiff; sourceTree = "<group>"; };
 		89E3456D1B9BE5F900F36298 /* GIFPlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GIFPlayerViewController.swift; sourceTree = "<group>"; };
 		89E345701B9BE9F000F36298 /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
 		89E345711B9BE9F000F36298 /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
@@ -302,6 +311,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89DCD74D1B9FA6B900C921F9 /* AVFoundation.framework in Frameworks */,
 				89D90BF11B3A208A0066C792 /* MapKit.framework in Frameworks */,
 				89D90BEF1B3A207A0066C792 /* CoreLocation.framework in Frameworks */,
 				1BE108CFDA7988630929127A /* libPods.a in Frameworks */,
@@ -750,7 +760,10 @@
 		89DCD73D1B9E7D6E00C921F9 /* tictactoe */ = {
 			isa = PBXGroup;
 			children = (
+				89DCD7501B9FAD2100C921F9 /* flute.aiff */,
 				89DCD7461B9E815E00C921F9 /* board.png */,
+				89DCD7541B9FAEE400C921F9 /* swoosh.aiff */,
+				89DCD7521B9FADA600C921F9 /* boing.aiff */,
 				89DCD7421B9E815200C921F9 /* circle146.png */,
 				89DCD7431B9E815200C921F9 /* cross-mark1.png */,
 				89DCD73E1B9E806300C921F9 /* tictactoe.storyboard */,
@@ -805,6 +818,8 @@
 		8B2FDCA5E7B1DEE48486C36E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				89DCD74C1B9FA6B900C921F9 /* AVFoundation.framework */,
+				89DCD7481B9F98A900C921F9 /* AudioToolbox.framework */,
 				365C67A0F02A9B5131487040 /* libPods.a */,
 			);
 			name = Frameworks;
@@ -921,6 +936,7 @@
 				89605F311B7E3D07004CF25D /* AD.storyboard in Resources */,
 				89F734181B83E93300E908F5 /* View1.xib in Resources */,
 				89605F2A1B7D59CB004CF25D /* TE.storyboard in Resources */,
+				89DCD7531B9FADA600C921F9 /* boing.aiff in Resources */,
 				89E3457F1B9BE9F000F36298 /* 5.png in Resources */,
 				89143E381B508CC4003F5D56 /* bart.storyboard in Resources */,
 				89CBE24D1B4C182400139979 /* ABAPP.storyboard in Resources */,
@@ -928,6 +944,7 @@
 				894BDCBF1B7187A00072E9F0 /* Transition1.storyboard in Resources */,
 				89F734201B83F10E00E908F5 /* View3.xib in Resources */,
 				89DCD7441B9E815200C921F9 /* circle146.png in Resources */,
+				89DCD7551B9FAEE400C921F9 /* swoosh.aiff in Resources */,
 				897B3A991B5FD8C4004D4A69 /* CT.storyboard in Resources */,
 				89605F1E1B7A418A004CF25D /* LE.storyboard in Resources */,
 				89E345851B9BE9F000F36298 /* 11.png in Resources */,
@@ -936,6 +953,7 @@
 				89605F271B7BB416004CF25D /* AE.storyboard in Resources */,
 				89E345831B9BE9F000F36298 /* 9.png in Resources */,
 				894FEF301B2F2FDE00F9DB4C /* Images.xcassets in Resources */,
+				89DCD7511B9FAD2100C921F9 /* flute.aiff in Resources */,
 				89DA5E1E1B948F7500E86636 /* StopWatch.storyboard in Resources */,
 				89E345821B9BE9F000F36298 /* 8.png in Resources */,
 				8972B1F01B351878005D32AA /* UID.storyboard in Resources */,

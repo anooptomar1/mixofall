@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
-        <!--Player View Controller-->
+        <!--Gesture based GIF player-->
         <scene sceneID="DXh-Er-nOY">
             <objects>
                 <viewController storyboardIdentifier="subMainVC" id="WrZ-gn-mkv" customClass="GIFPlayerViewController" customModule="MiniApps" customModuleProvider="target" sceneMemberID="viewController">
@@ -34,6 +34,14 @@
                             <constraint firstAttribute="centerY" secondItem="GCl-jT-2qx" secondAttribute="centerY" id="QAc-ZD-gW2"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Gesture based GIF player" id="fjb-Wn-5G6">
+                        <barButtonItem key="rightBarButtonItem" systemItem="stop" id="Ubz-bt-1dD">
+                            <connections>
+                                <action selector="didPressDismiss:" destination="WrZ-gn-mkv" id="S4f-oa-eTb"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="imageV" destination="GCl-jT-2qx" id="6D1-qx-aA3"/>
                     </connections>

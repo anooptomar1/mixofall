@@ -150,7 +150,7 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <action selector="didPressPlayAgain:" destination="UdO-ks-L9Q" eventType="touchUpInside" id="e5v-lt-n5T"/>
+                                            <action selector="didPressPlayAgain:" destination="UdO-ks-L9Q" eventType="touchUpInside" id="sdy-Ad-t5M"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yeK-vR-UjR">
@@ -212,13 +212,17 @@
                             <constraint firstItem="gGT-aQ-BVn" firstAttribute="leading" secondItem="WAK-ll-fdj" secondAttribute="leading" constant="142" id="ne4-mI-Tq8"/>
                             <constraint firstItem="6Nx-HF-6Gf" firstAttribute="top" secondItem="WAK-ll-fdj" secondAttribute="top" constant="143" id="rd0-tO-V5t"/>
                             <constraint firstItem="WAK-ll-fdj" firstAttribute="top" secondItem="31X-vb-2cs" secondAttribute="top" constant="-261" id="uwf-Dd-yyc"/>
+                            <constraint firstItem="dXu-Nt-sB9" firstAttribute="top" secondItem="WAK-ll-fdj" secondAttribute="top" constant="103" id="wPn-sU-9QH"/>
                             <constraint firstItem="6Nx-HF-6Gf" firstAttribute="leading" secondItem="WAK-ll-fdj" secondAttribute="leading" constant="26" id="xH9-0B-YuG"/>
+                            <constraint firstItem="dXu-Nt-sB9" firstAttribute="leading" secondItem="WAK-ll-fdj" secondAttribute="leading" constant="16" id="yLN-YM-hq7"/>
                             <constraint firstItem="dXu-Nt-sB9" firstAttribute="leading" secondItem="b0A-6Y-ZJd" secondAttribute="leading" constant="16" id="ygS-aT-tkr"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="G4b-Wu-k5g"/>
                                 <exclude reference="T5H-II-41R"/>
                                 <exclude reference="ft7-3R-NXw"/>
+                                <exclude reference="kUj-rU-r1j"/>
                                 <exclude reference="ygS-aT-tkr"/>
                             </mask>
                         </variation>
@@ -233,17 +237,17 @@
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <outlet property="messageLabel" destination="yeK-vR-UjR" id="kDN-zB-ywZ"/>
-                        <outlet property="newPlayView" destination="dXu-Nt-sB9" id="D09-TB-hAF"/>
-                        <outletCollection property="buttons" destination="4ZO-vS-sQD" collectionClass="NSMutableArray" id="R4m-2d-CBe"/>
-                        <outletCollection property="buttons" destination="yTG-d5-OTg" collectionClass="NSMutableArray" id="hVI-aa-8xQ"/>
-                        <outletCollection property="buttons" destination="R7G-PD-2Ow" collectionClass="NSMutableArray" id="hd2-j4-7Sa"/>
-                        <outletCollection property="buttons" destination="6Nx-HF-6Gf" collectionClass="NSMutableArray" id="Alx-pD-WWP"/>
-                        <outletCollection property="buttons" destination="Z5e-36-1pW" collectionClass="NSMutableArray" id="nSu-Ni-9k6"/>
-                        <outletCollection property="buttons" destination="qFU-xx-PYX" collectionClass="NSMutableArray" id="xzj-0J-gzi"/>
-                        <outletCollection property="buttons" destination="rXK-CN-Iqw" collectionClass="NSMutableArray" id="Ru9-wk-Z1D"/>
-                        <outletCollection property="buttons" destination="gGT-aQ-BVn" collectionClass="NSMutableArray" id="pfv-YN-WPy"/>
-                        <outletCollection property="buttons" destination="31X-vb-2cs" collectionClass="NSMutableArray" id="Hmz-SA-x8A"/>
+                        <outlet property="messageLabel" destination="yeK-vR-UjR" id="023-MV-txn"/>
+                        <outlet property="newPlayView" destination="dXu-Nt-sB9" id="qkC-Ne-AB4"/>
+                        <outletCollection property="buttons" destination="4ZO-vS-sQD" collectionClass="NSMutableArray" id="c5X-OX-GMw"/>
+                        <outletCollection property="buttons" destination="yTG-d5-OTg" collectionClass="NSMutableArray" id="tO2-eE-erK"/>
+                        <outletCollection property="buttons" destination="R7G-PD-2Ow" collectionClass="NSMutableArray" id="LN9-rr-BHw"/>
+                        <outletCollection property="buttons" destination="6Nx-HF-6Gf" collectionClass="NSMutableArray" id="eAa-2r-cEx"/>
+                        <outletCollection property="buttons" destination="Z5e-36-1pW" collectionClass="NSMutableArray" id="IjO-4g-RvU"/>
+                        <outletCollection property="buttons" destination="qFU-xx-PYX" collectionClass="NSMutableArray" id="Sxi-Rq-SnR"/>
+                        <outletCollection property="buttons" destination="31X-vb-2cs" collectionClass="NSMutableArray" id="0Ca-yr-tEU"/>
+                        <outletCollection property="buttons" destination="gGT-aQ-BVn" collectionClass="NSMutableArray" id="tSO-iz-k03"/>
+                        <outletCollection property="buttons" destination="rXK-CN-Iqw" collectionClass="NSMutableArray" id="v24-KW-E1l"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uSq-dR-XpY" userLabel="First Responder" sceneMemberID="firstResponder"/>
