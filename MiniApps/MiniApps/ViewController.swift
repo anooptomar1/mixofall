@@ -52,6 +52,7 @@ class ViewController: UIViewController {
         menus.append(MenuModel(text: "Weather App", sb: "Weather", order: -11))
         menus.append(MenuModel(text: "GIF Player", sb: "GIF", order: -12))
         menus.append(MenuModel(text: "Tic Tac Toe", sb: "tictactoe", order: -13))
+        menus.append(MenuModel(text: "Address near me", sb: "NearByAddress", order: -14))
     }
     
     func setupNavBar(){

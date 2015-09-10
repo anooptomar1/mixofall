@@ -123,6 +123,8 @@
 		89DCD7511B9FAD2100C921F9 /* flute.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 89DCD7501B9FAD2100C921F9 /* flute.aiff */; };
 		89DCD7531B9FADA600C921F9 /* boing.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 89DCD7521B9FADA600C921F9 /* boing.aiff */; };
 		89DCD7551B9FAEE400C921F9 /* swoosh.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 89DCD7541B9FAEE400C921F9 /* swoosh.aiff */; };
+		89DCD7581B9FF9FA00C921F9 /* NearByAddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DCD7571B9FF9FA00C921F9 /* NearByAddViewController.swift */; };
+		89DCD75A1B9FFA0C00C921F9 /* NearByAddress.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89DCD7591B9FFA0C00C921F9 /* NearByAddress.storyboard */; };
 		89E3456E1B9BE5F900F36298 /* GIFPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E3456D1B9BE5F900F36298 /* GIFPlayerViewController.swift */; };
 		89E3457B1B9BE9F000F36298 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 89E345701B9BE9F000F36298 /* 1.png */; };
 		89E3457C1B9BE9F000F36298 /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 89E345711B9BE9F000F36298 /* 2.png */; };
@@ -282,6 +284,8 @@
 		89DCD7501B9FAD2100C921F9 /* flute.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = flute.aiff; sourceTree = "<group>"; };
 		89DCD7521B9FADA600C921F9 /* boing.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = boing.aiff; sourceTree = "<group>"; };
 		89DCD7541B9FAEE400C921F9 /* swoosh.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = swoosh.aiff; sourceTree = "<group>"; };
+		89DCD7571B9FF9FA00C921F9 /* NearByAddViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NearByAddViewController.swift; sourceTree = "<group>"; };
+		89DCD7591B9FFA0C00C921F9 /* NearByAddress.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = NearByAddress.storyboard; sourceTree = "<group>"; };
 		89E3456D1B9BE5F900F36298 /* GIFPlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GIFPlayerViewController.swift; sourceTree = "<group>"; };
 		89E345701B9BE9F000F36298 /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
 		89E345711B9BE9F000F36298 /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
@@ -450,6 +454,7 @@
 		894FEF221B2F2FDE00F9DB4C /* MiniApps */ = {
 			isa = PBXGroup;
 			children = (
+				89DCD7561B9FF9CD00C921F9 /* NearByAddress */,
 				89DCD73D1B9E7D6E00C921F9 /* tictactoe */,
 				89E3456C1B9BE5D100F36298 /* GIFPlayer */,
 				89DA5E321B97B06C00E86636 /* Weather */,
@@ -772,6 +777,15 @@
 			name = tictactoe;
 			sourceTree = "<group>";
 		};
+		89DCD7561B9FF9CD00C921F9 /* NearByAddress */ = {
+			isa = PBXGroup;
+			children = (
+				89DCD7571B9FF9FA00C921F9 /* NearByAddViewController.swift */,
+				89DCD7591B9FFA0C00C921F9 /* NearByAddress.storyboard */,
+			);
+			name = NearByAddress;
+			sourceTree = "<group>";
+		};
 		89E3456C1B9BE5D100F36298 /* GIFPlayer */ = {
 			isa = PBXGroup;
 			children = (
@@ -926,6 +940,7 @@
 				894FEF5C1B312BBA00F9DB4C /* Transform.storyboard in Resources */,
 				89D90BE71B3A10E10066C792 /* GeoF.storyboard in Resources */,
 				89E3457C1B9BE9F000F36298 /* 2.png in Resources */,
+				89DCD75A1B9FFA0C00C921F9 /* NearByAddress.storyboard in Resources */,
 				89E3457B1B9BE9F000F36298 /* 1.png in Resources */,
 				894BDCB81B7043BD0072E9F0 /* CP.storyboard in Resources */,
 				89DA5E401B9897B000E86636 /* CurrentWeatherViewController.xib in Resources */,
@@ -1037,6 +1052,7 @@
 				89605F2C1B7D59D6004CF25D /* TEViewController.swift in Sources */,
 				89DA5E381B97B96600E86636 /* WeatherLocationsViewController.swift in Sources */,
 				894FEF571B30F2C100F9DB4C /* ScrollView.swift in Sources */,
+				89DCD7581B9FF9FA00C921F9 /* NearByAddViewController.swift in Sources */,
 				897B3A9B1B5FD8D2004D4A69 /* CTViewController.swift in Sources */,
 				894FEF4C1B2F36A800F9DB4C /* CALViewController.swift in Sources */,
 				894FEF611B336E7700F9DB4C /* TraitViewController.swift in Sources */,
