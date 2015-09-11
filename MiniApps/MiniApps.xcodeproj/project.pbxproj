@@ -125,6 +125,9 @@
 		89DCD7551B9FAEE400C921F9 /* swoosh.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 89DCD7541B9FAEE400C921F9 /* swoosh.aiff */; };
 		89DCD7581B9FF9FA00C921F9 /* NearByAddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DCD7571B9FF9FA00C921F9 /* NearByAddViewController.swift */; };
 		89DCD75A1B9FFA0C00C921F9 /* NearByAddress.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89DCD7591B9FFA0C00C921F9 /* NearByAddress.storyboard */; };
+		89DCD75D1BA242E200C921F9 /* MP3.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89DCD75C1BA242E200C921F9 /* MP3.storyboard */; };
+		89DCD75F1BA242F100C921F9 /* MP3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DCD75E1BA242F100C921F9 /* MP3ViewController.swift */; };
+		89DCD7611BA249A600C921F9 /* tailtoddle.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 89DCD7601BA249A600C921F9 /* tailtoddle.mp3 */; };
 		89E3456E1B9BE5F900F36298 /* GIFPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E3456D1B9BE5F900F36298 /* GIFPlayerViewController.swift */; };
 		89E3457B1B9BE9F000F36298 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 89E345701B9BE9F000F36298 /* 1.png */; };
 		89E3457C1B9BE9F000F36298 /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 89E345711B9BE9F000F36298 /* 2.png */; };
@@ -286,6 +289,9 @@
 		89DCD7541B9FAEE400C921F9 /* swoosh.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = swoosh.aiff; sourceTree = "<group>"; };
 		89DCD7571B9FF9FA00C921F9 /* NearByAddViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NearByAddViewController.swift; sourceTree = "<group>"; };
 		89DCD7591B9FFA0C00C921F9 /* NearByAddress.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = NearByAddress.storyboard; sourceTree = "<group>"; };
+		89DCD75C1BA242E200C921F9 /* MP3.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MP3.storyboard; sourceTree = "<group>"; };
+		89DCD75E1BA242F100C921F9 /* MP3ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MP3ViewController.swift; sourceTree = "<group>"; };
+		89DCD7601BA249A600C921F9 /* tailtoddle.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = tailtoddle.mp3; sourceTree = "<group>"; };
 		89E3456D1B9BE5F900F36298 /* GIFPlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GIFPlayerViewController.swift; sourceTree = "<group>"; };
 		89E345701B9BE9F000F36298 /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
 		89E345711B9BE9F000F36298 /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
@@ -454,6 +460,7 @@
 		894FEF221B2F2FDE00F9DB4C /* MiniApps */ = {
 			isa = PBXGroup;
 			children = (
+				89DCD75B1BA242D400C921F9 /* MP3Player */,
 				89DCD7561B9FF9CD00C921F9 /* NearByAddress */,
 				89DCD73D1B9E7D6E00C921F9 /* tictactoe */,
 				89E3456C1B9BE5D100F36298 /* GIFPlayer */,
@@ -786,6 +793,16 @@
 			name = NearByAddress;
 			sourceTree = "<group>";
 		};
+		89DCD75B1BA242D400C921F9 /* MP3Player */ = {
+			isa = PBXGroup;
+			children = (
+				89DCD7601BA249A600C921F9 /* tailtoddle.mp3 */,
+				89DCD75C1BA242E200C921F9 /* MP3.storyboard */,
+				89DCD75E1BA242F100C921F9 /* MP3ViewController.swift */,
+			);
+			name = MP3Player;
+			sourceTree = "<group>";
+		};
 		89E3456C1B9BE5D100F36298 /* GIFPlayer */ = {
 			isa = PBXGroup;
 			children = (
@@ -963,6 +980,7 @@
 				897B3A991B5FD8C4004D4A69 /* CT.storyboard in Resources */,
 				89605F1E1B7A418A004CF25D /* LE.storyboard in Resources */,
 				89E345851B9BE9F000F36298 /* 11.png in Resources */,
+				89DCD75D1BA242E200C921F9 /* MP3.storyboard in Resources */,
 				894FEF631B336E8500F9DB4C /* Trait.storyboard in Resources */,
 				8972B1E91B346A5C005D32AA /* CID.storyboard in Resources */,
 				89605F271B7BB416004CF25D /* AE.storyboard in Resources */,
@@ -972,6 +990,7 @@
 				89DA5E1E1B948F7500E86636 /* StopWatch.storyboard in Resources */,
 				89E345821B9BE9F000F36298 /* 8.png in Resources */,
 				8972B1F01B351878005D32AA /* UID.storyboard in Resources */,
+				89DCD7611BA249A600C921F9 /* tailtoddle.mp3 in Resources */,
 				89DA5E281B95274600E86636 /* Todo.storyboard in Resources */,
 				89DA5E171B93B4D200E86636 /* GAN.storyboard in Resources */,
 				89E345871B9BFD5200F36298 /* GIF.storyboard in Resources */,
@@ -1032,6 +1051,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				894E68C71B86B76B00E155F9 /* shapeLayerView.swift in Sources */,
+				89DCD75F1BA242F100C921F9 /* MP3ViewController.swift in Sources */,
 				89DA5E2A1B95439C00E86636 /* saveViewController.swift in Sources */,
 				8972B1E71B346A51005D32AA /* CoreImageDViewController.swift in Sources */,
 				89605F201B7A4195004CF25D /* LEViewController.swift in Sources */,
