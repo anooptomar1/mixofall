@@ -17,6 +17,8 @@ class MP3ViewController: UIViewController {
     @IBOutlet weak var duration: UILabel!
     var timer = NSTimer()
     
+    var didPause = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -24,6 +26,21 @@ class MP3ViewController: UIViewController {
        
     }
 
+    @IBAction func didPressPauseButton(sender: UIBarButtonItem) {
+        player.pause()
+        timer.invalidate()
+        didPause = true
+    }
+    
+    @IBAction func didPressStopButton(sender: UIBarButtonItem) {
+        player.stop()
+        seek.value = 0
+        currentTime.text = String(format: "%02d:%02d", 0, 0)
+        timer.invalidate()
+        didPause = false
+    }
+    
+    
     func tick(){
         var time = convertToMinSec(player.currentTime)
         currentTime.text = String(format: "%02d:%02d", time.min, time.sec)
@@ -36,8 +53,11 @@ class MP3ViewController: UIViewController {
     
     
     @IBAction func didPressPlay(sender: UIBarButtonItem) {
-        var url = NSBundle.mainBundle().URLForResource("tailtoddle", withExtension: "mp3")
-        player = AVAudioPlayer(contentsOfURL: url, error: nil)
+        if !didPause{
+            var url = NSBundle.mainBundle().URLForResource("tailtoddle", withExtension: "mp3")
+            player = AVAudioPlayer(contentsOfURL: url, error: nil)
+        }
+        
         timer = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: "tick", userInfo: nil, repeats: true)
         var time = convertToMinSec(player.duration)
         duration.text = String(format: "%02d:%02d", time.min, time.sec)
