@@ -29,7 +29,7 @@ class NewWeatherViewController: UIViewController {
         var url = NSURL(string: "http://maps.googleapis.com/maps/api/geocode/json?address=\(zipText.text!)")
         var session = NSURLSession.sharedSession().dataTaskWithURL(url!, completionHandler: { (data, response, error) -> Void in
             if error == nil{
-                var dataDictionary = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: nil) as! NSDictionary
+                var dataDictionary = (try! NSJSONSerialization.JSONObjectWithData(data!, options: [])) as! NSDictionary
                 
                 dispatch_async(dispatch_get_main_queue(), { () -> Void in
                     self.delegate?.didSaveNewLocation(self, city: weatherCity.convertJSONToWeatherCity(dataDictionary))

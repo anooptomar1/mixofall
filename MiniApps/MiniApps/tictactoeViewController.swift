@@ -37,16 +37,16 @@ class tictactoeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         showNewPlayScreen(false)
-        var url = NSBundle.mainBundle().URLForResource("flute", withExtension: "aiff")
-        audioPlayer = AVAudioPlayer(contentsOfURL: url!, error: nil)
+        let url = NSBundle.mainBundle().URLForResource("flute", withExtension: "aiff")
+        audioPlayer = try? AVAudioPlayer(contentsOfURL: url!)
         audioPlayer.prepareToPlay()
         
-        var drawurl = NSBundle.mainBundle().URLForResource("boing", withExtension: "aiff")
-        drawPlayer = AVAudioPlayer(contentsOfURL: drawurl!, error: nil)
+        let drawurl = NSBundle.mainBundle().URLForResource("boing", withExtension: "aiff")
+        drawPlayer = try? AVAudioPlayer(contentsOfURL: drawurl!)
         drawPlayer.prepareToPlay()
         
-        var winUrl = NSBundle.mainBundle().URLForResource("swoosh", withExtension: "aiff")
-        winPlayer = AVAudioPlayer(contentsOfURL: winUrl!, error: nil)
+        let winUrl = NSBundle.mainBundle().URLForResource("swoosh", withExtension: "aiff")
+        winPlayer = try? AVAudioPlayer(contentsOfURL: winUrl!)
         winPlayer.prepareToPlay()
     }
 
@@ -71,10 +71,10 @@ class tictactoeViewController: UIViewController {
         var cString:String = hex.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet() as NSCharacterSet).uppercaseString
         
         if (cString.hasPrefix("#")) {
-            cString = cString.substringFromIndex(advance(cString.startIndex, 1))
+            cString = cString.substringFromIndex(cString.startIndex.advancedBy(1))
         }
         
-        if (count(cString) != 6) {
+        if (cString.characters.count != 6) {
             return UIColor.grayColor()
         }
         
@@ -123,7 +123,7 @@ class tictactoeViewController: UIViewController {
     }
     
     func checkGameState(){
-        var countArr = gameState.filter { (val) -> Bool in
+        let countArr = gameState.filter { (val) -> Bool in
             return val == 0
         }
         if countArr.count <= 0{

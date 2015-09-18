@@ -25,20 +25,25 @@ class CoreDataHelper{
     
     lazy var persistentStoreCoordinator: NSPersistentStoreCoordinator? = {
         var coordinator: NSPersistentStoreCoordinator? = NSPersistentStoreCoordinator(managedObjectModel: self.managedObjectModel)
-        let documentsDirectory: NSURL = NSFileManager.defaultManager().URLsForDirectory(NSSearchPathDirectory.DocumentDirectory, inDomains: NSSearchPathDomainMask.UserDomainMask).last as! NSURL
+        let documentsDirectory: NSURL = (NSFileManager.defaultManager().URLsForDirectory(NSSearchPathDirectory.DocumentDirectory, inDomains: NSSearchPathDomainMask.UserDomainMask).last as NSURL?)!
         let url = documentsDirectory.URLByAppendingPathComponent(self.datastoreFileName)
-        println("DEBUG: path to the sqllite file: \(url)")
+        print("DEBUG: path to the sqllite file: \(url)")
         var error: NSError? = nil
         let options = [NSMigratePersistentStoresAutomaticallyOption: true, NSInferMappingModelAutomaticallyOption: true]
-        if coordinator!.addPersistentStoreWithType(NSSQLiteStoreType, configuration: nil, URL: url, options: options, error: &error) == nil{
+        do {
+            try coordinator!.addPersistentStoreWithType(NSSQLiteStoreType, configuration: nil, URL: url, options: options)
+        } catch var error1 as NSError {
+            error = error1
             coordinator = nil
             var dict = [String: AnyObject]()
             dict[NSLocalizedDescriptionKey] = "Failed to initialize application's saved data"
             dict[NSLocalizedFailureReasonErrorKey] = "There was an error creating or loading application's saved data"
             dict[NSUnderlyingErrorKey] = error
             error = NSError(domain: "com.devtechie.com", code: 9999, userInfo: dict)
-            println("Unresolved error \(error), \(error!.userInfo)")
+            print("Unresolved error \(error), \(error!.userInfo)")
             abort()
+        } catch {
+            fatalError()
         }
         return coordinator
     }()
@@ -57,15 +62,18 @@ class CoreDataHelper{
         if managedObjectContext == nil{
             return nil
         }
-        var newManagedObject = NSEntityDescription.insertNewObjectForEntityForName(named, inManagedObjectContext: managedObjectContext!) as? NSManagedObject
+        let newManagedObject = NSEntityDescription.insertNewObjectForEntityForName(named, inManagedObjectContext: managedObjectContext!) as? NSManagedObject
         return newManagedObject
     }
     
     func saveContext(){
         let context = self.managedObjectContext!
         var error: NSError? = nil
-        if !context.save(&error){
-            println("Error: \(error?.localizedDescription)")
+        do {
+            try context.save()
+        } catch let error1 as NSError {
+            error = error1
+            print("Error: \(error?.localizedDescription)")
             abort()
         }
     }

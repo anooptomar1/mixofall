@@ -33,7 +33,7 @@ class TimesTableViewController: UIViewController {
 
 extension TimesTableViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "Cell")
+        let cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "Cell")
         cell.textLabel?.text = String(Int(slider.value * 20) * (indexPath.row + 1))
         return cell
     }

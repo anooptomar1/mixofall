@@ -24,14 +24,14 @@ class SnapMenuViewController: UIViewController {
     
     func addMenus(){
         for i in 0...10{
-            var v: View1 = View1(nibName: "View1", bundle: nil)
+            let v: View1 = View1(nibName: "View1", bundle: nil)
             self.addChildViewController(v)
             self.scrollV.addSubview(v.view)
             v.didMoveToParentViewController(self)
             
-            var red = CGFloat(arc4random_uniform(255)) / CGFloat(255.0)
-            var green = CGFloat(arc4random_uniform(255)) / CGFloat(255.0)
-            var blue = CGFloat(arc4random_uniform(255)) / CGFloat(255.0)
+            let red = CGFloat(arc4random_uniform(255)) / CGFloat(255.0)
+            let green = CGFloat(arc4random_uniform(255)) / CGFloat(255.0)
+            let blue = CGFloat(arc4random_uniform(255)) / CGFloat(255.0)
             
             var vFrame = v.view.frame
             vFrame.origin.x = self.view.frame.width * CGFloat(i)
@@ -44,11 +44,11 @@ class SnapMenuViewController: UIViewController {
     }
     
     func addView1(){
-        var v1: View1 = View1(nibName: "View1", bundle: nil)
+        let v1: View1 = View1(nibName: "View1", bundle: nil)
         
-        var v2: View2 = View2(nibName: "View2", bundle: nil)
+        let v2: View2 = View2(nibName: "View2", bundle: nil)
         
-        var v3: View3 = View3(nibName: "View3", bundle: nil)
+        let v3: View3 = View3(nibName: "View3", bundle: nil)
         
         self.addChildViewController(v1)
         self.scrollV.addSubview(v1.view)

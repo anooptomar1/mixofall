@@ -32,11 +32,11 @@ class NearByAddViewController: UIViewController, MKMapViewDelegate, CLLocationMa
         case CLAuthorizationStatus.AuthorizedWhenInUse:
             initLocationManager()
         case CLAuthorizationStatus.Denied:
-            println("Authorization denied")
+            print("Authorization denied")
         case CLAuthorizationStatus.NotDetermined:
-            println("Unable to determine auth status")
+            print("Unable to determine auth status")
         case CLAuthorizationStatus.Restricted:
-            println("Auth status restricted")
+            print("Auth status restricted")
         }
         
         mapVIew.setUserTrackingMode(MKUserTrackingMode.Follow, animated: true)
@@ -57,19 +57,19 @@ class NearByAddViewController: UIViewController, MKMapViewDelegate, CLLocationMa
         stopLocationUpdate()
     }
     
-    func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
-        var loc = locations.last as! CLLocation
-        latLabel.text = "\(loc.coordinate.latitude)"
-        lngLabel.text = "\(loc.coordinate.longitude)"
-        headingLabel.text = "\(loc.course)"
-        speedLabel.text = "\(loc.speed)"
-        altitudeLabel.text = "\(loc.altitude)"
-        CLGeocoder().reverseGeocodeLocation(loc, completionHandler: { (placemarks, error) -> Void in
+    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        let loc = locations.last as CLLocation?
+        latLabel.text = "\(loc!.coordinate.latitude)"
+        lngLabel.text = "\(loc!.coordinate.longitude)"
+        headingLabel.text = "\(loc!.course)"
+        speedLabel.text = "\(loc!.speed)"
+        altitudeLabel.text = "\(loc!.altitude)"
+        CLGeocoder().reverseGeocodeLocation(loc!, completionHandler: { (placemarks, error) -> Void in
             if error != nil{
-                println("\(error!.localizedDescription)")
+                print("\(error!.localizedDescription)")
             }else{
-                let place = CLPlacemark(placemark: placemarks[0] as! CLPlacemark)
-                var message = "\(place.name), \(place.thoroughfare), \(place.subThoroughfare), \(place.locality), \(place.subLocality), \(place.subAdministrativeArea), \(place.administrativeArea), \(place.postalCode)"
+                let place = CLPlacemark(placemark: (placemarks?.first as CLPlacemark?)!)
+                let message = "\(place.name), \(place.thoroughfare), \(place.subThoroughfare), \(place.locality), \(place.subLocality), \(place.subAdministrativeArea), \(place.administrativeArea), \(place.postalCode)"
                 self.addressLabel.text = message
             }
         })

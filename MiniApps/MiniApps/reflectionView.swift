@@ -15,7 +15,7 @@ class reflectionView: CAReplicatorLayer {
         
         var transform = CATransform3DIdentity
         
-        var offset: CGFloat = self.bounds.size.height + 2
+        let offset: CGFloat = self.bounds.size.height + 2
         transform = CATransform3DTranslate(transform, 0, offset, 0)
         transform = CATransform3DScale(transform, 1, -1, 0)
         
@@ -23,12 +23,12 @@ class reflectionView: CAReplicatorLayer {
         
     }
     
-    override init!() {
+    override init() {
         super.init()
         setUp()
     }
 
-    required init(coder aDecoder: NSCoder) {
+    required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         self.setUp()
     }

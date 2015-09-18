@@ -34,22 +34,22 @@ class BartTableViewCell: UITableViewCell {
     func setupCell(leg: Leg){
         originDestName.text = "\(leg.origin!) to \(leg.destination!)"
         originDestTime.text = "\(leg.origTimeMin!) to \(leg.destTimeMin!)"
-        var color = routes[leg.line!]
+        let color = routes[leg.line!]
         
         trainColor.backgroundColor = hexStringToUIColor(color!)
         
-        var utcDateFormat = NSDateFormatter()
+        let utcDateFormat = NSDateFormatter()
         utcDateFormat.dateFormat = "MM/dd/yyyy HH:mm"
         utcDateFormat.timeZone = NSTimeZone(abbreviation: "UTC")
         
-        var range = Range(start: leg.origTimeMin!.startIndex,
-            end: advance(leg.origTimeMin!.endIndex, -3))
-        var or = leg.origTimeMin!.substringWithRange(range)
+        let range = Range(start: leg.origTimeMin!.startIndex,
+            end: leg.origTimeMin!.endIndex.advancedBy(-3))
+        let or = leg.origTimeMin!.substringWithRange(range)
         
         var utcDate = utcDateFormat.dateFromString("\(leg.origDate!) \(or)")
         
-       var time = NSDate(string: "\(leg.origDate!) \(leg.origTimeMin!)", formatString: "MM/dd/yyyy HH:mm a")
-        println(time)
+       let time = NSDate(string: "\(leg.origDate!) \(leg.origTimeMin!)", formatString: "MM/dd/yyyy HH:mm a")
+        print(time)
         
        // var time = moment("\(leg.origDate!) \(leg.origTimeMin!)", "MM/dd/yyyy HH:mm a", timeZone: NSTimeZone.localTimeZone(), locale: NSLocale.currentLocale())
 //        println(time!.intervalSince(moment()))
@@ -59,11 +59,11 @@ class BartTableViewCell: UITableViewCell {
     func setupCell2(leg: Leg){
         originDestName2.text = "\(leg.origin!) to \(leg.destination!)"
         originDestTime2.text = "\(leg.origTimeMin!) to \(leg.destTimeMin!)"
-        var color = routes[leg.line!]
+        let color = routes[leg.line!]
         
         trainColor2.backgroundColor = hexStringToUIColor(color!)
         
-        var utcDateFormat = NSDateFormatter()
+        let utcDateFormat = NSDateFormatter()
         utcDateFormat.dateFormat = "MM/dd/yyyy HH:mm"
         utcDateFormat.timeZone = NSTimeZone(abbreviation: "UTC")
         
@@ -74,10 +74,10 @@ class BartTableViewCell: UITableViewCell {
         var cString:String = hex.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet() as NSCharacterSet).uppercaseString
         
         if (cString.hasPrefix("#")) {
-            cString = cString.substringFromIndex(advance(cString.startIndex, 1))
+            cString = cString.substringFromIndex(cString.startIndex.advancedBy(1))
         }
         
-        if (count(cString) != 6) {
+        if (cString.characters.count != 6) {
             return UIColor.grayColor()
         }
         

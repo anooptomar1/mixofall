@@ -35,7 +35,7 @@ class WeatherViewController: UIViewController {
         self.addChildViewController(pageVC!)
         self.mainView.addSubview(self.pageVC!.view)
         
-        var pageRect = CGRectMake(0, 0, self.mainView.frame.size.width, self.mainView.frame.size.height)
+        let pageRect = CGRectMake(0, 0, self.mainView.frame.size.width, self.mainView.frame.size.height)
         pageVC!.view.frame = pageRect
         pageVC!.didMoveToParentViewController(self)
         pageVC!.automaticallyAdjustsScrollViewInsets = false
@@ -78,7 +78,7 @@ class WeatherViewController: UIViewController {
         var url = NSURL(string: "http://api.openweathermap.org/data/2.5/find?q=\(zip)&type=accurate&mode=json&units=imperial")
         var task = NSURLSession.sharedSession().dataTaskWithURL(url!, completionHandler: { (wd, response, error) -> Void in
             if error == nil{
-                var weatherData = NSJSONSerialization.JSONObjectWithData(wd, options: nil, error: nil) as! NSDictionary
+                var weatherData = (try! NSJSONSerialization.JSONObjectWithData(wd!, options: [])) as! NSDictionary
                 var temp = weatherCity.getTempFromWeatherJSON(weatherData)
                 
                 dispatch_async(dispatch_get_main_queue(), { () -> Void in

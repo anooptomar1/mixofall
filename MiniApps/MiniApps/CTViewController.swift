@@ -29,9 +29,9 @@ class CTViewController: UIViewController, NSURLSessionDownloadDelegate, CLLocati
     }
     
     func CoreDataExample(){
-        var helper = CoreDataHelper(modelName: "MiniApps", datastoreFileName: "MiniApps.sqlite")
+        let helper = CoreDataHelper(modelName: "MiniApps", datastoreFileName: "MiniApps.sqlite")
         let coordinator = helper.persistentStoreCoordinator
-        var recipe = helper.newEntry("Recipe") as? Recipe
+        let recipe = helper.newEntry("Recipe") as? Recipe
         if let r = recipe{
             r.name = "Apple pie"
             r.serves = 8
@@ -45,36 +45,36 @@ class CTViewController: UIViewController, NSURLSessionDownloadDelegate, CLLocati
         
         var error: NSError?
         
-        var result = helper.managedObjectContext?.executeFetchRequest(fetchRequest, error: &error) as? [Recipe]
-        if let recepies = result{
-            for r in recepies{
-                println(r.name)
-            }
-        }
+       // let result = helper.managedObjectContext?.executeFetchRequest(fetchRequest) as? [Recipe]
+//        if let recepies = result{
+//            for r in recepies{
+//                print(r.name)
+//            }
+//        }
     }
     
     func RestClientExample(){
         RestClient.Get("https://openlibrary.org/books/OL8365328M.json", callback: { (json: JSON?, error: NSError?) -> () in
             if let err = error{
-                println("Error: \(err.localizedDescription)")
+                print("Error: \(err.localizedDescription)")
                 return
             }
             
             if let j = json{
-                var subtitle = j["subtitle"]?.stringValue
-                var title = j["title"]?.stringValue
-                var revision = j["revision"]?.intValue
-                println("Title: \(title!) - \(subtitle!)")
-                println("Revision: \(revision!)")
+                let subtitle = j["subtitle"]?.stringValue
+                let title = j["title"]?.stringValue
+                let revision = j["revision"]?.intValue
+                print("Title: \(title!) - \(subtitle!)")
+                print("Revision: \(revision!)")
             }
         })
-        var data: [String: AnyObject] = [ "name" : "PeaSoup","Ingredients" : "Split Peas, Water, Chicken Broth, Milk, Salt, Onions" ]
+        let data: [String: AnyObject] = [ "name" : "PeaSoup","Ingredients" : "Split Peas, Water, Chicken Broth, Milk, Salt, Onions" ]
         RestClient.Post("http://echo.jsontest.com/status/OK", data: data) { (json: JSON?, error: NSError?) -> () in
             if let err = error{
-                println(err.localizedDescription)
+                print(err.localizedDescription)
             }
             if let j = json{
-                println((j["status"]?.stringValue)!)
+                print((j["status"]?.stringValue)!)
             }
         }
     }
@@ -86,15 +86,15 @@ class CTViewController: UIViewController, NSURLSessionDownloadDelegate, CLLocati
     }
     
     func checkForReachability(notification: NSNotification){
-        switch reach.currentReachabilityStatus().value{
-        case ReachableViaWiFi.value:
-            println("Reachable via wifi")
-        case ReachableViaWWAN.value:
-            println("Reachable via mobile network")
-        case NotReachable.value:
-            println("Not reachable")
+        switch reach.currentReachabilityStatus().rawValue{
+        case ReachableViaWiFi.rawValue:
+            print("Reachable via wifi")
+        case ReachableViaWWAN.rawValue:
+            print("Reachable via mobile network")
+        case NotReachable.rawValue:
+            print("Not reachable")
         default:
-            println("Not reachable")
+            print("Not reachable")
         }
     }
     
@@ -105,16 +105,21 @@ class CTViewController: UIViewController, NSURLSessionDownloadDelegate, CLLocati
         var xmlData: NSData?{
             didSet{
                 var err: NSError?
-                doc = SMXMLDocument(data: xmlData!, error: &err)
+                do {
+                    doc = try SMXMLDocument(data: xmlData!)
+                } catch let error as NSError {
+                    err = error
+                    doc = nil
+                }
                 if err == nil{
-                    var root = doc!.childrenNamed("schedule")[0] as! SMXMLElement
-                    var request = root.childrenNamed("request")[0] as! SMXMLElement
-                    var trips = request.childrenNamed("trip") as! [SMXMLElement]
+                    let root = doc!.childrenNamed("schedule")[0] as! SMXMLElement
+                    let request = root.childrenNamed("request")[0] as! SMXMLElement
+                    let trips = request.childrenNamed("trip") as! [SMXMLElement]
                     for trip in trips{
-                        var legs = trip.childrenNamed("leg") as! [SMXMLElement]
-                        var newTrip = Trip()
+                        let legs = trip.childrenNamed("leg") as! [SMXMLElement]
+                        let newTrip = Trip()
                         for leg in legs{
-                            var tripLeg = Leg()
+                            let tripLeg = Leg()
                             tripLeg.destDate = leg.attributeNamed("destTimeDate")
                             tripLeg.destination = leg.attributeNamed("destination")
                             tripLeg.destTimeMin = leg.attributeNamed("destTimeMin")
@@ -127,23 +132,23 @@ class CTViewController: UIViewController, NSURLSessionDownloadDelegate, CLLocati
                         }
                         bartTrips.append(newTrip)
                     }
-                    var formatter = NSDateFormatter()
+                    let formatter = NSDateFormatter()
                     formatter.timeZone = NSTimeZone.localTimeZone()
                     formatter.timeStyle = NSDateFormatterStyle.ShortStyle
                     formatter.dateStyle = NSDateFormatterStyle.ShortStyle
                     for t in bartTrips{
                         for l in t.legs{
-                            t.legs.sort{
+                            t.legs.sortInPlace{
                                 (a, b) in
-                                var a: Int = NSString(string: a.order!).integerValue
-                                var b: Int = NSString(string: b.order!).integerValue
+                                let a: Int = NSString(string: a.order!).integerValue
+                                let b: Int = NSString(string: b.order!).integerValue
                                 return a < b
                             }
-                            var legDateTime = formatter.dateFromString("\(l.origDate!) \(l.origTimeMin!)")
+                            let legDateTime = formatter.dateFromString("\(l.origDate!) \(l.origTimeMin!)")
                             if legDateTime?.timeIntervalSinceNow >= 0{
-                                println("-------------------------------------------------------")
-                                println("\(l.origin!)-\(l.destination!) at \(l.origDate!) \(l.origTimeMin!)")
-                                println("-------------------------------------------------------")
+                                print("-------------------------------------------------------")
+                                print("\(l.origin!)-\(l.destination!) at \(l.origDate!) \(l.origTimeMin!)")
+                                print("-------------------------------------------------------")
                             }
 
                         }
@@ -152,7 +157,7 @@ class CTViewController: UIViewController, NSURLSessionDownloadDelegate, CLLocati
             }
         }
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), { () -> Void in
-            var data = NSData(contentsOfURL: NSURL(string: "http://api.bart.gov/api/sched.aspx?cmd=depart&orig=ucty&dest=mont&key=MW9S-E7SL-26DU-VV8V")!)!
+            let data = NSData(contentsOfURL: NSURL(string: "http://api.bart.gov/api/sched.aspx?cmd=depart&orig=ucty&dest=mont&key=MW9S-E7SL-26DU-VV8V")!)!
             dispatch_async(dispatch_get_main_queue(), { () -> Void in
                 xmlData = data
             })
@@ -164,22 +169,28 @@ class CTViewController: UIViewController, NSURLSessionDownloadDelegate, CLLocati
         
         var serverData: NSData?{
             didSet{
-                var json = JSONParser.parse(serverData!, error: &err)
+                var json: JSON?
+                do {
+                    json = try JSONParser.parse(serverData!)
+                } catch var error as NSError {
+                    err = error
+                    json = nil
+                }
                 if let j = json{
                     if let name = j["loans"]?[0]?["name"]?.stringValue{
-                        println(name)
+                        print(name)
                     }
                     if let use = j["loans"]?[0]?["use"]?.stringValue{
-                        println(use)
+                        print(use)
                     }
                     if let loanAmount = j["loans"]?[0]?["loan_amount"]?.intValue{
-                        println(loanAmount)
+                        print(loanAmount)
                     }
                 }
             }
         }
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), { () -> Void in
-            var data = NSData(contentsOfURL: NSURL(string: "http://api.kivaws.org/v1/loans/search.json?status=fundraising")!)!
+            let data = NSData(contentsOfURL: NSURL(string: "http://api.kivaws.org/v1/loans/search.json?status=fundraising")!)!
             
             dispatch_async(dispatch_get_main_queue(), { () -> Void in
                 serverData = data
@@ -198,21 +209,21 @@ class CTViewController: UIViewController, NSURLSessionDownloadDelegate, CLLocati
             locationManager.desiredAccuracy = kCLLocationAccuracyBest
             locationManager.startUpdatingLocation()
         }else{
-            println("Please allow for location update")
+            print("Please allow for location update")
         }
     }
     
-    func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
-        var lastLocation = locations.last as? CLLocation
+    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        var lastLocation = locations.last as CLLocation?
         if let location = lastLocation{
-            println("location updated to: Lat:\(location.coordinate.latitude), Lng: \(location.coordinate.longitude)")
+            print("location updated to: Lat:\(location.coordinate.latitude), Lng: \(location.coordinate.longitude)")
         }
     }
     
     func emailExample(){
-        var email = EmailSharing(username: "Anoop Tomar")
+        let email = EmailSharing(username: "Anoop Tomar")
         email.username = "AT"
-        var message = Message(sharingMethod: email)
+        let message = Message(sharingMethod: email)
         message.share()
         
         
@@ -221,42 +232,44 @@ class CTViewController: UIViewController, NSURLSessionDownloadDelegate, CLLocati
         filterArray()
         complexArrayFilter()
         dictionaryDemo()
-        println(add(2,3))
+        print(add(2,3))
         doSomething("Anoop", finished: { () -> Bool in
-            println("Job finished")
+            print("Job finished")
             return true
         })
         
-        println("are two usernames equal?: \(areUserNameEqual(email, b: email))")
+        print("are two usernames equal?: \(areUserNameEqual(email, b: email))")
     }
     
     func downloadFileOverNetwork(){
-        var url = "http://www.brainloaf.com/introduction-to-ios.mp4"
-        var configuration = NSURLSessionConfiguration.backgroundSessionConfigurationWithIdentifier("sessionDownload")
+        let url = "http://www.brainloaf.com/introduction-to-ios.mp4"
+        let configuration = NSURLSessionConfiguration.backgroundSessionConfigurationWithIdentifier("sessionDownload")
         configuration.sessionSendsLaunchEvents = true
         configuration.discretionary = true
         
-        var session = NSURLSession(configuration: configuration, delegate: self, delegateQueue: nil)
-        var task = session.downloadTaskWithURL(NSURL(string: url)!)
+        let session = NSURLSession(configuration: configuration, delegate: self, delegateQueue: nil)
+        let task = session.downloadTaskWithURL(NSURL(string: url)!)
         task.resume()
     }
     
     // MARK: NSURLSessionDownload related functions
     
     func URLSession(session: NSURLSession, didBecomeInvalidWithError error: NSError?) {
-        println("Session is invalid: \(error?.localizedDescription)")
+        print("Session is invalid: \(error?.localizedDescription)")
     }
     
     func URLSession(session: NSURLSession, downloadTask: NSURLSessionDownloadTask, didFinishDownloadingToURL location: NSURL) {
-        println("Temporary path: \(location)")
+        print("Temporary path: \(location)")
         var fileManager = NSFileManager()
         var err: NSError?
         
         var dest = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.UserDomainMask, true).first?.stringByAppendingString("/introduction-to-ios.mp4") as String!
-        if fileManager.moveItemAtURL(location, toURL: NSURL(fileURLWithPath: dest!)!, error: &err){
-            println("File downloaded to \(dest!)")
-        }else{
-            println("Failed to save \(err?.localizedDescription)")
+        do {
+            try fileManager.moveItemAtURL(location, toURL: NSURL(fileURLWithPath: dest!))
+            print("File downloaded to \(dest!)")
+        } catch var error as NSError {
+            err = error
+            print("Failed to save \(err?.localizedDescription)")
         }
         
     }
@@ -269,11 +282,11 @@ class CTViewController: UIViewController, NSURLSessionDownloadDelegate, CLLocati
     
     func URLSession(session: NSURLSession, task: NSURLSessionTask, didCompleteWithError error: NSError?) {
         if error == nil{
-            println("Download complete!")
+            print("Download complete!")
         }else{
-            println("Download completed with error \(error)")
+            print("Download completed with error \(error)")
         }
-        var appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         
         if let complete = appDelegate.completionHandler{
             complete()
@@ -296,7 +309,7 @@ class CTViewController: UIViewController, NSURLSessionDownloadDelegate, CLLocati
             for i in 1...1000000{
                 self.mainQueue?.addOperationWithBlock({ () -> Void in
                     
-                        var done = Float(i/100000)
+                        let done = Float(i/100000)
                         self.myprogressView.setProgress(done, animated: true)
                     
                 })
@@ -319,11 +332,11 @@ class CTViewController: UIViewController, NSURLSessionDownloadDelegate, CLLocati
     }
     
     func threadingExample(){
-        var myInstance = MyThreadClass()
+        let myInstance = MyThreadClass()
         
         NSThread.detachNewThreadSelector("threadMethod:", toTarget: myInstance, withObject: myInstance)
         
-        var thread = NSThread(target: myInstance, selector: "threadMethod:", object: myInstance)
+        let thread = NSThread(target: myInstance, selector: "threadMethod:", object: myInstance)
         thread.stackSize = 16000
         thread.threadPriority = 0.75
         thread.start()
@@ -331,14 +344,14 @@ class CTViewController: UIViewController, NSURLSessionDownloadDelegate, CLLocati
     }
     
     func demoStack(){
-        var stack = ATStack<Int>()
+        let stack = ATStack<Int>()
         stack.push(1)
         stack.push(2)
         stack.push(3)
         stack.push(4)
         stack.push(5)
         while(!stack.isEmpty()){
-            println(stack.pop()!)
+            print(stack.pop()!)
         }
     }
 
@@ -366,11 +379,11 @@ class CTViewController: UIViewController, NSURLSessionDownloadDelegate, CLLocati
             textField.secureTextEntry = true
             passwordField = textField
         }
-        let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default) { (action: UIAlertAction!) -> Void in
-            println("Username: \(loginField.text!) Password: \(passwordField.text!)")
+        let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default) { (action: UIAlertAction) -> Void in
+            print("Username: \(loginField.text!) Password: \(passwordField.text!)")
         }
-        let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel) { (action: UIAlertAction!) -> Void in
-            println("login cancelled")
+        let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel) { (action: UIAlertAction) -> Void in
+            print("login cancelled")
             self.dismissViewControllerAnimated(true, completion: nil)
         }
         
@@ -390,12 +403,12 @@ class CTViewController: UIViewController, NSURLSessionDownloadDelegate, CLLocati
         self.presentViewController(baconController, animated: true, completion: nil)
     }
     
-    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         self.view.endEditing(true)
     }
     
     func liftMainViewWhenKeyboardAppear(aNotification: NSNotification){
-        var userInfo: NSDictionary = aNotification.userInfo!
+        let userInfo: NSDictionary = aNotification.userInfo!
         var animationDuration = NSTimeInterval()
         var animationCurve = UIViewAnimationCurve(rawValue: 0)
         var keyboardFrame = CGRect()
@@ -412,7 +425,7 @@ class CTViewController: UIViewController, NSURLSessionDownloadDelegate, CLLocati
     }
     
     func returnMainViewWhenKeyboardAppear(aNotification: NSNotification){
-        var userInfo: NSDictionary = aNotification.userInfo!
+        let userInfo: NSDictionary = aNotification.userInfo!
         var animationDuration = NSTimeInterval()
         var animationCurve = UIViewAnimationCurve(rawValue: 0)
         var keyboardFrame = CGRect()
@@ -434,7 +447,7 @@ class CTViewController: UIViewController, NSURLSessionDownloadDelegate, CLLocati
     }
     
     func doSomething(name: String, finished: ()-> Bool){
-        println("\(name) do something")
+        print("\(name) do something")
     }
     
     @IBAction func onClose(sender: UIBarButtonItem) {
@@ -442,8 +455,8 @@ class CTViewController: UIViewController, NSURLSessionDownloadDelegate, CLLocati
     }
     
     func filterArray(){
-        var vehicles = ["Car", "Bus", "Truck", "Plane"]
-        println(vehicles.filter({c in c == "Car" || c == "Truck"}))
+        let vehicles = ["Car", "Bus", "Truck", "Plane"]
+        print(vehicles.filter({c in c == "Car" || c == "Truck"}))
     }
     
     func complexArrayFilter(){
@@ -455,19 +468,19 @@ class CTViewController: UIViewController, NSURLSessionDownloadDelegate, CLLocati
             Vehicle(name: "Tempo", year: 1988, numberOfWheels: 3)
             ]
         // map and filter example on array
-        println(complexArray.filter({ v in v.year >= 2000 }).map({v in v.name}))
+        print(complexArray.filter({ v in v.year >= 2000 }).map({v in v.name}))
         // in place sort example on complex array
-        complexArray.sort({$0.year < $1.year})
-        println(complexArray.map({v in "\(v.name) \(v.year)"}))
+        complexArray.sortInPlace({$0.year < $1.year})
+        print(complexArray.map({v in "\(v.name) \(v.year)"}))
         
         // replace example using range in complex array
         complexArray[2...2] = [Vehicle(name: "TwoSitter", year: 1999, numberOfWheels: 3)]
-        println(complexArray.map({v in "\(v.name) \(v.year)"}))
+        print(complexArray.map({v in "\(v.name) \(v.year)"}))
         
         // example of subscript
-        var vehicle = Vehicle(name: "Car", year: 1990, numberOfWheels: 4)
+        let vehicle = Vehicle(name: "Car", year: 1990, numberOfWheels: 4)
         vehicle.similarVehicles = [Vehicle(name: "Honda Accord", year: 2013, numberOfWheels: 4), Vehicle(name: "Toyota Corola", year: 2000, numberOfWheels: 4), Vehicle(name: "Honda Civic", year: 2015, numberOfWheels: 4)]
-        println(vehicle["Honda"].map({v in v.name}))
+        print(vehicle["Honda"].map({v in v.name}))
     }
     
     func dictionaryDemo(){
@@ -477,7 +490,7 @@ class CTViewController: UIViewController, NSURLSessionDownloadDelegate, CLLocati
         dictionary[3] = "Third"
         
         for (k, v) in dictionary{
-            println("key is \(k) value is \(v)")
+            print("key is \(k) value is \(v)")
         }
     }
     
@@ -512,10 +525,10 @@ class EmailSharing: Sharing{
     private var _error: String?
     var username: String{
         willSet(newUsername){
-            println("new username is going to set to \(newUsername)")
+            print("new username is going to set to \(newUsername)")
         }
         didSet(oldValue){
-            println("old value is \(oldValue)")
+            print("old value is \(oldValue)")
         }
     }
     
@@ -557,8 +570,8 @@ class EmailSharing: Sharing{
     }
     
     func shareMessage(message: String) -> Bool {
-        println("Message from \(username): \n\(message)")
-        println(amount.convertToOunces().description())
+        print("Message from \(username): \n\(message)")
+        print(amount.convertToOunces().description())
         return true
     }
     
@@ -580,12 +593,12 @@ class Message{
     }
 }
 
-@objc class MyThreadClass{
+class MyThreadClass{
     func threadMethod(object: AnyObject?){
         var j = 0
         for i in 1..<10{
             objc_sync_enter(object)
-            println("iteration #\(i)")
+            print("iteration #\(i)")
             objc_sync_exit(object)
         }
     }

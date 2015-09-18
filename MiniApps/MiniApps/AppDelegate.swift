@@ -23,7 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
         let navVC = UINavigationController(rootViewController: mainVC)
         window?.rootViewController = navVC
         
-        application.registerUserNotificationSettings(UIUserNotificationSettings(forTypes: .Sound | .Alert | .Badge, categories: nil))
+        application.registerUserNotificationSettings(UIUserNotificationSettings(forTypes: [.Sound, .Alert, .Badge], categories: nil))
         UIApplication.sharedApplication().cancelAllLocalNotifications()
         locationManager.delegate = self
         return true
@@ -31,7 +31,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
     
     // MARK: Handler for localnotifications
     func handleRegionChange(region: CLRegion){
-        var note = getMessageFromGeofence(region.identifier)
+        let note = getMessageFromGeofence(region.identifier)
         if UIApplication.sharedApplication().applicationState == UIApplicationState.Active{
         // true if user has app opened
             if let message = note{
@@ -48,12 +48,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
     }
     
     // MARK: CLLocationManagerDelegate
-    func locationManager(manager: CLLocationManager!, didEnterRegion region: CLRegion!) {
+    func locationManager(manager: CLLocationManager, didEnterRegion region: CLRegion) {
         // do something when user enters in geofence
         handleRegionChange(region)
     }
     
-    func locationManager(manager: CLLocationManager!, didExitRegion region: CLRegion!) {
+    func locationManager(manager: CLLocationManager, didExitRegion region: CLRegion) {
         // do something when user exists the geofence
         handleRegionChange(region)
     }
@@ -72,7 +72,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
         })
         
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), { () -> Void in
-            println("Performing long running task like saving to database :P")
+            print("Performing long running task like saving to database :P")
             application.endBackgroundTask(taskToken)
             taskToken = UIBackgroundTaskInvalid
         })
@@ -101,7 +101,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
     lazy var applicationDocumentsDirectory: NSURL = {
         // The directory the application uses to store the Core Data store file. This code uses a directory named "com.devtechie.MiniApps" in the application's documents Application Support directory.
         let urls = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)
-        return urls[urls.count-1] as! NSURL
+        return urls[urls.count-1] 
     }()
 
     lazy var managedObjectModel: NSManagedObjectModel = {
@@ -117,7 +117,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
         let url = self.applicationDocumentsDirectory.URLByAppendingPathComponent("MiniApps.sqlite")
         var error: NSError? = nil
         var failureReason = "There was an error creating or loading the application's saved data."
-        if coordinator!.addPersistentStoreWithType(NSSQLiteStoreType, configuration: nil, URL: url, options: nil, error: &error) == nil {
+        do {
+            try coordinator!.addPersistentStoreWithType(NSSQLiteStoreType, configuration: nil, URL: url, options: nil)
+        } catch var error1 as NSError {
+            error = error1
             coordinator = nil
             // Report any error we got.
             var dict = [String: AnyObject]()
@@ -129,6 +132,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
             // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
             NSLog("Unresolved error \(error), \(error!.userInfo)")
             abort()
+        } catch {
+            fatalError()
         }
         
         return coordinator
@@ -150,11 +155,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
     func saveContext () {
         if let moc = self.managedObjectContext {
             var error: NSError? = nil
-            if moc.hasChanges && !moc.save(&error) {
-                // Replace this implementation with code to handle the error appropriately.
-                // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-                NSLog("Unresolved error \(error), \(error!.userInfo)")
-                abort()
+            if moc.hasChanges {
+                do {
+                    try moc.save()
+                } catch let error1 as NSError {
+                    error = error1
+                    // Replace this implementation with code to handle the error appropriately.
+                    // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+                    NSLog("Unresolved error \(error), \(error!.userInfo)")
+                    abort()
+                }
             }
         }
     }

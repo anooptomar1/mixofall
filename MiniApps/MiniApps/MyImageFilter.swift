@@ -12,7 +12,7 @@ class MyImageFilter: CIFilter {
     var inputImage: CIImage?
     var inputPercentage = NSNumber(double: 1.0)
     
-    override var outputImage:CIImage!{
+    override var outputImage:CIImage{
         get{
             return self.makeOutputImage()
         }
@@ -20,7 +20,7 @@ class MyImageFilter: CIFilter {
     
     private func makeOutputImage() -> CIImage{
         // get extent for input image
-        let imageExtent = self.inputImage?.extent()
+        let imageExtent = self.inputImage?.extent
         // apply gradient filter
         let gradient = CIFilter(name: "CIRadialGradient")
         // get the center of the extent
@@ -30,13 +30,13 @@ class MyImageFilter: CIFilter {
         // get max value between height and width
         let largerDimention = max(imageExtent!.width, imageExtent!.height)
         // set gradient center for filter
-        gradient.setValue(center, forKey: "inputCenter")
+        gradient!.setValue(center, forKey: "inputCenter")
         // set small value to input radius 0
-        gradient.setValue(smallerDimention / 2.0 * CGFloat(self.inputPercentage.doubleValue), forKey: "inputRadius0")
+        gradient!.setValue(smallerDimention / 2.0 * CGFloat(self.inputPercentage.doubleValue), forKey: "inputRadius0")
         // set max value to draw outer radius
-        gradient.setValue(largerDimention / 2.0, forKey: "inputRadius1")
+        gradient!.setValue(largerDimention / 2.0, forKey: "inputRadius1")
         // get CIImage out of gradient
-        let gradImage = gradient.outputImage
+        let gradImage = gradient!.outputImage
         // one way
         // apply new filter to blend images
 //        let blend = CIFilter(name: "CIBlendWithMask")

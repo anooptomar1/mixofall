@@ -40,9 +40,9 @@ class GeoDetailsTableViewController: UITableViewController {
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! UITableViewCell
-        var geofence = geofences[indexPath.row]
-        var eventTypeString = (geofence.eventType == EventType.onEntry) ? "On Entry" : "On Exit"
+        let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) 
+        let geofence = geofences[indexPath.row]
+        let eventTypeString = (geofence.eventType == EventType.onEntry) ? "On Entry" : "On Exit"
         cell.textLabel?.text = geofence.note
         cell.detailTextLabel?.text = "Radius: \(geofence.radius)m \(eventTypeString)"
         return cell

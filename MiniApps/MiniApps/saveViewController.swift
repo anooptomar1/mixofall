@@ -23,7 +23,7 @@ class saveViewController: UIViewController {
         super.viewDidLoad()
     }
     @IBAction func onSave(sender: UIBarButtonItem) {
-        self.delegate?.didSaved(self, note: noteText.text)
+        self.delegate?.didSaved(self, note: noteText.text!)
         navigationController?.popToViewController(sourceVC!, animated: true)
     }
 }

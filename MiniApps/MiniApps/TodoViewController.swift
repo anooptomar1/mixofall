@@ -25,7 +25,7 @@ class TodoViewController: UIViewController {
     }
     
     func getData(){
-        var retrivedData = NSUserDefaults.standardUserDefaults().objectForKey(DATAKEY) as? [(String)]
+        let retrivedData = NSUserDefaults.standardUserDefaults().objectForKey(DATAKEY) as? [(String)]
         if let d = retrivedData{
             data = d
         }
@@ -41,7 +41,7 @@ class TodoViewController: UIViewController {
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        var vc = segue.destinationViewController as! saveViewController
+        let vc = segue.destinationViewController as! saveViewController
         vc.delegate = self
         vc.sourceVC = self
     }
@@ -62,7 +62,7 @@ extension TodoViewController: UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "Cell")
+        let cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "Cell")
         cell.textLabel!.text = data[indexPath.row]
         return cell
     }

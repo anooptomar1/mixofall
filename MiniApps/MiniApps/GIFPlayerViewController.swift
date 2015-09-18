@@ -23,7 +23,7 @@ class GIFPlayerViewController: UIViewController {
         dismissViewControllerAnimated(true, completion: nil)
     }
     @IBAction func onPan(sender: UIPanGestureRecognizer) {
-        var translation = sender.translationInView(self.imageV)
+        let translation = sender.translationInView(self.imageV)
         if translation.x > 0{
             moveFwd()
         }else{

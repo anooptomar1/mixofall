@@ -26,6 +26,14 @@ class MP3ViewController: UIViewController {
        
     }
 
+    @IBAction func didChangedSlider(sender: UISlider) {
+        timer.invalidate()
+        player.pause()
+        player.currentTime = Double(sender.value)
+        player.play()
+        timer = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: "tick", userInfo: nil, repeats: true)
+    }
+    
     @IBAction func didPressPauseButton(sender: UIBarButtonItem) {
         player.pause()
         timer.invalidate()
@@ -42,7 +50,7 @@ class MP3ViewController: UIViewController {
     
     
     func tick(){
-        var time = convertToMinSec(player.currentTime)
+        let time = convertToMinSec(player.currentTime)
         currentTime.text = String(format: "%02d:%02d", time.min, time.sec)
         seek.value = Float(player.currentTime)
     }
@@ -54,12 +62,12 @@ class MP3ViewController: UIViewController {
     
     @IBAction func didPressPlay(sender: UIBarButtonItem) {
         if !didPause{
-            var url = NSBundle.mainBundle().URLForResource("tailtoddle", withExtension: "mp3")
-            player = AVAudioPlayer(contentsOfURL: url, error: nil)
+            let url = NSBundle.mainBundle().URLForResource("tailtoddle", withExtension: "mp3")
+            player = try? AVAudioPlayer(contentsOfURL: url!)
         }
         
         timer = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: "tick", userInfo: nil, repeats: true)
-        var time = convertToMinSec(player.duration)
+        let time = convertToMinSec(player.duration)
         duration.text = String(format: "%02d:%02d", time.min, time.sec)
        
         seek.maximumValue = Float(player.duration)
@@ -72,8 +80,8 @@ class MP3ViewController: UIViewController {
     }
     
     func convertToMinSec(time: NSTimeInterval) -> (min: Int, sec: Int){
-        var min = Int(time / 60)
-        var sec = Int(time % 60)
+        let min = Int(time / 60)
+        let sec = Int(time % 60)
         return (min, sec)
     }
 }

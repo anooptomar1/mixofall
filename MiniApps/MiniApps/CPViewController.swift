@@ -30,7 +30,7 @@ class CPViewController: UIViewController {
         progressLine.lineCap = kCALineCapRound
         self.view.layer.addSublayer(progressLine)
         
-        var label = UILabel(frame: CGRectMake(ovalRect.midX/2, ovalRect.midY/2, 50, 50))
+        let label = UILabel(frame: CGRectMake(ovalRect.midX/2, ovalRect.midY/2, 50, 50))
         label.text = "70"
         label.font = UIFont(name: "chalkboard", size: 16)
         label.textColor = UIColor.blackColor()

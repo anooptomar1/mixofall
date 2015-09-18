@@ -19,15 +19,15 @@ class Geofence: NSObject, NSCoding, MKAnnotation {
     var note: String
     var eventType: EventType
     
-    var title:String{
+    var title:String?{
         if note.isEmpty{
             return "None"
         }
         return note
     }
     
-    var subtitle: String{
-        var eventTypeString = (eventType == EventType.onEntry) ? "On Entry" : "On Exit"
+    var subtitle: String?{
+        let eventTypeString = (eventType == EventType.onEntry) ? "On Entry" : "On Exit"
         return "Radius:\(radius)m - \(eventTypeString)"
     }
     
@@ -39,7 +39,7 @@ class Geofence: NSObject, NSCoding, MKAnnotation {
         self.eventType = eventT
     }
     
-    required init(coder decoder: NSCoder) {
+    required init?(coder decoder: NSCoder) {
         let latitude = decoder.decodeDoubleForKey(kGeofenceLatitudeKey)
         let longitude = decoder.decodeDoubleForKey(kGeofenceLongitudeKey)
         coordinate = CLLocationCoordinate2DMake(latitude, longitude)

@@ -23,12 +23,12 @@ class AEViewController: UIViewController {
     func followPath(){
         
         // view that will hold all components
-        var v = UIView(frame: CGRectMake(0, 100, 300, 600))
+        let v = UIView(frame: CGRectMake(0, 100, 300, 600))
         //v.backgroundColor = UIColor.redColor()
         self.view.addSubview(v)
         
         // path to follow
-        var path = UIBezierPath()
+        let path = UIBezierPath()
         path.moveToPoint(CGPointMake(0, 150))
         path.addCurveToPoint(CGPointMake(100, 150), controlPoint1: CGPointMake(50, 0), controlPoint2: CGPointMake(75, 200))
         path.moveToPoint(CGPointMake(100, 150))
@@ -38,7 +38,7 @@ class AEViewController: UIViewController {
         path.addCurveToPoint(CGPointMake(400, 150), controlPoint1: CGPointMake(250, 100), controlPoint2: CGPointMake(300, 200))
         
         // layer to print path
-        var shapeLayer = CAShapeLayer()
+        let shapeLayer = CAShapeLayer()
         shapeLayer.path = path.CGPath
         shapeLayer.fillColor = UIColor.clearColor().CGColor
         shapeLayer.strokeColor = UIColor.redColor().CGColor
@@ -47,7 +47,7 @@ class AEViewController: UIViewController {
         v.layer.addSublayer(shapeLayer)
         
         // object that will follow path
-        var fishLayer = CALayer()
+        let fishLayer = CALayer()
         fishLayer.frame = CGRectMake(0, 0, 50, 25)
         fishLayer.position = CGPointMake(0, 150)
         fishLayer.contents = UIImage(named: "fish")?.CGImage
@@ -56,7 +56,7 @@ class AEViewController: UIViewController {
         v.layer.addSublayer(fishLayer)
         
         // keyframe animation
-        var animation = CAKeyframeAnimation()
+        let animation = CAKeyframeAnimation()
         animation.keyPath = "position"
         // instead using duration of 4 sec from animation group
         // animation.duration = 4.0
@@ -65,13 +65,13 @@ class AEViewController: UIViewController {
        // animation.repeatCount = Float.infinity
         
         // color animation
-        var colorAnimation = CABasicAnimation()
+        let colorAnimation = CABasicAnimation()
         colorAnimation.keyPath = "backgroundColor"
         colorAnimation.toValue = UIColor.redColor().CGColor
         //colorAnimation.repeatCount = Float.infinity
         
         // group animation
-        var groupAnimation = CAAnimationGroup()
+        let groupAnimation = CAAnimationGroup()
         groupAnimation.animations = [animation, colorAnimation]
         groupAnimation.duration = 4.0
         groupAnimation.repeatCount = Float.infinity
@@ -95,7 +95,7 @@ class AEViewController: UIViewController {
         
         
         // button
-        var button = UIButton(frame: CGRectMake(100, 150, 50, 25))
+        let button = UIButton(frame: CGRectMake(100, 150, 50, 25))
         button.setTitle("OK", forState: UIControlState.Normal)
         button.backgroundColor = UIColor.grayColor()
         button.setTitleColor(UIColor.blueColor(), forState: UIControlState.Normal)
@@ -122,7 +122,7 @@ class AEViewController: UIViewController {
 //        }
 //    }
     
-    func applyBasicAnimation(canimation: CABasicAnimation, var calayer: CALayer){
+    func applyBasicAnimation(canimation: CABasicAnimation, calayer: CALayer){
         var layer = calayer
         if let l = calayer.presentationLayer() as? CALayer{
             layer = l
@@ -134,16 +134,16 @@ class AEViewController: UIViewController {
         
         CATransaction.begin()
         CATransaction.setDisableActions(true)
-        calayer.setValue(canimation.toValue, forKey: canimation.keyPath)
+        calayer.setValue(canimation.toValue, forKey: canimation.keyPath!)
         CATransaction.commit()
         
         calayer.addAnimation(canimation, forKey: nil)
     }
     
-    override func animationDidStop(anim: CAAnimation!, finished flag: Bool) {
+    override func animationDidStop(anim: CAAnimation, finished flag: Bool) {
         CATransaction.begin()
         CATransaction.setDisableActions(true)
-        var v = anim.valueForKey("colorAnim") as! CALayer
+        let v = anim.valueForKey("colorAnim") as! CALayer
         v.backgroundColor = (anim as! CABasicAnimation).toValue as! CGColor
         CATransaction.commit()
     }
@@ -153,7 +153,7 @@ class AEViewController: UIViewController {
     }
     
     func keyframeAnimation(){
-        var animation = CAKeyframeAnimation()
+        let animation = CAKeyframeAnimation()
         animation.keyPath = "backgroundColor"
         animation.duration = 10.0
         animation.values = [
@@ -171,13 +171,13 @@ class AEViewController: UIViewController {
     func basicAnimation(){
         
         
-                var red = CGFloat(arc4random_uniform(255)) / CGFloat(255.0)
-                var green = CGFloat(arc4random_uniform(255)) / CGFloat(255.0)
-                var blue = CGFloat(arc4random_uniform(255)) / CGFloat(255.0)
+                let red = CGFloat(arc4random_uniform(255)) / CGFloat(255.0)
+                let green = CGFloat(arc4random_uniform(255)) / CGFloat(255.0)
+                let blue = CGFloat(arc4random_uniform(255)) / CGFloat(255.0)
         
-                var color = UIColor(red: red, green: green, blue: blue, alpha: 1.0).CGColor
+                let color = UIColor(red: red, green: green, blue: blue, alpha: 1.0).CGColor
         
-                var animation = CABasicAnimation()
+                let animation = CABasicAnimation()
                 animation.duration = 1
                 animation.keyPath = "backgroundColor"
                 animation.toValue = color

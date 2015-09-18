@@ -30,7 +30,7 @@ class GraphView: UIView {
         
         let gradient = CGGradientCreateWithColors(colorSpace, colors, colorLocations)
         
-        var startPoint = CGPoint.zeroPoint
+        var startPoint = CGPoint.zero
         var endPoint = CGPoint(x: 0, y: self.bounds.height)
         
         CGContextDrawLinearGradient(context, gradient, startPoint, endPoint, 0)

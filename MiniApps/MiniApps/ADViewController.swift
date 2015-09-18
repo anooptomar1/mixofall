@@ -27,7 +27,7 @@ class ADViewController: UIViewController {
     
     func doorPrep(){
         // create a layer
-        var layer = CALayer()
+        let layer = CALayer()
         layer.frame = CGRectMake(0, 0, 50, 100)
         layer.position = CGPointMake(90, 50)
         layer.anchorPoint = CGPointMake(0, 0.5)
@@ -42,19 +42,19 @@ class ADViewController: UIViewController {
         self.imageView.layer.sublayerTransform = transform
         
         // applyAnimation
-        var animation = CABasicAnimation()
+        let animation = CABasicAnimation()
         animation.keyPath = "transform.rotation.y"
         animation.toValue = CGFloat(M_PI_2)
-        animation.duration = (self.animDuration.text as NSString).doubleValue
-        animation.repeatCount = (self.animRepeat.text as NSString).floatValue
+        animation.duration = (self.animDuration.text as NSString?)!.doubleValue
+        animation.repeatCount = (self.animRepeat.text as NSString?)!.floatValue
         animation.autoreverses = true
         
         self.imageView.layer.addAnimation(animation, forKey: "rotateImageAnim")
     }
     
     func faceAnimation(){
-        var duration = (self.animDuration.text as NSString).doubleValue
-        var repeatCount = (self.animRepeat.text as NSString).floatValue
+        var duration = (self.animDuration.text as NSString?)!.doubleValue
+        var repeatCount = (self.animRepeat.text as NSString?)!.floatValue
         
         var animation = CABasicAnimation()
         animation.keyPath = "transform.rotation"
@@ -68,7 +68,7 @@ class ADViewController: UIViewController {
         self.setControls(false)
     }
     
-    override func animationDidStop(anim: CAAnimation!, finished flag: Bool) {
+    override func animationDidStop(anim: CAAnimation, finished flag: Bool) {
         self.setControls(true)
     }
     

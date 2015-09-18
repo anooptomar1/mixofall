@@ -12,7 +12,7 @@ class CalculatorBrain {
     
     var knownOperations = [String: Op]()
     
-    enum Op: Printable{
+    enum Op: CustomStringConvertible{
         case operand(value: Double)
         case unaryOperation(symbol: String, Double -> Double)
         case binaryOperation(symbol: String, (Double, Double) -> Double)
@@ -48,7 +48,7 @@ class CalculatorBrain {
                     }
                 }
             case .unaryOperation(_, let operation):
-                var op1 = evaluate(remainingOps)
+                let op1 = evaluate(remainingOps)
                 if let op1Eval = op1.result{
                     return (operation(op1Eval),remainingOps)
                 }
@@ -60,7 +60,7 @@ class CalculatorBrain {
     
     func evaluate(){
         var (result, remainingOps) = evaluate(opStack)
-        println("result: \(result), remaining Ops: \(remainingOps)")
+        print("result: \(result), remaining Ops: \(remainingOps)")
     }
     
     init(){

@@ -23,7 +23,7 @@ class WeatherLocationsViewController: UIViewController {
     }
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "newLocation"{
-            var vc = segue.destinationViewController as! NewWeatherViewController
+            let vc = segue.destinationViewController as! NewWeatherViewController
             vc.delegate = self
             vc.sourceVC = self
         }
@@ -43,7 +43,7 @@ class WeatherLocationsViewController: UIViewController {
     }
     
     func setWeatherData(){
-        var items = NSMutableArray()
+        let items = NSMutableArray()
         for d in data{
             let item = NSKeyedArchiver.archivedDataWithRootObject(d)
             items.addObject(item)
@@ -69,7 +69,7 @@ extension WeatherLocationsViewController: UITableViewDelegate, UITableViewDataSo
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell = table.dequeueReusableCellWithIdentifier("Cell") as? UITableViewCell
+        var cell = table.dequeueReusableCellWithIdentifier("Cell") as UITableViewCell?
         if cell == nil{
             cell = UITableViewCell(style: UITableViewCellStyle.Value1, reuseIdentifier: "Cell")
         }

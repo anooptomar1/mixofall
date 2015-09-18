@@ -33,15 +33,15 @@ class TEViewController: UIViewController {
     func animationWithCustomTransition(){
         
         UIGraphicsBeginImageContextWithOptions(self.view.bounds.size, true, 0.0)
-        self.view.layer.renderInContext(UIGraphicsGetCurrentContext())
-        var coverImage = UIGraphicsGetImageFromCurrentImageContext()
+        self.view.layer.renderInContext(UIGraphicsGetCurrentContext()!)
+        let coverImage = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         
         var images = [UIImage(named: "nerdy")!, UIImage(named: "sad")!, UIImage(named: "fish")!, UIImage(named: "ball")!]
         self.v.addSubview(imageView!)
         //imageView!.layer.addAnimation(transition, forKey: nil)
         
-        var currentImage = imageView!.image
+        let currentImage = imageView!.image
         var idx = 0
         if currentImage == nil{
             idx = 0
@@ -53,15 +53,15 @@ class TEViewController: UIViewController {
         imageView!.image = images[idx]
         
         
-        var cv = UIImageView(image: coverImage)
+        let cv = UIImageView(image: coverImage)
         cv.frame = self.view.bounds
         self.view.addSubview(cv)
         
-        var red = CGFloat(arc4random_uniform(255)) / CGFloat(255.0)
-        var green = CGFloat(arc4random_uniform(255)) / CGFloat(255.0)
-        var blue = CGFloat(arc4random_uniform(255)) / CGFloat(255.0)
+        let red = CGFloat(arc4random_uniform(255)) / CGFloat(255.0)
+        let green = CGFloat(arc4random_uniform(255)) / CGFloat(255.0)
+        let blue = CGFloat(arc4random_uniform(255)) / CGFloat(255.0)
         
-        var color = UIColor(red: red, green: green, blue: blue, alpha: 1.0)
+        let color = UIColor(red: red, green: green, blue: blue, alpha: 1.0)
 
         self.view.backgroundColor = color
         
@@ -84,13 +84,13 @@ class TEViewController: UIViewController {
         // imageView.image = images[0]
         self.v.addSubview(imageView!)
         
-        var transition = CATransition()
+        let transition = CATransition()
         transition.type = kCATransitionReveal
         transition.subtype = kCATransitionFromRight
         
         imageView!.layer.addAnimation(transition, forKey: nil)
         
-        var currentImage = imageView!.image
+        let currentImage = imageView!.image
         var idx = 0
         if currentImage == nil{
             idx = 0

@@ -85,7 +85,7 @@ class TransformViewController: UIViewController {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "imagSegue"{
-            var destController = segue.destinationViewController as! SnapViewController
+            let destController = segue.destinationViewController as! SnapViewController
             destController.image = img
         }
     }
@@ -105,7 +105,7 @@ class TransformViewController: UIViewController {
     }
    
     @IBAction func onSlider(sender: UISlider){
-        var theSlider = Sliders(rawValue: (sliders as NSArray).indexOfObject(sender))!
+        let theSlider = Sliders(rawValue: (sliders as NSArray).indexOfObject(sender))!
         
         switch theSlider{
         case Sliders.rotation:

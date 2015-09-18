@@ -28,8 +28,8 @@ class ImgViewController: UIViewController {
         var ballLeft = CGImageCreateWithImageInRect(ballCG, CGRectMake(0, 0, sizeCG.width / 2, sizeCG.height))
         var ballRight = CGImageCreateWithImageInRect(ballCG, CGRectMake(sizeCG.width / 2, 0, sizeCG.width / 2, sizeCG.height))
         UIGraphicsBeginImageContextWithOptions(CGSizeMake(sz.width, sz.height), false, 0)
-        UIImage(CGImage: ballLeft, scale: ball!.scale, orientation: ball!.imageOrientation)!.drawAtPoint(CGPointMake(0, 0))
-        UIImage(CGImage: ballRight, scale: ball!.scale, orientation: ball!.imageOrientation)!.drawAtPoint(CGPointMake(sz.width / 2 + 2, 0))
+        UIImage(CGImage: ballLeft!, scale: ball!.scale, orientation: ball!.imageOrientation).drawAtPoint(CGPointMake(0, 0))
+        UIImage(CGImage: ballRight!, scale: ball!.scale, orientation: ball!.imageOrientation).drawAtPoint(CGPointMake(sz.width / 2 + 2, 0))
         var im = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         var image = UIImageView(frame: CGRectMake(200, 100, sz.width, sz.height))
@@ -53,9 +53,9 @@ class ImgViewController: UIViewController {
         // get current context
         var con = UIGraphicsGetCurrentContext()
         // draw image from 0,0 to half width and full height
-        CGContextDrawImage(con, CGRectMake(0, 0, sz!.width / 2, sz!.height), flipImage(ballLeft))
+        CGContextDrawImage(con, CGRectMake(0, 0, sz!.width / 2, sz!.height), flipImage(ballLeft!))
         // draw other part of image from half width + 2 to full width .. width as half of the image size and full height
-        CGContextDrawImage(con, CGRectMake(sz!.width/2, 0, sz!.width / 2, sz!.height), flipImage(ballRight))
+        CGContextDrawImage(con, CGRectMake(sz!.width/2, 0, sz!.width / 2, sz!.height), flipImage(ballRight!))
         // g,et image out from drawn context
         var im = UIGraphicsGetImageFromCurrentImageContext()
         // close graphics context
@@ -77,19 +77,19 @@ class ImgViewController: UIViewController {
         CGContextDrawImage(UIGraphicsGetCurrentContext(), CGRectMake(0, 0, sz.width, sz.height), im)
         let image = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
-        return image.CGImage
+        return image.CGImage!
     }
     
     func drawAnotherImage(){
-        var img = UIImage(named: "ball")!
-        var sz = img.size
+        let img = UIImage(named: "ball")!
+        let sz = img.size
         UIGraphicsBeginImageContextWithOptions(CGSizeMake(sz.width*2, sz.height), false, 0)
         img.drawAtPoint(CGPointMake(0, 0))
         img.drawAtPoint(CGPointMake(sz.width, 0))
-        var im = UIGraphicsGetImageFromCurrentImageContext()
+        let im = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
-        var imageView = UIImageView(image: im)
-        var newView = UIView(frame: CGRectMake(0, myview.bounds.size.height, sz.width, sz.height))
+        let imageView = UIImageView(image: im)
+        let newView = UIView(frame: CGRectMake(0, myview.bounds.size.height, sz.width, sz.height))
         newView.addSubview(imageView)
         self.view.addSubview(newView)
     }

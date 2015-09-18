@@ -8,11 +8,18 @@
 
 import Foundation
 class JSONParser {
-    class func parse(data: NSData, inout error: NSError?) -> JSON?{
-        var parsedObject: AnyObject? = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: &error)
+    class func parse(data: NSData) throws -> JSON{
+        var error: NSError! = NSError(domain: "Migrator", code: 0, userInfo: nil)
+        var parsedObject: AnyObject?
+        do {
+            parsedObject = try NSJSONSerialization.JSONObjectWithData(data, options: [])
+        } catch let error1 as NSError {
+            error = error1
+            parsedObject = nil
+        }
         if let obj: AnyObject = parsedObject{
             return JSON(parsedObject: obj)
         }
-        return nil
+        throw error
     }
 }

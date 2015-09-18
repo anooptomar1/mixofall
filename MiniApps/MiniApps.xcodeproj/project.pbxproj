@@ -902,6 +902,8 @@
 		894FEF181B2F2FDE00F9DB4C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftMigration = 0700;
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = "Anoop tomar";
 				TargetAttributes = {

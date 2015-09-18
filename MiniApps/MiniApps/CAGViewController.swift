@@ -29,10 +29,10 @@ class CAGViewController: UIViewController {
         dismissViewControllerAnimated(true, completion: nil)
     }
     func transitionViews(){
-        var view1 = UIView(frame: CGRectMake(100,100,200,200))
+        let view1 = UIView(frame: CGRectMake(100,100,200,200))
         view1.backgroundColor = UIColor.redColor()
         
-        var view2 = UIView(frame: CGRectMake(100,100,200,200))
+        let view2 = UIView(frame: CGRectMake(100,100,200,200))
         view2.backgroundColor = UIColor.blueColor()
         
         self.view.addSubview(view1)
@@ -41,7 +41,7 @@ class CAGViewController: UIViewController {
         view1.hidden = false
         view2.hidden = true
 
-        var transition = CATransition()
+        let transition = CATransition()
         transition.startProgress = 0
         transition.endProgress = 1
         transition.type = kCATransitionPush
@@ -61,7 +61,7 @@ class CAGViewController: UIViewController {
         UIView.animateWithDuration(5, animations: { () -> Void in
             self.v.layer.opacity = 0.0
             
-            var animation = CABasicAnimation(keyPath: "position")
+            let animation = CABasicAnimation(keyPath: "position")
             animation.fromValue = NSValue(CGPoint: self.v.layer.position)
             animation.toValue = NSValue(CGPoint: CGPointMake(self.v.layer.position.x+100, self.v.layer.position.y+100))
             animation.duration = 5
@@ -72,16 +72,16 @@ class CAGViewController: UIViewController {
     func groupAnimation(){
         // rotation animation
         
-        var rotateAnimation = CABasicAnimation(keyPath: "transform.rotation")
+        let rotateAnimation = CABasicAnimation(keyPath: "transform.rotation")
         rotateAnimation.fromValue = 0
         rotateAnimation.toValue = M_PI*2
         
         // rotation on y
-        var yAnimation = CABasicAnimation(keyPath: "transform.rotation.x")
+        let yAnimation = CABasicAnimation(keyPath: "transform.rotation.x")
         yAnimation.fromValue = 0
         yAnimation.toValue = M_PI*2
         
-        var groupAnim = CAAnimationGroup()
+        let groupAnim = CAAnimationGroup()
         groupAnim.animations = [rotateAnimation, yAnimation]
         groupAnim.duration = 2
         groupAnim.repeatCount = Float.infinity
@@ -95,12 +95,12 @@ class CAGViewController: UIViewController {
     }
     
     func moveLayerByFrame(){
-        var path = CGPathCreateMutable()
+        let path = CGPathCreateMutable()
         CGPathMoveToPoint(path, nil, 74, 74)
         CGPathAddCurveToPoint(path, nil, 74, 100, 320, 100, 120, 74)
         CGPathAddCurveToPoint(path, nil, 100, 300, 366, 300, 366, 74)
         
-        var animation = CAKeyframeAnimation(keyPath: "position")
+        let animation = CAKeyframeAnimation(keyPath: "position")
         animation.path = path
         animation.duration = 5
         
@@ -113,7 +113,7 @@ class CAGViewController: UIViewController {
         //vLayer.opacity = 0.0
         
         //create caBasicAnimation to control animation properties
-        var animation = CABasicAnimation(keyPath: "opacity")
+        let animation = CABasicAnimation(keyPath: "opacity")
         // animation property from value
         animation.fromValue = 0.0
         // animation property to value
@@ -134,7 +134,7 @@ class CAGViewController: UIViewController {
         self.view.addSubview(v)
         
         // get shapelayer override and apply UIBezierPath
-        var path = UIBezierPath(arcCenter: CGPointMake(v.bounds.size.width/2, v.bounds.size.height/2), radius: v.bounds.size.width/2, startAngle: 0, endAngle: CGFloat(M_PI*2), clockwise: true)
+        let path = UIBezierPath(arcCenter: CGPointMake(v.bounds.size.width/2, v.bounds.size.height/2), radius: v.bounds.size.width/2, startAngle: 0, endAngle: CGFloat(M_PI*2), clockwise: true)
         
         // adding path to backing layer
         vLayer.path = path.CGPath

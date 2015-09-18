@@ -50,19 +50,19 @@ class weatherCity: NSObject{
     }
     
     class func getTempFromWeatherJSON(data: NSDictionary) -> String{
-        var temp = (((((data["list"] as! NSArray)[0] as! NSDictionary)["main"] as! NSDictionary)["temp"]) as! Double)
+        let temp = (((((data["list"] as! NSArray)[0] as! NSDictionary)["main"] as! NSDictionary)["temp"]) as! Double)
         return "\(temp)"
     }
     
     class func convertJSONToWeatherCity(data: NSDictionary) -> weatherCity{
-        var address_components = ((data["results"] as! NSArray)[0] as! NSDictionary)["address_components"] as! NSArray
+        let address_components = ((data["results"] as! NSArray)[0] as! NSDictionary)["address_components"] as! NSArray
         //println(address_components)
         // 0 as postal code
-        var postalCode = (address_components[0] as! NSDictionary)["short_name"] as! String
+        let postalCode = (address_components[0] as! NSDictionary)["short_name"] as! String
         // 1 as city name
-        var cityName = (address_components[1] as! NSDictionary)["short_name"] as! String
+        let cityName = (address_components[1] as! NSDictionary)["short_name"] as! String
         // 2 as state
-        var state = (address_components[2] as! NSDictionary)["short_name"] as! String
+        let state = (address_components[2] as! NSDictionary)["short_name"] as! String
         
         return weatherCity(name: "\(cityName),\(state)", zipcode: "\(postalCode)")
     }

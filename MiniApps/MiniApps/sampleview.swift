@@ -16,7 +16,7 @@ class sampleview: UIView {
         p.fill()
     }
 
-    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
-        println("ouch")
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        print("ouch")
     }
 }

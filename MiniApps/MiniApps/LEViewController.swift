@@ -47,7 +47,7 @@ class LEViewController: UIViewController {
         
         
         
-        var path = UIBezierPath(arcCenter: CGPoint(x: v.bounds.size.width/2, y: v.bounds.size.height/2), radius: v.bounds.size.width/2+10, startAngle: 0, endAngle: CGFloat(M_PI), clockwise: true)
+        let path = UIBezierPath(arcCenter: CGPoint(x: v.bounds.size.width/2, y: v.bounds.size.height/2), radius: v.bounds.size.width/2+10, startAngle: 0, endAngle: CGFloat(M_PI), clockwise: true)
         
         cl = CAShapeLayer()
         (cl as! CAShapeLayer).path = path.CGPath
@@ -64,7 +64,7 @@ class LEViewController: UIViewController {
         
         // rotation animation
         
-        var animation = CABasicAnimation(keyPath: "transform.rotation")
+        let animation = CABasicAnimation(keyPath: "transform.rotation")
         animation.byValue = CGFloat(M_PI*2)
         animation.duration = 5
         animation.repeatCount = Float.infinity
@@ -83,18 +83,18 @@ class LEViewController: UIViewController {
     }
     
     func tick(){
-        var calendar = NSCalendar(identifier: NSCalendarIdentifierGregorian)
-        var units = NSCalendarUnit.CalendarUnitHour | NSCalendarUnit.CalendarUnitMinute | NSCalendarUnit.CalendarUnitSecond
+        let calendar = NSCalendar(identifier: NSCalendarIdentifierGregorian)
+        let units: NSCalendarUnit = [NSCalendarUnit.Hour, NSCalendarUnit.Minute, NSCalendarUnit.Second]
         
-        var components = calendar?.components(units, fromDate: NSDate())
-        var hour = (components!.hour<10) ? "0\(components!.hour)" : "\(components!.hour)"
-        var minute = components!.minute<10 ? "0\(components!.minute)" : "\(components!.minute)"
-        var second = components!.second<10 ? "0\(components!.second)" : "\(components!.second)"
+        let components = calendar?.components(units, fromDate: NSDate())
+        let hour = (components!.hour<10) ? "0\(components!.hour)" : "\(components!.hour)"
+        let minute = components!.minute<10 ? "0\(components!.minute)" : "\(components!.minute)"
+        let second = components!.second<10 ? "0\(components!.second)" : "\(components!.second)"
         label.text = "\(hour):\(minute):\(second)"
         
-        var red = CGFloat(arc4random_uniform(255)) / CGFloat(255.0)
-        var green = CGFloat(arc4random_uniform(255)) / CGFloat(255.0)
-        var blue = CGFloat(arc4random_uniform(255)) / CGFloat(255.0)
+        let red = CGFloat(arc4random_uniform(255)) / CGFloat(255.0)
+        let green = CGFloat(arc4random_uniform(255)) / CGFloat(255.0)
+        let blue = CGFloat(arc4random_uniform(255)) / CGFloat(255.0)
 
         
         (cl as! CAShapeLayer).strokeColor = UIColor(red: red, green: green, blue: blue, alpha: 1.0).CGColor
@@ -109,7 +109,7 @@ class LEViewController: UIViewController {
     }
     
     func changeColor(){
-        var animation = CAKeyframeAnimation()
+        let animation = CAKeyframeAnimation()
         animation.keyPath = "backgroundColor"
         animation.duration = 1.0
         animation.values = [UIColor.lightGrayColor().CGColor,
@@ -118,7 +118,7 @@ class LEViewController: UIViewController {
                             UIColor.blueColor().CGColor,
                             UIColor.lightGrayColor().CGColor]
         
-        var timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseIn)
+        let timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseIn)
         animation.timingFunctions = [timingFunction, timingFunction, timingFunction, timingFunction]
         cl.addAnimation(animation, forKey: "backAnimation")
     }
@@ -142,8 +142,8 @@ class LEViewController: UIViewController {
         self.view.layer.addSublayer(cl)
     }
     
-    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
-        var touch = (touches.first as! UITouch).locationInView(self.view)
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        var touch = (touches.first as UITouch?)!.locationInView(self.view)
        // moveLayer(touch)
        // moveView(touch)
        // changeColor()
@@ -151,7 +151,7 @@ class LEViewController: UIViewController {
     }
     
     func performRotation(){
-        var animation = CABasicAnimation(keyPath: "transform.rotation")
+        let animation = CABasicAnimation(keyPath: "transform.rotation")
         animation.byValue = CGFloat(M_PI*2)
         animation.duration = 5
         animation.repeatCount = 4
@@ -173,11 +173,11 @@ class LEViewController: UIViewController {
         cl.position = touchPoint
         
         if flag{
-            var transform = CGAffineTransformMakeRotation(CGFloat(M_PI))
+            let transform = CGAffineTransformMakeRotation(CGFloat(M_PI))
             cl.transform = CATransform3DMakeAffineTransform(transform)
             flag = false
         }else{
-            var transform = CGAffineTransformMakeRotation(CGFloat(M_PI * 2))
+            let transform = CGAffineTransformMakeRotation(CGFloat(M_PI * 2))
             cl.transform = CATransform3DMakeAffineTransform(transform)
             flag = true
         }
@@ -187,15 +187,15 @@ class LEViewController: UIViewController {
     
     func cometDial(){
         // container view
-        var v = UIView(frame: CGRectMake(0, 100, 300, 300))
+        let v = UIView(frame: CGRectMake(0, 100, 300, 300))
         //v.backgroundColor = UIColor.blueColor()
         self.view.addSubview(v)
         
        // v.layer.contents = UIImage(named: "earth")?.CGImage
         
         // add circle layer
-        var path = UIBezierPath(arcCenter: CGPointMake(v.bounds.width/2, v.bounds.height/2), radius: v.bounds.width/2 - 50, startAngle: 0, endAngle: CGFloat(M_PI * 2), clockwise: true)
-        var shapeLayer = CAShapeLayer()
+        let path = UIBezierPath(arcCenter: CGPointMake(v.bounds.width/2, v.bounds.height/2), radius: v.bounds.width/2 - 50, startAngle: 0, endAngle: CGFloat(M_PI * 2), clockwise: true)
+        let shapeLayer = CAShapeLayer()
         shapeLayer.path = path.CGPath
         
         shapeLayer.fillColor = UIColor.blueColor().CGColor
@@ -216,8 +216,8 @@ class LEViewController: UIViewController {
 //        outerLayer.lineWidth = 10
 //        outerLayer.lineJoin = kCALineJoinMiter
 //        outerLayer.lineCap = kCALineCapRound
-        var outerLayer = CALayer()
-        var image = UIImage(named: "asteroid")!
+        let outerLayer = CALayer()
+        let image = UIImage(named: "asteroid")!
         outerLayer.contents = image.CGImage
         outerLayer.frame = CGRectMake(0, 0, 25, 25)
         var transform = CGAffineTransformIdentity
@@ -226,10 +226,10 @@ class LEViewController: UIViewController {
         v.layer.addSublayer(outerLayer)
         
         // path for ball
-        var ballPath = UIBezierPath(arcCenter: CGPointMake(v.bounds.width/2, v.bounds.height/2), radius: v.bounds.width/2 - 35, startAngle: 0, endAngle: CGFloat(M_PI * 2), clockwise: true)
+        let ballPath = UIBezierPath(arcCenter: CGPointMake(v.bounds.width/2, v.bounds.height/2), radius: v.bounds.width/2 - 35, startAngle: 0, endAngle: CGFloat(M_PI * 2), clockwise: true)
         
         // animation
-        var pathAnimation = CAKeyframeAnimation()
+        let pathAnimation = CAKeyframeAnimation()
         pathAnimation.keyPath = "position"
         // instead using duration of 4 sec from animation group
         pathAnimation.duration = 10.0
@@ -252,12 +252,12 @@ class LEViewController: UIViewController {
     }
     
     func gradientDial(){
-        var v = UIView(frame: CGRectMake(0, 100, 300, 300))
+        let v = UIView(frame: CGRectMake(0, 100, 300, 300))
         //v.backgroundColor = UIColor.redColor()
         
         // circle shape of radius half of rect width
-        var shapeLayer = CAShapeLayer()
-        var path = UIBezierPath()
+        let shapeLayer = CAShapeLayer()
+        let path = UIBezierPath()
         path.addArcWithCenter(CGPointMake(v.frame.width/2.0, v.frame.height/2.0), radius: v.frame.width/2.0 - 10, startAngle: CGFloat(0), endAngle: CGFloat(M_PI*2), clockwise: false)
     
         shapeLayer.path = path.CGPath
@@ -269,7 +269,7 @@ class LEViewController: UIViewController {
         shapeLayer.lineJoin = kCALineCapButt
         
         // stroke animation to draw line
-        var animation = CABasicAnimation(keyPath: "strokeEnd")
+        let animation = CABasicAnimation(keyPath: "strokeEnd")
         animation.duration = 5
         animation.repeatCount = 1
         animation.removedOnCompletion = false
@@ -282,7 +282,7 @@ class LEViewController: UIViewController {
         
         
         // add gradientLayer to base layer and mask it with shapelayer created earlier
-        var gradientLayer = CAGradientLayer()
+        let gradientLayer = CAGradientLayer()
         gradientLayer.frame = v.bounds
         gradientLayer.colors = [UIColor.redColor().CGColor, UIColor.blueColor().CGColor, UIColor.greenColor().CGColor, UIColor.yellowColor().CGColor, UIColor.brownColor().CGColor]
         gradientLayer.locations = [0.0, 0.25, 0.5, 0.75, 1.0]
@@ -292,7 +292,7 @@ class LEViewController: UIViewController {
         self.view.addSubview(v)
         
         // add uilabel
-        var label = UILabel(frame: CGRectMake(v.frame.width/2 - v.bounds.width/2, v.frame.height/2 - 40, v.bounds.width, 80))
+        let label = UILabel(frame: CGRectMake(v.frame.width/2 - v.bounds.width/2, v.frame.height/2 - 40, v.bounds.width, 80))
         
         label.textColor = UIColor.blueColor()
         label.text = "Hola Como Esta!"
@@ -338,13 +338,13 @@ class LEViewController: UIViewController {
         
         var attrs: [NSObject: AnyObject] = [kCTForegroundColorAttributeName: UIColor.grayColor().CGColor, kCTFontAttributeName: fontRef]
         
-        str.setAttributes(attrs, range: NSMakeRange(0, count(text)))
+       // str.setAttributes(attrs, range: NSMakeRange(0, text.characters.count))
         
         attrs = [kCTForegroundColorAttributeName: UIColor.blueColor().CGColor, kCTUnderlineStyleAttributeName: NSNumber(int: CTUnderlineStyle.Double.rawValue), kCTFontAttributeName: fontRef]
         
-        str.setAttributes(attrs, range: NSMakeRange(5, 14))
+        //str.setAttributes(attrs, range: NSMakeRange(5, 14))
         
-        str.setAttributes(attrs, range: NSMakeRange(20, 4))
+       // str.setAttributes(attrs, range: NSMakeRange(20, 4))
         
         textL.string = str
         
@@ -353,19 +353,19 @@ class LEViewController: UIViewController {
     }
     
     func roundedButton(){
-        var button = UIButton(frame: CGRectMake(100, 100, 150, 40))
+        let button = UIButton(frame: CGRectMake(100, 100, 150, 40))
         button.setTitle("My Button", forState: UIControlState.Normal)
         button.setTitleColor(UIColor.blueColor(), forState: UIControlState.Normal)
         //button.backgroundColor = UIColor.redColor()
         
-        var rect = button.bounds
-        var radii = CGSizeMake(20, 20)
+        let rect = button.bounds
+        let radii = CGSizeMake(20, 20)
         
-        var corners = UIRectCorner.TopLeft | UIRectCorner.BottomRight
+        let corners: UIRectCorner = [UIRectCorner.TopLeft, UIRectCorner.BottomRight]
         
-        var path = UIBezierPath(roundedRect: rect, byRoundingCorners: corners, cornerRadii: radii)
+        let path = UIBezierPath(roundedRect: rect, byRoundingCorners: corners, cornerRadii: radii)
         
-        var shapeLayer = CAShapeLayer()
+        let shapeLayer = CAShapeLayer()
         shapeLayer.strokeColor = UIColor.lightGrayColor().CGColor
         // UIColor * color = [UIColor colorWithRed:212/255.0f green:246/255.0f blue:122/255.0f alpha:1.0f];
         shapeLayer.fillColor = UIColor(red: convertToCGFloat(212.0/255.0), green: convertToCGFloat(246.0/255.0), blue: convertToCGFloat(122.0/255.0), alpha: convertToCGFloat(1.0)).CGColor
@@ -381,7 +381,7 @@ class LEViewController: UIViewController {
     }
     
     func canvasExample(){
-        var path = UIBezierPath()
+        let path = UIBezierPath()
         path.moveToPoint(CGPointMake(75, 150))
         path.addArcWithCenter(CGPointMake(50, 150), radius: 25, startAngle: convertToCGFloat(0), endAngle: convertToCGFloat(2 * M_PI), clockwise: true)
         path.moveToPoint(CGPointMake(50, 175))
@@ -389,7 +389,7 @@ class LEViewController: UIViewController {
         path.moveToPoint(CGPointMake(50, 185))
         path.addLineToPoint(CGPointMake(125, 150))
         
-        var shapeLayer = CAShapeLayer()
+        let shapeLayer = CAShapeLayer()
         shapeLayer.strokeColor = UIColor.blueColor().CGColor
         shapeLayer.fillColor = UIColor.clearColor().CGColor
         shapeLayer.lineWidth = 5
@@ -401,7 +401,7 @@ class LEViewController: UIViewController {
     }
     
     func addViewOne(){
-        var viewOne = UIView(frame: CGRectMake(100, 100, 100, 100))
+        let viewOne = UIView(frame: CGRectMake(100, 100, 100, 100))
         let image = UIImage(named: "nerdy")
         viewOne.layer.contents = image?.CGImage
         self.view.addSubview(viewOne)

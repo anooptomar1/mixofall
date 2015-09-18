@@ -10,13 +10,21 @@ import Foundation
 class RestClient {
     class func Get(urlString: String, callback: (JSON?, NSError?) -> ()){
         let url = NSURL(string: urlString)
-        let task = NSURLSession.sharedSession().dataTaskWithURL(url!, completionHandler: { (data: NSData!, response: NSURLResponse!, error: NSError!) -> Void in
+        let task = NSURLSession.sharedSession().dataTaskWithURL(url!, completionHandler: { (data: NSData?, response: NSURLResponse?, error: NSError?) -> Void in
             if let err = error{
                 callback(nil, err)
             }
             
             var parseError: NSError?
-            var parsedData = JSONParser.parse(data, error: &parseError)
+            var parsedData: JSON?
+            do {
+                parsedData = try JSONParser.parse(data!)
+            } catch var error as NSError {
+                parseError = error
+                parsedData = nil
+            } catch {
+                fatalError()
+            }
             if let err = parseError{
                 callback(nil, err)
             }
@@ -33,16 +41,30 @@ class RestClient {
         request.addValue("application/json", forHTTPHeaderField: "Content-type")
         request.addValue("application/json", forHTTPHeaderField: "Accept")
         var paramError: NSError?
-        var paramData = NSJSONSerialization.dataWithJSONObject(data, options: NSJSONWritingOptions.allZeros, error: &paramError)
+        var paramData: NSData?
+        do {
+            paramData = try NSJSONSerialization.dataWithJSONObject(data, options: NSJSONWritingOptions())
+        } catch var error as NSError {
+            paramError = error
+            paramData = nil
+        }
         request.HTTPBody = paramData
         
-        let task = NSURLSession.sharedSession().dataTaskWithRequest(request, completionHandler: { (data: NSData!, response:NSURLResponse!, error: NSError!) -> Void in
+        let task = NSURLSession.sharedSession().dataTaskWithRequest(request, completionHandler: { (data: NSData?, response:NSURLResponse?, error: NSError?) -> Void in
             if let err = error{
                 callback(nil, err)
             }
             
             var parseError: NSError?
-            var parseObject = JSONParser.parse(data, error: &parseError)
+            var parseObject: JSON?
+            do {
+                parseObject = try JSONParser.parse(data!)
+            } catch var error as NSError {
+                parseError = error
+                parseObject = nil
+            } catch {
+                fatalError()
+            }
             if let err = parseError{
                 callback(nil, err)
             }

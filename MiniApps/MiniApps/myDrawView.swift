@@ -17,7 +17,7 @@ class MyDrawView: UIView {
         if touchPoints.count > 1 {
             //CGContextRestoreGState(con)
             con = UIGraphicsGetCurrentContext()
-            var lastPoint = touchPoints.removeLast()
+            let lastPoint = touchPoints.removeLast()
             CGContextMoveToPoint(con, lastPoint.x, lastPoint.y)
             CGContextAddLineToPoint(con, touchPoints.last!.x, touchPoints.last!.y)
             CGContextSetRGBStrokeColor(con, 0.0, 0.0, 1.0, 1.0)
@@ -27,8 +27,8 @@ class MyDrawView: UIView {
         }
     }
     
-    override func touchesEnded(touches: Set<NSObject>, withEvent event: UIEvent) {
-        for touch in touches as! Set<UITouch>{
+    override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        for touch in touches {
             touchPoints.append(touch.locationInView(self))
         }
         self.setNeedsDisplay()

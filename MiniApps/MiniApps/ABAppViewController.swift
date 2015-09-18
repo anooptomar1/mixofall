@@ -33,24 +33,24 @@ class ABAppViewController: UIViewController {
             self.readFromAddressBook(addressBook)
             
         case ABAuthorizationStatus.Denied:
-            println("AddressBook permission denied")
+            print("AddressBook permission denied")
             
         case ABAuthorizationStatus.NotDetermined:
-            println("AddressBook permissions not determined")
+            print("AddressBook permissions not determined")
             ABAddressBookRequestAccessWithCompletion(addressBook, { [weak self] (granted: Bool, error: CFError!) in
                 if granted{
                     let strongSelf = self!
                     strongSelf.readFromAddressBook(strongSelf.addressBook)
-                    println("Access granted")
+                    print("Access granted")
                 }else{
-                    println("Access denied")
+                    print("Access denied")
                 }
             })
         case ABAuthorizationStatus.Restricted:
-            println("Access is restricted")
+            print("Access is restricted")
             
         default:
-            println("Unhandled")
+            print("Unhandled")
         }
         
         
@@ -97,7 +97,7 @@ extension ABAppViewController: UITableViewDelegate{}
 
 extension ABAppViewController: UITableViewDataSource{
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell = tableView.dequeueReusableCellWithIdentifier("cell") as? UITableViewCell
+        var cell = tableView.dequeueReusableCellWithIdentifier("cell") as UITableViewCell?
         if cell == nil{
             cell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "cell")
         }

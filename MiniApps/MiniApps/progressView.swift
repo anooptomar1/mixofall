@@ -13,7 +13,7 @@ class progressView: UIView {
     private let progressLayer = CAShapeLayer()
     private var progressLabel: UILabel
     
-    required init(coder aDecoder: NSCoder) {
+    required init?(coder aDecoder: NSCoder) {
         self.progressLabel = UILabel()
         super.init(coder: aDecoder)
         createProgressLabel()
@@ -46,7 +46,7 @@ class progressView: UIView {
         progressLabel.textAlignment = NSTextAlignment.Center
         progressLabel.text = "810"
         progressLabel.font = UIFont(name: "HelveticaNeue-UltraLight", size: 60)
-        progressLabel.setTranslatesAutoresizingMaskIntoConstraints(false)
+        progressLabel.translatesAutoresizingMaskIntoConstraints = false
         addSubview(progressLabel)
         
         addConstraint(NSLayoutConstraint(item: self, attribute: NSLayoutAttribute.CenterX, relatedBy: NSLayoutRelation.Equal, toItem: progressLabel, attribute: NSLayoutAttribute.CenterX, multiplier: 1.0, constant: 0.0))
@@ -58,7 +58,7 @@ class progressView: UIView {
         let endAngle = CGFloat(40 * M_PI/180)
         let center = CGPointMake(CGRectGetWidth(frame)/2, CGRectGetHeight(frame)/2)
         let radius = CGRectGetWidth(frame)/2
-        var path = UIBezierPath()
+        let path = UIBezierPath()
         
         path.addArcWithCenter(center, radius: radius, startAngle: startAngle, endAngle: endAngle, clockwise: true)
         progressLayer.path = path.CGPath
@@ -72,7 +72,7 @@ class progressView: UIView {
         layer.addSublayer(progressLayer)
     }
     
-    override func animationDidStop(anim: CAAnimation!, finished flag: Bool) {
+    override func animationDidStop(anim: CAAnimation, finished flag: Bool) {
         if flag == true{
             progressLabel.text = progressLabel.text!
             progressLabel.textColor = UIColor.greenColor()

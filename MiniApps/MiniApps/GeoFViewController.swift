@@ -48,7 +48,7 @@ class GeoFViewController: UIViewController {
     }
     
     func saveAllGeofences(){
-        var items = NSMutableArray()
+        let items = NSMutableArray()
         for geofence in geofences{
             let item = NSKeyedArchiver.archivedDataWithRootObject(geofence)
             items.addObject(item)
@@ -59,7 +59,7 @@ class GeoFViewController: UIViewController {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "newGeoSegue"{
-            var destVC = (segue.destinationViewController as! UINavigationController).viewControllers.first as! NewGeoTableViewController
+            let destVC = (segue.destinationViewController as! UINavigationController).viewControllers.first as! NewGeoTableViewController
             destVC.delegate = self
         }
     }
@@ -73,8 +73,8 @@ class GeoFViewController: UIViewController {
         // center map on all pin coordinates
         var zoomRect = MKMapRectNull
         for annotation in mapView.annotations{
-            var annotationPoint = MKMapPointForCoordinate((annotation as? MKAnnotation)!.coordinate)
-            var pointRect = MKMapRectMake(annotationPoint.x, annotationPoint.y, 0.1, 0.1)
+            let annotationPoint = MKMapPointForCoordinate((annotation as? MKAnnotation)!.coordinate)
+            let pointRect = MKMapRectMake(annotationPoint.x, annotationPoint.y, 0.1, 0.1)
             zoomRect = MKMapRectUnion(zoomRect, pointRect)
         }
         
@@ -108,14 +108,14 @@ class GeoFViewController: UIViewController {
     }
     
     func regionForGeofence(geofence: Geofence) -> CLCircularRegion{
-        var region = CLCircularRegion(center: geofence.coordinate, radius: geofence.radius, identifier: geofence.identifier)
+        let region = CLCircularRegion(center: geofence.coordinate, radius: geofence.radius, identifier: geofence.identifier)
         region.notifyOnEntry = (geofence.eventType == EventType.onEntry)
         region.notifyOnExit = !region.notifyOnEntry
         return region
     }
     
     func removeGeofence(geofence: Geofence){
-        if let index = find(geofences, geofence){
+        if let index = geofences.indexOf(geofence){
             geofences.removeAtIndex(index)
         }
         
@@ -124,8 +124,8 @@ class GeoFViewController: UIViewController {
     }
     
     func removeRadiusOverlayforGeofence(geofence: Geofence){
-        if let overlays = mapView.overlays{
-            for overlay in overlays{
+        if mapView.overlays.count > 0{
+            for overlay in mapView.overlays{
                 if let circleOverlay = overlay as? MKCircle{
                     var coord = circleOverlay.coordinate
                     if coord.latitude == geofence.coordinate.latitude && coord.longitude == geofence.coordinate.longitude && circleOverlay.radius == geofence.radius{
@@ -139,7 +139,7 @@ class GeoFViewController: UIViewController {
 
 // MARK: MKMapViewDelegate
 extension GeoFViewController: MKMapViewDelegate{
-    func mapView(mapView: MKMapView!, viewForAnnotation annotation: MKAnnotation!) -> MKAnnotationView! {
+    func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView! {
         let identifier = "myGeofence"
         if annotation is Geofence{
             var annotationView = mapView.dequeueReusableAnnotationViewWithIdentifier(identifier) as? MKPinAnnotationView
@@ -147,7 +147,7 @@ extension GeoFViewController: MKMapViewDelegate{
                 annotationView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: identifier)
                 annotationView?.animatesDrop = true
                 annotationView?.canShowCallout = true
-                var removeButton = UIButton.buttonWithType(UIButtonType.Custom) as! UIButton
+                let removeButton = UIButton(type: UIButtonType.Custom)
                 removeButton.frame = CGRectMake(0, 0, 23, 23)
                 removeButton.setImage(UIImage(named: "delete")!, forState: UIControlState.Normal)
                 annotationView?.leftCalloutAccessoryView = removeButton
@@ -159,9 +159,9 @@ extension GeoFViewController: MKMapViewDelegate{
         return nil
     }
     
-    func mapView(mapView: MKMapView!, rendererForOverlay overlay: MKOverlay!) -> MKOverlayRenderer! {
+    func mapView(mapView: MKMapView, rendererForOverlay overlay: MKOverlay) -> MKOverlayRenderer! {
         if overlay is MKCircle{
-            var circleRendrer = MKCircleRenderer(overlay: overlay)
+            let circleRendrer = MKCircleRenderer(overlay: overlay)
             circleRendrer.lineWidth = 2.0
             circleRendrer.strokeColor = UIColor.blueColor()
             circleRendrer.fillColor = UIColor.redColor().colorWithAlphaComponent(0.4)
@@ -170,8 +170,8 @@ extension GeoFViewController: MKMapViewDelegate{
         return nil
     }
     
-    func mapView(mapView: MKMapView!, annotationView view: MKAnnotationView!, calloutAccessoryControlTapped control: UIControl!) {
-        var geofence = view.annotation as! Geofence
+    func mapView(mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
+        let geofence = view.annotation as! Geofence
         stopMonitoringForGeofence(geofence)
         removeGeofence(geofence)
         saveAllGeofences()
@@ -179,7 +179,7 @@ extension GeoFViewController: MKMapViewDelegate{
 }
 
 extension GeoFViewController: CLLocationManagerDelegate{
-    func locationManager(manager: CLLocationManager!, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
+    func locationManager(manager: CLLocationManager, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
         self.mapView.showsUserLocation  = (status == CLAuthorizationStatus.AuthorizedAlways)
     }
 }

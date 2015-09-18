@@ -39,7 +39,7 @@ func getMessageFromGeofence(identifier: String) -> String?{
 }
 
 func showLocalNotification(message: String){
-    var notification = UILocalNotification()
+    let notification = UILocalNotification()
     notification.alertBody = message
     notification.soundName = "Default"
     UIApplication.sharedApplication().presentLocalNotificationNow(notification)

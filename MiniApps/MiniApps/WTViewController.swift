@@ -49,10 +49,10 @@ class WTViewController: UIViewController {
     @IBAction func counterViewTap(sender: UITapGestureRecognizer?) {
         if isGraphShowing{
             // hide graph
-            UIView.transitionFromView(graphV, toView: counterV, duration: 1.0, options: UIViewAnimationOptions.TransitionFlipFromLeft | UIViewAnimationOptions.ShowHideTransitionViews, completion: nil)
+            UIView.transitionFromView(graphV, toView: counterV, duration: 1.0, options: [UIViewAnimationOptions.TransitionFlipFromLeft, UIViewAnimationOptions.ShowHideTransitionViews], completion: nil)
         }
         else{
-            UIView.transitionFromView(counterV, toView: graphV, duration: 1.0, options: UIViewAnimationOptions.TransitionFlipFromRight | UIViewAnimationOptions.ShowHideTransitionViews, completion: nil)
+            UIView.transitionFromView(counterV, toView: graphV, duration: 1.0, options: [UIViewAnimationOptions.TransitionFlipFromRight, UIViewAnimationOptions.ShowHideTransitionViews], completion: nil)
         }
         isGraphShowing = !isGraphShowing
     }

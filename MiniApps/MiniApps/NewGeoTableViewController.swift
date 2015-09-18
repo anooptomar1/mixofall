@@ -47,20 +47,20 @@ class NewGeoTableViewController: UITableViewController {
     
     @IBAction func onSave(sender: UIBarButtonItem) {
         let coordinates = mapView.centerCoordinate
-        let radius = (radiusText.text as NSString).doubleValue
+        let radius = (radiusText.text as NSString?)!.doubleValue
         let identifier = NSUUID().UUIDString
         let notes = noteText.text
         let eventType = (entryOn.selectedSegmentIndex == 0) ? EventType.onEntry : EventType.onExit
-        delegate?.addNewGeofence(self, coordinates: coordinates, radius: radius, identifier: identifier, note: notes, eventType: eventType)
+        delegate?.addNewGeofence(self, coordinates: coordinates, radius: radius, identifier: identifier, note: notes!, eventType: eventType)
     }
     
     @IBAction func onEditChanged(sender: UITextField) {
-        saveButton.enabled = (!radiusText.text.isEmpty) && (!noteText.text.isEmpty)
+        saveButton.enabled = (!radiusText.text!.isEmpty) && (!noteText.text!.isEmpty)
     }
 }
 
 extension NewGeoTableViewController: CLLocationManagerDelegate{
-    func locationManager(manager: CLLocationManager!, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
+    func locationManager(manager: CLLocationManager, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
         mapView.showsUserLocation = (status == CLAuthorizationStatus.AuthorizedAlways)
         mapView.userTrackingMode = MKUserTrackingMode.Follow
     }

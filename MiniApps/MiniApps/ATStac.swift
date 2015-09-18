@@ -12,14 +12,14 @@ class ATStack<T> {
     var counter = 0
     
     func push(da: T){
-        var newNode = createNewNode(da)
+        let newNode = createNewNode(da)
         if(head == nil){
             head = newNode
             counter++
             return
         }
         
-        var temp = head
+        let temp = head
         newNode.next = temp
         head = newNode
         counter++
@@ -29,7 +29,7 @@ class ATStack<T> {
         if(isEmpty()){
             return nil
         }
-        var temp = head
+        let temp = head
         head = temp!.next
         counter--
         return temp?.data
@@ -40,7 +40,7 @@ class ATStack<T> {
     }
     
     private func createNewNode(da: T) -> Node<T>{
-        var node = Node<T>()
+        let node = Node<T>()
         node.data = da
         return node
     }

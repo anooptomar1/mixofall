@@ -26,20 +26,20 @@ class WebBrowserViewController: UIViewController {
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        var vc = segue.destinationViewController as! BrowseViewController
-        vc.url = contents.values.array[table.indexPathForSelectedRow()!.row]
+        let vc = segue.destinationViewController as! BrowseViewController
+        vc.url = Array(contents.values)[table.indexPathForSelectedRow!.row]
     }
     
 }
 
 extension WebBrowserViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell = table.dequeueReusableCellWithIdentifier("Cell") as? UITableViewCell
+        var cell = table.dequeueReusableCellWithIdentifier("Cell") as UITableViewCell?
         if cell == nil{
             cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "Cell")
         }
         
-        cell?.textLabel?.text = contents.keys.array[indexPath.row]
+        cell?.textLabel?.text = Array(contents.keys)[indexPath.row]
         
         return cell!
     }

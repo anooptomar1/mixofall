@@ -33,7 +33,7 @@ class CounterVIew: UIView {
         let startAngle: CGFloat = CGFloat(3*pi/4)
         let endAngle: CGFloat = CGFloat(pi/4)
         
-        var path = UIBezierPath(arcCenter: center, radius: radius/2 - arcWidth/2, startAngle: startAngle, endAngle: endAngle, clockwise: true)
+        let path = UIBezierPath(arcCenter: center, radius: radius/2 - arcWidth/2, startAngle: startAngle, endAngle: endAngle, clockwise: true)
         
         path.lineWidth = arcWidth
         counterColor.setStroke()
@@ -42,7 +42,7 @@ class CounterVIew: UIView {
         let angleDifference: CGFloat =  2*pi - startAngle + endAngle
         let arcLengthPerGlass = angleDifference/CGFloat(numberOfGlasses)
         let outerEndAngle = arcLengthPerGlass * CGFloat(counter) + startAngle
-        var outlinePath = UIBezierPath(arcCenter: center, radius: bounds.width/2 - 2.5, startAngle: startAngle, endAngle: outerEndAngle, clockwise: true)
+        let outlinePath = UIBezierPath(arcCenter: center, radius: bounds.width/2 - 2.5, startAngle: startAngle, endAngle: outerEndAngle, clockwise: true)
         outlinePath.addArcWithCenter(center, radius: bounds.width/2 - arcWidth + 2.5, startAngle: outerEndAngle, endAngle: startAngle, clockwise: false)
         outlinePath.closePath()
         outlinePath.lineWidth = 5.0

@@ -35,14 +35,14 @@ class BartViewController: UIViewController {
         self.tableView.dataSource = self
         self.tableView.delegate = self
         
-        var url: String = "http://api.bart.gov/api/sched.aspx?cmd=depart&orig=ucty&dest=mont&key=MW9S-E7SL-26DU-VV8V"
-        var urlToSend: NSURL = NSURL(string: url)!
+        let url: String = "http://api.bart.gov/api/sched.aspx?cmd=depart&orig=ucty&dest=mont&key=MW9S-E7SL-26DU-VV8V"
+        let urlToSend: NSURL = NSURL(string: url)!
         
         parser = NSXMLParser(contentsOfURL: urlToSend)!
         parser.delegate = self
-        var success: Bool = parser.parse()
+        let success: Bool = parser.parse()
         if success{
-            println("parsing success!")
+            print("parsing success!")
 //            for t in trips{
 //                for l in t.legs{
 //                    println("----- leg \(l.order!) -----")
@@ -86,7 +86,7 @@ class BartViewController: UIViewController {
 
 extension BartViewController: NSXMLParserDelegate{
     
-    func parser(parser: NSXMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [NSObject : AnyObject]) {
+    func parser(parser: NSXMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String]) {
         
         if elementName == "trip"{
             self.trip = Trip()

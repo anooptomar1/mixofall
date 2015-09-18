@@ -21,7 +21,7 @@ class CoreImageDViewController: UIViewController {
         filter.inputPercentage = 0.3
         
         let output = filter.outputImage
-        let outputCG = CIContext(options: nil).createCGImage(output, fromRect: output.extent())
+        let outputCG = CIContext(options: nil).createCGImage(output, fromRect: output.extent)
         myImage.image = UIImage(CGImage: outputCG)
         applyBlur()
     }
@@ -29,7 +29,7 @@ class CoreImageDViewController: UIViewController {
     func applyBlur(){
         let blur = UIVisualEffectView(effect: UIBlurEffect(style: UIBlurEffectStyle.ExtraLight))
         blur.frame = self.view.bounds
-        blur.autoresizingMask = UIViewAutoresizing.FlexibleWidth | UIViewAutoresizing.FlexibleHeight
+        blur.autoresizingMask = [UIViewAutoresizing.FlexibleWidth, UIViewAutoresizing.FlexibleHeight]
         let vib = UIVisualEffectView(effect: UIVibrancyEffect(forBlurEffect: blur.effect as! UIBlurEffect))
         blur.contentView.addSubview(vib)
         self.view.addSubview(blur)

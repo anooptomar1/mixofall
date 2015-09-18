@@ -19,7 +19,7 @@ class ViewController: UIViewController {
         self.tableView.delegate = self
         self.tableView.dataSource = self
         initializeMenu()
-        menus = sorted(menus){$0.ordering < $1.ordering}
+        menus = menus.sort{$0.ordering < $1.ordering}
     }
     
     func initializeMenu(){
@@ -58,7 +58,7 @@ class ViewController: UIViewController {
     
     func setupNavBar(){
         self.navigationController?.navigationBar.barTintColor = UIColor.brownColor()
-        var titleLabel = UILabel(frame: CGRectMake(0, 0, 100, 20))
+        let titleLabel = UILabel(frame: CGRectMake(0, 0, 100, 20))
         titleLabel.text = "Mini Apps Menu"
         titleLabel.textColor = UIColor.whiteColor()
         self.navigationItem.titleView = titleLabel
@@ -89,7 +89,7 @@ extension ViewController: UITableViewDataSource{
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
-        var cell = tableView.dequeueReusableCellWithIdentifier(NSStringFromClass(ViewController.self)) as? UITableViewCell
+        var cell = tableView.dequeueReusableCellWithIdentifier(NSStringFromClass(ViewController.self)) as UITableViewCell?
         if cell == nil{
             cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: NSStringFromClass(ViewController.self))
         }
@@ -100,7 +100,7 @@ extension ViewController: UITableViewDataSource{
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let sbName: String = menus[indexPath.row].sbName
         let storyboard = UIStoryboard(name: sbName, bundle: nil)
-        let submainVC = storyboard.instantiateViewControllerWithIdentifier("subMainVC") as! UIViewController
+        let submainVC = storyboard.instantiateViewControllerWithIdentifier("subMainVC") 
         let navVC = UINavigationController(rootViewController: submainVC)
 //        var transition = CATransition()
 //        transition.type = kCATransitionPush
