@@ -256,3 +256,245 @@ let sorted = [122,2,34,5,6,2,5,1].sort({$0 > $1})
 print(sorted)
 
 // class
+class Shape{
+    var numberOfSides = 0
+    var name: String
+    
+    init(name: String){
+        self.name = name
+    }
+    func simpleDescription() -> String{
+        return "A shape with \(numberOfSides) sides is called \(name)"
+    }
+}
+
+var shape = Shape(name: "Triangle")
+shape.numberOfSides = 3
+shape.simpleDescription()
+
+// subclass
+class Square: Shape{
+    var sideLength: Double
+    
+    init(name:String, sideLength: Double){
+        self.sideLength = sideLength
+        super.init(name: name)
+        self.name = name
+        self.numberOfSides = 4
+    }
+    
+    func area() -> Double{
+        return self.sideLength * self.sideLength
+    }
+    
+    override func simpleDescription() -> String {
+        return "A square with area \(area())"
+    }
+}
+
+var test = Square(name: "Square", sideLength: 4)
+test.simpleDescription()
+
+// subclass 2 
+class Circle: Shape{
+    var radius: Double
+    
+    init(name: String, radius: Double) {
+        self.radius = radius
+        super.init(name: name)
+        self.name = name
+    }
+    func area() -> Double{
+        return M_PI * (self.radius * self.radius)
+    }
+    override func simpleDescription() -> String {
+        return "Circle with radius \(radius) and area \(area())"
+    }
+}
+
+var circleTest = Circle(name: "Circle", radius: 12)
+circleTest.simpleDescription()
+
+// getter setter
+class EquilateralTriangle: Shape{
+
+    var sideLength: Double = 0.0
+    
+    init(parimeter: Double,name: String) {
+        super.init(name: name)
+        self.Perimeter = parimeter
+    }
+    
+    var Perimeter: Double{
+        get{
+            return 3 * sideLength
+        }set{
+            sideLength = newValue / 3
+        }
+    }
+    
+    override func simpleDescription() -> String {
+        return "Equilateral triangle's side length is \(sideLength) for perimeter \(Perimeter)"
+    }
+}
+
+var eqTest = EquilateralTriangle(parimeter: 9.9, name: "Triangle")
+eqTest.simpleDescription()
+
+// didset and willset
+class TriangleAndSquare{
+    var triangle: EquilateralTriangle{
+        willSet{
+            square.sideLength = newValue.sideLength
+        }
+    }
+    var square: Square{
+        willSet{
+            triangle.sideLength = newValue.sideLength
+        }
+    }
+    
+    init(name: String, sideLength: Double){
+        triangle = EquilateralTriangle(parimeter: sideLength * 3, name: name)
+        square = Square(name: name, sideLength: sideLength)
+    }
+    
+    func simpleDescription() -> String{
+        return "Triangle side is: \(triangle.sideLength) and Square side is \(square.sideLength)"
+    }
+}
+
+var tasTest = TriangleAndSquare(name: "test", sideLength: 12)
+tasTest.simpleDescription()
+tasTest.square.sideLength = 5
+tasTest.simpleDescription()
+tasTest.square = Square(name: "newSquare", sideLength: 50)
+tasTest.simpleDescription()
+
+// having ? before operations like methods, properties, subscripting will do automatic check for nil. If the value is nil everything after ? will be ignored and returned as nil but if value exists then value will be treated unwrapped after that. Both cases will return optional value
+
+let optionalSquare: Square? = Square(name: "optionalSquare", sideLength: 2.8)
+optionalSquare?.simpleDescription()
+optionalSquare?.sideLength
+
+// enums
+enum Rank: Int{
+    // value to enum's member is incremental that's why on first one is assigned a value and rest will take incremental value
+    // values can be string or floating point numbers
+    case Ace = 1
+    case Two, Three, Four, Five, Six, Seven, Eight, Nine, Ten
+    case Jack, Queen, King
+    // enums can have functions but not stored properties
+    func simpleDescription() -> String{
+        switch self{
+            case .Ace: return "Ace"
+            case .Jack: return "Jack"
+            case .King: return "King"
+            case .Queen: return "Queen"
+            default: return "\(self.rawValue)"
+        }
+    }
+    
+    static func compare(a: Rank, b:Rank) -> Bool{
+        return a.rawValue == b.rawValue
+    }
+}
+
+let ace = Rank.Ace
+ace.simpleDescription()
+let ten = Rank.Ten
+ten.simpleDescription()
+let secondAce = Rank.Ace
+
+Rank.compare(ace, b: ten)
+Rank.compare(ace, b: secondAce)
+
+// raw value member will only be present for enum member that have raw value assigned to it
+secondAce.rawValue
+
+// convert number to Rank enum value
+let convertRank = Rank(rawValue: 1)
+
+// enum without initial value
+enum Suit: Int{
+    case Spades = 1
+    case Hearts, Diamonds, Clubs
+    func simpleDescription() -> String{
+        switch self{
+        case .Spades: return "Spades"
+        case .Hearts: return "Hearts"
+        case .Diamonds: return "Diamonds"
+        case .Clubs: return "Clubs"
+        }
+    }
+    func icon() -> String{
+        switch self{
+        case .Spades: return "♠️"
+        case .Hearts: return "❤️"
+        case .Diamonds: return "♦️"
+        case .Clubs: return "♣️"
+        }
+    }
+}
+
+let suite = Suit.Hearts
+suite.icon()
+
+// structure
+struct Card{
+    var rank: Rank
+    var suit: Suit
+    
+    func simpleDescription() -> String{
+        return "The \(rank.simpleDescription()) of \(suit.simpleDescription())"
+    }
+    
+}
+
+let threeOfSpades = Card(rank: .Three, suit: .Spades)
+threeOfSpades.simpleDescription()
+
+
+// struct is pass by value vs classes are passed by reference
+var copyOfStruct = threeOfSpades
+copyOfStruct.rank = Rank.King
+copyOfStruct.simpleDescription()
+
+// enum with params
+enum ServerResponse{
+    case Result(String, String)
+    case Error(String)
+}
+
+func evalResponse(response: ServerResponse) -> String{
+    switch response{
+    case let .Result(sunrise, sunset):
+        return "Sunrise at \(sunrise) and sunset at \(sunset)"
+    case let .Error(error):
+        return "Error: \(error)"
+    }
+}
+
+let successResponse = ServerResponse.Result("3.30am", "4.4pm")
+let errorResponse = ServerResponse.Error("Well, sun is still sleeping.")
+
+evalResponse(successResponse)
+evalResponse(errorResponse)
+
+// enum with param call
+enum operations{
+    case add(Int, Int)
+    case increment(Int)
+}
+
+func calculator(operation: operations) -> Int{
+
+    switch operation{
+    case let .add(a, b): return a+b
+    case var .increment(a): return ++a
+    }
+}
+
+let addition = calculator(operations.add(12, 12))
+let inc = calculator(operations.increment(14))
+
