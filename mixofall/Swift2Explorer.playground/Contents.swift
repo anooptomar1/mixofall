@@ -498,3 +498,279 @@ func calculator(operation: operations) -> Int{
 let addition = calculator(operations.add(12, 12))
 let inc = calculator(operations.increment(14))
 
+// use of protocol 
+
+protocol exampleProtocol{
+    var simpleDescription: String { get }
+    mutating func adjust()
+}
+
+class simpleClass: exampleProtocol{
+    var simpleDescription: String = "Simple class"
+    func adjust() {
+        simpleDescription += " with new adjustment."
+    }
+}
+
+struct simpleStruct: exampleProtocol {
+    var simpleDescription: String = "Simple struct"
+    mutating func adjust() {
+        simpleDescription += " new developments are in place."
+    }
+}
+
+enum simpleEnum: exampleProtocol{
+    case base, adjusted
+    
+    var simpleDescription: String{
+        get {
+            return self.getDescription()
+        }
+    }
+    
+    func getDescription() -> String{
+        switch self{
+        case .base: return "simple enum"
+        case .adjusted: return "adjusted enum"
+        }
+    }
+    
+    mutating func adjust() {
+        self = simpleEnum.adjusted
+    }
+}
+
+var c = simpleClass()
+var s = simpleStruct()
+var e = simpleEnum.base
+
+c.adjust()
+c.simpleDescription
+
+s.adjust()
+s.simpleDescription
+
+e.adjust()
+e.getDescription()
+
+// extension method to extend functionality
+extension Int: exampleProtocol{
+    var simpleDescription: String{
+        return "The number is \(self)"
+    }
+    
+    func addOne() -> Int{
+        return self + 1
+    }
+    
+    mutating func adjust() {
+        self += 2
+    }
+}
+
+var i = 9
+i.adjust()
+i.addOne()
+i.simpleDescription
+
+// generics
+// generic function
+func repeatItem<item>(a: item, times: Int) -> [item]{
+    var result = [item]()
+    for _ in 0..<times{
+        result.append(a)
+    }
+    return result
+}
+
+print(repeatItem("hola", times: 5))
+print(repeatItem(12, times: 2))
+
+// add where condition in generics
+func commonElements<T: SequenceType, U: SequenceType where T.Generator.Element: Equatable, T.Generator.Element == U.Generator.Element>(lhs: T, _ rhs: U) -> Bool{
+    for l in lhs{
+        for r in rhs{
+            if l == r{
+                return true
+            }
+        }
+    }
+    return false
+}
+
+commonElements([12,2,23,4], [1])
+
+class genericNode<Item>{
+    var data: Item?
+    var next: genericNode?
+}
+
+class genericLinkedList<Item>{
+    var head: genericNode<Item>?
+    var printResult = [Item]()
+    
+    func add(data: Item){
+        if head == nil{
+            head = newElement(data)
+        }else{
+            var temp = head
+            while(temp!.next != nil){
+                temp = temp?.next
+            }
+            temp?.next = newElement(data)
+        }
+    }
+    
+    func printList() -> [Item]{
+        printResult = []
+        internalPrint(head)
+        return printResult
+    }
+    
+    func internalPrint(node: genericNode<Item>?){
+        if node == nil{
+            return
+        }
+        printResult.append(node!.data!)
+        internalPrint(node!.next)
+    }
+    
+    private func newElement(data: Item) -> genericNode<Item>{
+        let newElem = genericNode<Item>()
+        newElem.data = data
+        newElem.next = nil
+        return newElem
+    }
+}
+
+
+var stringLL = genericLinkedList<String>()
+stringLL.add("One")
+stringLL.add("Two")
+stringLL.add("Three")
+stringLL.add("Four")
+stringLL.printList()
+
+var intLL = genericLinkedList<Int>()
+intLL.add(1)
+intLL.add(4)
+intLL.add(2)
+intLL.printList()
+
+// typealias
+typealias AudioSample = UInt8
+let maxAmplitude = AudioSample.max
+
+// Tuples
+let http404error = (404, "Page not found")
+http404error.0
+
+// named value tuples
+let http200message = (status: 200, message: "OK")
+http200message.status
+http200message.message
+
+// ignore one value in tuple
+let (responseCode, _) = http200message
+responseCode
+
+// unwrap nil with condition
+if let firstNumber = Int("4"), secondNumber = Int("42") where firstNumber < secondNumber{
+    print("\(firstNumber) and \(secondNumber)")
+}
+
+// error handling
+
+enum MyError: ErrorType{
+    case divideByZero
+}
+
+func divide(a: Int, b: Int) throws -> Int{
+    if b == 0{
+        throw MyError.divideByZero
+    }
+    
+    return a/b
+}
+
+do{
+    try divide(9, b: 0)
+    print("will not reach here")
+}catch MyError.divideByZero{
+    print("divide by zero error")
+}
+
+// assert to catch any bug
+let age = -3
+// uncomment below to see in effect
+//assert(age > 0, "Age can't be less than 0")
+print("new line")
+
+// remainder operator works on floating point as well
+var a = 3.14
+a % 2
+
+// nil coalescing operator
+var coalescingString: String?
+coalescingString ?? "Other Value"
+
+// get chars from String
+for chars in "string test".characters{
+    print(chars)
+}
+
+// string from chars
+var ch: [Character] = ["T", "E", "S", "T"]
+print(String(ch))
+
+// append at the end of string
+let exclamationMark: Character = "!"
+message.append(exclamationMark)
+
+// string interpolation
+let multiplier = 3
+"\(multiplier) times 2.5 is \((Double(multiplier) * 2.5))"
+"\u{1F496}"
+
+// character count
+"hello".characters.count
+
+let greetingMessage = "Greetings World!"
+greetingMessage[greetingMessage.endIndex.predecessor()]
+greetingMessage[greetingMessage.startIndex]
+var idx = greetingMessage.startIndex.advancedBy(10)
+greetingMessage[idx]
+
+// acceses by indices
+for index in greetingMessage.characters.indices{
+    print("\(greetingMessage[index])", terminator: " ")
+}
+
+// inserting and removing string
+var welcomeMessage = "Hello Hello"
+welcomeMessage.insert("!", atIndex: welcomeMessage.startIndex)
+welcomeMessage.insertContentsOf(" Hola Hola!".characters, at: welcomeMessage.endIndex)
+
+// remove char from string
+welcomeMessage.removeAtIndex(welcomeMessage.endIndex.predecessor())
+welcomeMessage
+
+// remove chars from string
+let range = welcomeMessage.endIndex.advancedBy(-10)..<welcomeMessage.endIndex
+welcomeMessage.removeRange(range)
+
+// prefix suffix
+
+welcomeMessage.hasPrefix("!")
+welcomeMessage.hasSuffix("Hello")
+
+print("")
+
+// utf representation for a string
+for codeUnit in welcomeMessage.utf8{
+    print(codeUnit, terminator: " ")
+}
+print("")
+for codeUnit in welcomeMessage.utf16{
+    print(codeUnit, terminator: " ")
+}
