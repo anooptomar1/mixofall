@@ -774,3 +774,647 @@ print("")
 for codeUnit in welcomeMessage.utf16{
     print(codeUnit, terminator: " ")
 }
+
+// Arrays
+// shorthand init
+let arr1 = [Int]()
+// array init
+let arr2 = Array<Int>()
+// array with empty content
+let arr3 = []
+// array with default values
+let arr4 = [Double](count: 10, repeatedValue: 0.4)
+
+// two arrays can be merged with + operator
+let arr5 = [Int](count: 3, repeatedValue: 1)
+let arr6 = [Int](count: 3, repeatedValue: 2)
+let arr7 = arr5 + arr6
+
+// array init with values
+var arr8 = [1, 2, 3]
+arr8.append(9)
+arr8 += [12, 43]
+arr8[0...3]
+
+// insert at index
+arr8.insert(0, atIndex: 0)
+
+// remove an element
+arr8.removeRange(0...1)
+print(arr8)
+
+// remove last
+arr8.removeLast()
+arr8
+
+// sets
+var letters = Set<Character>()
+for c in "letters".characters{
+    letters.insert(c)
+}
+
+letters
+
+// setting set to empty
+letters = []
+letters
+
+// init set with array
+var genre: Set<String> = ["Rock", "Clasical", "Hip Hop"]
+
+// type is inferred if all types are same in array
+var favGenres: Set = ["Rock", "Clasical", "Hip Hop"]
+
+// use count to count elements
+favGenres.count
+
+// remove
+favGenres.remove("Rock")
+favGenres.insert("Jazz")
+
+// contains
+favGenres.contains("Jazz")
+
+// loop
+for g in favGenres{
+    print(g)
+}
+
+// enumerate
+for a in favGenres.enumerate(){
+    print(a)
+}
+
+// set operations
+var setA:Set = [2, 4, 6, 3]
+var setB:Set = [1, 3, 5, 4]
+
+// only common in both
+setA.intersect(setB)
+
+// values in both but not common
+setA.exclusiveOr(setB)
+
+// all together, dups are counted as one
+setA.union(setB)
+
+// subtract a to b to find unique in a
+setA.subtract(setB)
+
+// subtract b to a to find unique in b
+setB.subtract(setA)
+
+// two sets are equal if they have exact same elements
+var setC = setA
+setA == setC
+setC == setB
+
+// more set operations
+var setD: Set = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+var setE: Set = [2, 3, 5]
+var setF: Set = [9, 10, 11, 12]
+var setG: Set = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+// setE is subset of setD
+setE.isSubsetOf(setD)
+
+// setD is superset of setE
+setD.isSupersetOf(setE)
+
+// disjoint
+setE.isDisjointWith(setF)
+
+//strict subset
+setG.isStrictSubsetOf(setD)
+
+// strict superset
+setG.isStrictSupersetOf(setD)
+
+
+// dictionary
+var dictionary1 = [Int: String]()
+dictionary1[100] = "Hundred"
+dictionary1
+
+var dictionary2 = [String: String]()
+dictionary2 = ["NY": "New York", "CA": "California"]
+
+dictionary2.updateValue("ca", forKey: "CA")
+dictionary2
+
+dictionary2["NV"] = "Nevada"
+
+// searching dictionary based on key
+if let a = dictionary2["NV"]{
+    print(a)
+}else{
+    print("No such state")
+}
+
+// removing from dictionary
+dictionary2["Appl"] = "Apple State"
+dictionary2
+dictionary2["Appl"] = nil
+dictionary2
+
+// alternatively can use removeValueForKey
+dictionary2.removeValueForKey("CA")
+dictionary2
+
+// for loop 
+for (key, value) in dictionary2{
+    print("key: \(key), value: \(value)")
+}
+
+// pring keys
+for key in dictionary2.keys{
+    print(key)
+}
+
+// print values
+for value in dictionary2.values{
+    print(value)
+}
+
+// convert dictionary values to array
+var dictioanryValues = [String](dictionary2.values)
+
+
+// snake ladder game
+let finalSquare = 25
+var board = [Int](count: finalSquare + 1, repeatedValue: 0)
+board[03] = +8
+board[06] = +11
+board[09] = +09
+board[10] = +02
+
+board[14] = -10
+board[19] = -11
+board[22] = -02
+board[24] = -08
+
+var square = 0
+var diceRoll = 0
+while square < finalSquare{
+    diceRoll = Int(arc4random_uniform(6))
+    
+    square += diceRoll
+    print("diceroll: \(diceRoll)")
+    print("current square: \(square)")
+    if square < board.count{
+        square += board[square]
+    }
+}
+
+print("Game over")
+
+// switch case
+
+let testString = "here is a test string"
+switch testString{
+case let x where x.characters.contains("a"):
+    print("it has a vowel")
+case let x where x.hasPrefix("here"):
+    print(x)
+case let x where x.containsString("test"):
+    print(x)
+default:
+    print("default")
+}
+
+enum Sample{
+    case sample1, sample2, sample3, sample4
+}
+
+let sampleTest = Sample.sample1
+
+switch sampleTest{
+case .sample1, .sample2:
+    print("Either sample 1 or 2")
+case .sample3, .sample4:
+    print("Either sample 3 or 4")
+    
+}
+
+// range match
+
+let rangeSwitch = "This is just a sample"
+
+switch rangeSwitch.characters.count{
+case 0...10:
+    print("10 chars")
+case 10...20:
+    print("Somewhere around 20")
+case 20...30:
+    print("More than 20")
+default:
+    print("At lot more than 20")
+}
+
+// tuple switch
+let point = (1, 2)
+switch point{
+case let(x, y) where y < x:
+    print("y is more than x")
+case let(x, y):
+    print("x: \(x), y:\(y)")
+    fallthrough
+default:
+    print("Default executed")
+}
+
+// api supported by ios or not can be checked with if and available
+if #available(iOS 9, OSX 10.10, *){
+    print("these fetures are supported only on iOS 9 or up")
+}else{
+    print("fall back on old supported apis")
+}
+
+// swift functions support default values, param with default values are always last in the list
+func sampleDefault(value: Int = 12) -> String{
+    return "here is the value: \(value)"
+}
+
+sampleDefault()
+sampleDefault(15)
+
+// variadic param function can have 0 or more params
+// variadic param: function can have at most one variadia param
+func variadicFunction(value: Int...) -> String{
+    return "Total count of numbers sent is : \(value.count)"
+}
+
+variadicFunction(12,2,3,4,5,6,0,7,8,76,5,9)
+
+variadicFunction()
+
+// function params are constant by default but can be modified by adding var infront to make them as variable
+func addPadding(var str: String, totalLen: Int, pad: String) -> String{
+    let lenTogo = totalLen - str.characters.count
+    if lenTogo < 1{
+        return str
+    }
+
+    for _ in 1...lenTogo{
+        str = "\(pad)\(str)"
+    }
+    return str
+}
+
+addPadding("Hola", totalLen: 20, pad: "-")
+addPadding("Como Esta!", totalLen: 20, pad: "-")
+
+// swift supports in and out params where a variable can be passed and returned modified after the function call finishes
+// inout params can't have default values or can't be of variadic type and also var or let can't be marked on inout params
+
+func swapTwoInts(inout a: Int, inout b: Int){
+    a = a + b
+    b = a - b
+    a = b - a
+}
+var a1 = 12
+var b1 = 15
+swap(&a1, &b1)
+a1
+b1
+
+// functions as variables
+func addTwoNumbers(num1: Int, num2: Int) -> Int{
+    return num1 + num2
+}
+
+var delegateAdd = addTwoNumbers
+
+print(delegateAdd(12,num2: 11))
+
+// function as return type
+func stepFwd(num: Int) -> Int{
+    return num + 1
+}
+
+func stepBack(num: Int) -> Int{
+    return num - 1
+}
+
+func computeStep(back: Bool) -> ((Int) -> Int){
+    return back ? stepBack : stepFwd
+}
+
+var step = computeStep(true)
+step(10)
+
+// clousure 
+var unsortedArray = ["Ewa", "Daniella", "Chris", "Barry", "Alex"]
+var sortedArray = unsortedArray.sort(){(s1: String, s2: String) in
+    return s1 < s2
+}
+
+// type inferred
+var sortedArray2 = unsortedArray.sort(){s1, s2 in return s1 < s2}
+sortedArray2
+
+// short hand version
+var sortedArray3 = unsortedArray.sort{$0 > $1}
+sortedArray3
+
+// even shorter version
+var sortedArray4 = unsortedArray.sort(<)
+
+// trailing closure
+func notifyAfterComplete(num: Int, completion: (String) -> Void){
+    for _ in 0...num{
+    
+    }
+    completion("all done")
+}
+
+notifyAfterComplete(100) { (val) -> Void in
+    var completedVal = val
+    print(completedVal)
+}
+
+// use of map
+var digitNames = [1: "One", 2: "Two", 3: "Three", 4: "Four", 5: "Five", 6: "Six", 7: "Seven", 8: "Eight", 9: "Nine"]
+
+var testDigits = [11, 15, 89, 78]
+var stringDigits = testDigits.map { (var number) -> String in
+    var output = ""
+    while(number > 0){
+        output = digitNames[number % 10]! + output
+        number = number / 10
+    }
+    return output
+}
+
+// closures keep local values 
+func IncrementParent(num: Int) -> (()->Int){
+    var repeatSum = 0
+    func IncrementChild() -> Int{
+        for i in 0...num{
+            repeatSum += i
+        }
+        return repeatSum
+    }
+    return IncrementChild
+}
+
+var incr = IncrementParent(10)
+incr()
+
+// autoclosures are used to delay execution for expensive operations
+var customersInLine = ["Chris", "Mary", "Jane", "Adam"]
+
+func serveNextCustomer(customer: () -> String){
+    print("now serving \(customer())")
+}
+
+serveNextCustomer { customersInLine.removeAtIndex(0)}
+
+// enums can store values with them
+enum BarcodeType{
+    case UPCA(Int, Int, Int, Int)
+    case QRCode(String)
+}
+
+var productType = BarcodeType.UPCA(12, 11, 222, 1212)
+var productType2 = BarcodeType.QRCode("ATESTQRCODE")
+
+switch productType{
+case .UPCA(let numberSystem, let manufacture, let product, let check):
+    print("UPCA#:\(numberSystem)\(manufacture)\(product)\(check)")
+case .QRCode(let code):
+    print("QRCODE#:\(code)")
+}
+
+// enum with raw value
+enum Planet: Int{
+    case Sun = 1
+    case Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, Neptune
+}
+
+// if type is given to enum then it gets an initializer that accepts raw values
+var somePlanet = Planet(rawValue: 8)
+if let p = somePlanet{
+    switch p{
+    case .Earth:
+        print("Safe to live")
+    default:
+        print("Not sure about life yet")
+    }
+}
+
+// === and !== uses
+// === is used to check if two instances are identical meaning pointing to the same reference object
+// its different from == which is check for equality
+class TenEight{
+    
+}
+
+let tenEight = TenEight()
+let secondTenEight = tenEight
+print("if two are equal \(tenEight === secondTenEight)")
+
+// define expensive veriables with lazy keyword
+class DataImporter{
+    var fileName = "SomeFile.txt"
+}
+
+class DataManagement{
+    lazy var importer = DataImporter()
+    var data = [String]()
+}
+
+var dm = DataManagement()
+dm.data.append("One")
+dm.data.append("Two")
+
+// this is where lazy property will initialized because its being utilized
+dm.importer.fileName
+
+// when used in multithreaded environ there is no gurantee for lazy property to get initialization only once
+
+// computed property
+struct Point{
+    var x = 0.0, y = 0.0
+}
+
+struct Size {
+    var width = 0.0, height = 0.0
+}
+
+struct Rect{
+    var origin = Point()
+    var size = Size()
+    
+    var center: Point{
+        get{
+            let centerX = origin.x + (size.width / 2)
+            let centerY = origin.y + (size.height / 2)
+            return Point(x: centerX, y: centerY)
+        }
+        set(newCenter){
+            origin.x = newCenter.x - (size.width / 2)
+            origin.y = newCenter.y - (size.height / 2)
+        }
+    }
+}
+
+var sq = Rect(origin: Point(x:0.0, y: 0.0), size: Size(width: 10.0, height: 10.0))
+print("square.origin is \(sq.origin.x), \(sq.origin.y)")
+var initSquareCenter = sq.center
+sq.center = Point(x: 15.0, y: 15.0)
+print("square.origin is \(sq.origin.x), \(sq.origin.y)")
+
+// read only properties can be defined using following syntax
+// no need to put get keyword when its a ready only property
+
+struct Cuboid{
+    var width = 0.0, height = 0.0, depth = 0.0
+    
+    var volume: Double{
+        return width * height * depth
+    }
+}
+
+let aCuboid = Cuboid(width: 10.0, height: 20.0, depth: 9)
+aCuboid.volume
+
+// property observer: works on any stored property as long as they are not attributed as lazy
+
+class StepCounter{
+    var totalSteps = 20{
+        willSet{
+            print("about to set new value to: \(newValue)")
+        }
+        didSet{
+            print("just finished setting from old value \(oldValue)")
+        }
+    }
+}
+
+var stepCounter = StepCounter()
+stepCounter.totalSteps = 90
+
+// global constants and variable are always computed lazily
+
+// type properties
+struct Struct1{
+    static var storedTypeProperty = "Some Value"
+    static var computedTypeProperty: Int{
+        return 1
+    }
+}
+
+enum Enum1{
+    static var storedTypeProperty = "Some value"
+    static var computedTypeProperty: Int{
+        return 2
+    }
+}
+
+class Class1 {
+    static var storedTypeProperty = "Some Value"
+    static var computedTypeProperty: Int{
+        return 3
+    }
+}
+
+Class1.computedTypeProperty
+Class1.storedTypeProperty
+
+// function in enum
+enum TriStateSwitch{
+    case Off, Low, High
+    
+    mutating func next(){
+        switch self{
+        case .Off:
+            self = Low
+        case .Low:
+            self = High
+        case .High:
+            self = Off
+        }
+    }
+}
+
+var triSwitch = TriStateSwitch.Off
+triSwitch.next()
+triSwitch.next()
+triSwitch.next()
+
+// subscripts
+class Multiplexer{
+    private var multiplier = 0
+    
+    var Multiplier: Int{
+        get{
+            return multiplier
+        }set{
+            multiplier = newValue
+        }
+    }
+    
+    init(multiple: Int){
+        self.Multiplier = multiple
+    }
+    
+    subscript(index: Int) -> Int{
+        return self.Multiplier * index
+    }
+}
+
+var m1 = Multiplexer(multiple: 10)
+print(m1[10])
+
+// classes and inheritance 
+class Vehicle{
+    var currentSpeed = 0.0
+    var description: String{
+        return "traveling at \(currentSpeed) miles per hour"
+    }
+    func makeNoise(){
+        
+    }
+}
+
+class Bicycle: Vehicle{
+    var hasBasket = false
+}
+
+var vehicle = Bicycle()
+vehicle.hasBasket = true
+vehicle.currentSpeed = 10.0
+vehicle.description
+
+class Train: Vehicle{
+    override func makeNoise() {
+        print("Choo Choo")
+    }
+}
+
+var train = Train()
+train.makeNoise()
+
+class Car: Vehicle{
+    var gears = 0
+    override func makeNoise() {
+        print("broom broom on \(gears) gear")
+    }
+}
+
+final class AutomaticCar: Car{
+    override var currentSpeed: Double{
+        didSet{
+            gears = Int(currentSpeed / 10.0) + 1
+        }
+    }
+}
+
+var autoCar = AutomaticCar()
+autoCar.currentSpeed = 100
+autoCar.description
+autoCar.makeNoise()
+
+// mark class final to prevent overriding
+//class newCar: AutomaticCar{}
