@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <scenes>
+        <!--Text Effect 1-->
+        <scene sceneID="g7z-5u-1ov">
+            <objects>
+                <viewController storyboardIdentifier="mainVC" id="lRx-fZ-HRW" customClass="TextEffect1ViewController" customModule="DemoProjects" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="aBB-Fb-eWB"/>
+                        <viewControllerLayoutGuide type="bottom" id="E58-wz-Q4U"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cFB-ne-CCm">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter name" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="ijN-ed-zQB" customClass="TextEffect1" customModule="DemoProjects" customModuleProvider="target">
+                                <rect key="frame" x="20" y="118" width="560" height="50"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="4Hi-Dk-r6l"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                        <color key="value" red="0.91764705879999997" green="0.17254901959999999" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="foregroundColor">
+                                        <color key="value" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3mN-yA-25J">
+                                <rect key="frame" x="20" y="225" width="560" height="30"/>
+                                <animations/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ijN-ed-zQB" firstAttribute="top" secondItem="aBB-Fb-eWB" secondAttribute="bottom" constant="54" id="5bZ-xi-doo"/>
+                            <constraint firstItem="3mN-yA-25J" firstAttribute="top" secondItem="ijN-ed-zQB" secondAttribute="bottom" constant="57" id="7uu-jx-Dxj"/>
+                            <constraint firstAttribute="trailing" secondItem="ijN-ed-zQB" secondAttribute="trailing" constant="20" id="JvD-14-88V"/>
+                            <constraint firstItem="ijN-ed-zQB" firstAttribute="leading" secondItem="cFB-ne-CCm" secondAttribute="leading" constant="20" id="XgU-x3-Etu"/>
+                            <constraint firstAttribute="trailing" secondItem="3mN-yA-25J" secondAttribute="trailing" constant="20" id="b6d-FE-ful"/>
+                            <constraint firstItem="3mN-yA-25J" firstAttribute="leading" secondItem="cFB-ne-CCm" secondAttribute="leading" constant="20" id="eQb-PT-9Nc"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Text Effect 1" id="C4b-BG-18K">
+                        <barButtonItem key="rightBarButtonItem" systemItem="stop" id="1Oc-qe-LWS">
+                            <connections>
+                                <action selector="didClickClose:" destination="lRx-fZ-HRW" id="HpV-Cv-0W1"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hxI-2Z-eZx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="400" y="396"/>
+        </scene>
+    </scenes>
+</document>
