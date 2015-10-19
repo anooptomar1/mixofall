@@ -24,7 +24,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     }
     
     func addMenuItems(){
-        menuItems.append(MenuItem(title: "Text Effect 1", id: 1, titleImage: UIImage(named: "sample")!, sbName: "textEffect1"))
+        menuItems.append(MenuItem(title: "Text Effect 1", id: 1, titleImage: UIImage(named: "texteffect1")!, sbName: "textEffect1"))
     }
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
