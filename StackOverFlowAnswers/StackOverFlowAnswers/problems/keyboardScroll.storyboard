@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+    </dependencies>
+    <scenes>
+        <!--Keyboard Scrollview Autosize-->
+        <scene sceneID="adA-ao-IZQ">
+            <objects>
+                <viewController storyboardIdentifier="mainVC" id="p1M-vP-GxX" customClass="KeyboardScrollViewController" customModule="StackOverFlowAnswers" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="I1q-5K-QOY"/>
+                        <viewControllerLayoutGuide type="bottom" id="mXh-Li-SKg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Oyt-mw-87h">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gBU-GT-skF">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="um1-Ie-H9b">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="684"/>
+                                        <subviews>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="textbox1" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="enK-6e-C84">
+                                                <rect key="frame" x="8" y="78" width="584" height="30"/>
+                                                <animations/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="textbox2" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vef-M3-3hW">
+                                                <rect key="frame" x="8" y="540" width="584" height="30"/>
+                                                <animations/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                        <animations/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="Vef-M3-3hW" secondAttribute="bottom" constant="114" id="4BL-0f-hHh"/>
+                                            <constraint firstAttribute="trailing" secondItem="enK-6e-C84" secondAttribute="trailing" constant="8" id="A4G-SC-jgd"/>
+                                            <constraint firstAttribute="trailing" secondItem="Vef-M3-3hW" secondAttribute="trailing" constant="8" id="DxI-dY-dVs"/>
+                                            <constraint firstAttribute="height" constant="684" id="FEH-Xu-yu4"/>
+                                            <constraint firstItem="enK-6e-C84" firstAttribute="top" secondItem="um1-Ie-H9b" secondAttribute="top" constant="78" id="PNV-Pl-5gz"/>
+                                            <constraint firstItem="enK-6e-C84" firstAttribute="leading" secondItem="um1-Ie-H9b" secondAttribute="leading" constant="8" id="rbI-mx-1XO"/>
+                                            <constraint firstItem="Vef-M3-3hW" firstAttribute="leading" secondItem="um1-Ie-H9b" secondAttribute="leading" constant="8" id="sFQ-zJ-DHB"/>
+                                            <constraint firstAttribute="bottom" secondItem="enK-6e-C84" secondAttribute="bottom" constant="8" id="vqE-zr-wUw"/>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="vqE-zr-wUw"/>
+                                            </mask>
+                                        </variation>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="b7V-9R-FTf" appends="YES" id="qkB-3M-ePN"/>
+                                        </connections>
+                                    </view>
+                                </subviews>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstItem="um1-Ie-H9b" firstAttribute="centerX" secondItem="gBU-GT-skF" secondAttribute="centerX" id="6Kk-6d-mSP"/>
+                                    <constraint firstItem="um1-Ie-H9b" firstAttribute="leading" secondItem="gBU-GT-skF" secondAttribute="leading" id="Qab-q1-zTu"/>
+                                    <constraint firstAttribute="trailing" secondItem="um1-Ie-H9b" secondAttribute="trailing" id="Zr5-DW-M5n"/>
+                                    <constraint firstItem="um1-Ie-H9b" firstAttribute="top" secondItem="gBU-GT-skF" secondAttribute="top" id="gOE-EY-uG0"/>
+                                    <constraint firstAttribute="bottom" secondItem="um1-Ie-H9b" secondAttribute="bottom" id="kgc-Gn-Ob6"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="gBU-GT-skF" firstAttribute="leading" secondItem="Oyt-mw-87h" secondAttribute="leading" id="C17-7q-y71"/>
+                            <constraint firstAttribute="trailing" secondItem="gBU-GT-skF" secondAttribute="trailing" id="PMe-RR-Svu"/>
+                            <constraint firstItem="mXh-Li-SKg" firstAttribute="top" secondItem="gBU-GT-skF" secondAttribute="bottom" id="mdF-qP-ce3"/>
+                            <constraint firstItem="gBU-GT-skF" firstAttribute="top" secondItem="Oyt-mw-87h" secondAttribute="top" id="sC9-7W-OMQ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Keyboard Scrollview Autosize" id="cTx-76-sXP">
+                        <barButtonItem key="rightBarButtonItem" systemItem="stop" id="oAw-uf-ohk">
+                            <connections>
+                                <action selector="didCloseViewController:" destination="p1M-vP-GxX" id="Bus-lZ-DER"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="scrollView" destination="gBU-GT-skF" id="1qj-QH-qXz"/>
+                        <outlet property="textV" destination="enK-6e-C84" id="Rzt-39-eM8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kx9-dK-u9R" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="b7V-9R-FTf">
+                    <connections>
+                        <action selector="didTapView:" destination="p1M-vP-GxX" id="EOc-0T-FP6"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="542" y="-87"/>
+        </scene>
+    </scenes>
+</document>

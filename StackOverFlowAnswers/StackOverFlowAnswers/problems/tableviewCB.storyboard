@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+    </dependencies>
+    <scenes>
+        <!--TableView Checkbox-->
+        <scene sceneID="XjW-4D-yRX">
+            <objects>
+                <viewController storyboardIdentifier="mainVC" id="14z-DH-cdU" customClass="TableViewCBViewController" customModule="StackOverFlowAnswers" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9uK-9w-vrD"/>
+                        <viewControllerLayoutGuide type="bottom" id="ago-O4-Qt7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qIQ-Oq-eLB">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="w9u-QL-6Wr">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="cell" id="0ps-fb-MJ0" customClass="CBTableViewCell" customModule="StackOverFlowAnswers" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0ps-fb-MJ0" id="ihj-A1-4aG">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="amS-1U-zCT">
+                                                    <rect key="frame" x="8" y="6" width="51" height="31"/>
+                                                    <animations/>
+                                                    <connections>
+                                                        <action selector="didChangeSwitch:" destination="0ps-fb-MJ0" eventType="valueChanged" id="qCY-VQ-OsI"/>
+                                                    </connections>
+                                                </switch>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="als-Js-uML">
+                                                    <rect key="frame" x="65" y="11" width="527" height="21"/>
+                                                    <animations/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <animations/>
+                                            <constraints>
+                                                <constraint firstItem="amS-1U-zCT" firstAttribute="top" secondItem="ihj-A1-4aG" secondAttribute="top" constant="6" id="1WP-rU-dJd"/>
+                                                <constraint firstItem="amS-1U-zCT" firstAttribute="leading" secondItem="ihj-A1-4aG" secondAttribute="leading" constant="8" id="5dy-qM-RKN"/>
+                                                <constraint firstAttribute="trailing" secondItem="als-Js-uML" secondAttribute="trailing" constant="8" id="CVG-LZ-r1n"/>
+                                                <constraint firstAttribute="bottom" secondItem="als-Js-uML" secondAttribute="bottom" constant="11.5" id="F3I-WP-FdC"/>
+                                                <constraint firstItem="als-Js-uML" firstAttribute="leading" secondItem="amS-1U-zCT" secondAttribute="trailing" constant="8" id="Nax-Ft-rWN"/>
+                                                <constraint firstAttribute="bottom" secondItem="amS-1U-zCT" secondAttribute="bottom" constant="6.5" id="htF-c9-dYg"/>
+                                                <constraint firstItem="als-Js-uML" firstAttribute="top" secondItem="ihj-A1-4aG" secondAttribute="top" constant="11" id="ypK-0c-dTB"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <animations/>
+                                        <connections>
+                                            <outlet property="checkmark" destination="amS-1U-zCT" id="wNo-J7-vgF"/>
+                                            <outlet property="title" destination="als-Js-uML" id="hXC-RL-uC4"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="w9u-QL-6Wr" firstAttribute="top" secondItem="9uK-9w-vrD" secondAttribute="bottom" id="fMc-0v-h9d"/>
+                            <constraint firstAttribute="trailing" secondItem="w9u-QL-6Wr" secondAttribute="trailing" id="hDi-K2-oHm"/>
+                            <constraint firstItem="w9u-QL-6Wr" firstAttribute="leading" secondItem="qIQ-Oq-eLB" secondAttribute="leading" id="x9e-9w-ca9"/>
+                            <constraint firstItem="ago-O4-Qt7" firstAttribute="top" secondItem="w9u-QL-6Wr" secondAttribute="bottom" id="yNS-M7-Pzr"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="TableView Checkbox" id="6s9-lN-xsb">
+                        <barButtonItem key="leftBarButtonItem" systemItem="edit" id="va0-Dh-jWV">
+                            <color key="tintColor" red="0.25624018253987091" green="0.44324283770366357" blue="0.99215686270000003" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <segue destination="LqW-dU-9N5" kind="show" identifier="selectedDetails" id="neO-FN-QB3"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="stop" id="6Mb-gC-OYh">
+                            <connections>
+                                <action selector="didCloseVC:" destination="14z-DH-cdU" id="dL8-gW-YmP"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="EditButton" destination="va0-Dh-jWV" id="8ID-63-lSR"/>
+                        <outlet property="tableview" destination="w9u-QL-6Wr" id="zUe-MV-cJ0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GLa-WB-RIi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="586" y="390"/>
+        </scene>
+        <!--Selected Items-->
+        <scene sceneID="orj-Hr-3xW">
+            <objects>
+                <viewController id="LqW-dU-9N5" customClass="TableCheckDetailViewController" customModule="StackOverFlowAnswers" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5f7-1H-k9B"/>
+                        <viewControllerLayoutGuide type="bottom" id="4ge-WY-Q7G"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="TsV-SQ-z8h">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="jFl-fR-ijm">
+                                <rect key="frame" x="8" y="72" width="584" height="520"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="4ge-WY-Q7G" firstAttribute="top" secondItem="jFl-fR-ijm" secondAttribute="bottom" constant="8" id="2aD-lC-0xa"/>
+                            <constraint firstItem="jFl-fR-ijm" firstAttribute="leading" secondItem="TsV-SQ-z8h" secondAttribute="leading" constant="8" id="UYK-tj-zkC"/>
+                            <constraint firstAttribute="trailing" secondItem="jFl-fR-ijm" secondAttribute="trailing" constant="8" id="hWb-c1-RFf"/>
+                            <constraint firstItem="jFl-fR-ijm" firstAttribute="top" secondItem="5f7-1H-k9B" secondAttribute="bottom" constant="8" id="v3v-np-i5S"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Selected Items" id="yl2-go-If6"/>
+                    <connections>
+                        <outlet property="textView" destination="jFl-fR-ijm" id="IU1-fd-qLo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ue5-m1-ABp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1243" y="390"/>
+        </scene>
+    </scenes>
+</document>
