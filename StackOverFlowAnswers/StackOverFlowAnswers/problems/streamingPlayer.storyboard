@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Audio Streaming Player-->
+        <scene sceneID="Ucj-tp-WyO">
+            <objects>
+                <viewController storyboardIdentifier="mainVC" id="3JX-Jq-Qwr" customClass="streamingPlayerViewController" customModule="StackOverFlowAnswers" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hhO-jM-BAr"/>
+                        <viewControllerLayoutGuide type="bottom" id="CxK-Mf-kok"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cTD-aa-qWy">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="urv-e0-ZoL">
+                                <rect key="frame" x="285" y="285" width="30" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Play"/>
+                                <connections>
+                                    <action selector="didClickPlay:" destination="3JX-Jq-Qwr" eventType="touchUpInside" id="wpQ-wB-tef"/>
+                                </connections>
+                            </button>
+                            <slider alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="sjk-xO-Sn1">
+                                <rect key="frame" x="18" y="550" width="564" height="31"/>
+                                <animations/>
+                                <color key="tintColor" red="1" green="0.53903762499999996" blue="0.22823129280000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LMq-sh-S3a">
+                                <rect key="frame" x="20" y="528" width="52.5" height="14.5"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cFS-nw-Pjv">
+                                <rect key="frame" x="527" y="527" width="52.5" height="14.5"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qpi-6v-bMs">
+                                <rect key="frame" x="274" y="527" width="52.5" height="14.5"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="UMf-r5-yk2">
+                                <rect key="frame" x="18" y="552" width="564" height="31"/>
+                                <animations/>
+                                <color key="tintColor" red="0.0" green="0.43535024143889872" blue="0.91764705879999997" alpha="1" colorSpace="calibratedRGB"/>
+                            </slider>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="de4-pX-Kpf">
+                                <rect key="frame" x="20" y="466.5" width="39" height="30"/>
+                                <animations/>
+                                <state key="normal" title="&lt;&lt;1m"/>
+                                <connections>
+                                    <action selector="rewind5s:" destination="3JX-Jq-Qwr" eventType="touchUpInside" id="KfR-Z3-1by"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HoU-PJ-e9a">
+                                <rect key="frame" x="266" y="466" width="68" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Start over"/>
+                                <connections>
+                                    <action selector="startOver:" destination="3JX-Jq-Qwr" eventType="touchUpInside" id="nyE-Pf-rbn"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current Time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="waL-q9-aQk">
+                                <rect key="frame" x="20" y="504" width="74.5" height="14.5"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Buffered" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bf3-Id-MGr">
+                                <rect key="frame" x="275" y="504" width="49" height="14.5"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Time" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cWn-oS-9Fo">
+                                <rect key="frame" x="520" y="504" width="59.5" height="14.5"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eMW-2q-gzD">
+                                <rect key="frame" x="541" y="466" width="39" height="30"/>
+                                <animations/>
+                                <state key="normal" title="1m&gt;&gt;"/>
+                                <connections>
+                                    <action selector="fwd5s:" destination="3JX-Jq-Qwr" eventType="touchUpInside" id="cVn-Ch-paE"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="bf3-Id-MGr" firstAttribute="top" secondItem="HoU-PJ-e9a" secondAttribute="bottom" constant="8" id="0XG-yM-pJI"/>
+                            <constraint firstItem="LMq-sh-S3a" firstAttribute="leading" secondItem="cTD-aa-qWy" secondAttribute="leading" constant="20" id="0XP-bE-T8i"/>
+                            <constraint firstItem="urv-e0-ZoL" firstAttribute="centerX" secondItem="cTD-aa-qWy" secondAttribute="centerX" id="3EQ-bn-Etz"/>
+                            <constraint firstItem="waL-q9-aQk" firstAttribute="leading" secondItem="cTD-aa-qWy" secondAttribute="leading" constant="20" id="4Lz-9m-QIs"/>
+                            <constraint firstItem="cFS-nw-Pjv" firstAttribute="top" secondItem="cWn-oS-9Fo" secondAttribute="bottom" constant="8" id="5nY-9n-aHZ"/>
+                            <constraint firstItem="waL-q9-aQk" firstAttribute="top" secondItem="de4-pX-Kpf" secondAttribute="bottom" constant="8" id="6JY-WJ-7PO"/>
+                            <constraint firstAttribute="trailing" secondItem="eMW-2q-gzD" secondAttribute="trailing" constant="20" id="8Oh-Qv-xY8"/>
+                            <constraint firstItem="HoU-PJ-e9a" firstAttribute="centerX" secondItem="cTD-aa-qWy" secondAttribute="centerX" id="8eu-kN-RsW"/>
+                            <constraint firstItem="Qpi-6v-bMs" firstAttribute="top" secondItem="bf3-Id-MGr" secondAttribute="bottom" constant="8" id="Dpf-l8-Dmf"/>
+                            <constraint firstItem="de4-pX-Kpf" firstAttribute="leading" secondItem="cTD-aa-qWy" secondAttribute="leading" constant="20" id="Eyg-rm-HtH"/>
+                            <constraint firstItem="sjk-xO-Sn1" firstAttribute="top" secondItem="LMq-sh-S3a" secondAttribute="bottom" constant="8" id="HQz-ff-KLO"/>
+                            <constraint firstItem="LMq-sh-S3a" firstAttribute="top" secondItem="waL-q9-aQk" secondAttribute="bottom" constant="9" id="J3G-rR-9CF"/>
+                            <constraint firstItem="sjk-xO-Sn1" firstAttribute="top" secondItem="cFS-nw-Pjv" secondAttribute="bottom" constant="8" id="LJw-Fm-lfD"/>
+                            <constraint firstItem="UMf-r5-yk2" firstAttribute="leading" secondItem="cTD-aa-qWy" secondAttribute="leading" constant="20" id="Ryw-Mf-gOl"/>
+                            <constraint firstItem="cWn-oS-9Fo" firstAttribute="top" secondItem="eMW-2q-gzD" secondAttribute="bottom" constant="8" id="Su9-z4-FXX"/>
+                            <constraint firstAttribute="trailing" secondItem="sjk-xO-Sn1" secondAttribute="trailing" constant="20" id="VwL-s4-qSg"/>
+                            <constraint firstItem="urv-e0-ZoL" firstAttribute="centerY" secondItem="cTD-aa-qWy" secondAttribute="centerY" id="WMd-Pt-evP"/>
+                            <constraint firstAttribute="trailing" secondItem="UMf-r5-yk2" secondAttribute="trailing" constant="20" id="X5a-UF-AYy"/>
+                            <constraint firstAttribute="trailing" secondItem="cWn-oS-9Fo" secondAttribute="trailing" constant="20" id="XXH-H9-idS"/>
+                            <constraint firstItem="CxK-Mf-kok" firstAttribute="top" secondItem="sjk-xO-Sn1" secondAttribute="bottom" constant="20" id="a0E-iP-7nj"/>
+                            <constraint firstItem="bf3-Id-MGr" firstAttribute="centerX" secondItem="cTD-aa-qWy" secondAttribute="centerX" id="aIf-vg-OEc"/>
+                            <constraint firstItem="sjk-xO-Sn1" firstAttribute="leading" secondItem="cTD-aa-qWy" secondAttribute="leading" constant="20" id="f00-kG-b7P"/>
+                            <constraint firstItem="sjk-xO-Sn1" firstAttribute="top" secondItem="Qpi-6v-bMs" secondAttribute="bottom" constant="8.5" id="moe-iD-nls"/>
+                            <constraint firstItem="cFS-nw-Pjv" firstAttribute="trailing" secondItem="cTD-aa-qWy" secondAttribute="trailingMargin" id="ofu-pi-fN8"/>
+                            <constraint firstItem="Qpi-6v-bMs" firstAttribute="centerX" secondItem="cTD-aa-qWy" secondAttribute="centerX" id="yEF-dg-Zpl"/>
+                            <constraint firstItem="CxK-Mf-kok" firstAttribute="top" secondItem="UMf-r5-yk2" secondAttribute="bottom" constant="18" id="zZl-eg-NZR"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Audio Streaming Player" id="CdX-27-8qy">
+                        <barButtonItem key="rightBarButtonItem" systemItem="stop" id="iIJ-WM-ABY">
+                            <connections>
+                                <action selector="didClickDismiss:" destination="3JX-Jq-Qwr" id="CkH-bL-VIJ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="bufferSlider" destination="UMf-r5-yk2" id="AYQ-i1-Xhc"/>
+                        <outlet property="bufferedTimeLabel" destination="Qpi-6v-bMs" id="HOe-fZ-TIH"/>
+                        <outlet property="controlButton" destination="urv-e0-ZoL" id="97A-em-Bog"/>
+                        <outlet property="currentTimeLabel" destination="LMq-sh-S3a" id="BHG-ws-DIB"/>
+                        <outlet property="durationTimeLabel" destination="cFS-nw-Pjv" id="yvU-4c-lbZ"/>
+                        <outlet property="slider" destination="sjk-xO-Sn1" id="gSb-d8-hch"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tC2-Ec-1tA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="539" y="423"/>
+        </scene>
+    </scenes>
+</document>

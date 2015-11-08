@@ -7,13 +7,32 @@
 //
 
 import UIKit
+import AVFoundation
+import OAuthSwift
+
+var audioPlayer: AVPlayer?
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    
+    var audioStreamingItem: AVPlayerItem?
 
-
+    func initAndPlayAudio(url: NSURL) -> AVPlayer{
+        audioStreamingItem = AVPlayerItem(URL: url)
+        audioPlayer = AVPlayer(playerItem: audioStreamingItem!)
+        return audioPlayer!
+    }
+    
+    func application(app: UIApplication, openURL url: NSURL, options: [String : AnyObject]) -> Bool {
+        // check if callback url's host is from the app
+        if (url.host! == "podplayer.com") {
+            OAuth2Swift.handleOpenURL(url)
+        }
+        return true
+    }
+    
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         return true

@@ -17,5 +17,9 @@ public class MenuModel {
     private static func buildMenuItems(){
         items.append(MenuItem(name: "Keyboard Scrollview Autosize", storyboard: "keyboardScroll", id: 0))
         items.append(MenuItem(name: "TableView Checkbox", storyboard: "tableviewCB", id: 1))
+        items.append(MenuItem(name: "Audio Streaming Player", storyboard: "streamingPlayer", id: 2))
+        items.append(MenuItem(name: "System Sound Service", storyboard: "SSS", id: 3))
+        items.append(MenuItem(name: "OAuth 2.0 Test", storyboard: "OAuth2Test", id: 4))
+        items.append(MenuItem(name: "Networking basics", storyboard: "NetworkingTest", id: 5))
     }
 }
