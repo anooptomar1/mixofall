@@ -83,6 +83,20 @@ class TableViewImageViewController: UIViewController {
         super.viewDidLoad()
         tableview.delegate = self
         tableview.dataSource = self
+        self.automaticallyAdjustsScrollViewInsets = false
+    }
+    
+    func downloadImageAsync(url: String, completionHandler: (img: UIImage) -> Void){
+        let request = NSMutableURLRequest(URL: NSURL(string: url)!)
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0)) { () -> Void in
+            let task = NSURLSession.sharedSession().dataTaskWithRequest(request) { (data:NSData?, response:NSURLResponse?, error:NSError?) -> Void in
+                if error == nil{
+                    let im = UIImage(data: data!)
+                    completionHandler(img: im!)
+                }
+            }
+            task.resume()
+        }
     }
 
 
@@ -93,19 +107,21 @@ extension TableViewImageViewController: UITableViewDelegate, UITableViewDataSour
         if cell == nil{
             cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "cell")
         }
+        
         let m = self.modalUrls[indexPath.row]
         cell!.textLabel!.text = m.title!
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0)) { () -> Void in
-            let data = NSData(contentsOfURL: NSURL(string: m.picUrl!)!)
-            let im = UIImage(data: data!)
+        
+        downloadImageAsync(m.picUrl!) { (img) -> Void in
             dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                cell!.imageView!.image = im
+                cell!.imageView!.image = img
                 cell!.imageView!.layer.masksToBounds = true
                 cell!.imageView!.clipsToBounds = true
                 cell!.imageView!.layer.cornerRadius = 14.0
                 cell!.setNeedsLayout()
             })
         }
+        
+        
         return cell!
     }
     
