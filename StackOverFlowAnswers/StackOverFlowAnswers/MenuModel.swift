@@ -21,5 +21,7 @@ public class MenuModel {
         items.append(MenuItem(name: "System Sound Service", storyboard: "SSS", id: 3))
         items.append(MenuItem(name: "OAuth 2.0 Test", storyboard: "OAuth2Test", id: 4))
         items.append(MenuItem(name: "Networking basics", storyboard: "NetworkingTest", id: 5))
+        items.append(MenuItem(name: "Stackview Demo", storyboard: "SVDemo", id: 6))
+        items.append(MenuItem(name: "Food Pin It", storyboard: "TVCC", id: 7))
     }
 }

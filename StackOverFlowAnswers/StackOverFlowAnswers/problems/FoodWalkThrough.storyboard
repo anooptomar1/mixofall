@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Walkthrough Page View Controller-->
+        <scene sceneID="vwu-UQ-EYJ">
+            <objects>
+                <pageViewController storyboardIdentifier="WalkthroughController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="m9g-j2-PIz" customClass="WalkthroughPageViewController" customModule="StackOverFlowAnswers" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mgi-wv-uid" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="462" y="1031"/>
+        </scene>
+        <!--Walkthrough Content View Controller-->
+        <scene sceneID="mJc-JM-plh">
+            <objects>
+                <viewController storyboardIdentifier="WalkthroughContentController" id="Ez8-ae-fBg" customClass="WalkthroughContentViewController" customModule="StackOverFlowAnswers" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="GWT-px-viV"/>
+                        <viewControllerLayoutGuide type="bottom" id="Jey-4I-r1Q"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1H0-st-7S3">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Personalize" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nX6-tu-4YN">
+                                <rect key="frame" x="239" y="20" width="122.5" height="31.5"/>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="23"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZH0-CD-1Ks">
+                                <rect key="frame" x="20" y="59" width="560" height="412"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="ZH0-CD-1Ks" secondAttribute="height" multiplier="560:459" constant="57.342047930283229" id="Qt9-P7-dah"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="252" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="751" text="Pin your favorite restaurants and create your own food guide" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4l9-s1-A3O">
+                                <rect key="frame" x="200" y="479" width="200" height="61.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="bls-7k-gtj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-LightOblique" family="Avenir" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="Gxi-d9-wpE">
+                                <rect key="frame" x="281" y="543" width="39" height="37"/>
+                            </pageControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tgr-so-abd">
+                                <rect key="frame" x="548" y="550" width="32" height="30"/>
+                                <state key="normal" title="Next">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onNextButtonClick:" destination="Ez8-ae-fBg" eventType="touchUpInside" id="eVD-9v-FWs"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.91764705879999997" green="0.17254901959999999" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="4l9-s1-A3O" firstAttribute="leading" secondItem="1H0-st-7S3" secondAttribute="leadingMargin" constant="79" id="67t-wx-i85"/>
+                            <constraint firstItem="4l9-s1-A3O" firstAttribute="top" secondItem="ZH0-CD-1Ks" secondAttribute="bottom" constant="12.5" id="6XB-PL-lyO"/>
+                            <constraint firstItem="nX6-tu-4YN" firstAttribute="centerX" secondItem="1H0-st-7S3" secondAttribute="centerX" id="Avm-to-a9V"/>
+                            <constraint firstItem="Jey-4I-r1Q" firstAttribute="top" secondItem="4l9-s1-A3O" secondAttribute="bottom" constant="59.5" id="FUh-Pw-AMI"/>
+                            <constraint firstItem="Gxi-d9-wpE" firstAttribute="centerX" secondItem="1H0-st-7S3" secondAttribute="centerX" id="Gye-Gn-MQJ"/>
+                            <constraint firstItem="nX6-tu-4YN" firstAttribute="top" secondItem="GWT-px-viV" secondAttribute="bottom" id="NaW-1h-tPd"/>
+                            <constraint firstItem="4l9-s1-A3O" firstAttribute="centerX" secondItem="1H0-st-7S3" secondAttribute="centerX" id="Qo4-RX-4cM"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ZH0-CD-1Ks" secondAttribute="trailing" id="T7J-h5-890"/>
+                            <constraint firstItem="4l9-s1-A3O" firstAttribute="top" secondItem="ZH0-CD-1Ks" secondAttribute="bottom" constant="8" id="TvR-Yd-abO"/>
+                            <constraint firstItem="Tgr-so-abd" firstAttribute="top" secondItem="ZH0-CD-1Ks" secondAttribute="bottom" constant="79" id="X3U-6s-GaL"/>
+                            <constraint firstItem="Jey-4I-r1Q" firstAttribute="top" secondItem="4l9-s1-A3O" secondAttribute="bottom" constant="79.5" id="Ynb-ve-abU"/>
+                            <constraint firstItem="Jey-4I-r1Q" firstAttribute="top" secondItem="Tgr-so-abd" secondAttribute="bottom" constant="20" id="bMf-3c-4QB"/>
+                            <constraint firstItem="ZH0-CD-1Ks" firstAttribute="width" secondItem="1H0-st-7S3" secondAttribute="height" multiplier="14:15" id="bjV-d6-Ucv"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="4l9-s1-A3O" secondAttribute="trailing" constant="79" id="bsj-2W-TWX"/>
+                            <constraint firstItem="4l9-s1-A3O" firstAttribute="centerX" secondItem="1H0-st-7S3" secondAttribute="centerX" id="jx4-Zy-Qph"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="ZH0-CD-1Ks" secondAttribute="leading" id="krF-lL-gFI"/>
+                            <constraint firstItem="ZH0-CD-1Ks" firstAttribute="top" secondItem="nX6-tu-4YN" secondAttribute="bottom" constant="7.5" id="mDC-z7-Exn"/>
+                            <constraint firstAttribute="trailing" secondItem="Tgr-so-abd" secondAttribute="trailing" constant="20" id="oZd-aV-o2X"/>
+                            <constraint firstItem="Gxi-d9-wpE" firstAttribute="top" secondItem="4l9-s1-A3O" secondAttribute="bottom" constant="2.5" id="uzn-li-Mva"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="bjV-d6-Ucv"/>
+                                <exclude reference="67t-wx-i85"/>
+                                <exclude reference="6XB-PL-lyO"/>
+                                <exclude reference="Qo4-RX-4cM"/>
+                                <exclude reference="bsj-2W-TWX"/>
+                                <exclude reference="Ynb-ve-abU"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="bottomMessage" destination="4l9-s1-A3O" id="g61-ek-EjI"/>
+                        <outlet property="btnNext" destination="Tgr-so-abd" id="cYP-PR-g5B"/>
+                        <outlet property="imageView" destination="ZH0-CD-1Ks" id="LrT-wU-tU3"/>
+                        <outlet property="pageControl" destination="Gxi-d9-wpE" id="Uhb-4c-pTw"/>
+                        <outlet property="topMessage" destination="nX6-tu-4YN" id="I1L-6H-RFj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RXj-kg-Rek" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="462" y="1741"/>
+        </scene>
+    </scenes>
+</document>

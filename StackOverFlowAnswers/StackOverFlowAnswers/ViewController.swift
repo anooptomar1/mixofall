@@ -42,6 +42,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource{
     // show new controller based on row selected
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         presentViewController(UINavigationController(rootViewController: UIStoryboard(name: menuItems[indexPath.row].Storyboard, bundle: nil).instantiateViewControllerWithIdentifier("mainVC") as UIViewController), animated: true, completion: nil)
+        tableView.deselectRowAtIndexPath(indexPath, animated: false)
     }
 }
 

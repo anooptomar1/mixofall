@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--Stackview demo-->
+        <scene sceneID="VaU-FA-5gT">
+            <objects>
+                <viewController storyboardIdentifier="mainVC" id="T8W-SV-WQP" customClass="SVDemoViewController" customModule="StackOverFlowAnswers" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="sIk-yb-mD6"/>
+                        <viewControllerLayoutGuide type="bottom" id="Sd0-7Q-nZA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="b8j-wG-enH">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="jL0-cy-ElH">
+                                <rect key="frame" x="165" y="74" width="270" height="97"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wardrobe" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iSB-Pu-f4g">
+                                        <rect key="frame" x="0.0" y="0.0" width="270" height="76.5"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="64"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="heightClass=compact">
+                                            <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                        </variation>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Keep your wardrobe organized" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RKJ-wl-oSa">
+                                        <rect key="frame" x="18" y="76.5" width="234" height="20.5"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="heightClass=compact">
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        </variation>
+                                    </label>
+                                </subviews>
+                                <animations/>
+                                <variation key="heightClass=compact" distribution="equalSpacing"/>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Qkj-bG-xir">
+                                <rect key="frame" x="0.0" y="179" width="600" height="338"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="t-shirt-1" translatesAutoresizingMaskIntoConstraints="NO" id="WUq-TX-flD">
+                                        <rect key="frame" x="0.0" y="0.0" width="193.5" height="338"/>
+                                        <animations/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="t-shirt-2" translatesAutoresizingMaskIntoConstraints="NO" id="NuZ-Mo-KHq">
+                                        <rect key="frame" x="203.5" y="0.0" width="193" height="338"/>
+                                        <animations/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="t-shirt-3" translatesAutoresizingMaskIntoConstraints="NO" id="CmV-zY-elX">
+                                        <rect key="frame" x="406.5" y="0.0" width="193.5" height="338"/>
+                                        <animations/>
+                                    </imageView>
+                                </subviews>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Qkj-bG-xir" secondAttribute="height" multiplier="300:169" id="xdQ-qs-KrT"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="ZMc-dn-Ra4">
+                                <rect key="frame" x="200" y="527" width="200" height="65"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hUA-vw-KrX">
+                                        <rect key="frame" x="0.0" y="0.0" width="200" height="30"/>
+                                        <animations/>
+                                        <color key="backgroundColor" red="0.91764705879999997" green="0.17254901959999999" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="pcK-Wi-LOF"/>
+                                        </constraints>
+                                        <state key="normal" title="Sign in">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="unR-N2-3gn">
+                                        <rect key="frame" x="0.0" y="35" width="200" height="30"/>
+                                        <animations/>
+                                        <color key="backgroundColor" red="0.91764705879999997" green="0.17254901959999999" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="AES-Er-Vx2"/>
+                                        </constraints>
+                                        <state key="normal" title="Sign up with email">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <animations/>
+                                <variation key="heightClass=compact" axis="horizontal"/>
+                            </stackView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ZMc-dn-Ra4" firstAttribute="centerX" secondItem="b8j-wG-enH" secondAttribute="centerX" id="LPc-WI-XJS"/>
+                            <constraint firstItem="Qkj-bG-xir" firstAttribute="leading" secondItem="b8j-wG-enH" secondAttribute="leading" id="N2f-KT-DLV"/>
+                            <constraint firstAttribute="trailing" secondItem="Qkj-bG-xir" secondAttribute="trailing" id="PbW-rh-urf"/>
+                            <constraint firstItem="jL0-cy-ElH" firstAttribute="top" secondItem="sIk-yb-mD6" secondAttribute="bottom" constant="10" id="QqH-IR-UMD">
+                                <variation key="heightClass=compact" constant="0.0"/>
+                            </constraint>
+                            <constraint firstItem="ZMc-dn-Ra4" firstAttribute="bottom" secondItem="Qkj-bG-xir" secondAttribute="bottom" constant="8" id="YNh-RB-Ohc"/>
+                            <constraint firstItem="jL0-cy-ElH" firstAttribute="centerX" secondItem="b8j-wG-enH" secondAttribute="centerX" id="ZmB-xf-zx7"/>
+                            <constraint firstItem="Qkj-bG-xir" firstAttribute="top" secondItem="jL0-cy-ElH" secondAttribute="bottom" constant="8" id="nW0-Ap-3B6"/>
+                            <constraint firstItem="Sd0-7Q-nZA" firstAttribute="top" secondItem="ZMc-dn-Ra4" secondAttribute="bottom" constant="8" id="xO3-PY-5pi"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="YNh-RB-Ohc"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" title="Stackview demo" id="eDA-JM-YRf">
+                        <barButtonItem key="rightBarButtonItem" systemItem="stop" id="ZDA-Jv-HbW">
+                            <connections>
+                                <action selector="didPressedClose:" destination="T8W-SV-WQP" id="5La-LR-U6L"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2oa-HA-bb0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="459" y="389"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="t-shirt-1" width="180" height="338"/>
+        <image name="t-shirt-2" width="180" height="338"/>
+        <image name="t-shirt-3" width="180" height="338"/>
+    </resources>
+</document>
