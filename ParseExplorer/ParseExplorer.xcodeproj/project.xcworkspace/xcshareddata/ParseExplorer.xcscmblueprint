@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "7AE26446FC131A977B67126CA1262106E2484337",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "F8D5CCC0B848103AC2897358123470ADD4BF6303" : 0,
+    "7AE26446FC131A977B67126CA1262106E2484337" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "AC129515-8BEC-4787-B29A-3E5F043320B2",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "F8D5CCC0B848103AC2897358123470ADD4BF6303" : "..",
+    "7AE26446FC131A977B67126CA1262106E2484337" : "mixofall\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "ParseExplorer",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "ParseExplorer\/ParseExplorer.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/anooptomar1\/mixofall.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "7AE26446FC131A977B67126CA1262106E2484337"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/bitbucket.org\/anooptomar\/bt-car.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "F8D5CCC0B848103AC2897358123470ADD4BF6303"
+    }
+  ]
+}
